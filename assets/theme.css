@@ -7963,7 +7963,7 @@ select .variant-input{
 .color-scheme-1 .btn{
     color:#ffffff;
     color:var(--colorScheme1Bg);
-    background-color:#000000;
+    background-color:#ff0000;
     background-color:var(--colorScheme1Text);
   }
 
