@@ -13,6 +13,12 @@
             "color_swatches": false
           }
         },
+        "deeb4fa8-57b4-47b8-ac08-986c1c08d91b": {
+          "type": "custom",
+          "settings": {
+            "code": "<!-- Custom Variant Metafield-->\n<div class=\"variant_select_box\">\n{% for variant in product.variants %}\n<div class=\"variant_select_btn\">\n{% if variant.metafields.custom.variable_link != blank %}\n<p><a href=\"{{ variant.metafields.custom.variable_link }}\">{{ variant.metafields.custom.gas_type }}<\/a><\/p>\n{% endif %}\n<\/div>\n{% endfor %}\n<\/div>"
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -63,6 +69,7 @@
       },
       "block_order": [
         "variant_picker",
+        "deeb4fa8-57b4-47b8-ac08-986c1c08d91b",
         "price",
         "sales_point",
         "sales_point2",
