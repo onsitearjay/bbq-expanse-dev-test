@@ -13,6 +13,12 @@
             "color_swatches": false
           }
         },
+        "1219996f-cb01-4a28-b470-8bf9a71b8cb0": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.custom.option_field_title.value }}"
+          }
+        },
         "deeb4fa8-57b4-47b8-ac08-986c1c08d91b": {
           "type": "custom",
           "settings": {
@@ -69,6 +75,7 @@
       },
       "block_order": [
         "variant_picker",
+        "1219996f-cb01-4a28-b470-8bf9a71b8cb0",
         "deeb4fa8-57b4-47b8-ac08-986c1c08d91b",
         "price",
         "sales_point",
