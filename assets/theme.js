@@ -823,12 +823,23 @@ lazySizesConfig.expFactor = 4;
       this.dynamicVariantsEnabled = options.dynamicVariantsEnabled;
       this.currentlySelectedValues = this._getCurrentOptions();
       this.currentVariant = this._getVariantFromOptions();
-  
+      this.updateVariantDetails(this.currentVariant);
       this.container.querySelectorAll(this.singleOptionSelector).forEach(el => {
         el.addEventListener('change', this._onSelectChange.bind(this));
       });
     }
-  
+
+    updateVariantDetails(currentVariant){
+    const variants = document.querySelectorAll('[data-variant-id]')
+
+    variants.forEach( function(variant){
+      variant.style.display = 'none';
+      if(variant.dataset.variantId == currentVariant.id){
+        variant.style.display = 'block'
+      }
+    });
+  }
+    
     Variants.prototype = Object.assign({}, Variants.prototype, {
   
       _getCurrentOptions: function() {
