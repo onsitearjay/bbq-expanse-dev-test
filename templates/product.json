@@ -3,15 +3,8 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "96bb8fe8-80c1-4eb9-962f-bd3d245a59de": {
-          "type": "custom",
-          "settings": {
-            "code": "<p class=\"form__label\">Gas Type<\/p>\n<div class=\"variant_select_box\">\n{% for variant in product.variants %}\n<div class=\"variant_select_btn\">\n{% if variant.metafields.custom.variable_link != blank %}\n<p><a href=\"{{ variant.metafields.custom.variable_link }}\">{{ variant.metafields.custom.gas_type }}<\/a><\/p>\n{% endif %}\n<\/div>\n{% endfor %}\n<\/div>"
-          }
-        },
         "variant_picker": {
           "type": "variant_picker",
-          "disabled": true,
           "settings": {
             "variant_labels": true,
             "picker_type": "button",
@@ -68,7 +61,6 @@
         }
       },
       "block_order": [
-        "96bb8fe8-80c1-4eb9-962f-bd3d245a59de",
         "variant_picker",
         "price",
         "sales_point",
