@@ -16,7 +16,7 @@
         "6d4a00c6-99ed-42dd-bfd5-1b91c8900dc8": {
           "type": "custom",
           "settings": {
-            "code": "<!-- Custom Variant Metafield-->\n<p class=\"form__label\">{{ product.metafields.custom.option_title }}<\/p>\n\n<a href=\"{{ product.metafields.custom.option_one_product.value.url }}\">\n{{ product.metafields.custom.option_field_title }} <\/a>\n\n<a href=\"{{ product.metafields.custom.option_two_product.value.url }}\">\n{{ product.metafields.custom.option_two_title }} <\/a>"
+            "code": "<!-- Custom Variant Metafield-->\n<p class=\"form__label\">{{ product.metafields.custom.option_title }}<\/p>\n\n<a style=\"border: 2px solid;border-radius: 3px;padding: 8px 25px;margin: 0 5px;\" href=\"{{ product.metafields.custom.option_one_product.value.url }}\">\n{{ product.metafields.custom.option_field_title }} <\/a>\n\n<a style=\"border: 2px solid;border-radius: 3px;padding: 8px 25px;margin: 0 5px;\" href=\"{{ product.metafields.custom.option_two_product.value.url }}\">\n{{ product.metafields.custom.option_two_title }} <\/a>"
           }
         },
         "price": {
