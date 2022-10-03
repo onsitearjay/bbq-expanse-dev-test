@@ -16,7 +16,7 @@
         "6d4a00c6-99ed-42dd-bfd5-1b91c8900dc8": {
           "type": "custom",
           "settings": {
-            "code": "<!-- Custom Variant Metafield-->\n<p class=\"form__label\">Gas Type<\/p>\n<div class=\"variant_select_box\">\n{% for variant in product.variants %}\n<div class=\"variant_select_btn\">\n{% if variant.metafields.custom.variable_link != blank %}\n<p><a href=\"{{ variant.metafields.custom.variable_link }}\">{{ variant.metafields.custom.gas_type }}<\/a><\/p>\n{% endif %}\n<\/div>\n{% endfor %}\n<\/div>"
+            "code": "<!-- Custom Variant Metafield-->\n<p class=\"form__label\">Gas Type<\/p>\n\n{{ product.metafields.custom.option_one_product }}\n\n<div class=\"variant_select_box\">\n{% for variant in product.variants %}\n<div class=\"variant_select_btn\">\n{% if variant.metafields.custom.variable_link != blank %}\n<p>\n<a href=\"{{ variant.metafields.custom.variable_link }}\">{{ variant.metafields.custom.gas_type }}<\/a>\n<\/p>\n{% endif %}\n<\/div>\n{% endfor %}\n<\/div>"
           }
         },
         "price": {
