@@ -6,7 +6,7 @@
         "enable": true,
         "collection_image_enable": false,
         "parallax": false,
-        "parallax_direction": "top"
+        "parallax_direction": "left"
       }
     },
     "promo-grid": {
