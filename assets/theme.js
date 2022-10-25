@@ -4157,7 +4157,7 @@ lazySizesConfig.expFactor = 4;
   
     function accessibleDropdowns() {
       var hasActiveDropdown = true;
-      var hasActiveSubDropdown = false;
+      var hasActiveSubDropdown = true;
       var closeOnClickActive = false;
   
       // Touch devices open dropdown on first click, navigate to link on second
