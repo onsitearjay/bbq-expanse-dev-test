@@ -169,17 +169,7 @@ lazySizesConfig.expFactor = 4;
     }
   };
   
-  theme.a11y = {
-    trapFocus: function(options) {
-      var eventsName = {
-        focusin: options.namespace ? 'focusin.' + options.namespace : 'focusin',
-        focusout: options.namespace
-          ? 'focusout.' + options.namespace
-          : 'focusout',
-        keydown: options.namespace
-          ? 'keydown.' + options.namespace
-          : 'keydown.handleFocus'
-      };
+
   
       // Get every possible visible focusable element
       var focusableEls = options.container.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex^="-"])');
