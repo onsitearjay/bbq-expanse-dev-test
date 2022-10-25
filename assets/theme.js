@@ -3982,32 +3982,7 @@ lazySizesConfig.expFactor = 4;
         }
       }
   
-      // Position menu and search bars absolutely, offsetting their height
-      // with an invisible div to prevent reflows
-      setAbsoluteBottom();
-      window.on('resize' + config.namespace, theme.utils.debounce(250, setAbsoluteBottom));
   
-      var collapsedNavTrigger = wrapper.querySelector(selectors.triggerCollapsedMenu);
-      if (collapsedNavTrigger) {
-        collapsedNavTrigger.on('click', function() {
-          collapsedNavTrigger.classList.toggle('is-active');
-          theme.utils.prepareTransition(bottomNav, function() {
-            bottomNav.classList.toggle('is-active');
-          });
-        });
-      }
-  
-      accessibleDropdowns();
-  
-      var navigation = siteHeader.querySelector(selectors.navigation);
-      if (navigation.querySelectorAll('.grid-product')) {
-        new theme.QuickAdd(navigation);
-        new theme.QuickShop(navigation);
-      }
-  
-      window.on('load' + config.namespace, resizeLogo);
-      window.on('resize' + config.namespace, theme.utils.debounce(150, resizeLogo));
-    }
   
     // Measure sub menu bar, set site header's bottom padding to it.
     // Set sub bars as absolute to avoid page jumping on collapsed state change.
