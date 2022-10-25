@@ -141,15 +141,11 @@
   -%}
   <div id="ProductModals"></div>
 
-  <script>
-      document.querySelectorAll('.site-nav--is-megamenu').forEach((menu) 
-        => menu.addEventListener('click', (event) 
-        => {
+    <script>
+      document.querySelectorAll('.site-nav--is-megamenu').forEach((menu) => menu.addEventListener('click', (event) => {
         event.preventDefault();
         event.target.classList.toggle('is-focused');
-        }
-      )
-     );
+      }));
   </script>
 </body>
 </html>
