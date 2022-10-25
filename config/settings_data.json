@@ -50,7 +50,7 @@
     "product_grid_image_size": "square",
     "product_grid_image_fill": true,
     "product_hover_image": true,
-    "product_grid_style": "simple",
+    "product_grid_style": "grey-square",
     "product_grid_image_margin": 10,
     "collection_grid_shape": "circle",
     "collection_grid_image": "product",
