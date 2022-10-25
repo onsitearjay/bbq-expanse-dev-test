@@ -19,7 +19,7 @@
         endif
       endif
 
-      assign isCollection = true
+      assign isCollection = false
       if show_mega_products
         if is_megamenu and link.url contains routes.collections_url
           assign collection_handle = link.url | remove: routes.collections_url | remove: '/'
