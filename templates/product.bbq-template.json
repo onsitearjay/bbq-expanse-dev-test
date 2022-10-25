@@ -3,14 +3,9 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "variant_picker": {
-          "type": "variant_picker",
-          "disabled": true,
+        "price": {
+          "type": "price",
           "settings": {
-            "variant_labels": true,
-            "picker_type": "button",
-            "product_dynamic_variants_enable": false,
-            "color_swatches": false
           }
         },
         "6d4a00c6-99ed-42dd-bfd5-1b91c8900dc8": {
@@ -25,9 +20,13 @@
             "code": "<!-- Custom Variant Metafield-->\n<p class=\"form__label\">{{ product.metafields.custom.size_field_title }}<\/p>\n\n<a style=\"border: 2px solid;border-radius: 3px;padding: 8px 25px;margin: 0 5px;\" href=\"{{ product.metafields.custom.size_related_product.value.url }}\">\n{{ product.metafields.custom.size_option_title }} <\/a>"
           }
         },
-        "price": {
-          "type": "price",
+        "variant_picker": {
+          "type": "variant_picker",
           "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": false,
+            "color_swatches": false
           }
         },
         "sales_point": {
@@ -74,10 +73,10 @@
         }
       },
       "block_order": [
-        "variant_picker",
+        "price",
         "6d4a00c6-99ed-42dd-bfd5-1b91c8900dc8",
         "50a3e805-7198-4e5d-bdaa-a47a923e3c03",
-        "price",
+        "variant_picker",
         "sales_point",
         "sales_point2",
         "sales_point3",
@@ -130,7 +129,7 @@
         "contact"
       ],
       "settings": {
-        "max_width": true
+        "max_width": false
       }
     },
     "recommendations": {
