@@ -3931,15 +3931,7 @@ lazySizesConfig.expFactor = 4;
       collapsedMenu: '[data-type="nav"]',
       bottomSearch: '[data-type="search"]'
     };
-  
-    var classes = {
-      hasDropdownClass: 'site-nav--has-dropdown',
-      hasSubDropdownClass: 'site-nav__deep-dropdown-trigger',
-      dropdownActive: 'is-focused',
-      headerCompressed: 'header-wrapper--compressed',
-      overlay: 'header-wrapper--overlay',
-      overlayStyle: 'is-light'
-    };
+
   
     var config = {
       namespace: '.siteNav',
