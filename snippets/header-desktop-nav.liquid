@@ -15,11 +15,11 @@
       if link.levels > 0
         assign has_dropdown = true
         if link.levels > 1
-          assign is_megamenu = false
+          assign is_megamenu = true
         endif
       endif
 
-      assign isCollection = false
+      assign isCollection = true
       if show_mega_products
         if is_megamenu and link.url contains routes.collections_url
           assign collection_handle = link.url | remove: routes.collections_url | remove: '/'
