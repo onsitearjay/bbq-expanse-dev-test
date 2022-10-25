@@ -4156,7 +4156,7 @@ lazySizesConfig.expFactor = 4;
     }
   
     function accessibleDropdowns() {
-      var hasActiveDropdown = false;
+      var hasActiveDropdown = true;
       var hasActiveSubDropdown = false;
       var closeOnClickActive = false;
   
