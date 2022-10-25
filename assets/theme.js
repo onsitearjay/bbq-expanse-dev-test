@@ -4177,11 +4177,11 @@ lazySizesConfig.expFactor = 4;
       }
   
       // Open/hide top level dropdowns
-      document.querySelectorAll(selectors.navLinks).forEach(el => {
-        el.on('focusin' + config.namespace, accessibleMouseEvent);
-        el.on('mouseover' + config.namespace, accessibleMouseEvent);
-        el.on('mouseleave' + config.namespace, closeDropdowns);
-      });
+      //document.querySelectorAll(selectors.navLinks).forEach(el => {
+      //  el.on('focusin' + config.namespace, accessibleMouseEvent);
+      //  el.on('mouseover' + config.namespace, accessibleMouseEvent);
+      //  el.on('mouseleave' + config.namespace, closeDropdowns);
+     // });
   
       document.querySelectorAll(selectors.navDropdownLinks).forEach(el => {
         if (theme.config.isTouch) {
