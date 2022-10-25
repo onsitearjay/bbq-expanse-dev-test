@@ -98,12 +98,7 @@
 
   <script src="{{ 'vendor-scripts-v2.js' | asset_url | split: '?' | first }}" defer="defer"></script>
   <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
-  <script>
-      document.querySelectorAll('.site-nav--is-megamenu').forEach((menu) => menu.addEventListener('click', (event) => {
-        event.preventDefault();
-        event.target.classList.toggle('is-focused');
-      }));
-</script>
+
   {%- if request.page_type contains 'customers/' -%}
     <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer="defer"></script>
   {%- endif -%}
@@ -135,7 +130,12 @@
       {%- section 'footer' -%}
     </div>
   </div>
-
+  <script>
+      document.querySelectorAll('.site-nav--is-megamenu').forEach((menu) => menu.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.target.classList.toggle('is-focused');
+      }));
+  </script>
   {%- liquid
     render 'video-modal'
     render 'photoswipe-template'
