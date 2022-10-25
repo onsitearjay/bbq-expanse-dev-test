@@ -48,7 +48,7 @@
     "quick_shop_enable": true,
     "quick_add_enable": true,
     "product_grid_image_size": "square",
-    "product_grid_image_fill": true,
+    "product_grid_image_fill": false,
     "product_hover_image": true,
     "product_grid_style": "grey-square",
     "product_grid_image_margin": 10,
