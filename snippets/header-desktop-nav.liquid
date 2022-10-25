@@ -10,7 +10,7 @@
 <ul class="site-nav site-navigation site-navigation--{{ nav_position }} small--hide" role="navigation">
   {%- for link in main_menu.links limit: limit offset: offset -%}
     {%- liquid
-      assign has_dropdown = false
+      assign has_dropdown = true
       assign is_megamenu = false
       if link.levels > 0
         assign has_dropdown = true
