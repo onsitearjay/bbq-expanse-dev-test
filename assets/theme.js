@@ -4242,7 +4242,7 @@ lazySizesConfig.expFactor = 4;
         var parent = el.parentNode;
         if (parent.classList.contains(classes.hasDropdownClass)) {
           parent.classList.add(classes.dropdownActive);
-          hasActiveDropdown = true;
+          hasActiveDropdown = false;
         }
   
         if (!theme.config.isTouch) {
