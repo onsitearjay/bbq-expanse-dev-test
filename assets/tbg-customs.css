@@ -1,12 +1,12 @@
 /*Custom Variant Metafield*/
-.custom-variant-btn {
+.gasType-btn {
   box-shadow: 0 0 0 1px #e8e8e1;
   border-radius: 3px;
   padding: 8px 25px;
   margin: 0 5px 5px 0;
   display: inline-block;
 }
-a.custom-variant-btn:hover{
+.gasType-btn:hover{
   box-shadow: 0 0 0 2px #000;
 }
 .active{
