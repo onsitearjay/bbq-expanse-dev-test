@@ -1,6 +1,6 @@
 /*Custom Variant Metafield*/
 .custom-variant-btn {
-  border: 2px solid;
+  box-shadow: 0 0 0 1px #e8e8e1;
   border-radius: 3px;
   padding: 8px 25px;
   margin: 0 5px 5px 0;
