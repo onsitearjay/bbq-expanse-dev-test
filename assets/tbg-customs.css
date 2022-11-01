@@ -6,7 +6,6 @@
   margin: 0 5px 5px 0;
   display: inline-block;
 }
-
 a.custom-variant-btn:hover{
   box-shadow: 0 0 0 2px #000;
 }
@@ -14,7 +13,9 @@ a.custom-variant-btn:hover{
   background-color:#000;
   color:#fff;
 }
-
+.gas-var-type{
+  float:left;
+}
 .sales-point .icon-phone{
   font-weight:600;
   font-size:18px;
