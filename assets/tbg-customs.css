@@ -7,6 +7,11 @@
   display: inline-block;
 }
 
+.custom-variant-btn:hover{
+  background-color:#000;
+  color:#fff;
+}
+
 .sales-point .icon-phone{
   font-weight:600;
   font-size:18px;
