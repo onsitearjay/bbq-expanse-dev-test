@@ -13,6 +13,10 @@ a.custom-variant-btn:hover{
   border: 2px solid #000;
   border-radius: 3px;
 }
+a.custom-variant-btn:active{
+  background-color:#000;
+  color:#fff;
+}
 
 .sales-point .icon-phone{
   font-weight:600;
