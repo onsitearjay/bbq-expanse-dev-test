@@ -8,6 +8,13 @@
           "settings": {
           }
         },
+        "f03402d2-4bfe-43c3-abd4-c5f3b7c4d5e1": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "phone",
+            "text": "Call Now For Exclsive Discounts 888-667-4986"
+          }
+        },
         "6d4a00c6-99ed-42dd-bfd5-1b91c8900dc8": {
           "type": "custom",
           "settings": {
@@ -27,7 +34,7 @@
           "type": "sales_point",
           "settings": {
             "icon": "globe",
-            "text": "<span class='icon-globe'>Free worldwide shippings<\/span>"
+            "text": "Free worldwide shipping"
           }
         },
         "sales_point2": {
@@ -68,6 +75,7 @@
       },
       "block_order": [
         "price",
+        "f03402d2-4bfe-43c3-abd4-c5f3b7c4d5e1",
         "6d4a00c6-99ed-42dd-bfd5-1b91c8900dc8",
         "variant_picker",
         "sales_point",
