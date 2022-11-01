@@ -1,5 +1,6 @@
 /*Custom Variant Metafield*/
-.gasType-btn {
+.gasType-btn,
+.custom-variant-btn{
   box-shadow: 0 0 0 1px #e8e8e1;
   border-radius: 3px;
   padding: 8px 25px;
