@@ -27,7 +27,7 @@
           "type": "sales_point",
           "settings": {
             "icon": "globe",
-            "text": "Free worldwide shipping"
+            "text": "<span class='icon-globe'>Free worldwide shippings<\/span>"
           }
         },
         "sales_point2": {
