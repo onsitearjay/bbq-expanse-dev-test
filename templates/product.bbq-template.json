@@ -34,14 +34,14 @@
           "type": "sales_point",
           "settings": {
             "icon": "package",
-            "text": "<span class=\"icon-package\">Call for Open Box Availability  888-667-4986<\/span>"
+            "text": "Call for Open Box Availability  888-667-4986"
           }
         },
         "sales_point3": {
           "type": "sales_point",
           "settings": {
             "icon": "truck",
-            "text": "<span class=\"icon-truck\">Free Shipping<\/span>"
+            "text": "Free Shipping!"
           }
         },
         "inventory_status": {
