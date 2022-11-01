@@ -8,8 +8,6 @@
 }
 
 a.custom-variant-btn:hover{
-  background-color:#000;
-  color:#fff;
   box-shadow: 0 0 0 1px #000;
 }
 .custom-variant-btn:active{
