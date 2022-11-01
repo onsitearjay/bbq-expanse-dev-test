@@ -33,7 +33,7 @@
   {%- render 'font-face' -%}
   {{ 'theme.css' | asset_url | stylesheet_tag: preload: true }}
   {%- render 'css-variables' -%}
-
+  
   {%- liquid
     assign enableSuperScript = false
     unless shop.money_format contains 'money' or shop.money_format contains '.'
@@ -46,7 +46,9 @@
       endif
     endunless
   -%}
-
+  
+  {{ tbg-custom.css | asset_url | stylesheet_tag }}
+  
   <script>
     document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
 
