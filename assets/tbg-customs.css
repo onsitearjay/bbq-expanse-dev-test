@@ -10,7 +10,7 @@
 a.custom-variant-btn:hover{
   background-color:#000;
   color:#fff;
-  border: 2px solid #000;
+  border: 1px solid #000;
   border-radius: 3px;
 }
 a.custom-variant-btn:active{
