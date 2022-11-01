@@ -4359,7 +4359,15 @@ form+.footer__social{
     height:10px;
   }
 
-
+.site-nav__link{
+  display:inline-block;
+  vertical-align:middle;
+  text-decoration:none;
+  padding:16px 20px;
+  white-space:nowrap;
+  color:{{ settings.color_header_text | default: "#000" }};
+  color:var(--colorNavText)
+}
 
 .site-header--heading-style .site-nav__link{
     font-family:var(--typeHeaderPrimary),var(--typeHeaderFallback);
