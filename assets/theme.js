@@ -11,6 +11,12 @@
   });
 */
 
+document.querySelectorAll('.site-nav--is-megamenu').forEach((menu) => menu.addEventListener('click', (event) => {
+  event.preventDefault();
+  event.target.classList.toggle('is-focused');
+  return false;
+}));
+
 window.theme = window.theme || {};
 window.Shopify = window.Shopify || {};
 
