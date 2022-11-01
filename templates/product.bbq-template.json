@@ -41,7 +41,7 @@
           "type": "sales_point",
           "settings": {
             "icon": "truck",
-            "text": "Free Shipping"
+            "text": "<span class='icon-truck'>Free Shipping<\/span>"
           }
         },
         "inventory_status": {
