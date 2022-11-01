@@ -12,7 +12,7 @@
           "type": "sales_point",
           "settings": {
             "icon": "phone",
-            "text": "<span class='icon-phone'>Call Now For Exclsive Discounts 888-667-4986<\/span>"
+            "text": "Call Now For Exclusive Discounts 888-667-4986"
           }
         },
         "6d4a00c6-99ed-42dd-bfd5-1b91c8900dc8": {
@@ -34,14 +34,14 @@
           "type": "sales_point",
           "settings": {
             "icon": "package",
-            "text": "<span class='icon-package'>Call for Open Box Availability  888-667-4986<\/span>"
+            "text": "<span class=\"icon-package\">Call for Open Box Availability  888-667-4986<\/span>"
           }
         },
         "sales_point3": {
           "type": "sales_point",
           "settings": {
             "icon": "truck",
-            "text": "<span class='icon-truck'>Free Shipping<\/span>"
+            "text": "<span class=\"icon-truck\">Free Shipping<\/span>"
           }
         },
         "inventory_status": {
