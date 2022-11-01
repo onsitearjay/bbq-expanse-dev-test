@@ -24,9 +24,9 @@
           "type": "variant_picker",
           "settings": {
             "variant_labels": true,
-            "picker_type": "button",
-            "product_dynamic_variants_enable": false,
-            "color_swatches": false
+            "picker_type": "dropdown",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": true
           }
         },
         "sales_point": {
