@@ -106,7 +106,8 @@
   {% if request.design_mode %}
     <script src="https://api.archetypethemes.co/design-mode.js" defer="defer"></script>
   {% endif %}
-{% render 'minmaxify-head' %}
+
+  {% render 'shogun-head' %}
 </head>
 
 <body class="template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}{% if request.path == '/challenge' %} template-challange{% endif %}" data-transitions="{{ settings.animate_page_transitions }}" data-button_style="{{ settings.button_style }}" data-edges="{{ settings.roundness }}" data-type_header_capitalize="{{ settings.type_header_capitalize }}" data-swatch_style="{{ settings.swatch_style }}" data-grid-style="{{ settings.product_grid_style }}">
@@ -142,13 +143,12 @@
   -%}
   <div id="ProductModals"></div>
 
-<script>
+  <script>
       document.querySelectorAll('.site-nav--is-megamenu').forEach((menu) => menu.addEventListener('click', (event) => {
         event.preventDefault();
         event.target.classList.toggle('is-focused');
-        return false;
       }));
-</script>
-  
+  </script>
 </body>
 </html>
+
