@@ -30,32 +30,18 @@
             "color_swatches": true
           }
         },
-        "sales_point": {
-          "type": "sales_point",
-          "settings": {
-            "icon": "globe",
-            "text": "Free worldwide shipping"
-          }
-        },
         "sales_point2": {
           "type": "sales_point",
           "settings": {
-            "icon": "truck",
-            "text": "Free returns"
+            "icon": "package",
+            "text": "Call for Open Box Availability  888-667-4986"
           }
         },
         "sales_point3": {
           "type": "sales_point",
           "settings": {
-            "icon": "leaf",
-            "text": "Carbon neutral"
-          }
-        },
-        "sales_point4": {
-          "type": "sales_point",
-          "settings": {
-            "icon": "lock",
-            "text": "Secure payments"
+            "icon": "truck",
+            "text": "Free Shipping"
           }
         },
         "inventory_status": {
@@ -78,10 +64,8 @@
         "f03402d2-4bfe-43c3-abd4-c5f3b7c4d5e1",
         "6d4a00c6-99ed-42dd-bfd5-1b91c8900dc8",
         "variant_picker",
-        "sales_point",
         "sales_point2",
         "sales_point3",
-        "sales_point4",
         "inventory_status",
         "buy_buttons"
       ],
