@@ -146,6 +146,21 @@
   <div id="ProductModals"></div>
 
   <script>
+    $(function(){
+        var url = window.location.pathname, 
+            urlRegExp = new RegExp(url.replace(/\/$/,'') + "$");
+      // create regexp to match current url pathname and remove trailing slash if present as it could collide with the link in navigation in case trailing slash wasn't present there
+            // now grab every link from the navigation
+            $('.gasType a').each(function(){
+                // and test its normalized href against the url pathname regexp
+                if(urlRegExp.test(this.href.replace(/\/$/,''))){
+                    $(this).addClass('active');
+                }
+            });
+    });
+  </script>
+  
+  <script>
       document.querySelectorAll('.site-nav--is-megamenu').forEach((menu) => menu.addEventListener('click', (event) => {
         event.preventDefault();
         event.target.classList.toggle('is-focused');
