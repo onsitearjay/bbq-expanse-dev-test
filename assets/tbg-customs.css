@@ -1,3 +1,18 @@
+.product-single__meta{
+  padding-top:6px;
+}
+.product-single__title{
+  line-height: 1.25em;
+}
+.sales-point .icon-phone{
+  font-weight:600;
+  font-size:18px;
+}
+.sales-point .icon-truck{
+  color:#009900;
+  font-weight:900;
+}
+
 /*Custom Variant Metafield*/
 .custom-variant-btn{
   box-shadow: 0 0 0 1px #e8e8e1;
@@ -20,12 +35,4 @@ a[aria-current="activePage"] {
   padding: 8px 25px;
   margin: 0 5px 5px 0;
   display: inline-block;
-}
-.sales-point .icon-phone{
-  font-weight:600;
-  font-size:18px;
-}
-.sales-point .icon-truck{
-  color:#009900;
-  font-weight:900;
 }
