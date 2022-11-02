@@ -10,7 +10,7 @@
 <ul class="site-nav site-navigation site-navigation--{{ nav_position }} small--hide" role="navigation">
   {%- for link in main_menu.links limit: limit offset: offset -%}
     {%- liquid
-      assign has_dropdown = true
+      assign has_dropdown = false
       assign is_megamenu = false
       if link.levels > 0
         assign has_dropdown = true
@@ -19,7 +19,7 @@
         endif
       endif
 
-      assign isCollection = false
+      assign isCollection = true
       if show_mega_products
         if is_megamenu and link.url contains routes.collections_url
           assign collection_handle = link.url | remove: routes.collections_url | remove: '/'
