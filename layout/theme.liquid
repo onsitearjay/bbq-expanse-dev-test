@@ -34,7 +34,7 @@
   {{ 'theme.css' | asset_url | stylesheet_tag: preload: true }}
   {%- render 'css-variables' -%}
   
-  {{ 'tbg-customs.css' | asset_url | stylesheet_tag }}
+  {{ 'bbq-customs.css' | asset_url | stylesheet_tag }}
   
   {%- liquid
     assign enableSuperScript = false
@@ -145,7 +145,7 @@
   -%}
   <div id="ProductModals"></div>
   
-  {{ 'tbg-customs.js' | asset_url | script_tag }}
+  {{ 'bbq-customs.js' | asset_url | script_tag }}
 </body>
 </html>
 
