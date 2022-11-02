@@ -35,7 +35,7 @@
   {%- render 'css-variables' -%}
   
   {{ 'tbg-customs.css' | asset_url | stylesheet_tag }}
-  {{ 'tbg-customs.js.liquid' | asset_url | script_tag }}
+  {{ 'tbg-customs.js' | asset_url | script_tag }}
   
   {%- liquid
     assign enableSuperScript = false
