@@ -35,7 +35,7 @@
   {%- render 'css-variables' -%}
   
   {{ 'tbg-customs.css' | asset_url | stylesheet_tag }}
-  <link rel="javascript" as="script" href="{{ 'tbg-customs.js' | asset_url }}">
+  {{ 'tbg-customs.js' | asset_url | script_tag }}
   
   {%- liquid
     assign enableSuperScript = false
