@@ -7,6 +7,7 @@
   display: inline-block;
 }
 .custom-variant-btn:hover{
+  box-shadow: 0 0 0 1px #000;
   background-color:#000;
   border-radius: 1px;
   color:#fff;
