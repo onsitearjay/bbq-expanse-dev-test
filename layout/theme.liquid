@@ -34,6 +34,8 @@
   {{ 'theme.css' | asset_url | stylesheet_tag: preload: true }}
   {%- render 'css-variables' -%}
   
+  {{ 'tbg-customs.css' | asset_url | stylesheet_tag }}
+  
   {%- liquid
     assign enableSuperScript = false
     unless shop.money_format contains 'money' or shop.money_format contains '.'
@@ -46,9 +48,7 @@
       endif
     endunless
   -%}
-  
-  {{ 'tbg-customs.css' | asset_url | stylesheet_tag }}
-  
+
   <script>
     document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
 
@@ -145,20 +145,6 @@
   -%}
   <div id="ProductModals"></div>
 
-    <script>
-    $(function(){
-        var url = location.href, 
-            urlRegExp = new RegExp(url.replace(/\/$/,'') + "$"); // create regexp to match current url pathname and remove trailing slash if present as it could collide with the link in navigation in case trailing slash wasn't present there
-            // grab every link from the variant meta
-            $('#custom-variant-meta a').each(function(){
-                // and test its normalized href against the url pathname regexp
-                if(urlRegExp.test(this.href.replace(/\/$/,''))){
-                    $(this).addClass('active');
-                }
-            });
-    });
-  </script>
-  
   <script>
       document.querySelectorAll('.site-nav--is-megamenu').forEach((menu) => menu.addEventListener('click', (event) => {
         event.preventDefault();
