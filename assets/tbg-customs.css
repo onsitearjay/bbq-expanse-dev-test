@@ -7,14 +7,10 @@
   display: inline-block;
 }
 .custom-variant-btn:hover,
-.custom-variant-btn:active{
+a[aria-current="page"]{
   box-shadow: 0 0 0 1px #000;
   background-color:#000;
   border-radius: 1px;
-  color:#fff;
-}
-a[aria-current="page"]{
-  background-color:#000;
   color:#fff;
 }
 .openBox{
