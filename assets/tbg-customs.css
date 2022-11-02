@@ -1,5 +1,4 @@
 /*Custom Variant Metafield*/
-.gasType-btn,
 .custom-variant-btn{
   box-shadow: 0 0 0 1px #e8e8e1;
   border-radius: 3px;
@@ -7,7 +6,6 @@
   margin: 0 5px 5px 0;
   display: inline-block;
 }
-.gasType-btn:hover,
 .custom-variant-btn:hover{
   background-color:#000;
   color:#fff;
