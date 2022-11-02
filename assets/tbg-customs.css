@@ -9,7 +9,7 @@
 }
 .gasType-btn:hover,
 .custom-variant-btn:hover{
-  box-shadow: 0 0 0 2px #000;
+  background-color:#000;
   color:#fff;
 }
 .active{
