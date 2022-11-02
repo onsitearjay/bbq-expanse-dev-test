@@ -13,7 +13,7 @@
   border-radius: 1px;
   color:#fff;
 }
-.active[aria-current="page"]{
+a[aria-current="page"]{
   background-color:#000;
   color:#fff;
 }
