@@ -3935,7 +3935,7 @@ lazySizesConfig.expFactor = 4;
     var classes = {
       hasDropdownClass: 'site-nav--has-dropdown',
       hasSubDropdownClass: 'site-nav__deep-dropdown-trigger',
-      dropdownActive: 'is-focused',
+      dropdownActive: 'not-focused',
       headerCompressed: 'header-wrapper--compressed',
       overlay: 'header-wrapper--overlay',
       overlayStyle: 'is-light'
