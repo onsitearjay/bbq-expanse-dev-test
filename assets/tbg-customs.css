@@ -12,19 +12,16 @@
   border-radius: 1px;
   color:#fff;
 }
+.active{
+  background-color:#000;
+  color:#fff;
+}
 .openBox{
   box-shadow: 0 0 0 2px #000;
   border-radius: 1px;
   padding: 8px 25px;
   margin: 0 5px 5px 0;
   display: inline-block;
-}
-.active{
-  background-color:#000;
-  color:#fff;
-}
-.gas-var-type{
-  float:left;
 }
 .sales-point .icon-phone{
   font-weight:600;
