@@ -149,7 +149,7 @@
     $(function(){
         var url = window.location.href, 
             urlRegExp = new RegExp(url.replace(/\/$/,'') + "$"); // create regexp to match current url pathname and remove trailing slash if present as it could collide with the link in navigation in case trailing slash wasn't present there
-            // grab every link from the gasType
+            // grab every link from the variant meta
             $('#custom-variant-meta a').each(function(){
                 // and test its normalized href against the url pathname regexp
                 if(urlRegExp.test(this.href.replace(/\/$/,''))){
