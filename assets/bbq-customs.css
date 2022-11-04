@@ -1,3 +1,15 @@
+.grid-product__title{
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.grid-product__vendor{
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
 [class*=color-scheme-]:not(.color-scheme-none).index-section{
   padding: 25px 0;
 }
