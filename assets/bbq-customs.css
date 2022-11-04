@@ -1,3 +1,9 @@
+[class*=color-scheme-]:not(.color-scheme-none).index-section{
+  padding: 25px 0;
+}
+[class*=color-scheme-]:not(.color-scheme-none).index-section .theme-block{
+  margin-bottom: 0;
+}
 .product-single__meta{
   padding-top:6px;
 }
@@ -12,8 +18,19 @@
   color:#009900;
   font-weight:900;
 }
-
 /*Custom Variant Metafield*/
+#custom-variant-meta{
+  margin-bottom: -20px;
+}
+.custom-field-block {
+  margin-bottom:10px;
+}
+.custom-field-block .variantTitle{
+  font-weight:700;
+}
+.variant-wrapper+.variant-wrapper{
+  margin-top:10px;
+}
 .custom-variant-btn{
   box-shadow: 0 0 0 1px #e8e8e1;
   border-radius: 1px;
