@@ -10,6 +10,9 @@
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
+.grid-product__price--current > span[aria-hidden="true"]{
+  min-height:52px;
+}
 [class*=color-scheme-]:not(.color-scheme-none).index-section{
   padding: 25px 0;
 }
