@@ -10,7 +10,7 @@
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
-span.grid-product__price--current > span[aria-hidden="true"]{
+.grid-product__price .grid-product__price--current > span[aria-hidden="true"]{
   min-height:52px;
 }
 [class*=color-scheme-]:not(.color-scheme-none).index-section{
