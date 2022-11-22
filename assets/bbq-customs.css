@@ -1,3 +1,6 @@
+.return-section {
+  padding: 0 0 30px 0;
+}
 .grid-product__title{
   display: -webkit-box;
   overflow: hidden;
