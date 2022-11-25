@@ -6,7 +6,8 @@
   font-size:18px;
   font-weight:600;
 }
-.exclusive-savings p a{
+.exclusive-savings p:nth-child(2),
+.exclusive-savings a{
   text-decoration: underline;
   font-size:18px;
   font-weight:600;
