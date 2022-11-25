@@ -1,6 +1,9 @@
 .exclusive-savings{
   text-align:center;
 }
+.exclusive-savings p:first-child{
+  color:#090;
+}
 .return-section {
   margin:0 0 40px;
   padding: 0;
