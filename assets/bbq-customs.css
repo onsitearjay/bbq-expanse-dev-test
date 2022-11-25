@@ -6,6 +6,10 @@
   font-weight:600;
   font-size:18px;
 }
+.exclusive-savings a{
+  text-decoration: underline;
+  font-size:18px;
+}
 .return-section {
   margin:0 0 40px;
   padding: 0;
