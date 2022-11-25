@@ -3,7 +3,8 @@
 }
 .exclusive-savings p:first-child{
   color:#090;
-  font-weight:500;
+  font-weight:600;
+  font-size:18px;
 }
 .return-section {
   margin:0 0 40px;
