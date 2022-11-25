@@ -8,11 +8,10 @@
           "settings": {
           }
         },
-        "f03402d2-4bfe-43c3-abd4-c5f3b7c4d5e1": {
-          "type": "sales_point",
+        "a9b9159f-7fe2-4149-bf31-0833258247c1": {
+          "type": "custom",
           "settings": {
-            "icon": "phone",
-            "text": "Call Now For Exclusive Discounts 888-667-4986"
+            "code": "<div class=\"exclusive-savings\">\n<p>Phone Discounts | Package Deals | Open Box | Close Out | Scratch + Dent | Low Monthly Payments | Free Accessories<\/p><p>Exclusive Huge Savings Just One Call Away! Experts Standing By <a href=\"tel:888-667-4986\">888-667-4986<\/a><\/p>\n<\/div>"
           }
         },
         "6d4a00c6-99ed-42dd-bfd5-1b91c8900dc8": {
@@ -61,7 +60,7 @@
       },
       "block_order": [
         "price",
-        "f03402d2-4bfe-43c3-abd4-c5f3b7c4d5e1",
+        "a9b9159f-7fe2-4149-bf31-0833258247c1",
         "6d4a00c6-99ed-42dd-bfd5-1b91c8900dc8",
         "variant_picker",
         "sales_point2",
