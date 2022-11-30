@@ -30,7 +30,7 @@
     -%}
 
     <li
-      class=""
+      class="site-nav__item site-nav__expanded-item{% if has_dropdown %} site-nav--has-dropdown{% endif %}"
       {% if has_dropdown %}aria-haspopup="true"{% endif %}>
 
       <a href="{{ link.url }}" class="site-nav__link site-nav__link--underline{% if has_dropdown %} site-nav__link--has-dropdown{% endif %}">
