@@ -1,3 +1,10 @@
+.bbq-description{
+  height: 75px;
+  visibility: visible;
+  overflow: hidden;
+  opacity: 1;
+  margin-top: 15px;
+}
 .exclusive-savings{
   text-align:center;
 }
