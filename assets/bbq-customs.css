@@ -39,8 +39,11 @@
 .grid-product__price--original{
   font-size: 0.8em;
 }
+[class*=color-scheme-]:not(.color-scheme-none).index-section h2{
+  margin-bottom:10px;
+}
 [class*=color-scheme-]:not(.color-scheme-none).index-section{
-  padding: 25px 0;
+  padding: 10px 0;
 }
 [class*=color-scheme-]:not(.color-scheme-none).index-section .theme-block{
   margin-bottom: 0;
@@ -55,11 +58,18 @@
   font-weight:600;
   font-size:18px;
 }
+/*.sales-point .icon-tag{
+  text-align:center;
+}*/
 .sales-point .icon-truck{
   color:#009900;
   font-weight:900;
 }
 /*Custom Variant Metafield*/
+label[for=ProductPrice-template--16537158713601__main]{
+  margin-bottom:-15px !important;
+}
+.product-single__vendor-sku,
 #custom-variant-meta{
   margin-bottom: -20px;
 }
@@ -93,4 +103,11 @@ a[aria-current="activePage"] {
   padding: 8px 25px;
   margin: 0 5px 5px 0;
   display: inline-block;
+}
+
+/*Rondel CSS*/
+.variantSize .custom-variant-btn {
+    min-height: 65px;
+    display: inline-flex;
+    text-align: center;
 }
