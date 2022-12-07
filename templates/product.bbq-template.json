@@ -31,7 +31,7 @@
         "a9b9159f-7fe2-4149-bf31-0833258247c1": {
           "type": "custom",
           "settings": {
-            "code": "<div class=\"exclusive-savings\">\n<p>Phone Discounts | Package Deals | Open Box | Close Out | Scratch + Dent | Low Monthly Payments | Free Accessories<\/p><p>Exclusive Huge Savings Just One Call Away! Experts Standing By <a href=\"tel:888-667-4986\">888-667-4986<\/a><\/p>\n<\/div>"
+            "code": "<div class=\"exclusive-savings\">\n<p><span style=\"color:#090;\">Phone Discounts<\/span> | Package Deals | <span style=\"color:#090;\">Open Box<\/span> | Close Out | <span style=\"color:#090;\">Scratch + Dent<\/span> | Low Monthly Payments | <span style=\"color:#090;\">Free Accessories<\/span><\/p><p>Exclusive Huge Savings Just One Call Away! Experts Standing By <a href=\"tel:888-667-4986\">888-667-4986<\/a><\/p>\n<\/div>"
           }
         },
         "6d4a00c6-99ed-42dd-bfd5-1b91c8900dc8": {
