@@ -1,4 +1,4 @@
-.collapsibles-wrapper div:first-child{
+.collapsibles-wrapper div.bbq-description:first-child{
   height: 75px;
   visibility: visible;
   overflow: hidden;
