@@ -1,4 +1,4 @@
-.bbq-description{
+.bbq-description:first-child{
   height: 75px;
   visibility: visible;
   overflow: hidden;
