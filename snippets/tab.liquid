@@ -19,11 +19,7 @@
       {{ title }}
       {%- render 'collapsible-icons' -%}
     </button>
-    <div id="Product-content-{{ id }}" style="height: 75px;
-    visibility: visible;
-    overflow: hidden;
-    opacity: 1;
-    margin-top: 15px;"
+    <div id="Product-content-{{ id }}" class="bbq-description"
       class="collapsible-content collapsible-content--all{% if force_open %} is-open{% endif %}"
       {% if force_open %}style="height: auto;"{% endif %}>
       <div class="collapsible-content__inner rte">
