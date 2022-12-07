@@ -1,4 +1,4 @@
-.product-block div.bbq-description:first-child{
+.product-block:first-child > div > .bbq-description{
   height: 75px;
   visibility: visible;
   overflow: hidden;
