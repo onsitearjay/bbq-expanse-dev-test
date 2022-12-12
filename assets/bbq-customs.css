@@ -1,10 +1,10 @@
 
 :root {
   --bbq-green:#090;
-  display: contents;
 }
 .bbq-text-green{
   color: var(--bbq-green);
+  display: contents;
 }
 .jdgm-preview-badge{
   margin-bottom:10px;
