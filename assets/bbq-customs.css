@@ -1,13 +1,26 @@
+<<<<<<< Updated upstream
 .jdgm-widget.jdgm-widget{
   margin-bottom:10px;
 }
 .product-block:first-child > div > .bbq-description{
+=======
+:root {
+  --bbq-green:#090;
+}
+.bbq-text-green{
+  color: var(--bbq-green)
+}
+.jdgm-preview-badge{
+  margin-bottom:10px;
+}
+/*.product-block:first-child > div > .bbq-description{
+>>>>>>> Stashed changes
   height: 75px;
   visibility: visible;
   overflow: hidden;
   opacity: 1;
   margin-top: 15px;
-}
+}*/
 .exclusive-savings{
   text-align:center;
 }
@@ -38,6 +51,12 @@
 }
 .grid-product__price--current{
   font-size:16px;
+}
+#Recommendations-template--16537158713601__recommendations .new-grid .grid-item,
+#VendorProducts-template--16537158713601__more-products-vendor .grid-item,
+#RecentlyViewed-template--16537158713601__recently-viewed .new-grid .grid-item{
+  flex: 0 0 25%;
+  max-width: 100%;
 }
 .grid-product__price--original{
   font-size: 0.8em;

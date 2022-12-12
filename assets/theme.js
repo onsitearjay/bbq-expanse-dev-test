@@ -3935,7 +3935,7 @@ lazySizesConfig.expFactor = 4;
     var classes = {
       hasDropdownClass: 'site-nav--has-dropdown',
       hasSubDropdownClass: 'site-nav__deep-dropdown-trigger',
-      dropdownActive: 'not-focused',
+      dropdownActive: 'is-focused',
       headerCompressed: 'header-wrapper--compressed',
       overlay: 'header-wrapper--overlay',
       overlayStyle: 'is-light'
@@ -8535,7 +8535,7 @@ lazySizesConfig.expFactor = 4;
   
   theme.RecentlyViewed = (function() {
     var init = false;
-    var maxProducts = 7;
+    var maxProducts = 4;
   
     function RecentlyViewed(container) {
       if (!container) {
@@ -8619,7 +8619,7 @@ lazySizesConfig.expFactor = 4;
   })();
   
   theme.VendorProducts = (function() {
-    var maxProducts = 6;
+    var maxProducts = 4;
   
     function VendorProducts(container) {
       if (!container) {
