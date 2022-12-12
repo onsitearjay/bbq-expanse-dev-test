@@ -4,6 +4,7 @@
 }
 .bbq-text-green{
   color: var(--bbq-green);
+  font-weight: 900;
   display: contents;
 }
 .jdgm-preview-badge{
