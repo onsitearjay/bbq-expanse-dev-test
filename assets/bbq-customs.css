@@ -1,6 +1,7 @@
 
 :root {
   --bbq-green:#090;
+  display: contents;
 }
 .bbq-text-green{
   color: var(--bbq-green);
