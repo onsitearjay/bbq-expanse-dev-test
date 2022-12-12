@@ -3,7 +3,7 @@
   --bbq-green:#090;
 }
 .bbq-text-green{
-  color: var(--bbq-green)
+  color: var(--bbq-green);
 }
 .jdgm-preview-badge{
   margin-bottom:10px;
