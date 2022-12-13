@@ -133,13 +133,12 @@
               {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', concierge_install: true, product: product %}
             {% comment %}End automatically added Judge.me widget{% endcomment %}
             </div>  
-            
-            {% if product.metafields.accentuate.manufacturers_downloads %}
             <h4>Manufacturer's Download</h4>
+            
             <div>
-            <img src="{{ product.metafields.accentuate.manufacturers_downloads }}">  
+            {{ product.metafields.accentuate.manufacturers_downloads }}  
             </div>
-            {% endif %}
+            
           </div>
         {%- endif -%}
 
