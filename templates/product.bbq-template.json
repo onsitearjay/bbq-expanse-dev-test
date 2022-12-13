@@ -129,7 +129,7 @@
         "579b50b1-f3cb-4c44-9a61-2f5b25f73897": {
           "type": "custom",
           "settings": {
-            "code": "{% if product.metafields. accentuate.manufacturers_downloads %}\n\n<a href=\"{{ product.metafields. accentuate.manufacturers_downloads }}\">Manufacturer's Download<\/h4>\n\n{% endif %}"
+            "code": "<h4>Manufacturer's Download<\/h4>\n{% if product.metafields. accentuate.manufacturers_downloads %}\n <div>\n   {{ product.metafields. accentuate.manufacturers_downloads }}  \n  <\/div>\n{% endif %}"
           }
         }
       },
