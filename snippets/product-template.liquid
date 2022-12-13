@@ -163,12 +163,6 @@
                         {{ block.settings.page.content }}
                       {% endcapture %}
                       {%- render 'tab', id: tab_id, title: block.settings.title, content: tab_content -%}
-                      <h4>Manufacturer's Download</h4>
-                      {% if product.metafields. accentuate.manufacturers_downloads %}
-                       <div>
-                         {{ product.metafields. accentuate.manufacturers_downloads }}  
-                        </div>
-                      {% endif %}
                     </div>
                   {%- when 'contact' -%}
                     <div class="product-block product-block--tab" {{ block.shopify_attributes }}>
@@ -180,6 +174,12 @@
                       {%- assign id = block.id | append: product.id -%}
                       {%- render 'product-description', id: id, product: product, is_tab: block.settings.is_tab -%}
                     </div>
+                    <h4>Manufacturer's Download</h4>
+                    {% if product.metafields. accentuate.manufacturers_downloads %}
+                    <div>
+                    {{ product.metafields. accentuate.manufacturers_downloads }}  
+                    </div>
+                    {% endif %}
                   {%- when 'price' -%}
                     <div class="product-block product-block--price" {{ block.shopify_attributes }}>
                       <label class="variant__label" for="ProductPrice-{{ section_id }}">
