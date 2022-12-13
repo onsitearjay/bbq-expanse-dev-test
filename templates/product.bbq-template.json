@@ -119,14 +119,6 @@
             "is_tab": true
           }
         },
-        "981a1cc5-294f-4950-8719-0676c489ae1d": {
-          "type": "tab",
-          "settings": {
-            "title": "Shipping information",
-            "content": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.<\/p><p>Ex: Shipping and return policies, size guides, and other common questions.<\/p>",
-            "page": ""
-          }
-        },
         "tab": {
           "type": "tab",
           "settings": {
@@ -151,7 +143,6 @@
       },
       "block_order": [
         "description",
-        "981a1cc5-294f-4950-8719-0676c489ae1d",
         "tab",
         "contact",
         "e473ac02-fdd6-45c8-8fb6-b7488095642d"
