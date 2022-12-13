@@ -163,6 +163,12 @@
                         {{ block.settings.page.content }}
                       {% endcapture %}
                       {%- render 'tab', id: tab_id, title: block.settings.title, content: tab_content -%}
+                      <h4>Manufacturer's Download</h4>
+                      {% if product.metafields. accentuate.manufacturers_downloads %}
+                       <div>
+                         {{ product.metafields. accentuate.manufacturers_downloads }}  
+                        </div>
+                      {% endif %}
                     </div>
                   {%- when 'contact' -%}
                     <div class="product-block product-block--tab" {{ block.shopify_attributes }}>
