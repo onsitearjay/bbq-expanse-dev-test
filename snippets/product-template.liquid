@@ -128,6 +128,11 @@
               video_looping: video_looping,
               video_style: video_style
             -%}
+<div style="text-align:center;">          
+{% comment %}Start automatically added Judge.me widget{% endcomment %}
+  {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', concierge_install: true, product: product %}
+{% comment %}End automatically added Judge.me widget{% endcomment %}
+</div>    
           </div>
         {%- endif -%}
 
@@ -383,7 +388,7 @@
                                 {% when 'phone' %}<span class="icon-phone">{{ block.settings.text }}</span>
                                 {% when 'ribbon' %}<span>{{ block.settings.text }}</span>
                                 {% when 'shield' %}<span>{{ block.settings.text }}</span>
-                                {% when 'tag' %}<span>{{ block.settings.text }}</span>
+                                {% when 'tag' %}<span class="icon-tag">{{ block.settings.text }}</span>
                                 {% when 'truck' %}<span class="icon-truck">{{ block.settings.text }}</span>
                               {% endcase %}
                             </span>
