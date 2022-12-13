@@ -36,8 +36,15 @@
         },
         "6d4a00c6-99ed-42dd-bfd5-1b91c8900dc8": {
           "type": "custom",
+          "disabled": true,
           "settings": {
             "code": "<!-- Custom Metafield-->\n<div id=\"custom-variant-meta\">\n    <div class=\"custom-field-block gasType\">\n        {% if product.metafields.custom.option_one_title != blank %}\n        <p class=\"variantTitle\">{{ product.metafields.custom.option_field_title }}<\/p>\n        <a href=\"{{ product.metafields.custom.option_one_product.value.url }}\" class=\"custom-variant-btn\">\n        {{ product.metafields.custom.option_one_title }}<\/a>\n        {% endif %}\n\n        {% if product.metafields.custom.option_two_title != blank %}\n        <a href=\"{{ product.metafields.custom.option_two_product.value.url }}\" class=\"custom-variant-btn\">\n        {{ product.metafields.custom.option_two_title }} <\/a>\n        {% endif %}\n\n        {% if product.metafields.custom.option_three_title != blank %}\n        <a href=\"{{ product.metafields.custom.option_three_product.value.url }}\" class=\"custom-variant-btn\">\n        {{ product.metafields.custom.option_three_title }} <\/a>\n        {% endif %}\n    <\/div>\n\n    <div class=\"custom-field-block variantSize\">\n        {% if product.metafields.custom.size_option_title != blank %}\n        <p class=\"variantTitle\"> Size <\/p>\n\n        <a href=\"{{ product.metafields.custom.size_related_product.value.url }}\" class=\"custom-variant-btn\">\n            {{ product.metafields.custom.size_option_title }}\n        <span class=\"bbq-text-green\">\n            {% assign diff1 = product.metafields.custom.size_related_product.value.price | minus: product.price %}\n            {% if diff1 < 0 %}\n            <br>Save {{ diff1 | abs | money_with_currency}}\n            {% elsif diff1 > 0 %}\n            <br>Add {{ diff1 | abs | money_with_currency}}\n            {% endif %}\n        <\/span>\n        <\/a>\n        {% endif %}\n\n        {% if product.metafields.custom.size_two_product_title != blank %}\n        <a href=\"{{ product.metafields.custom.size_two_product.value.url }}\" class=\"custom-variant-btn\">\n            {{ product.metafields.custom.size_two_product_title }}\n        <span class=\"bbq-text-green\">\n            {% assign diff2 = product.metafields.custom.size_two_product.value.price | minus: product.price %}\n            {% if diff2 < 0 %}\n                <br>Save {{ diff2 | abs | money_with_currency}}\n            {% elsif diff2 > 0 %}\n                <br>Add {{ diff2 | abs | money_with_currency}}\n            {% endif %}\n        <\/span>\n        <\/a>\n        {% endif %}\n\n        {% if product.metafields.custom.size_three_title != blank %}\n        <a href=\"{{ product.metafields.custom.size_three_product.value.url }}\" class=\"custom-variant-btn\">\n            {{ product.metafields.custom.size_three_title }} \n        <span class=\"bbq-text-green\">\n            {% assign diff3 = product.metafields.custom.size_three_product.value.price | minus: product.price %}\n            {% if diff3 < 0 %}\n                <br>Save {{ diff3 | abs | money_with_currency}}\n            {% elsif diff3 > 0 %}\n                <br>Add {{ diff3 | abs | money_with_currency}}\n            {% endif %}\n        <\/span>\n        <\/a>\n        {% endif %}\n\n        {% if product.metafields.custom.size_four_title != blank %}\n        <a href=\"{{ product.metafields.custom.size_four_product.value.url }}\" class=\"custom-variant-btn\">\n            {{ product.metafields.custom.size_four_title }}\n        <span class=\"bbq-text-green\"> \n            {% assign diff4 = product.metafields.custom.size_four_product.value.price | minus: product.price %}\n            {% if diff4 < 0 %}\n                <br>Save {{ diff4 | abs | money_with_currency}}\n            {% elsif diff4 > 0 %}\n                <br>Add {{ diff4 | abs | money_with_currency}}\n            {% endif %}\n        <\/span>\n        <\/a>\n        {% endif %}\n\n        {% if product.metafields.custom.size_five_title != blank %}\n        <a href=\"{{ product.metafields.custom.size_five_product.value.url }}\" class=\"custom-variant-btn\">\n            {{ product.metafields.custom.size_five_title }} \n        <span class=\"bbq-text-green\">\n            {% assign diff5 = product.metafields.custom.size_five_product.value.price | minus: product.price %}\n            {% if diff5 < 0 %}\n                <br>Save {{ diff5 | abs | money_with_currency}}\n            {% elsif diff5 > 0 %}\n                <br>Add {{ diff5 | abs | money_with_currency}}\n            {% endif %}\n        <\/span>\n        <\/a>\n        {% endif %}\n    <\/div>\n\n    <div class=\"custom-field-block shopOpenBox\">\n        {% if product.metafields.custom.open_box != blank %}\n        <p class=\"variantTitle\"> Shop Open Box <\/p>\n        <a href=\"{{ product.metafields.custom.open_box.value.url }}\" class=\"openBox\">\n            {{ product.metafields.custom.open_box.value.title }}<\/a>\n        {% endif %}\n    <\/div>\n<\/div>"
+          }
+        },
+        "44880ef3-f19a-40d1-acc6-025a4af3db44": {
+          "type": "custom",
+          "settings": {
+            "code": "<p class=\"variantTitle\">{{ product.metafields.bbq.option_title }}<\/p>\n<ul>\n{% for ingredient in product.metafields.bbq.option_type %}\n<li>\n<a href=\"{{ product.metafields.bbq.option_related_product[forloop.index0] }}\">{{ product.metafields.bbq.option_type[forloop.index0] }}<\/a>\n<\/li>\n{% endfor %}\n<\/ul>"
           }
         },
         "variant_picker": {
@@ -82,6 +89,7 @@
         "price",
         "a9b9159f-7fe2-4149-bf31-0833258247c1",
         "6d4a00c6-99ed-42dd-bfd5-1b91c8900dc8",
+        "44880ef3-f19a-40d1-acc6-025a4af3db44",
         "variant_picker",
         "sales_point2",
         "sales_point3",
@@ -111,6 +119,14 @@
             "is_tab": true
           }
         },
+        "981a1cc5-294f-4950-8719-0676c489ae1d": {
+          "type": "tab",
+          "settings": {
+            "title": "Shipping information",
+            "content": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.<\/p><p>Ex: Shipping and return policies, size guides, and other common questions.<\/p>",
+            "page": ""
+          }
+        },
         "tab": {
           "type": "tab",
           "settings": {
@@ -135,6 +151,7 @@
       },
       "block_order": [
         "description",
+        "981a1cc5-294f-4950-8719-0676c489ae1d",
         "tab",
         "contact",
         "e473ac02-fdd6-45c8-8fb6-b7488095642d"
