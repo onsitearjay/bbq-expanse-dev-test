@@ -129,7 +129,7 @@
         "e473ac02-fdd6-45c8-8fb6-b7488095642d": {
           "type": "custom",
           "settings": {
-            "code": "<h4>Manufacturer's Download<\/h4>\n<div>\n<a href=\"{{ product.metafields.accentuate.manufacturers_downloads }}\">Dowload<\/a>  \n<\/div>"
+            "code": "<h4>Manufacturer's Download<\/h4>\n<div>\n<a href=\"{{ product.metafields.accentuate.manufacturers_downloads }}\">Download<\/a>  \n<\/div>"
           }
         }
       },
