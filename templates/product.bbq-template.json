@@ -129,7 +129,7 @@
         "579b50b1-f3cb-4c44-9a61-2f5b25f73897": {
           "type": "custom",
           "settings": {
-            "code": "<h4>Custom code block<\/h4><p>Use this advanced section to add custom HTML, app scripts, or liquid.<\/p>"
+            "code": "<h4>Manufacturer's Download<\/h4>\n{% if product.metafields.accentuate.manufacturers_downloads %}\n <div>\n   {{ product.metafields.accentuate.manufacturers_downloads }}  \n  <\/div>\n{% endif %}"
           }
         }
       },
