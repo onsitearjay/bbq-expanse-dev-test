@@ -44,7 +44,7 @@
         "44880ef3-f19a-40d1-acc6-025a4af3db44": {
           "type": "custom",
           "settings": {
-            "code": "<p class=\"variantTitle\">{{ product.metafields.bbq.option_title }}<\/p>\n<ul>\n{% for option in product.metafields.bbq.option_type %}\n<li>\n<a href=\"{{ product.metafields.bbq.option_related_product[forloop.index0] }}\">{{ product.metafields.bbq.option_type[forloop.index0] }}<\/a>\n<\/li>\n{% endfor %}\n<\/ul>"
+            "code": "<p class=\"variantTitle\">{{ product.metafields.bbq.option_title }}<\/p>\n<ul>\n{% for option in product.metafields.bbq.option_type %}\n<li>\n<a class=\"custom-variant-btn\" href=\"{{ product.metafields.bbq.option_related_product[forloop.index0] }}\">{{ product.metafields.bbq.option_type[forloop.index0] }}<\/a>\n<\/li>\n{% endfor %}\n<\/ul>"
           }
         },
         "variant_picker": {
