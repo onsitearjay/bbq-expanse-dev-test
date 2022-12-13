@@ -49,11 +49,6 @@
             "color_swatches": true
           }
         },
-        "2663495f-63c8-4f74-8b8d-4f83842f2678": {
-          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-          }
-        },
         "sales_point2": {
           "type": "sales_point",
           "settings": {
@@ -88,7 +83,6 @@
         "a9b9159f-7fe2-4149-bf31-0833258247c1",
         "6d4a00c6-99ed-42dd-bfd5-1b91c8900dc8",
         "variant_picker",
-        "2663495f-63c8-4f74-8b8d-4f83842f2678",
         "sales_point2",
         "sales_point3",
         "inventory_status",
@@ -131,12 +125,19 @@
             "title": "Ask a question",
             "phone": false
           }
+        },
+        "579b50b1-f3cb-4c44-9a61-2f5b25f73897": {
+          "type": "custom",
+          "settings": {
+            "code": "<h4>Custom code block<\/h4><p>Use this advanced section to add custom HTML, app scripts, or liquid.<\/p>"
+          }
         }
       },
       "block_order": [
         "description",
         "tab",
-        "contact"
+        "contact",
+        "579b50b1-f3cb-4c44-9a61-2f5b25f73897"
       ],
       "settings": {
         "max_width": false
