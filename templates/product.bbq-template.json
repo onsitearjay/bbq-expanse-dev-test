@@ -129,7 +129,7 @@
         "e473ac02-fdd6-45c8-8fb6-b7488095642d": {
           "type": "custom",
           "settings": {
-            "code": "<h4>Manufacturer's Download<\/h4>\n<div>\n{% for download in product.metafields.bbq.file_title %} \n<span>{{product.metafields.bbq.file_title}}<\/span>\n{% endfor %}\n{% for download in product.metafields.bbq.file_reference %}  \n<a href=\"{{ product.metafields.bbq.file_reference }}\" target=\"_blank\">Download PDF<\/a>  \n<\/div>\n{% endfor %}"
+            "code": "<h4>Manufacturer's Download<\/h4>\n<div>\n{% for download in product.metafields.bbq.file_title %} \n<span>{{product.metafields.bbq.file_title[forloop.index0]}}<\/span>\n{% endfor %}\n{% for download in product.metafields.bbq.file_reference %}  \n<a href=\"{{ product.metafields.bbq.file_reference[forloop.index0] }}\" target=\"_blank\">Download PDF<\/a>  \n<\/div>\n{% endfor %}"
           }
         }
       },
