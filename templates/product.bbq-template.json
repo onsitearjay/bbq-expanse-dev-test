@@ -125,12 +125,19 @@
             "title": "Ask a question",
             "phone": false
           }
+        },
+        "e473ac02-fdd6-45c8-8fb6-b7488095642d": {
+          "type": "custom",
+          "settings": {
+            "code": "<h4>Manufacturer's Download<\/h4>\n            \n            <div>\n            <a href=\"{{ product.metafields.accentuate.manufacturers_downloads }}\">Dowload<\/a>  \n            <\/div>"
+          }
         }
       },
       "block_order": [
         "description",
         "tab",
-        "contact"
+        "contact",
+        "e473ac02-fdd6-45c8-8fb6-b7488095642d"
       ],
       "settings": {
         "max_width": false
