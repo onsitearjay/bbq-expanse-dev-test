@@ -50,7 +50,7 @@
         "de053079-8bb3-4fec-8b07-bce05221c8af": {
           "type": "custom",
           "settings": {
-            "code": "<p class=\"variantTitle\"> Size <\/p>\n   <div class=\"custom-field-block variantSize\"> \n    {% for option in product.metafields.bbq.option_type %}\n    <a href=\"{{ product.metafields.bbq.related_product.value.url[forloop.index0] }}\" class=\"custom-variant-btn\">\n    <span class=\"bbq-size-short-desc\">\n        {{ product.metafields.bbq.size_title[forloop.index0] }}\n    <\/span>\n    <\/a>\n    {% endfor %}\n    <\/div>"
+            "code": "<p class=\"variantTitle\"> Size <\/p>\n<div class=\"custom-field-block variantSize\"> \n    {% for option in product.metafields.bbq.option_type %}\n    <a href=\"{{ product.metafields.bbq.related_product[forloop.index0] }}\" class=\"custom-variant-btn\">\n    <span class=\"bbq-size-short-desc\">\n        {{ product.metafields.bbq.size_title[forloop.index0] }}\n    <\/span>\n    <\/a>\n    {% endfor %}\n<\/div>"
           }
         },
         "variant_picker": {
