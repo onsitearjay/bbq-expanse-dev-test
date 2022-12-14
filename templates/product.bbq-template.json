@@ -47,6 +47,12 @@
             "code": "<p class=\"variantTitle\">{{ product.metafields.bbq.option_title }}<\/p>\n\n{% for option in product.metafields.bbq.option_type %}\n<a class=\"custom-variant-btn\" href=\"{{ product.metafields.bbq.option_related_product[forloop.index0] }}\">{{ product.metafields.bbq.option_type[forloop.index0] }}<\/a>\n{% endfor %}"
           }
         },
+        "de053079-8bb3-4fec-8b07-bce05221c8af": {
+          "type": "custom",
+          "settings": {
+            "code": "<p class=\"variantTitle\"> Size <\/p>\n    <div class=\"custom-field-block variantSize\">\n        {% if product.metafields.custom.size_option_title != blank %}\n        <a href=\"{{ product.metafields.custom.size_related_product.value.url }}\" class=\"custom-variant-btn\">\n        <span class=\"bbq-size-short-desc\">\n            {{ product.metafields.custom.size_option_title }}\n        <\/span>\n        <span class=\"bbq-text-green\">\n            {% assign diff1 = product.metafields.custom.size_related_product.value.price | minus: product.price %}\n            {% if diff1 < 0 %}\n            Save {{ diff1 | abs | money_with_currency}}\n            {% elsif diff1 > 0 %}\n            Add {{ diff1 | abs | money_with_currency}}\n            {% endif %}\n        <\/span>\n        <\/a>\n        {% endif %}"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -90,6 +96,7 @@
         "a9b9159f-7fe2-4149-bf31-0833258247c1",
         "6d4a00c6-99ed-42dd-bfd5-1b91c8900dc8",
         "44880ef3-f19a-40d1-acc6-025a4af3db44",
+        "de053079-8bb3-4fec-8b07-bce05221c8af",
         "variant_picker",
         "sales_point2",
         "sales_point3",
