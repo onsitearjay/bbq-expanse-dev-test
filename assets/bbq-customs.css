@@ -17,7 +17,7 @@
 .desc-wrapper {
   position: relative;
 }
-.content {
+.desc-content {
   position: relative;
   max-height: 4.5em;
   overflow: hidden;
