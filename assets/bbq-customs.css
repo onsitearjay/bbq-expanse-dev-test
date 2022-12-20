@@ -11,13 +11,17 @@
 }
 .show, .hide {
   position: absolute;
-  bottom: -2em;
+  bottom: -3em;
   z-index: 100;
 }
 .desc-wrapper {
   position: relative;
 }
-
+.desc-content {
+  position: relative;
+  max-height: 4.5em;
+  overflow: hidden;
+}
 .hide {display: none;}
 .show:target {display: none;}
 .show:target ~ .hide {display: block;}
@@ -26,11 +30,6 @@
 }
 .show:target ~ .clip {
   margin-top: 0;
-}
-.desc-content {
-  position: relative;
-  max-height: 4.5em;
-  overflow: hidden;
 }
 .collection-hero{
   height:200px;
