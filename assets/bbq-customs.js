@@ -1,13 +1,18 @@
-	jQuery(document).ready(function($){
-		$('.clipped-text').each(function(){
-			var unclipBtn = $(this).closest('.product-block').find('.unclip');
-			unclipBtn.click(function(e){
-				e.preventDefault();
-				$(this).closest('.product-block').find('.clipped-text').css('max-height', 'none');
-				$(this).hide();
-			});
-		});
-	});
+$(".show-more a").on("click", function() {
+    var $this = $(this); 
+    var $content = $this.parent().prev("div.content");
+    var linkText = $this.text().toUpperCase();    
+    
+    if(linkText === "SHOW MORE"){
+        linkText = "Show less";
+        $content.switchClass("hideContent", "showContent", 400);
+    } else {
+        linkText = "Show more";
+        $content.switchClass("showContent", "hideContent", 400);
+    };
+
+    $this.text(linkText);
+});
 
 document.querySelectorAll('.custom-variant-btn').forEach(link => {
   if(link.href === window.location.href){

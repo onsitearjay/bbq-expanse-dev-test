@@ -123,7 +123,7 @@
         "d5636319-b1ba-4b4f-8008-bce914237531": {
           "type": "custom",
           "settings": {
-            "code": "{%- if product.description !=blank -%}\n<h4 class=\"bbq-prod-details-title\">Description<\/h4>\n<div class=\"clipped-text\">\n{{ product.description }}\n<\/div>\n<span class=\"unclip\">Show more...<\/span>\n{%- endif -%}"
+            "code": "{%- if product.description !=blank -%}\n<div class=\"desc-wrapper\">\n\n<h4 class=\"bbq-prod-details-title\">Description<\/h4>\n\n<div class=\"content hideContent\">\n{{ product.description }}\n<\/div>\n\n<div class=\"show-more\">\n<a href=\"#\">Show more...<\/a>\n<\/div>\n<\/div>\n{%- endif -%}"
           }
         },
         "description": {
