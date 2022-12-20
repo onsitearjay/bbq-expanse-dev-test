@@ -1,7 +1,6 @@
 jQuery(document).ready(function($){
         $('.unclip').hide()
-});
-
+})
 
 document.querySelectorAll('.custom-variant-btn').forEach(link => {
   if(link.href === window.location.href){
