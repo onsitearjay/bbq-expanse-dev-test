@@ -132,6 +132,12 @@
             "is_tab": true
           }
         },
+        "e473ac02-fdd6-45c8-8fb6-b7488095642d": {
+          "type": "custom",
+          "settings": {
+            "code": "<div class=\"collapsibles-wrapper\">\n    <button type=\"button\"\n      class=\"label collapsible-trigger collapsible-trigger-btn collapsible-trigger-btn--borders collapsible--auto-height{% if force_open %} is-open{% endif %}\" aria-controls=\"Product-content-{{ id }}\"\n      {% if force_open %}aria-expanded=\"true\"{% endif %}>\n      Manufacturer's Download\n      {%- render 'collapsible-icons' -%}\n    <\/button>\n    <div id=\"Product-content-{{ id }}\"\n      class=\"bbq-description collapsible-content collapsible-content--all{% if force_open %} is-open{% endif %}\"\n      {% if force_open %}style=\"height: auto;\"{% endif %}>\n      <div class=\"collapsible-content__inner rte\">\n        {% for filename in product.metafields.bbq.file_name %} \n<div>\n<a href=\"{{ product.metafields.bbq.upload_file[forloop.index0] }}\" target=\"_blank\"> {{ product.metafields.bbq.file_name[forloop.index0] }}<\/a> \n<\/div>\n{% endfor %}\n      <\/div>\n    <\/div>\n  <\/div>\n\n{% comment %}\n<h4 style=\"font-family:Harmonia Sans;font-size: 19px; font-weight:700;\">Manufacturer's Download<\/h4>\n\n{% for filename in product.metafields.bbq.file_name %} \n<div>\n<a href=\"{{ product.metafields.bbq.upload_file[forloop.index0] }}\" target=\"_blank\"> {{ product.metafields.bbq.file_name[forloop.index0] }}<\/a> \n<\/div>\n{% endfor %}\n{% endcomment %}"
+          }
+        },
         "tab": {
           "type": "tab",
           "settings": {
@@ -146,20 +152,14 @@
             "title": "Ask a question",
             "phone": false
           }
-        },
-        "e473ac02-fdd6-45c8-8fb6-b7488095642d": {
-          "type": "custom",
-          "settings": {
-            "code": "<h4 style=\"font-family:Harmonia Sans;font-size: 19px; font-weight:700;\">Manufacturer's Download<\/h4>\n\n{% for filename in product.metafields.bbq.file_name %} \n<div>\n<a href=\"{{ product.metafields.bbq.upload_file[forloop.index0] }}\" target=\"_blank\"> {{ product.metafields.bbq.file_name[forloop.index0] }}<\/a> \n<\/div>\n{% endfor %}"
-          }
         }
       },
       "block_order": [
         "d5636319-b1ba-4b4f-8008-bce914237531",
         "description",
+        "e473ac02-fdd6-45c8-8fb6-b7488095642d",
         "tab",
-        "contact",
-        "e473ac02-fdd6-45c8-8fb6-b7488095642d"
+        "contact"
       ],
       "settings": {
         "max_width": false
