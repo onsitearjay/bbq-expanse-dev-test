@@ -120,6 +120,12 @@
     "sub": {
       "type": "product-full-width",
       "blocks": {
+        "d5636319-b1ba-4b4f-8008-bce914237531": {
+          "type": "custom",
+          "settings": {
+            "code": "{%- if product.description !=blank -%}\n<h4 class=\"bbq-prod-details-title\">Description<\/h4>\n        {{ product.description }}\n  <\/div>\n{%- endif -%}"
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -149,6 +155,7 @@
         }
       },
       "block_order": [
+        "d5636319-b1ba-4b4f-8008-bce914237531",
         "description",
         "tab",
         "contact",
