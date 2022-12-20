@@ -1,5 +1,5 @@
-jQuery(document).ready(function($){
-        $(".unclip").hide();
+jQuery(document).ready(function(){
+        jQuery(".unclip").hide();
 });
 
 
