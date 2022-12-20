@@ -149,6 +149,7 @@
         },
         "description": {
           "type": "description",
+          "disabled": true,
           "settings": {
             "is_tab": true
           }
