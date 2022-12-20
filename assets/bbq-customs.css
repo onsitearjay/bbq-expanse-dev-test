@@ -6,30 +6,12 @@
   font-size: 19px;
   font-weight:700;
 }
-.clp-btn {
-  text-decoration: none;
-}
-.show, .hide {
-  position: absolute;
-  bottom: -3em;
-  z-index: 100;
-}
-.desc-wrapper {
-  position: relative;
-}
-.desc-content {
-  position: relative;
+.clipped-text{
   max-height: 4.5em;
   overflow: hidden;
 }
-.hide {display: none;}
-.show:target {display: none;}
-.show:target ~ .hide {display: block;}
-.show:target ~ .desc-content {
-   max-height: 2000px; 
-}
-.show:target ~ .clip {
-  margin-top: 0;
+.unclip{
+  display: block;
 }
 .collection-hero{
   height:200px;
