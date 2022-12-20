@@ -25,7 +25,7 @@
 .hide {display: none;}
 .show:target {display: none;}
 .show:target ~ .hide {display: block;}
-.show:target ~ .content {
+.show:target ~ .desc-content {
    max-height: 2000px; 
 }
 .show:target ~ .clip {
