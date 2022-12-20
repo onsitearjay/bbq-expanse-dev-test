@@ -6,7 +6,7 @@
   font-size: 19px;
   font-weight:700;
 }
-.clip-text{
+.clipped-text{
   max-height: 4.5em;
   overflow: hidden;
 }
