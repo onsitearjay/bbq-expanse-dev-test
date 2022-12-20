@@ -1,6 +1,11 @@
 :root {
   --bbq-green:#090;
 }
+.bbq-prod-details-title{
+  font-family:Harmonia Sans;
+  font-size: 19px;
+  font-weight:700;
+}
 .collection-hero{
   height:200px;
 }
