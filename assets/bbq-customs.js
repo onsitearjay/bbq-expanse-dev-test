@@ -1,8 +1,4 @@
-jQuery(document).ready(function($){
-        $(".unclip").click(function(){
-            alert("clicked");
-        });
-});
+
 
 document.querySelectorAll('.custom-variant-btn').forEach(link => {
   if(link.href === window.location.href){
