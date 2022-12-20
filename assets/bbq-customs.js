@@ -1,6 +1,4 @@
-jQuery(document).ready(function($){
-        $('.unclip').hide()
-});
+document.getElementsByClassName("clipped-text").style.display = "none";
 
 document.querySelectorAll('.custom-variant-btn').forEach(link => {
   if(link.href === window.location.href){
