@@ -1,6 +1,5 @@
-jQuery(document).ready(function(){
-        jQuery(".unclip").hide();
-});
+
+$(".unclip").hide();
 
 
 document.querySelectorAll('.custom-variant-btn').forEach(link => {
