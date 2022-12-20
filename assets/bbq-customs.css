@@ -11,7 +11,7 @@
 }
 .show, .hide {
   position: absolute;
-  bottom: -3em;
+  bottom: -2em;
   z-index: 100;
 }
 .desc-wrapper {
