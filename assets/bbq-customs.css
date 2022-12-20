@@ -7,7 +7,8 @@
   font-weight:700;
 }
 .clip-text{
-  
+  max-height: 6em;
+  overflow: hidden;
 }
 .collection-hero{
   height:200px;
