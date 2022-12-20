@@ -1,9 +1,9 @@
 	jQuery(document).ready(function($){
 		$('.clipped-text').each(function(){
-			var unclipBtn = $(this).find('.unclip');
+			var unclipBtn = $(this).closest('.product-block').find('.unclip');
 			unclipBtn.click(function(e){
 				e.preventDefault();
-				$(this).find('.clipped-text').css('max-height', 'none');
+				$(this).closest('.product-block').find('.clipped-text').css('max-height', 'none');
 				$(this).hide();
 			});
 		});
