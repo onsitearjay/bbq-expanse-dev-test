@@ -1,3 +1,14 @@
+	jQuery(document).ready(function($){
+		$('.clipped-text').each(function(){
+			var unclipBtn = $(this).find('.unclip');
+			unclipBtn.click(function(e){
+				e.preventDefault();
+				$(this).find('.clipped-text').css('max-height', 'none');
+				$(this).hide();
+			});
+		});
+	});
+
 document.querySelectorAll('.custom-variant-btn').forEach(link => {
   if(link.href === window.location.href){
     link.setAttribute('aria-current', 'activePage')
