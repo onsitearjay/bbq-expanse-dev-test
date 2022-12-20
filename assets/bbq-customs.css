@@ -8,11 +8,9 @@
 }
 .hideContent {
 overflow: hidden;
-line-height: 1em;
-height: 2em;
+height: 4.5em;
 }
 .showContent {
-line-height: 1em;
 height: auto;
 }
 .showContent{
