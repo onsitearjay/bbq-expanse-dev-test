@@ -6,12 +6,17 @@
   font-size: 19px;
   font-weight:700;
 }
-.clipped-text{
-  max-height: 4.5em;
-  overflow: hidden;
+.hideContent {
+overflow: hidden;
+line-height: 1em;
+height: 2em;
 }
-.unclip{
-  display: block;
+.showContent {
+line-height: 1em;
+height: auto;
+}
+.showContent{
+height: auto;
 }
 .collection-hero{
   height:200px;
