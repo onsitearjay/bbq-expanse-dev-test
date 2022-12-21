@@ -115,12 +115,12 @@
 
 <script language="javascript">
   function SelectRedirect(){
-    switch(document.getElementsById('s1').value)
+  switch(document.getElementById('s1').value)
     { 
     {% for option in product.metafields.bbq.size_title %}
-      case "{{ product.metafields.bbq.size_title[forloop.index0] }}":
-      window.location="{{ product.metafields.bbq.related_product[forloop.index0] }}";
-      break;
+    case "{{ product.metafields.bbq.size_title[forloop.index0] }}":
+    window.location="{{ product.metafields.bbq.related_product[forloop.index0] }}";
+    break;
     {% endfor %}
     default:
     window.location="../";
