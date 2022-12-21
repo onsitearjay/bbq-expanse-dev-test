@@ -1,21 +1,17 @@
 :root {
   --bbq-green:#090;
 }
-/* The container must be positioned relative: */
+/* Variant Dropdown */
 .custom-select {
   position: relative;
   font-family: Arial;
 }
-
 .custom-select select {
-  display: none; /*hide original SELECT element: */
+  display: none;
 }
-
 .select-selected {
   background-color: DodgerBlue;
 }
-
-/* Style the arrow inside the select element: */
 .select-selected:after {
   position: absolute;
   content: "";
@@ -26,14 +22,10 @@
   border: 6px solid transparent;
   border-color: #fff transparent transparent transparent;
 }
-
-/* Point the arrow upwards when the select box is open (active): */
 .select-selected.select-arrow-active:after {
   border-color: transparent transparent #fff transparent;
   top: 7px;
 }
-
-/* style the items (options), including the selected item: */
 .select-items div,.select-selected {
   color: #ffffff;
   padding: 8px 16px;
@@ -41,25 +33,21 @@
   border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
   cursor: pointer;
 }
-
-/* Style items (options): */
 .select-items {
   position: absolute;
-  background-color: DodgerBlue;
+  background-color: #000;
   top: 100%;
   left: 0;
   right: 0;
   z-index: 99;
 }
-
-/* Hide the items when the select box is closed: */
 .select-hide {
   display: none;
 }
-
 .select-items div:hover, .same-as-selected {
   background-color: rgba(0, 0, 0, 0.1);
-}
+} /* Variant Dropdown end */
+
 .bbq-prod-details-title{
   font-family:Harmonia Sans;
   font-size: 19px;
