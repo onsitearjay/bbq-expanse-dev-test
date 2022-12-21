@@ -112,6 +112,25 @@
   {% render 'shogun-head' %}
   {% render 'minmaxify-head' %}
   {% render 'judgeme_core' %}
+
+  <script language="javascript">
+    function SelectRedirect(){
+        switch(document.getElementById('s1').value)
+    { 
+    {% for option in product.metafields.bbq.size_title %}
+    case "{{ product.metafields.bbq.size_title[forloop.index0] }}":
+    window.location="{{ product.metafields.bbq.related_product[forloop.index0] }}";
+    {% endfor %} 
+    break;
+    
+    /// Can be extended to other different selections of SubCategory //////
+    default:
+    window.location="../"; // if no selection matches then redirected to home page
+    break;
+    }// end of switch 
+    }
+    ////////////////// 
+</script>
 </head>
 
 <body class="template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}{% if request.path == '/challenge' %} template-challange{% endif %}" data-transitions="{{ settings.animate_page_transitions }}" data-button_style="{{ settings.button_style }}" data-edges="{{ settings.roundness }}" data-type_header_capitalize="{{ settings.type_header_capitalize }}" data-swatch_style="{{ settings.swatch_style }}" data-grid-style="{{ settings.product_grid_style }}">
