@@ -94,20 +94,3 @@ function closeAllSelect(elmnt) {
 /* If the user clicks anywhere outside the select box,
 then close all select boxes: */
 document.addEventListener("click", closeAllSelect);
-
-//dropdown select redirect
-function SelectRedirect(){
-    switch(document.getElementById('s1').value)
-{ 
-  {% for option in product.metafields.bbq.size_title %}
-    case "{{ product.metafields.bbq.size_title[forloop.index0] }}":
-    window.location="{{ product.metafields.bbq.related_product[forloop.index0] }}";
-  {% endfor %} 
-break;
-
-/// Can be extended to other different selections of SubCategory //////
-default:
-window.location="../"; // if no selection matches then redirected to home page
-break;
-}// end of switch 
-}
