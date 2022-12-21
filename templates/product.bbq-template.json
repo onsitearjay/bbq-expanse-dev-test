@@ -62,7 +62,7 @@
         "948419f6-5159-4d16-8ea7-16760e4199ee": {
           "type": "custom",
           "settings": {
-            "code": "<p class=\"variantTitle\"> Size <\/p>\n<div class=\"custom-select\" style=\"width:100%;\">\n<select id=\"s1\" name=\"section\" onChange=\"SelectRedirect();\">\n    {% for option in product.metafields.bbq.size_title %}\n        <option value=\"{{ product.metafields.bbq.size_title[forloop.index0] }}\">\n                    {{ product.metafields.bbq.size_title[forloop.index0] }}\n        <\/option>\n    {% endfor %} \n<\/select>\n<\/div>"
+            "code": "<p class=\"variantTitle\"> Size <\/p>\n\n<select id=\"s1\" name=\"section\" onChange=\"SelectRedirect();\">\n    {% for option in product.metafields.bbq.size_title %}\n        <option value=\"{{ product.metafields.bbq.size_title[forloop.index0] }}\">\n                    {{ product.metafields.bbq.size_title[forloop.index0] }}\n        <\/option>\n    {% endfor %} \n<\/select>"
           }
         },
         "variant_picker": {
