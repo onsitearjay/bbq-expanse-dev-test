@@ -101,7 +101,7 @@ function SelectRedirect(){
 { 
   {% for option in product.metafields.bbq.size_title %}
     case "{{ product.metafields.bbq.size_title[forloop.index0] }}":
-    window.location="{{ product.metafields.bbq.related_product.links[forloop.index0] }}";
+    window.location="{{ product.metafields.bbq.related_product[forloop.index0] }}";
   {% endfor %} 
 break;
 
