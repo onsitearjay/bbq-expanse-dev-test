@@ -59,6 +59,12 @@
             "code": "<p class=\"variantTitle\"> Size <\/p>\n<div class=\"custom-select\" style=\"width:100%;\">\n<select id=\"size\">\n    {% for option in product.metafields.bbq.size_title %}\n        <option value=\"0\">\n            <a href=\"{{ product.metafields.bbq.related_product[forloop.index0] }}\" class=\"custom-variant-btn\">\n                <span class=\"bbq-size-short-desc\">\n                    {{ product.metafields.bbq.size_title[forloop.index0] }}\n                <\/span>\n                <span class=\"bbq-text-green\">\n                    {% assign diff1 = product.metafields.bbq.related_product.value.price | minus: product.price %}\n                    {% if diff1 < 0 %}\n                    Save {{ diff1 | abs | money_with_currency}}\n                    {% elsif diff1 > 0 %}\n                    Add {{ diff1 | abs | money_with_currency}}\n                    {% endif %}\n                <\/span>\n            <\/a>\n        <\/option>\n    {% endfor %} \n<\/select>\n<\/div>"
           }
         },
+        "948419f6-5159-4d16-8ea7-16760e4199ee": {
+          "type": "custom",
+          "settings": {
+            "code": "<script language=\"javascript\">\n    function SelectRedirect(){\n    \/\/ ON selection of section this function will work\n    \/\/alert( document.getElementById('s1').value);\n    \n    switch(document.getElementById('s1').value)\n    {\n    case \"{{ product.metafields.bbq.size_title}}\":\n    window.location=\"{{ product.metafields.bbq.related_product}}\";\n    break;\n    \n    \/\/\/ Can be extended to other different selections of SubCategory \/\/\/\/\/\/\n    default:\n    window.location=\"..\/\"; \/\/ if no selection matches then redirected to home page\n    break;\n    }\/\/ end of switch \n    }\n    \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ \n<\/script>\n\n<select id=\"s1\" NAME=\"section\" onChange=\"SelectRedirect();\">\n    {% for option in product.metafields.bbq.size_title %}\n        <option value=\"0\">\n            <a href=\"{{ product.metafields.bbq.related_product[forloop.index0] }}\" class=\"custom-variant-btn\">\n                <span class=\"bbq-size-short-desc\">\n                    {{ product.metafields.bbq.size_title[forloop.index0] }}\n                <\/span>\n                <span class=\"bbq-text-green\">\n                    {% assign diff1 = product.metafields.bbq.related_product.value.price | minus: product.price %}\n                    {% if diff1 < 0 %}\n                    Save {{ diff1 | abs | money_with_currency}}\n                    {% elsif diff1 > 0 %}\n                    Add {{ diff1 | abs | money_with_currency}}\n                    {% endif %}\n                <\/span>\n            <\/a>\n        <\/option>\n    {% endfor %} \n<\/select>"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -104,6 +110,7 @@
         "44880ef3-f19a-40d1-acc6-025a4af3db44",
         "de053079-8bb3-4fec-8b07-bce05221c8af",
         "9b8e058c-44b0-4ed0-a873-eba443923274",
+        "948419f6-5159-4d16-8ea7-16760e4199ee",
         "variant_picker",
         "sales_point2",
         "sales_point3",
