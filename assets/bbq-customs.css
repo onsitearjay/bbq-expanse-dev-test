@@ -15,7 +15,7 @@
 }
 #desc-content.open {
 	max-height: 1000px;
-	transition: max-height 0.3s;
+	transition: max-height 0.5s;
 }
 #desc-show-more { 
   font-weight:900;
