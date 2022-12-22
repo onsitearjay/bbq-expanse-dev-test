@@ -9,12 +9,6 @@
 }
 /*description show more*/
 #desc-content {
-	background: #fff;
-	padding: 20px;
-	font-family: Sans-Serif;
-	font-size: 18px;
-	color: #444;
-	margin: 0 auto;
 	max-height: 4.5em;
 	overflow: hidden;
 	transition: max-height 0.7s;
