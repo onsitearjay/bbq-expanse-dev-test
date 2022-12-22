@@ -18,15 +18,13 @@
 	transition: max-height 0.7s;
 }
 #desc-show-more {
-  width: 20%;
-	background: #1594e5;
-	color: #fff;
-	font-family: sans-serif;
-	display: block;
-	cursor: pointer;
-	text-align: center;
-	padding: 15px;
-  margin: 10px auto;
+width: 20%;
+color: #fff;
+display: block;
+cursor: pointer;
+text-align: center;
+padding: 15px;
+margin: 10px auto;
 }
 
 .collection-hero{
