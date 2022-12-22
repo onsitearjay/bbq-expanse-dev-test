@@ -21,11 +21,11 @@ button.onclick = function () {
 	if(content.className == "open"){
 		//shrink the box
 		content.className = "";
-		button.innerHTML = "SHOW MORE";
+		button.innerHTML = "Read more";
 	} else {
 		//expand the box
 		content.className = "open";
-		button.innerHTML = "SHOW LESS";
+		button.innerHTML = "Read less";
 	}
 
 };
