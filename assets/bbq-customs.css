@@ -11,11 +11,11 @@
 #desc-content {
 	max-height: 4.5em;
 	overflow: hidden;
-	transition: max-height 0.7s;
+	transition: max-height 0.3s;
 }
 #desc-content.open {
 	max-height: 1000px;
-	transition: max-height 0.7s;
+	transition: max-height 0.3s;
 }
 #desc-show-more { 
   font-weight:900;
