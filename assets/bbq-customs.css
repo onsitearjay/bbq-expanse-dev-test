@@ -7,13 +7,35 @@
   font-size: 19px;
   font-weight:700;
 }
-#clipped-text{
-  max-height: 4.5em;
-  overflow: hidden;
+/*description show more*/
+#desc-content {
+	width: 50%;
+	background: #fff;
+	padding: 20px;
+	font-family: Sans-Serif;
+	font-size: 18px;
+	color: #444;
+	margin: 0 auto;
+	max-height: 4.5em;
+	overflow: hidden;
+	transition: max-height 0.7s;
 }
-.unclip{
-  display: block;
+#desc-content.open {
+	max-height: 1000px;
+	transition: max-height 0.7s;
 }
+#desc-show-more {
+  width: 20%;
+	background: #1594e5;
+	color: #fff;
+	font-family: sans-serif;
+	display: block;
+	cursor: pointer;
+	text-align: center;
+	padding: 15px;
+  margin: 10px auto;
+}
+
 .collection-hero{
   height:200px;
 }
