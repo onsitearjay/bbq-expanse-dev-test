@@ -17,11 +17,10 @@
 	max-height: 1000px;
 	transition: max-height 0.7s;
 }
-#desc-show-more {
-font-weight:900;
-color: #000;
-display: block;
-cursor: pointer;
+#desc-show-more { 
+  font-weight:900;
+  color: #000;
+  cursor: pointer;
 }
 
 .collection-hero{
