@@ -188,7 +188,7 @@
         "template--14912652017743__cdf2246f-9cce-4bfc-8ae9-6b5eb30e9acd-1672368930c68ec30c-1": {
           "type": "liquid",
           "settings": {
-            "code": "<h2 class=\"h3\">{{ product.metafields.bbq.fbi_heading }}<\/h2>\n<p>\n<a href=\"{{ product.metafields.bbq.fbi_related_product.value.url }}\"> \n  <img src=\"{{ product.metafields.bbq.fbi_related_product.value | file_url }}\" >\n  Click here\n<\/a>\n<\/p>",
+            "code": "<h2 class=\"h3\">{{ product.metafields.bbq.fbi_heading }}<\/h2>\n<p>\n<a href=\"{{ product.metafields.bbq.fbi_related_product.value.url }}\"> \n  <img src=\"{{ product.metafields.bbq.fbi_related_product }}\" >\n  Click here\n<\/a>\n<\/p>",
             "width": "100%",
             "alignment": "center"
           }
