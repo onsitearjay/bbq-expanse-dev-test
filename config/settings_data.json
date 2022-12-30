@@ -135,6 +135,7 @@
         "blocks": {
           "footer-promotions-0": {
             "type": "promotion",
+            "disabled": true,
             "settings": {
               "enable_image": true,
               "title": "Site-wide promotion",
@@ -146,6 +147,7 @@
           },
           "footer-promotions-1": {
             "type": "promotion",
+            "disabled": true,
             "settings": {
               "enable_image": true,
               "title": "Site-wide promotion",
@@ -157,6 +159,7 @@
           },
           "footer-promotions-2": {
             "type": "promotion",
+            "disabled": true,
             "settings": {
               "enable_image": true,
               "title": "Site-wide promotion",
@@ -173,7 +176,7 @@
           "footer-promotions-2"
         ],
         "settings": {
-          "hide_homepage": false,
+          "hide_homepage": true,
           "image_size": "wide"
         }
       },
@@ -264,15 +267,7 @@
     },
     "content_for_index": [
 
-    ],
-    "blocks": {
-      "judgeme_core_5cc30398": {
-        "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-        "disabled": false,
-        "settings": {
-        }
-      }
-    }
+    ]
   },
   "presets": {
     "Modern": {

@@ -209,6 +209,26 @@
       "settings": {
         "color_scheme": "2"
       }
+    },
+    "cdf2246f-9cce-4bfc-8ae9-6b5eb30e9acd": {
+      "type": "advanced-content",
+      "blocks": {
+        "template--14912652017743__cdf2246f-9cce-4bfc-8ae9-6b5eb30e9acd-1672368930c68ec30c-1": {
+          "type": "liquid",
+          "settings": {
+            "code": "<h2>{{ product.metafields.bbq.fbi_heading }}<\/h2>\n\n<p>\n{{ product.metafields.bbq.fbi_related_product }}\n<\/p>",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--14912652017743__cdf2246f-9cce-4bfc-8ae9-6b5eb30e9acd-1672368930c68ec30c-1"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
     }
   },
   "order": [
@@ -219,6 +239,7 @@
     "more-products-vendor",
     "more-products-collection",
     "recently-viewed",
-    "collection-return"
+    "collection-return",
+    "cdf2246f-9cce-4bfc-8ae9-6b5eb30e9acd"
   ]
 }
