@@ -188,7 +188,7 @@
         "template--14912652017743__cdf2246f-9cce-4bfc-8ae9-6b5eb30e9acd-1672368930c68ec30c-1": {
           "type": "liquid",
           "settings": {
-            "code": "<h2 class=\"h3\">{{ product.metafields.bbq.fbi_heading }}<\/h2>\n\n<div class=\"page-width page-width--flush-small\">\n<div class=\"grid-item grid-product\">\n<div>\n<a href=\"{{ product.metafields.bbq.fbi_related_product.value.url }}\">\n<img src=\"{{product.metafields.frequently.fbi_related_product.value.featured_image | img_url: '300x'}}\">\n<\/a>\n<\/div>\n<div>{{ product.metafields.frequently.fbi_related_product.value.title }}<\/div>\n<div>{{ product.metafields.frequently.fbi_related_product.value.price | money_with_currency }}<\/div>\n<\/div>\n<\/div>",
+            "code": "<h2 class=\"h3\">{{ product.metafields.bbq.fbi_heading }}<\/h2>\n\n<div class=\"page-width page-width--flush-small\">\n<div class=\"grid-item grid-product\">\n<div class=\"grid-item__content\">\n<a href=\"{{ product.metafields.bbq.fbi_related_product.value.url }}\">\n<img src=\"{{product.metafields.frequently.fbi_related_product.value.featured_image | img_url: '300x'}}\">\n<\/a>\n<\/div>\n<div>{{ product.metafields.frequently.fbi_related_product.value.title }}<\/div>\n<div>{{ product.metafields.frequently.fbi_related_product.value.price | money_with_currency }}<\/div>\n<\/div>\n<\/div>",
             "width": "100%",
             "alignment": "center"
           }
