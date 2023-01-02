@@ -44,7 +44,7 @@
         "44880ef3-f19a-40d1-acc6-025a4af3db44": {
           "type": "custom",
           "settings": {
-            "code": "{% if product.metafields.bbq.option_title != blank %}\n    <p class=\"variantTitle\">{{ product.metafields.bbq.option_title }}<\/p>\n    {% for option in product.metafields.bbq.option_type %}\n    <a class=\"custom-variant-btn\" href=\"{{ product.metafields.bbq.option_related_product[forloop.index0] }}\">\n        {{ product.metafields.bbq.option_type[forloop.index0] }}\n    <\/a>\n    {% endfor %}\n{% endif %}"
+            "code": "<h3 class=\"h3\">{{ product.metafields.frequently.fbi_heading }}<\/h3>\n\n<div class=\"new-grid product-grid scrollable-grid--small\">\n  <div class=\"page-width page-width--flush-small\">\n    <div class=\"grid-item grid-product\">\n      <div class=\"grid-item__content\">\n          <div class=\"grid-item__meta\">\n            <a href=\"{{ product.metafields.frequently.fbi_related_product.value.url }}\">\n              <img src=\"{{ product.metafields.frequently.fbi_related_product.value.featured_image | img_url: '300x'}}\">\n            <\/a>\n            <div class=\"grid-product__title\">{{ product.metafields.frequently.fbi_related_product.value.title }}<\/div>\n            <div>{{ product.metafields.frequently.fbi_related_product.value.price | money_with_currency }}<\/div>\n          <\/div>\n      <\/div>\n    <\/div>\n  <\/div>\n<\/div>"
           }
         },
         "de053079-8bb3-4fec-8b07-bce05221c8af": {
