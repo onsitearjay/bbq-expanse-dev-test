@@ -47,6 +47,12 @@
             "code": "{% if product.metafields.bbq.option_title != blank %}\n<p class=\"variantTitle\">{{ product.metafields.bbq.option_title }}<\/p>\n  {% for option in product.metafields.bbq.option_type %}\n    <a class=\"custom-variant-btn\" href=\"{{ product.metafields.bbq.option_related_product[forloop.index0] }}\">\n      {{ product.metafields.bbq.option_type[forloop.index0] }}\n    <\/a>\n  {% endfor %}\n{% endif %}"
           }
         },
+        "36c63643-2306-453c-a69a-302aac2fee56": {
+          "type": "custom",
+          "settings": {
+            "code": "{% if product.metafields.bbq.configuration_type != blank %}\n    <p class=\"variantTitle\"> Configuration <\/p>\n    {% for option in product.metafields.bbq.configuration_type %}\n    <a class=\"custom-variant-btn\" href=\"{{ product.metafields.bbq.configuration_product[forloop.index0] }}\">\n        {{ product.metafields.bbq.configuration_type[forloop.index0] }}\n    <\/a>\n    {% endfor %}\n{% endif %}"
+          }
+        },
         "de053079-8bb3-4fec-8b07-bce05221c8af": {
           "type": "custom",
           "settings": {
@@ -115,6 +121,7 @@
         "a9b9159f-7fe2-4149-bf31-0833258247c1",
         "6d4a00c6-99ed-42dd-bfd5-1b91c8900dc8",
         "44880ef3-f19a-40d1-acc6-025a4af3db44",
+        "36c63643-2306-453c-a69a-302aac2fee56",
         "de053079-8bb3-4fec-8b07-bce05221c8af",
         "58ee2dc4-2dc9-46db-8f89-daec03006790",
         "9b8e058c-44b0-4ed0-a873-eba443923274",
