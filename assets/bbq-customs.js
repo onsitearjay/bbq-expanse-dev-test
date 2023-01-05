@@ -27,7 +27,7 @@ button.onclick = function () {
 	}
 };
 
-
+//This is for custom Add Cart Modal
 theme.AddCart = (function() {
     var selectors = {
       quickAddBtn: '.js-add-cart-btn',
