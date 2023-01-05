@@ -5322,25 +5322,6 @@ lazySizesConfig.expFactor = 4;
         // Button loads form when 1+ variants
         var quickAddForms = this.container.querySelectorAll(selectors.quickAddForm);
   
-        // if (quickAddForms.length) {
-        //   this.quickAddHolder = document.querySelector(
-        //     selectors.quickAddHolder);
-        //   if (!modalInitailized) {
-        //     modal = new theme.Modals('QuickAddModal', 'quick-add');
-        //     modalInitailized = true;
-  
-        //     // Empty cart form when closed
-        //     document.addEventListener('modalClose.QuickAddModal', function() {
-        //       setTimeout(function() {
-        //         this.quickAddHolder.innerHTML = '';
-        //       }.bind(this), 350);
-        //     }.bind(this));
-        //   }
-  
-        //   quickAddForms.forEach(btn => {
-        //     btn.addEventListener('click', this.loadQuickAddForm.bind(this));
-        //   });
-        // }
       },
   
       addToCart: function(evt) {
@@ -5371,6 +5352,7 @@ lazySizesConfig.expFactor = 4;
           if (data.status === 422 || data.status === 'bad_request') {
           } else {
             var product = data;
+            console.log(product);
             document.dispatchEvent(new CustomEvent('ajaxProduct:added', {
               detail: {
                 product: product,
