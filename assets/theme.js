@@ -5362,9 +5362,10 @@ lazySizesConfig.expFactor = 4;
 
 
             modal = new theme.Modals('AddCartModal', 'quick-add');
+         this.quickAddHolder = document.querySelector(
+                    selectors.quickAddHolder);
+            console.log(this.quickAddHolder)
 
-            var modalContent = modal.getElementById('AddCartModalHolder');
-            console.log(modalContent);
             modal.open();
             
           }
