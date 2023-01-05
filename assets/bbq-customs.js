@@ -26,7 +26,7 @@ theme.AddCart = (function() {
   
     var modalInitailized = false;
     var modal;
-  
+     console.log('dfdf')
     function AddCart(container) {
       console.log('dfdf')
       this.container = container;
