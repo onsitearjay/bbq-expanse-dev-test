@@ -5296,15 +5296,15 @@ lazySizesConfig.expFactor = 4;
   
     var modalInitailized = false;
     var modal;
-    var AddCart = (function(container) {
-       console.log(container);
+
+    function AddCart(container) {
       if (!container) {
         return;
       }
-     
+
       this.container = container;
       this.init();
-    })();
+    }
   
     AddCart.prototype = Object.assign({}, AddCart.prototype, {
       init: function() {
