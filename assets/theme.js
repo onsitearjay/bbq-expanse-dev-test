@@ -5372,7 +5372,10 @@ lazySizesConfig.expFactor = 4;
                 <img class="modal-add-cart-image-element" src="${product.items[0].image}"  width="100" height="100" />
               </div>
             </div>
-            <div class="modal-action-section"></div>
+            <div class="modal-action-section">
+              <button class="btn btn-primary">Continue to Cart</button>
+              <button class="btn btn-secondary">Continue to Shopping</button>
+            </div>
             <div>`;
           
             modal = new theme.Modals('AddCartModal', 'quick-add');
