@@ -5378,8 +5378,8 @@ lazySizesConfig.expFactor = 4;
             }));
 
 
-             modal = new theme.Modals('AddCartModal', 'quick-add');
-            console.log(modal)
+            modal = new theme.Modals('AddCartModal', 'quick-add');
+            modal.open();
             
           }
   
