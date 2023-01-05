@@ -50,7 +50,7 @@
                 </span>
               </button>
             {%- else -%}
-              <button type="button" class="text-link quick-add-btn js-quick-add-btn"
+              <button type="button" class="text-link quick-add-btn js-quick-add-btn js-modal-open-quick-add"
                       title="{{ 'products.product.add_to_cart' | t }}"
                       tabindex="-1"
                       data-id="{{ product.selected_or_first_available_variant.id }}">
