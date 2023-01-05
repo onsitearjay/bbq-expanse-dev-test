@@ -9047,7 +9047,7 @@ lazySizesConfig.expFactor = 4;
     });
 
       document.addEventListener('page:loaded', function(e) {
-        console.log(page);
+        console.log(e);
     // Page has loaded and theme assets are ready
       });
 
