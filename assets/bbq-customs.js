@@ -16,6 +16,11 @@ for (i = 0; i < customOptions.length; i++) {
 var content = document.getElementById("desc-content");
 var button = document.getElementById("desc-show-more");
 
+const addCartProdPage = function(this){
+     let variantID = document.querySelector('select[name="id"]').value;
+      this.dataset.id = variantID;
+   
+}
 
 if(button !== null  && button.onclick !== null && typeof button.onclick !== "undefined"){
   button.onclick = function () {
