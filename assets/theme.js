@@ -9026,6 +9026,7 @@ lazySizesConfig.expFactor = 4;
       if (searchGrid) {
         var searchProducts = searchGrid.querySelectorAll('.grid-product');
         if (searchProducts.length) {
+          new theme.AddCart(searchGrid);
           new theme.QuickAdd(searchGrid);
           new theme.QuickShop(searchGrid);
         }
@@ -9034,6 +9035,7 @@ lazySizesConfig.expFactor = 4;
 
     document.addEventListener('recommendations:loaded', function(evt) {
       if (evt && evt.detail && evt.detail.section) {
+        new theme.AddCart(evt.detail.section);
         new theme.QuickAdd(evt.detail.section);
         new theme.QuickShop(evt.detail.section);
       }
