@@ -5293,7 +5293,7 @@ lazySizesConfig.expFactor = 4;
     var selectors = {
       quickAddBtn: '.js-add-cart-btn',
       quickAddForm: '.js-add-cart-form',
-      quickAddHolder: '#AddCartHolder'
+      quickAddHolder: '#AddCartModalHolder'
     };
   
     var modalInitailized = false;
