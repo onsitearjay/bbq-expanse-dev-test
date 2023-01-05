@@ -31,7 +31,7 @@ theme.AddCart = (function() {
       if (!container) {
         return;
       }
-
+     console.log('container check')
       this.container = container;
       this.init();
     }
