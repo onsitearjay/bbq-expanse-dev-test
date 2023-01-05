@@ -32,7 +32,7 @@ theme.AddCart = (function() {
   
     var modalInitailized = false;
     var modal;
-    var AddCart = (function() {
+    var AddCart = (function(container) {
        console.log('tet');
       if (!container) {
         return;
