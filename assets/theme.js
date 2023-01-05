@@ -5300,7 +5300,6 @@ lazySizesConfig.expFactor = 4;
     var modal;
 
     function AddCart(container) {
-      console.log('test')
       if (!container) {
         return;
       }
@@ -5312,7 +5311,7 @@ lazySizesConfig.expFactor = 4;
       init: function() {
         // When a single variant, auto add it to cart
         var quickAddBtns = this.container.querySelectorAll(selectors.quickAddBtn);
-  
+        console.log(quickAddBtns);
         if (quickAddBtns) {
           quickAddBtns.forEach(btn => {
            
