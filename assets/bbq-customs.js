@@ -38,6 +38,7 @@ theme.AddCart = (function() {
     AddCart.prototype = Object.assign({}, AddCart.prototype, {
       init: function() {
         console.log('df');
+        console.log(this);
         // When a single variant, auto add it to cart
         var quickAddBtns = this.container.querySelectorAll(selectors.quickAddBtn);
          console.log(quickAddBtns)
