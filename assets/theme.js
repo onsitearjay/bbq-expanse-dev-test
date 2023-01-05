@@ -5364,7 +5364,14 @@ lazySizesConfig.expFactor = 4;
                     selectors.quickAddHolder);
             this.AddCartHolder.innerHTML = `
             <div>
-            <div class="modal-add-cart-image-section"><img class="modal-add-cart-image-holder" src="${product.items[0].image}"  width="100" height="100" /></div>
+            <div class="modal-add-cart-product-info-section">
+              <div class="modal-add-cart-image-holder">
+                <img class="modal-add-cart-image-element" src="${product.items[0].image}"  width="100" height="100" />
+              </div>
+              <div class="modal-add-cart-product-info-holder">
+                <label class="modal-add-cart-product-name">${product.items[0].title}</label>
+              </div>
+            </div>
             <div class="modal-action-section"></div>
             <div>`;
           
