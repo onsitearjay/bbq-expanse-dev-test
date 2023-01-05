@@ -40,9 +40,10 @@ theme.AddCart = (function() {
       init: function() {
         // When a single variant, auto add it to cart
         var quickAddBtns = this.container.querySelectorAll(selectors.quickAddBtn);
+         console.log(quickAddBtns)
         if (quickAddBtns) {
           quickAddBtns.forEach(btn => {
-            console.log('test')
+           
             btn.addEventListener('click', this.addToCart.bind(this));
           });
         }
