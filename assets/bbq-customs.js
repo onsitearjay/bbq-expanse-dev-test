@@ -114,8 +114,8 @@ theme.AddCart = (function() {
   })();
 
 console.log(theme);
-
-if(button.onclick !== null && typeof button.onclick !== "undefined"){
+console.log(button);
+if(button !== null  && button.onclick !== null && typeof button.onclick !== "undefined"){
   button.onclick = function () {
   try{
     	if(content.className == "open"){
