@@ -5347,7 +5347,8 @@ lazySizesConfig.expFactor = 4;
         
         var btn = evt.currentTarget;
         var visibleBtn = btn.querySelector('.btn');
-        visibleBtn.classList.add('btn--loading');
+        if(visibleBtn) visibleBtn.classList.add('btn--loading');
+
         var id = btn.dataset.id;
   
         var data = {
@@ -5382,8 +5383,7 @@ lazySizesConfig.expFactor = 4;
             modal.open();
             
           }
-  
-          visibleBtn.classList.remove('btn--loading');
+          if(visibleBtn) visibleBtn.classList.add('btn--loading');
         }.bind(this));
       },
     });
@@ -9047,9 +9047,9 @@ lazySizesConfig.expFactor = 4;
     });
 
     document.addEventListener('page:loaded', function(evt) {
-      const  productBlock = document.querySelector('.product-single__form')
-      if(productBlock){
-      new theme.AddCart(productBlock);
+        const  productBlock = document.querySelector('.product-single__form')
+        if(productBlock){
+           new theme.AddCart(productBlock);
       }
     });
 
