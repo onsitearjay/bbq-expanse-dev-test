@@ -42,6 +42,7 @@ theme.AddCart = (function() {
         var quickAddBtns = this.container.querySelectorAll(selectors.quickAddBtn);
         if (quickAddBtns) {
           quickAddBtns.forEach(btn => {
+            console.log('test')
             btn.addEventListener('click', this.addToCart.bind(this));
           });
         }
@@ -113,8 +114,6 @@ theme.AddCart = (function() {
     return AddCart;
   })();
 
-console.log(theme);
-console.log(button);
 if(button !== null  && button.onclick !== null && typeof button.onclick !== "undefined"){
   button.onclick = function () {
   try{
