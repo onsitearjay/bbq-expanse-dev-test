@@ -5298,6 +5298,7 @@ lazySizesConfig.expFactor = 4;
     var modal;
 
     function AddCart(container) {
+      console.log('test')
       if (!container) {
         return;
       }
