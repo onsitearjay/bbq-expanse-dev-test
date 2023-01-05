@@ -31,10 +31,10 @@ theme.AddCart = (function() {
       if (!container) {
         return;
       }
+      console.log(container)
       this.container = container;
       this.init();
     }
-   console.log('df');
     AddCart.prototype = Object.assign({}, AddCart.prototype, {
       init: function() {
         console.log('df');
