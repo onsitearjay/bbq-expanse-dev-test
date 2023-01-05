@@ -5311,7 +5311,7 @@ lazySizesConfig.expFactor = 4;
       init: function() {
         // When a single variant, auto add it to cart
         var quickAddBtns = this.container.querySelectorAll(selectors.quickAddBtn);
-        console.log(quickAddBtns);
+      
         if (quickAddBtns) {
           quickAddBtns.forEach(btn => {
            
