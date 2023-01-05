@@ -59,11 +59,6 @@
             "code": "{% if product.metafields.bbq.size_title != blank %}\n<p class=\"variantTitle\"> Size <\/p>\n   <div class=\"custom-field-block variantSize\"> \n    {% for option in product.metafields.bbq.size_title %}\n        <a href=\"{{ product.metafields.bbq.related_product[forloop.index0] }}\" class=\"custom-variant-btn\">\n        <span class=\"bbq-size-short-desc\">\n            {{ product.metafields.bbq.size_title[forloop.index0] }}\n        <\/span>\n        <span class=\"bbq-text-green\">\n            {% assign diff1 = product.metafields.bbq.related_product.value.price | minus: product.price %}\n            {% if diff1 < 0 %}\n            Save {{ diff1 | abs | money_with_currency}}\n            {% elsif diff1 > 0 %}\n            Add {{ diff1 | abs | money_with_currency}}\n            {% endif %}\n        <\/span>\n        <\/a>\n    {% endfor %}\n<\/div>\n{% endif %}"
           }
         },
-        "58ee2dc4-2dc9-46db-8f89-daec03006790": {
-          "type": "shopify:\/\/apps\/infinite-options\/blocks\/app-block\/7e73b6f9-82b0-45f5-9b9b-04f446ba1a9b",
-          "settings": {
-          }
-        },
         "9b8e058c-44b0-4ed0-a873-eba443923274": {
           "type": "custom",
           "disabled": true,
@@ -123,7 +118,6 @@
         "44880ef3-f19a-40d1-acc6-025a4af3db44",
         "36c63643-2306-453c-a69a-302aac2fee56",
         "de053079-8bb3-4fec-8b07-bce05221c8af",
-        "58ee2dc4-2dc9-46db-8f89-daec03006790",
         "9b8e058c-44b0-4ed0-a873-eba443923274",
         "948419f6-5159-4d16-8ea7-16760e4199ee",
         "variant_picker",
