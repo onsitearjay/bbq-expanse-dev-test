@@ -4002,6 +4002,7 @@ lazySizesConfig.expFactor = 4;
       var navigation = siteHeader.querySelector(selectors.navigation);
       if (navigation.querySelectorAll('.grid-product')) {
         new theme.QuickAdd(navigation);
+        new theme.AddCart(navigation);
         new theme.QuickShop(navigation);
       }
   
@@ -5024,6 +5025,7 @@ lazySizesConfig.expFactor = 4;
       init: function() {
         this.cartForm = new theme.CartForm(this.form);
         this.quickAdd = new theme.QuickAdd(this.wrapper);
+        this.addCart = new theme.AddCart(this.wrapper)
         this.quickShop = new theme.QuickShop(this.wrapper);
         this.cartForm.buildCart();
   
@@ -5310,6 +5312,7 @@ lazySizesConfig.expFactor = 4;
       init: function() {
         // When a single variant, auto add it to cart
         var quickAddBtns = this.container.querySelectorAll(selectors.quickAddBtn);
+  
         if (quickAddBtns) {
           quickAddBtns.forEach(btn => {
            
@@ -8701,7 +8704,7 @@ lazySizesConfig.expFactor = 4;
           if (count > 0) {
             var results = doc.querySelector('.product-grid');
             this.outputContainer.append(results);
-  
+            new theme.AddCart(this.outputContainer);
             new theme.QuickAdd(this.outputContainer);
             new theme.QuickShop(this.outputContainer);
           } else {
