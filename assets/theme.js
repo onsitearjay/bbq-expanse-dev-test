@@ -5300,7 +5300,6 @@ lazySizesConfig.expFactor = 4;
     var modal;
 
     function AddCart(container) {
-      console.log(container)
       if (!container) {
         return;
       }
@@ -9048,7 +9047,7 @@ lazySizesConfig.expFactor = 4;
     });
 
       document.addEventListener('page:loaded', function(evt) {
-         const  productBlock = document.querySelector('.product-block')
+         const  productBlock = document.querySelector('.product-single__form')
         if(productBlock){
            new theme.AddCart(productBlock);
         }
