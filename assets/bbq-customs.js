@@ -15,7 +15,7 @@ for (i = 0; i < customOptions.length; i++) {
 
 var content = document.getElementById("desc-content");
 var button = document.getElementById("desc-show-more");
-console.log('df');
+console.log(theme);
 button.onclick = function () {
   try{
     	if(content.className == "open"){
