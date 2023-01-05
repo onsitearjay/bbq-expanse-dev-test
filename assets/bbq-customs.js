@@ -28,11 +28,7 @@ theme.AddCart = (function() {
     var modal;
   
     function AddCart(container) {
-        console.log(container)
-      if (!container) {
-        return;
-      }
-    
+      console.log('dfdf')
       this.container = container;
       this.init();
     }
