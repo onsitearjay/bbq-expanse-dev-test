@@ -30,6 +30,7 @@
           {{ product.selling_plan_allocation.selling_plan.name }}
         </div>
       {%- endif -%}
+      {% comment %}
       {%- assign property_size = product.properties | size -%}
       {% if property_size > 0 %}
         {% for p in product.properties %}
@@ -43,10 +44,11 @@
                 {{ p.last }}
               {% endif %}
             </div>
+            
           {% endunless %}
         {% endfor %}
       {% endif %}
-
+      {% endcomment %}
     </div>
     <div class="cart__item-sub">
       <div>
