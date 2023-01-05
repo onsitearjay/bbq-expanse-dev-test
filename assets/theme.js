@@ -9046,12 +9046,12 @@ lazySizesConfig.expFactor = 4;
       }
     });
 
-      document.addEventListener('page:loaded', function(evt) {
-         const  productBlock = document.querySelector('.product-block')
-        if(productBlock){
-           new theme.AddCart(productBlock);
-        }
-      });
+      // document.addEventListener('page:loaded', function(evt) {
+      //    const  productBlock = document.querySelector('.product-block')
+      //   if(productBlock){
+      //      new theme.AddCart(productBlock);
+      //   }
+      // });
 
     theme.pageTransitions();
 
