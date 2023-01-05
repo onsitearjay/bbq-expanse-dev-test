@@ -16,22 +16,6 @@ for (i = 0; i < customOptions.length; i++) {
 var content = document.getElementById("desc-content");
 var button = document.getElementById("desc-show-more");
 
-button.onclick = function () {
-  try{
-    	if(content.className == "open"){
-		//shrink the box
-		content.className = "";
-		button.innerHTML = "Read more >>";
-	} else {
-		//expand the box
-		content.className = "open";
-		button.innerHTML = "Read less <<";
-	}
-  }catch(e){
-    throw(e)
-  }
-};
-
 //This is for custom Add Cart Modal
 theme.AddCart = (function() {
     var selectors = {
@@ -130,3 +114,21 @@ theme.AddCart = (function() {
   })();
 
 console.log(theme);
+
+
+button.onclick = function () {
+  try{
+    	if(content.className == "open"){
+		//shrink the box
+		content.className = "";
+		button.innerHTML = "Read more >>";
+	} else {
+		//expand the box
+		content.className = "open";
+		button.innerHTML = "Read less <<";
+	}
+  }catch(e){
+    throw(e)
+  }
+};
+
