@@ -9047,9 +9047,9 @@ lazySizesConfig.expFactor = 4;
     });
 
       document.addEventListener('page:loaded', function(evt) {
-         const  selectorLength = document.querySelectorAll('.product-block').length
-        if(selectorLength >0 && evt && evt.detail && evt.detail.section){
-           new theme.AddCart(evt.detail.section);
+         const  productBlock = document.querySelector('.product-block')
+        if(productBlock){
+           new theme.AddCart(productBlock);
         }
       });
 
