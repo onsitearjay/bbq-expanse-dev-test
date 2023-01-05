@@ -26,12 +26,14 @@ theme.AddCart = (function() {
   
     var modalInitailized = false;
     var modal;
-     console.log('dfdf')
-    
+    function AddCart(container) {
+      console.log('dfdf')
+      this.container = container;
+      this.init();
+    }
+  
     AddCart.prototype = Object.assign({}, AddCart.prototype, {
       init: function() {
-        console.log('df');
-        console.log(this);
         // When a single variant, auto add it to cart
         var quickAddBtns = this.container.querySelectorAll(selectors.quickAddBtn);
          console.log(quickAddBtns)
