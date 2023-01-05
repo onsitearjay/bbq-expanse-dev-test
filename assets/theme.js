@@ -5352,7 +5352,7 @@ lazySizesConfig.expFactor = 4;
           if (data.status === 422 || data.status === 'bad_request') {
           } else {
             var product = data;
-            console.log(product);
+        
             document.dispatchEvent(new CustomEvent('ajaxProduct:added', {
               detail: {
                 product: product,
@@ -5360,7 +5360,7 @@ lazySizesConfig.expFactor = 4;
               }
             }));
 
-
+            console.log(product);
             modal = new theme.Modals('AddCartModal', 'quick-add');
             modal.open();
             
