@@ -5314,7 +5314,7 @@ lazySizesConfig.expFactor = 4;
       
         if (quickAddBtns) {
           quickAddBtns.forEach(btn => {
-           
+              
             btn.addEventListener('click', this.addToCart.bind(this));
           });
         }
@@ -6815,7 +6815,7 @@ lazySizesConfig.expFactor = 4;
           // Has to init after the Collection JS because cloneFiltersOnMobile
           this.sidebar = new theme.CollectionSidebar();
         }
-  
+       this.quickAdd = new theme.AddCart(this.container);
         this.quickAdd = new theme.QuickAdd(this.container);
         this.quickShop = new theme.QuickShop(this.container);
   
@@ -9001,6 +9001,7 @@ lazySizesConfig.expFactor = 4;
 
         var recommendations = document.querySelector('.cart-recommendations[data-location="page"]');
         if (recommendations) {
+          new theme.AddCart(recommendations);
           new theme.QuickAdd(recommendations);
           new theme.QuickShop(recommendations);
         }
