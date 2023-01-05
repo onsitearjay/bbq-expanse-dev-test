@@ -16,12 +16,6 @@ for (i = 0; i < customOptions.length; i++) {
 var content = document.getElementById("desc-content");
 var button = document.getElementById("desc-show-more");
 
-//This is for custom Add Cart Modal
-   function AddCart(container) {
-      console.log('dfdf')
-      this.container = container;
-      this.init();
-    }
 
 theme.AddCart = (function() {
     var selectors = {
@@ -33,7 +27,7 @@ theme.AddCart = (function() {
     var modalInitailized = false;
     var modal;
     var AddCart = (function(container) {
-       console.log('tet');
+       console.log(container);
       if (!container) {
         return;
       }
