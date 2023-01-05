@@ -32,7 +32,7 @@ theme.AddCart = (function() {
   
     var modalInitailized = false;
     var modal;
-    var AddCart = (function(container) {
+    var AddCart = function(container) {
        console.log('tet');
       if (!container) {
         return;
@@ -40,7 +40,7 @@ theme.AddCart = (function() {
      
       this.container = container;
       this.init();
-    })();
+    };
   
     AddCart.prototype = Object.assign({}, AddCart.prototype, {
       init: function() {
