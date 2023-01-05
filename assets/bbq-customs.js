@@ -16,9 +16,9 @@ for (i = 0; i < customOptions.length; i++) {
 var content = document.getElementById("desc-content");
 var button = document.getElementById("desc-show-more");
 
-const addCartProdPage = function(this){
+const addCartProdPage = function(obj){
      let variantID = document.querySelector('select[name="id"]').value;
-      this.dataset.id = variantID;
+      obj.dataset.id = variantID;
    
 }
 
