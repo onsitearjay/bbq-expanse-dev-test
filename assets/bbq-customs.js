@@ -28,7 +28,6 @@ theme.AddCart = (function() {
     var modal;
      console.log('dfdf')
     
-  this.init();
     AddCart.prototype = Object.assign({}, AddCart.prototype, {
       init: function() {
         console.log('df');
