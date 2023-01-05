@@ -5156,7 +5156,7 @@ lazySizesConfig.expFactor = 4;
       if (!container) {
         return;
       }
-      console.log('quickadd'+theme.settings.quickAdd )
+
       if (!theme.settings.quickAdd) {
         return;
       }
