@@ -9046,6 +9046,11 @@ lazySizesConfig.expFactor = 4;
       }
     });
 
+      document.addEventListener('page:loaded', function(e) {
+        console.log(page);
+    // Page has loaded and theme assets are ready
+      });
+
     theme.pageTransitions();
 
     document.dispatchEvent(new CustomEvent('page:loaded'));
