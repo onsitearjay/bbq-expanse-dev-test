@@ -41,6 +41,7 @@ theme.AddCart = (function() {
         // When a single variant, auto add it to cart
         var quickAddBtns = this.container.querySelectorAll(selectors.quickAddBtn);
          console.log(quickAddBtns)
+         console.log('test')
         if (quickAddBtns) {
           quickAddBtns.forEach(btn => {
            
