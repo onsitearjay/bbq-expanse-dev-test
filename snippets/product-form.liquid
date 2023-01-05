@@ -38,7 +38,8 @@
       {% if product.empty? %}type="button"{% else %}type="button"{% endif %}
       name="add-cart"
       data-id=""
-      class="btn btn--full onclick="addCartProdPage(this)" js-add-cart-btn{% if enable_dynamic_buttons and product.selling_plan_groups == empty %} btn--secondary{% endif %}"
+      onclick="addCartProdPage(this)"
+      class="btn btn--full js-add-cart-btn{% if enable_dynamic_buttons and product.selling_plan_groups == empty %} btn--secondary{% endif %}"
       {% unless current_variant.available %} disabled="disabled"{% endunless %}>
       <span data-add-to-cart-text data-default-text="{{ default_text }}">
         {{ button_text }}
