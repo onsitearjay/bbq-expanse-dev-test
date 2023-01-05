@@ -5373,8 +5373,8 @@ lazySizesConfig.expFactor = 4;
               </div>
             </div>
             <div class="modal-action-section">
-              <button class="btn btn-primary">Continue to Cart</button>
-              <button class="btn btn-secondary">Continue to Shopping</button>
+              <button class="btn">Continue to Cart</button>
+              <button class="btn">Continue to Shopping</button>
             </div>
             <div>`;
           
