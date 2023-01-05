@@ -5359,13 +5359,16 @@ lazySizesConfig.expFactor = 4;
                 addToCartBtn: btn
               }
             }));
-
-
-            modal = new theme.Modals('AddCartModal', 'quick-add');
-         this.quickAddHolder = document.querySelector(
+            console.log(product);
+            this.AddCartHolder = document.querySelector(
                     selectors.quickAddHolder);
-            console.log(this.quickAddHolder)
-
+            this.AddCartHolder.innerHtml = `
+            <div>
+            <div class="modal-add-cart-image-section"><img class="modal-add-cart-image-holder" src="${product.image}"  width="100" height="100" /></div>
+            <div class="modal-action-section"></div>
+            <div>`;
+          
+            modal = new theme.Modals('AddCartModal', 'quick-add');
             modal.open();
             
           }
