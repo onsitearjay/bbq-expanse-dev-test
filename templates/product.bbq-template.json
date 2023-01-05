@@ -161,21 +161,6 @@
             "code": "{%if product.metafields.bbq.file_name !=blank %}\n<div class=\"collapsibles-wrapper\" style=\"margin: -30px 0;\">\n    <button type=\"button\"\n      class=\"label collapsible-trigger collapsible-trigger-btn collapsible-trigger-btn--borders collapsible--auto-height{% if force_open %} is-open{% endif %}\" aria-controls=\"Product-content-{{ id }}\"\n      {% if force_open %}aria-expanded=\"true\"{% endif %}>\n      Manufacturer's Download\n      {%- render 'collapsible-icons' -%}\n    <\/button>\n    <div id=\"Product-content-{{ id }}\"\n      class=\"bbq-description collapsible-content collapsible-content--all{% if force_open %} is-open{% endif %}\"\n      {% if force_open %}style=\"height: auto;\"{% endif %}>\n      <div class=\"collapsible-content__inner rte\">\n        {% for filename in product.metafields.bbq.file_name %} \n<div>\n<a href=\"{{ product.metafields.bbq.upload_file[forloop.index0] }}\" target=\"_blank\"> {{ product.metafields.bbq.file_name[forloop.index0] }}<\/a> \n<\/div>\n{% endfor %}\n      <\/div>\n    <\/div>\n  <\/div>\n{% endif %}\n{% comment %}\n<h4 style=\"font-family:Harmonia Sans;font-size: 19px; font-weight:700;\">Manufacturer's Download<\/h4>\n\n{% for filename in product.metafields.bbq.file_name %} \n<div>\n<a href=\"{{ product.metafields.bbq.upload_file[forloop.index0] }}\" target=\"_blank\"> {{ product.metafields.bbq.file_name[forloop.index0] }}<\/a> \n<\/div>\n{% endfor %}\n{% endcomment %}"
           }
         },
-        "tab": {
-          "type": "tab",
-          "settings": {
-            "title": "Shipping information",
-            "content": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.<\/p><p>Ex: Shipping and return policies, size guides, and other common questions.<\/p>",
-            "page": ""
-          }
-        },
-        "contact": {
-          "type": "contact",
-          "settings": {
-            "title": "Ask a question",
-            "phone": false
-          }
-        },
         "description": {
           "type": "description",
           "disabled": true,
@@ -187,8 +172,6 @@
       "block_order": [
         "d5636319-b1ba-4b4f-8008-bce914237531",
         "e473ac02-fdd6-45c8-8fb6-b7488095642d",
-        "tab",
-        "contact",
         "description"
       ],
       "settings": {
