@@ -86,6 +86,7 @@ theme.AddCart = (function() {
       },
   
       addToCart: function(evt) {
+        console.log('test')
         var btn = evt.currentTarget;
         var visibleBtn = btn.querySelector('.btn');
         visibleBtn.classList.add('btn--loading');
