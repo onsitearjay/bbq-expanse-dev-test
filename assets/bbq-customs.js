@@ -31,13 +31,13 @@ theme.AddCart = (function() {
       if (!container) {
         return;
       }
-     console.log('container check')
       this.container = container;
       this.init();
     }
-  
+   console.log('df');
     AddCart.prototype = Object.assign({}, AddCart.prototype, {
       init: function() {
+        console.log('df');
         // When a single variant, auto add it to cart
         var quickAddBtns = this.container.querySelectorAll(selectors.quickAddBtn);
          console.log(quickAddBtns)
