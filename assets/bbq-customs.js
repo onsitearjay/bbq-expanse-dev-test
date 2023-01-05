@@ -17,6 +17,12 @@ var content = document.getElementById("desc-content");
 var button = document.getElementById("desc-show-more");
 
 //This is for custom Add Cart Modal
+   function AddCart(container) {
+      console.log('dfdf')
+      this.container = container;
+      this.init();
+    }
+
 theme.AddCart = (function() {
     var selectors = {
       quickAddBtn: '.js-add-cart-btn',
@@ -26,11 +32,7 @@ theme.AddCart = (function() {
   
     var modalInitailized = false;
     var modal;
-    function AddCart(container) {
-      console.log('dfdf')
-      this.container = container;
-      this.init();
-    }
+ 
   
     AddCart.prototype = Object.assign({}, AddCart.prototype, {
       init: function() {
