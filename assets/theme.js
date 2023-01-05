@@ -5344,7 +5344,7 @@ lazySizesConfig.expFactor = 4;
       },
   
       addToCart: function(evt) {
-        console.log('test')
+        
         var btn = evt.currentTarget;
         var visibleBtn = btn.querySelector('.btn');
         visibleBtn.classList.add('btn--loading');
@@ -5376,6 +5376,11 @@ lazySizesConfig.expFactor = 4;
                 addToCartBtn: btn
               }
             }));
+
+
+             modal = new theme.Modals('AddCartModal', 'quick-add');
+            console.log(modal)
+            
           }
   
           visibleBtn.classList.remove('btn--loading');
