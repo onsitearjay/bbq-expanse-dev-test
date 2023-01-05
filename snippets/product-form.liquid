@@ -35,7 +35,7 @@
     -%}
 
     <button
-      {% if product.empty? %}type="button"{% else %}type="submit"{% endif %}
+      {% if product.empty? %}type="button"{% else %}type="button"{% endif %}
       name="add"
       data-id="{{ product.id }}"
       class="btn btn--full js-add-cart-btn{% if enable_dynamic_buttons and product.selling_plan_groups == empty %} btn--secondary{% endif %}"
