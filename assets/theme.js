@@ -5383,7 +5383,7 @@ lazySizesConfig.expFactor = 4;
             modal.open();
             
           }
-          if(visibleBtn) visibleBtn.classList.add('btn--loading');
+          if(visibleBtn) visibleBtn.classList.remove('btn--loading');
         }.bind(this));
       },
     });
