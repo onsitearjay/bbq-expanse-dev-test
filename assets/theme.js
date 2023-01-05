@@ -8795,7 +8795,7 @@ lazySizesConfig.expFactor = 4;
               this.outputContainer.append(...modals);
               new theme.QuickShop(this.outputContainer);
             }
-  
+            new theme.AddCart(this.outputContainer);
             new theme.QuickAdd(this.outputContainer);
           }
         });
