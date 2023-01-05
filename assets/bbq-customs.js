@@ -16,7 +16,8 @@ for (i = 0; i < customOptions.length; i++) {
 var content = document.getElementById("desc-content");
 var button = document.getElementById("desc-show-more");
 button.onclick = function () {
-	if(content.className == "open"){
+  try{
+    	if(content.className == "open"){
 		//shrink the box
 		content.className = "";
 		button.innerHTML = "Read more >>";
@@ -25,6 +26,9 @@ button.onclick = function () {
 		content.className = "open";
 		button.innerHTML = "Read less <<";
 	}
+  }catch(e){
+    throw(e)
+  }
 };
 
 //This is for custom Add Cart Modal
