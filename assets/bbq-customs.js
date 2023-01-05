@@ -28,10 +28,11 @@ theme.AddCart = (function() {
     var modal;
   
     function AddCart(container) {
+        console.log(container)
       if (!container) {
         return;
       }
-      console.log(container)
+    
       this.container = container;
       this.init();
     }
