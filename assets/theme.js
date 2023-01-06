@@ -3990,7 +3990,6 @@ lazySizesConfig.expFactor = 4;
       var collapsedNavTrigger = wrapper.querySelector(selectors.triggerCollapsedMenu);
       if (collapsedNavTrigger) {
         collapsedNavTrigger.on('click', function() {
-          console.log('df')
           collapsedNavTrigger.classList.toggle('is-active');
           theme.utils.prepareTransition(bottomNav, function() {
             bottomNav.classList.toggle('is-active');
@@ -4235,8 +4234,8 @@ lazySizesConfig.expFactor = 4;
         if (hasActiveSubDropdown) {
           closeThirdLevelDropdown();
         }
-  
-        openFirstLevelDropdown(evt.currentTarget);
+        
+        //openFirstLevelDropdown(evt.currentTarget);
       }
   
       // Private dropdown functions
