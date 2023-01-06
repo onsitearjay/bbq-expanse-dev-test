@@ -4236,15 +4236,18 @@ lazySizesConfig.expFactor = 4;
         if (hasActiveSubDropdown) {
           closeThirdLevelDropdown();
         }
-        document.querySelectorAll(selectors.dropdownClass).forEach(el => {
-          el.classList.remove(classes.dropdownActive)
-      });
+  
         openFirstLevelDropdown(evt.currentTarget);
       }
   
       // Private dropdown functions
       function openFirstLevelDropdown(el) {
         var parent = el.parentNode;
+
+       document.querySelectorAll(selectors.dropdownClass).forEach(el => {
+            el.classList.remove(classes.dropdownActive)
+        });
+        
         if (parent.classList.contains(classes.hasDropdownClass)) {
           parent.classList.add(classes.dropdownActive);
           hasActiveDropdown = false;
