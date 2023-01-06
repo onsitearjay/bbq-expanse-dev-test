@@ -5314,7 +5314,7 @@ lazySizesConfig.expFactor = 4;
       
         if (quickAddBtns) {
           quickAddBtns.forEach(btn => {
-              
+            
             btn.addEventListener('click', this.addToCart.bind(this));
           });
         }
@@ -5359,12 +5359,12 @@ lazySizesConfig.expFactor = 4;
                 addToCartBtn: btn
               }
             }));
-            console.log(product.items[0]);
             this.AddCartHolder = document.querySelector(
                     selectors.quickAddHolder);
+            
             this.AddCartHolder.innerHTML = `
             <div>
-             <div class="modal-add-cart-product-info-holder" data-id="${product.items[0].id}">
+             <div class="modal-add-cart-product-info-holder" data-id="${product.items[0].product_id}">
                 <label class="modal-add-cart-product-name">${product.items[0].title}</label>
              </div>
             <div class="modal-add-cart-product-info-section">
@@ -6250,9 +6250,10 @@ lazySizesConfig.expFactor = 4;
         var url = this.url;
         var href = new URL(window.location.origin+url);
 
-        console.log(href.searchParams.get('product_id'));
+   
         if( !href.searchParams.get('product_id') ){
-            href.searchParams.set('product_id',  document.querySelector('.modal-add-cart-product-info-holder').dataset.id);
+          var productID =  document.querySelector('.modal-add-cart-product-info-holder').dataset.id;
+          href.searchParams.set('product_id',productID);
           url = href.toString();
         }
       
