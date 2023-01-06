@@ -6248,6 +6248,7 @@ lazySizesConfig.expFactor = 4;
         }
   
         var url = this.url;
+        console.log(url)
   
         // When section his hidden and shown, make sure it starts empty
         if (Shopify.designMode) {
