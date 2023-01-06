@@ -5359,7 +5359,7 @@ lazySizesConfig.expFactor = 4;
                 addToCartBtn: btn
               }
             }));
-      
+            console.log(product.items[0]);
             this.AddCartHolder = document.querySelector(
                     selectors.quickAddHolder);
             this.AddCartHolder.innerHTML = `
