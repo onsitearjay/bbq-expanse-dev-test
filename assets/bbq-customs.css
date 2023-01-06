@@ -196,6 +196,7 @@ a[aria-current="activePage"] {
   width: 50%;
   content: "";
   display: table;
+  padding-top: 10%;
 }
 .modal-add-cart-image-element{
   height:200px,
