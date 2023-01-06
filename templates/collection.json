@@ -66,6 +66,13 @@
         "enable_sort": true
       }
     },
+    "recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "product_recommendations_heading": "You may also like",
+        "related_count": 5
+      }
+    },
     "recently-viewed": {
       "type": "recently-viewed",
       "settings": {
@@ -76,6 +83,7 @@
     "collection-header",
     "promo-grid",
     "main-collection",
-    "recently-viewed"
+    "recently-viewed",
+    "recommendations"
   ]
 }
