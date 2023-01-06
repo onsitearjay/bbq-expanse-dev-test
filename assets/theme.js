@@ -4249,7 +4249,7 @@ lazySizesConfig.expFactor = 4;
         if (!theme.config.isTouch) {
           if (!closeOnClickActive) {
             var eventType = theme.config.isTouch ? 'touchend' : 'click';
-            closeOnClickActive = false;
+            closeOnClickActive = true;
             document.documentElement.on(eventType + config.namespace, function() {
               closeDropdowns();
               document.documentElement.off(eventType + config.namespace);
