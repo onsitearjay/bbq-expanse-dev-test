@@ -4243,7 +4243,7 @@ lazySizesConfig.expFactor = 4;
         var parent = el.parentNode;
         console.log(classes.dropdownActive);
         if (parent.classList.contains(classes.hasDropdownClass)) {
-         // parent.classList.add(classes.dropdownActive);
+          parent.classList.add(classes.dropdownActive);
           hasActiveDropdown = false;
         }
   
