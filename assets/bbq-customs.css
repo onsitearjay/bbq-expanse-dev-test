@@ -201,7 +201,7 @@ a[aria-current="activePage"] {
   width:200px,
 }
 
-.modal-action-section btn{
+.modal-action-section .btn{
   flex: 100%;
 }
 
