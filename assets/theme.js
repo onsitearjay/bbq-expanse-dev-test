@@ -4234,8 +4234,8 @@ lazySizesConfig.expFactor = 4;
         if (hasActiveSubDropdown) {
           closeThirdLevelDropdown();
         }
-        
-        //openFirstLevelDropdown(evt.currentTarget);
+      
+        openFirstLevelDropdown(evt.currentTarget);
       }
   
       // Private dropdown functions
