@@ -4240,24 +4240,24 @@ lazySizesConfig.expFactor = 4;
   
       // Private dropdown functions
       function openFirstLevelDropdown(el) {
-        var parent = el.parentNode;
-        console.log(classes.dropdownActive);
-        if (parent.classList.contains(classes.hasDropdownClass)) {
-          parent.classList.add(classes.dropdownActive);
-          hasActiveDropdown = false;
-        }
+        // var parent = el.parentNode;
+        // console.log(classes.dropdownActive);
+        // if (parent.classList.contains(classes.hasDropdownClass)) {
+        //   parent.classList.add(classes.dropdownActive);
+        //   hasActiveDropdown = false;
+        // }
   
-        if (!theme.config.isTouch) {
-          if (!closeOnClickActive) {
-            var eventType = theme.config.isTouch ? 'touchend' : 'click';
-            closeOnClickActive = true;
-            document.documentElement.on(eventType + config.namespace, function() {
-              closeDropdowns();
-              document.documentElement.off(eventType + config.namespace);
-              closeOnClickActive = false;
-            }.bind(this));
-          }
-        }
+        // if (!theme.config.isTouch) {
+        //   if (!closeOnClickActive) {
+        //     var eventType = theme.config.isTouch ? 'touchend' : 'click';
+        //     closeOnClickActive = true;
+        //     document.documentElement.on(eventType + config.namespace, function() {
+        //       closeDropdowns();
+        //       document.documentElement.off(eventType + config.namespace);
+        //       closeOnClickActive = false;
+        //     }.bind(this));
+        //   }
+        // }
       }
   
       function openSecondLevelDropdown(el, skipCheck) {
