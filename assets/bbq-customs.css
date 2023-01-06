@@ -194,6 +194,7 @@ a[aria-current="activePage"] {
 .modal-action-section{
   float: left;
   width: 50%;
+  display:flex
 }
 .modal-add-cart-image-element{
   height:200px,
@@ -201,7 +202,7 @@ a[aria-current="activePage"] {
 }
 
 .modal-action-section btn{
-  width: 100%;
+  flex: 100%;
 }
 
 
