@@ -4164,7 +4164,7 @@ lazySizesConfig.expFactor = 4;
       // Touch devices open dropdown on first click, navigate to link on second
       if (theme.config.isTouch) {
         document.querySelectorAll(selectors.navLinksWithDropdown).forEach(el => {
-          el.on('click' + config.namespace, function(evt) {
+          el.on('touchend' + config.namespace, function(evt) {
             var parent = evt.currentTarget.parentNode;
             if (!parent.classList.contains(classes.dropdownActive)) {
               evt.preventDefault();
