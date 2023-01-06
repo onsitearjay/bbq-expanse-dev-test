@@ -4229,7 +4229,7 @@ lazySizesConfig.expFactor = 4;
       }
   
       function accessibleMouseEvent(evt) {
-         document.querySelectorAll(selectors.dropdownClass).forEach(elem => {
+         document.querySelectorAll('.site-nav--has-dropdown').forEach(elem => {
            console.log(elem)
             elem.classList.remove(classes.dropdownActive)
         });
