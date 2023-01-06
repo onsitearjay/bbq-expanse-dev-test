@@ -1,0 +1,76 @@
+{%- liquid
+  assign recommend_products = true
+
+  if recommendations.products and recommendations.products_count > 0
+    assign related_collection = recommendations
+  endif
+
+  for tag in product.tags
+    if tag contains '_related'
+      assign include_collection_handle = tag | split: '_' | last
+      assign include_collection = collections[include_collection_handle]
+      if include_collection != empty and include_collection.products_count > 0
+        assign related_collection = include_collection
+        assign recommend_products = false
+        break
+      endif
+    endif
+  endfor
+
+  assign number_of_products = 5
+-%}
+
+<div
+  id="Recommendations-product-recommendations"
+  data-section-id="product-recommendations"
+  data-section-type="product-recommendations"
+  data-enable="true"
+  data-product-id="{{ product.id }}"
+  data-url="{{ routes.product_recommendations_url }}?section_id=product-recommendations&product_id=&limit={{number_of_products}}"
+  data-limit="{{number_of_products}}">
+
+  <div
+    data-section-id="{{ product.id }}"
+    data-subsection
+    data-section-type="collection-template"
+    class="index-section index-section--sub-product">
+    <div class="page-width">
+      <header class="section-header">
+        <div class="h3 section-header__title">
+         You may also like
+        </div>
+      </header>
+    </div>
+
+    <div class="page-width page-width--flush-small">
+      {%- if recommend_products -%}
+        <div class="product-recommendations-placeholder">
+          {% comment %}
+            This content is visually hidden and replaced when recommended
+            products show up
+          {% endcomment %}
+          <div class="new-grid product-grid scrollable-grid--small visually-invisible" aria-hidden="true" data-view="scrollable">
+            {%- render 'product-grid-item', product: product, no_actions: true -%}
+          </div>
+        </div>
+      {%- endif -%}
+      {%- if related_collection.products_count > 1 -%}
+        <div class="product-recommendations">
+          <div class="new-grid product-grid scrollable-grid--small" data-view="scrollable">
+            {%- for product in related_collection.products -%}
+              {%- render 'product-grid-item', product: product -%}
+            {%- endfor -%}
+          </div>
+
+          {%- liquid
+            if settings.quick_shop_enable
+              for product in related_collection.products
+                render 'quick-shop-modal', product: product
+              endfor
+            endif
+          -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
