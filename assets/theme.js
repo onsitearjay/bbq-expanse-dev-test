@@ -6251,7 +6251,7 @@ lazySizesConfig.expFactor = 4;
         var href = new URL(window.location.origin+url);
 
         console.log(href.searchParams.get('product_id'));
-        if( href.searchParams.get('product_id') != null && href.searchParams.get('product_id') != '' ){
+        if( !href.searchParams.get('product_id') ){
             href.searchParams.set('product_id', 'test');
           console.log(href.toString());
         }
