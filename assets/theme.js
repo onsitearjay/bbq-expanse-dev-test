@@ -3990,6 +3990,7 @@ lazySizesConfig.expFactor = 4;
       var collapsedNavTrigger = wrapper.querySelector(selectors.triggerCollapsedMenu);
       if (collapsedNavTrigger) {
         collapsedNavTrigger.on('click', function() {
+          console.log('df')
           collapsedNavTrigger.classList.toggle('is-active');
           theme.utils.prepareTransition(bottomNav, function() {
             bottomNav.classList.toggle('is-active');
@@ -4160,13 +4161,11 @@ lazySizesConfig.expFactor = 4;
       var hasActiveDropdown = false;
       var hasActiveSubDropdown = false;
       var closeOnClickActive = false;
-      theme.config.isTouch = true;
+  
       // Touch devices open dropdown on first click, navigate to link on second
       if (theme.config.isTouch) {
         document.querySelectorAll(selectors.navLinksWithDropdown).forEach(el => {
-            console.log(el)
           el.on('touchend' + config.namespace, function(evt) {
-          
             var parent = evt.currentTarget.parentNode;
             if (!parent.classList.contains(classes.dropdownActive)) {
               evt.preventDefault();
@@ -5365,6 +5364,7 @@ lazySizesConfig.expFactor = 4;
                     selectors.quickAddHolder);
             
             this.AddCartHolder.innerHTML = `
+
             <div class="modal-add-cart-body">
              <div class="modal-add-cart-product-info-holder" data-id="${product.items[0].product_id}">
                 <label class="modal-add-cart-product-name">${product.items[0].title}</label>
