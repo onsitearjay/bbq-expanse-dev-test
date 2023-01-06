@@ -179,19 +179,16 @@ a[aria-current="activePage"] {
 }
 
 .modal-add-cart-body{
-  width: 100%;
-  flex:1
+  display: flex;
+}
+.modal-add-cart-product-info-holder{
+  flex: 100%;
 }
 .modal-add-cart-product-info-section{
-  width: 100%;
-}{
-  width: 100%;
-}
-.modal-add-cart-product-info-section{
-  width: 50%;
+  flex: 50%;
 }
 .modal-action-section{
-  width: 50%;
+  flex: 50%;
 }
 
 
