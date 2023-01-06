@@ -4183,7 +4183,7 @@ lazySizesConfig.expFactor = 4;
         el.on('focusin' + config.namespace, accessibleMouseEvent);
         //el.on('mouseover' + config.namespace, accessibleMouseEvent);
         el.on('click' + config.namespace, accessibleMouseEvent);
-        //el.on('mouseleave' + config.namespace, closeDropdowns);
+        el.on('mouseleave' + config.namespace, closeDropdowns);
       });
   
       document.querySelectorAll(selectors.navDropdownLinks).forEach(el => {
@@ -4244,10 +4244,9 @@ lazySizesConfig.expFactor = 4;
       // Private dropdown functions
       function openFirstLevelDropdown(el) {
         var parent = el.parentNode;
-        document.querySelectorAll('.site-nav--has-dropdown').forEach(elem => {
-           console.log(elem)
-            elem.classList.remove(classes.dropdownActive)
-        });
+        // document.querySelectorAll('.site-nav--has-dropdown').forEach(elem => {
+        //     elem.classList.remove(classes.dropdownActive)
+        // });
         if (parent.classList.contains(classes.hasDropdownClass)) {
           parent.classList.add(classes.dropdownActive);
           hasActiveDropdown = false;
