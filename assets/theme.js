@@ -4243,14 +4243,13 @@ lazySizesConfig.expFactor = 4;
         var parent = el.parentNode;
         if (parent.classList.contains(classes.hasDropdownClass)) {
           parent.classList.add(classes.dropdownActive);
-          hasActiveDropdown = true;
+          hasActiveDropdown = false;
         }
   
         if (!theme.config.isTouch) {
           if (!closeOnClickActive) {
             var eventType = theme.config.isTouch ? 'touchend' : 'click';
-            closeOnClickActive = true;
-            console.log(eventType);
+            closeOnClickActive = false;
             document.documentElement.on(eventType + config.namespace, function() {
               closeDropdowns();
               document.documentElement.off(eventType + config.namespace);
