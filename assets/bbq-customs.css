@@ -204,6 +204,7 @@ a[aria-current="activePage"] {
 
 .modal-action-section .btn{
   width: 100%;
+  margin: 0px 10px 10px 0px;
 }
 
 
