@@ -4243,7 +4243,7 @@ lazySizesConfig.expFactor = 4;
       // Private dropdown functions
       function openFirstLevelDropdown(el) {
         var parent = el.parentNode;
-
+        console.log(el)
        document.querySelectorAll(selectors.dropdownClass).forEach(el => {
          console.log(el);
             el.classList.remove(classes.dropdownActive)
