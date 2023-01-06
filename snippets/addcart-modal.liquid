@@ -3,11 +3,12 @@
     <div class="modal__centered">
       <div class="modal__centered-content">
         <div id="AddCartModalHolder"></div>
-        {% if product %}
+         {% render 'product-recommendation'  %}
+<!--         {% if product %}
           {% section 'product-recommendations'  %}
         {% else %}
-          {% render 'product-recommendation'  %}
-        {% endif %}
+         
+        {% endif %} -->
       </div>
 
       <button type="button" class="btn btn--circle btn--icon modal__close js-modal-close">
