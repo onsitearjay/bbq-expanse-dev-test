@@ -3925,6 +3925,7 @@ lazySizesConfig.expFactor = 4;
       navigation: '.site-navigation',
       navItems: '.site-nav__item',
       navLinks: '.site-nav__link',
+      dropdownClass: 'site-nav--has-dropdown',
       navLinksWithDropdown: '.site-nav__link--has-dropdown',
       navDropdownLinks: '.site-nav__dropdown-link--second-level',
       triggerCollapsedMenu: '.site-nav__compress-menu',
@@ -4235,7 +4236,9 @@ lazySizesConfig.expFactor = 4;
         if (hasActiveSubDropdown) {
           closeThirdLevelDropdown();
         }
-      
+        document.querySelectorAll(selectors.dropdownClass).forEach(el => {
+          el.classList.remove(classes.dropdownActive)
+      });
         openFirstLevelDropdown(evt.currentTarget);
       }
   
