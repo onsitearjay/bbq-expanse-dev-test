@@ -200,4 +200,8 @@ a[aria-current="activePage"] {
   width:200px,
 }
 
+.modal-action-section btn{
+  width: 100%;
+}
+
 
