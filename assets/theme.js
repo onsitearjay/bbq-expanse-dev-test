@@ -4227,37 +4227,37 @@ lazySizesConfig.expFactor = 4;
       }
   
       function accessibleMouseEvent(evt) {
-        if (hasActiveDropdown) {
-          closeSecondLevelDropdown();
-        }
+        // if (hasActiveDropdown) {
+        //   closeSecondLevelDropdown();
+        // }
   
-        if (hasActiveSubDropdown) {
-          closeThirdLevelDropdown();
-        }
+        // if (hasActiveSubDropdown) {
+        //   closeThirdLevelDropdown();
+        // }
       
-        openFirstLevelDropdown(evt.currentTarget);
+        // openFirstLevelDropdown(evt.currentTarget);
       }
   
       // Private dropdown functions
       function openFirstLevelDropdown(el) {
-        // var parent = el.parentNode;
-        // console.log(classes.dropdownActive);
-        // if (parent.classList.contains(classes.hasDropdownClass)) {
-        //   parent.classList.add(classes.dropdownActive);
-        //   hasActiveDropdown = false;
-        // }
+        var parent = el.parentNode;
+        console.log(classes.dropdownActive);
+        if (parent.classList.contains(classes.hasDropdownClass)) {
+          parent.classList.add(classes.dropdownActive);
+          hasActiveDropdown = false;
+        }
   
-        // if (!theme.config.isTouch) {
-        //   if (!closeOnClickActive) {
-        //     var eventType = theme.config.isTouch ? 'touchend' : 'click';
-        //     closeOnClickActive = true;
-        //     document.documentElement.on(eventType + config.namespace, function() {
-        //       closeDropdowns();
-        //       document.documentElement.off(eventType + config.namespace);
-        //       closeOnClickActive = false;
-        //     }.bind(this));
-        //   }
-        // }
+        if (!theme.config.isTouch) {
+          if (!closeOnClickActive) {
+            var eventType = theme.config.isTouch ? 'touchend' : 'click';
+            closeOnClickActive = true;
+            document.documentElement.on(eventType + config.namespace, function() {
+              closeDropdowns();
+              document.documentElement.off(eventType + config.namespace);
+              closeOnClickActive = false;
+            }.bind(this));
+          }
+        }
       }
   
       function openSecondLevelDropdown(el, skipCheck) {
