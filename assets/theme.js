@@ -6252,7 +6252,7 @@ lazySizesConfig.expFactor = 4;
 
         console.log(href.searchParams.get('product_id'));
         if( !href.searchParams.get('product_id') ){
-            href.searchParams.set('product_id', 'test');
+            href.searchParams.set('product_id',  document.querySelector('.modal-add-cart-product-info-holder').dataset.id);
           url = href.toString();
         }
       
