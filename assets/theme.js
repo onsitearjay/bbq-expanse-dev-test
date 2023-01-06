@@ -5369,7 +5369,7 @@ lazySizesConfig.expFactor = 4;
              </div>
             <div class="modal-add-cart-product-info-section">
               <div class="modal-add-cart-image-holder">
-                <img class="modal-add-cart-image-element" src="${product.items[0].image}"  width="100" height="100" />
+                <img class="modal-add-cart-image-element" src="${product.items[0].image}"/>
               </div>
             </div>
             <div class="modal-action-section">
