@@ -177,3 +177,20 @@ a[aria-current="activePage"] {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+.modal-add-cart-body{
+  width: 100%;
+}
+.modal-add-cart-product-info-section{
+  width: 100%;
+}{
+  width: 100%;
+}
+.modal-add-cart-product-info-section{
+  width: 50%;
+}
+.modal-action-section{
+  width: 50%;
+}
+
+
