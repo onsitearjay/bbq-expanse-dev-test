@@ -5364,7 +5364,7 @@ lazySizesConfig.expFactor = 4;
                     selectors.quickAddHolder);
             this.AddCartHolder.innerHTML = `
             <div>
-             <div class="modal-add-cart-product-info-holder">
+             <div class="modal-add-cart-product-info-holder" data-id="${product.items[0].id">
                 <label class="modal-add-cart-product-name">${product.items[0].title}</label>
              </div>
             <div class="modal-add-cart-product-info-section">
@@ -6253,7 +6253,7 @@ lazySizesConfig.expFactor = 4;
         console.log(href.searchParams.get('product_id'));
         if( !href.searchParams.get('product_id') ){
             href.searchParams.set('product_id', 'test');
-          console.log(href.toString());
+          url = href.toString();
         }
       
   
