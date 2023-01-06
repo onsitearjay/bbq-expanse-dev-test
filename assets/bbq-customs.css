@@ -191,6 +191,7 @@ a[aria-current="activePage"] {
   float: left;
   width: 50%;
 }
+
 .modal-action-section{
   float: left;
   width: 50%;
@@ -207,5 +208,9 @@ a[aria-current="activePage"] {
   width: 100%;
   margin: 0px 10px 10px 0px;
 }
+#AddCartModal .modal__header{
+  padding: 10px 40px 10px 40px;
+}
+
 
 
