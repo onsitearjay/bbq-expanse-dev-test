@@ -4246,7 +4246,7 @@ lazySizesConfig.expFactor = 4;
           parent.classList.add(classes.dropdownActive);
           hasActiveDropdown = false;
         }
-  
+    
         // if (!theme.config.isTouch) {
         //   if (!closeOnClickActive) {
         //     var eventType = theme.config.isTouch ? 'touchend' : 'click';
