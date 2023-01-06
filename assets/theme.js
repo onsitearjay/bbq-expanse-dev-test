@@ -4242,7 +4242,7 @@ lazySizesConfig.expFactor = 4;
       function openFirstLevelDropdown(el) {
         var parent = el.parentNode;
         if (parent.classList.contains(classes.hasDropdownClass)) {
-          parent.classList.add(classes.dropdownActive);
+          //parent.classList.add(classes.dropdownActive);
           hasActiveDropdown = false;
         }
   
