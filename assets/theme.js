@@ -4245,6 +4245,7 @@ lazySizesConfig.expFactor = 4;
         var parent = el.parentNode;
 
        document.querySelectorAll(selectors.dropdownClass).forEach(el => {
+         console.log(el);
             el.classList.remove(classes.dropdownActive)
         });
         
