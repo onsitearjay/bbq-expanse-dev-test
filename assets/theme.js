@@ -4229,7 +4229,9 @@ lazySizesConfig.expFactor = 4;
       }
   
       function accessibleMouseEvent(evt) {
-        console.log('test')
+         document.querySelectorAll(selectors.dropdownClass).forEach(elem => {
+            elem.classList.remove(classes.dropdownActive)
+        });
         if (hasActiveDropdown) {
           closeSecondLevelDropdown();
         }
