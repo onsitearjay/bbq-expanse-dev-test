@@ -6248,7 +6248,12 @@ lazySizesConfig.expFactor = 4;
         }
   
         var url = this.url;
-        console.log(url)
+        var href = new URL(url);
+        if( href.searchParams.get('product_id') != null && href.searchParams.get('product_id') != '' ){
+            href.searchParams.set('product_id', 'test');
+          console.log(href.toString());
+        }
+      
   
         // When section his hidden and shown, make sure it starts empty
         if (Shopify.designMode) {
