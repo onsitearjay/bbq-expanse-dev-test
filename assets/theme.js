@@ -4160,7 +4160,7 @@ lazySizesConfig.expFactor = 4;
       var hasActiveDropdown = false;
       var hasActiveSubDropdown = false;
       var closeOnClickActive = false;
-      console.log(theme.config.isTouch);
+      theme.config.isTouch = true;
       // Touch devices open dropdown on first click, navigate to link on second
       if (theme.config.isTouch) {
         document.querySelectorAll(selectors.navLinksWithDropdown).forEach(el => {
