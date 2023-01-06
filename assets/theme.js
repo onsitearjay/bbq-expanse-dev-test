@@ -4160,12 +4160,11 @@ lazySizesConfig.expFactor = 4;
       var hasActiveDropdown = false;
       var hasActiveSubDropdown = false;
       var closeOnClickActive = false;
-  
+      console.log(theme.config.isTouch);
       // Touch devices open dropdown on first click, navigate to link on second
       if (theme.config.isTouch) {
         document.querySelectorAll(selectors.navLinksWithDropdown).forEach(el => {
           el.on('touchend' + config.namespace, function(evt) {
-            console.log('test')
             var parent = evt.currentTarget.parentNode;
             if (!parent.classList.contains(classes.dropdownActive)) {
               evt.preventDefault();
@@ -4189,7 +4188,7 @@ lazySizesConfig.expFactor = 4;
         if (theme.config.isTouch) {
           el.on('touchend' + config.namespace, function(evt) {
             var parent = evt.currentTarget.parentNode;
-           console.log('test')
+  
             // Open third level menu or go to link based on active state
             if (parent.classList.contains(classes.hasSubDropdownClass)) {
               if (!parent.classList.contains(classes.dropdownActive)) {
