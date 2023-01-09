@@ -230,12 +230,14 @@ a[aria-current="activePage"] {
   display:flex;
 }
 .product-price-column{
+  position: relative;
   flex:50%;
 }
 .product-price-column p{
   font-size:18px;
   font-weigth:800;
-  bottom:0;
+  bottom: 0;
+  left: 0;
   position:absolute;
 }
 
