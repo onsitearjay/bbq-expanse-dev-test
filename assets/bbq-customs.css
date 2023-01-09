@@ -2,7 +2,8 @@
   --bbq-green:#090;
 }
 p.openbox{
- color: var(--bbq-green); 
+ color: var(--bbq-green);
+ font-weight: 900;
 }
 .bbq-prod-details-title{
   font-family:Harmonia Sans;
