@@ -77,6 +77,12 @@
             "code": "{% if product.metafields.bbq.open_box_heading_title != blank %}\n    <p class=\"variantTitle openbox\">{{ product.metafields.bbq.open_box_heading_title }}<\/p>\n    <a class=\"custom-variant-btn\" href=\"\/collections\/{{ product.metafields.bbq.open_box_collection }}\">\n        {{ product.metafields.bbq.open_box_heading_title }}\n    <\/a>\n{% endif %}"
           }
         },
+        "e53656a4-6f00-4df8-b8e0-99e17b1f705f": {
+          "type": "custom",
+          "settings": {
+            "code": "{% if product.metafields.bbq.brand_new_heading_title != blank %}\n    <p class=\"variantTitle\">{{ product.metafields.bbq.brand_new_heading_title }}<\/p>\n    <a class=\"custom-variant-btn\" href=\"\/collections\/{{ product.metafields.bbq.brand_new_related_collection }}\">\n        {{ product.metafields.bbq.brand_new_heading_title }}\n    <\/a>\n{% endif %}"
+          }
+        },
         "9b8e058c-44b0-4ed0-a873-eba443923274": {
           "type": "custom",
           "disabled": true,
@@ -139,6 +145,7 @@
         "e9a1b09c-5b9b-4929-bb49-5df4fffb4bf9",
         "bd285021-7257-447c-90b2-f4aabd259843",
         "b78fc02a-22e0-4467-9bfe-28f8e2874401",
+        "e53656a4-6f00-4df8-b8e0-99e17b1f705f",
         "9b8e058c-44b0-4ed0-a873-eba443923274",
         "948419f6-5159-4d16-8ea7-16760e4199ee",
         "variant_picker",
