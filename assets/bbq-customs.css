@@ -226,3 +226,11 @@ a[aria-current="activePage"] {
   padding: 10px 40px 10px 40px;
   background:#D3D3D3
 }
+.product-price-container{
+  display:flex;
+}
+.product-price-column{
+  flex:50%;
+}
+
+
