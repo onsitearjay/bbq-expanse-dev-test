@@ -21,6 +21,8 @@ p.openbox{
 	transition: max-height 0.5s;
 }
 #desc-show-more { 
+  color: #888;
+  font-style: italic;
   font-weight:900;
   color: var(--bbq-green);
   cursor: pointer;
