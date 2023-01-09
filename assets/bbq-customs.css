@@ -1,6 +1,16 @@
 :root {
   --bbq-green:#090;
 }
+.frequently-bought-item .fbi-content-wrap{
+  display:flex;
+  justify-content: flex-start;
+}
+.fbi-inner-content{
+  width: 25%;
+  padding: 25px;
+  margin: 0 10px;
+  background-color: #f8f8f8;
+}
 p.openbox{
  color: var(--bbq-green);
  font-weight: 900;
@@ -216,6 +226,3 @@ a[aria-current="activePage"] {
   padding: 10px 40px 10px 40px;
   background:#D3D3D3
 }
-
-
-
