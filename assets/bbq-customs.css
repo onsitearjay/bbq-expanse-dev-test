@@ -20,24 +20,35 @@ p.openbox{
   font-size: 19px;
   font-weight:700;
 }
-/*description show more*/
-#desc-content {
+/*description & specs show more*/
+.specification{
+  margin-bottom:-30px;
+}
+#desc-content{
 	max-height: 4.5em;
 	overflow: hidden;
 	transition: max-height 0.2s;
 }
-#desc-content.open {
-	max-height: 1000px;
+#specs-content {
+	max-height: 7em;
+	overflow: hidden;
+	transition: max-height 0.2s;
+}
+#desc-content.open,
+#specs-content.view{
+	max-height: 100%;
 	transition: max-height 0.5s;
 }
-#desc-show-more { 
-  font-style: italic;
+#desc-show-more,
+#specs-view-more{ 
   font-weight:900;
   color: #888;
+  font-style: italic;
   cursor: pointer;
-  display:block;
+  display:inline-block;
   margin:8px 0;
 }/*end description show more*/
+
 .collection-hero{
   height:200px;
 }
