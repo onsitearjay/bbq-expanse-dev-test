@@ -3,6 +3,17 @@ document.querySelectorAll('.custom-variant-btn').forEach(link => {
     link.setAttribute('aria-current', 'activePage')
   }
 })
+var specsContent = document.getElementById("specs-content");
+var specsButton = document.getElementById("specs-view-more");
+    specsButton.onclick = function () {
+    	if(specsContent.className == "view"){
+    		specsContent.className = "see";
+    		specsButton.innerHTML = "Read more >>";
+    	} else {
+    		specsContent.className = "view";
+    		specsButton.innerHTML = "Read less <<";
+    	}
+    };
 
 var customOptions = document.getElementsByClassName('custom-variant-btn');
 for (i = 0; i < customOptions.length; i++) {
