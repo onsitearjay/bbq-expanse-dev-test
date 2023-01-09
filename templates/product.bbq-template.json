@@ -74,7 +74,7 @@
         "b78fc02a-22e0-4467-9bfe-28f8e2874401": {
           "type": "custom",
           "settings": {
-            "code": "{% if product.metafields.bbq.open_box_heading_title != blank %}\n    <p class=\"variantTitle openbox\">{{ product.metafields.bbq.open_box_heading_title }}<\/p>\n    <a class=\"custom-variant-btn\" href=\"\/collections\/{{ product.metafields.bbq.open_box_collection }}\">\n        {{ product.metafields.bbq.open_box_heading_title }}\n    <\/a>\n{% endif %}"
+            "code": "{% if product.metafields.bbq.open_box_heading_title != blank %}\n    <p class=\"variantTitle openbox\">{{ product.metafields.bbq.open_box_heading_title }}<\/p>\n    <a class=\"custom-variant-btn\" href=\"{{ product.metafields.bbq.openbox_related_product[forloop.index0] }}\">\n        {{ product.metafields.bbq.open_box_heading_title[forloop.index0] }}\n        {% assign referenced_product = all_products[product.metafields.bbq.openbox_related_product[forloop.index0]] %}\n        {% assign prodPrice = referenced_product.price | money_with_currency %}\n        <span>{{ prodPrice }}<\/span>\n    <\/a>\n{% endif %}"
           }
         },
         "e53656a4-6f00-4df8-b8e0-99e17b1f705f": {
