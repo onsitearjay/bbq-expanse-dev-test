@@ -74,7 +74,7 @@
         "b78fc02a-22e0-4467-9bfe-28f8e2874401": {
           "type": "custom",
           "settings": {
-            "code": "{% if product.metafields.bbq.open_box_heading_title != blank %}\n    <p class=\"variantTitle openbox\">{{ product.metafields.bbq.open_box_heading_title }}<\/p>\n    \n    {% for openbox in product.metafields.bbq.open_box_heading_title %}\n    <a class=\"custom-variant-btn\" href=\"{{ product.metafields.bbq.openbox_related_product }}\">\n        {{ product.metafields.bbq.open_box_heading_title}}\n        <p>\n        {% assign referenced_product = all_products[product.metafields.bbq.openbox_related_product] %}\n        {% assign productPrice = referenced_product.price %}\n        {{ productPrice | money_with_currency }}\n        <\/p>\n    <\/a>\n    {% endfor %}\n{% endif %}"
+            "code": "{% if product.metafields.bbq.open_box_heading_title != blank %}\n    <p class=\"variantTitle openbox\">{{ product.metafields.bbq.open_box_heading_title }}<\/p>\n    \n    {% for openbox in product.metafields.bbq.open_box_heading_title %}\n    <a class=\"custom-variant-btn\" href=\"{{ product.metafields.bbq.openbox_related_product }}\">\n        {{ product.metafields.bbq.open_box_heading_title}}\n        <p class=\"openbox\">\n        {% assign referenced_product = all_products[product.metafields.bbq.openbox_related_product] %}\n        {% assign productPrice = referenced_product.price %}\n        {{ productPrice | money_with_currency }}\n        <\/p>\n    <\/a>\n    {% endfor %}\n{% endif %}"
           }
         },
         "e53656a4-6f00-4df8-b8e0-99e17b1f705f": {
