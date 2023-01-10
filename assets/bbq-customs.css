@@ -13,6 +13,7 @@
 }
 .fbi-inner-content img{
   aspect-ratio:1/1;
+  mix-blend-mode: multiply;
 }
 .openbox{
  color: var(--bbq-green);
