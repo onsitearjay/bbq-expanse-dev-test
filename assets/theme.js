@@ -9078,24 +9078,7 @@ lazySizesConfig.expFactor = 4;
       }
     });
     
-    window.onresize = function(e) {
-        const siteHeader = document.querySelector('#SiteHeader');
-        siteHeader.querySelectorAll('.megamenu').forEach(nav => {
-        var h = nav.offsetHeight;
-         const navRectPositions =  nav.getBoundingClientRect()
-          console.log(navRectPositions)
-        if(typeof nav.getBoundingClientRect() !== "undefined"){
-          //deduct left position screen value to position menu to absolute left
-          if(navRectPositions !== null && typeof navRectPositions.left !== "undefined"){
-            let oldLeftPost = Math.abs(parseInt(nav.style.left));
-            console.log(oldLeftPost)
-            let newPositionLeft = navRectPositions.left +oldLeftPost;
-            nav.style.left +=  "-"+Math.round( newPositionLeft )+"px";
-            nav.style.width = Math.round(window.innerWidth)+"px";
-          }
-        }
-      });
-    }
+
  
 
     theme.pageTransitions();
