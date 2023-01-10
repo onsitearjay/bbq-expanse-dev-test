@@ -4081,7 +4081,7 @@ lazySizesConfig.expFactor = 4;
           //deduct left position screen value to position menu to absolute left
           if(navRectPositions !== null && typeof navRectPositions.left !== "undefined"){
             nav.style.left =  "-"+Math.round(navRectPositions.left)+"px";
-            nav.style.width = "-"+Math.round(screen.width)+"px";
+            nav.style.width = Math.round(screen.width)+"px";
           }
         }
         if (h > largestMegaNav) {
