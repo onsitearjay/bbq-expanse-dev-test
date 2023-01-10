@@ -9082,12 +9082,12 @@ lazySizesConfig.expFactor = 4;
         const siteHeader = document.querySelector('#SiteHeader');
         siteHeader.querySelectorAll('.megamenu').forEach(nav => {
         var h = nav.offsetHeight;
-          console.log('test');
+          console.log(nav.getBoundingClientRect())
         if(typeof nav.getBoundingClientRect() !== "undefined"){
           const navRectPositions =nav.getBoundingClientRect();
           //deduct left position screen value to position menu to absolute left
           if(navRectPositions !== null && typeof navRectPositions.left !== "undefined"){
-            //nav.style.left =  "-"+Math.round(navRectPositions.left)+"px";
+            nav.style.left =  "-"+Math.round(navRectPositions.left)+"px";
             nav.style.width = Math.round(window.innerWidth)+"px";
           }
         }
