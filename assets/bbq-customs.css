@@ -251,6 +251,9 @@ a[aria-current="activePage"] {
   left: 0;
   position:absolute;
 }
-
+//mega menu custom css
+.megamenu{
+  position:fixed;
+}
 
 
