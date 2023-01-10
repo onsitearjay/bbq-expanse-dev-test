@@ -4077,6 +4077,7 @@ lazySizesConfig.expFactor = 4;
         var h = nav.offsetHeight;
         console.log(nav);
         if(typeof nav.getBoundingClientRect() !== "undefined"){
+            console.log('test');
           const navRectPositions =nav.getBoundingClientRect();
           //deduct left position screen value to position menu to absolute left
           nav.left -=  navRectPositions.left;
