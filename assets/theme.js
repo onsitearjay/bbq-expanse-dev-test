@@ -4192,7 +4192,7 @@ lazySizesConfig.expFactor = 4;
         el.on('focusin' + config.namespace, accessibleMouseEvent);
         //el.on('mouseover' + config.namespace, accessibleMouseEvent);
         el.on('click' + config.namespace, accessibleMouseEvent);
-        el.on('mouseleave' + config.namespace, closeDropdowns);
+        //el.on('mouseleave' + config.namespace, closeDropdowns);
       });
   
       document.querySelectorAll(selectors.navDropdownLinks).forEach(el => {
@@ -4260,7 +4260,7 @@ lazySizesConfig.expFactor = 4;
           parent.classList.add(classes.dropdownActive);
           hasActiveDropdown = false;
         }
-           console.log(parent)
+           parent.querySelector('.megamenu')
           //   const navRectPositions =el.getBoundingClientRect();
           // //deduct left position screen value to position menu to absolute left
           // if(navRectPositions !== null ){
