@@ -9090,9 +9090,6 @@ lazySizesConfig.expFactor = 4;
             nav.style.width = Math.round(window.innerWidth)+"px";
           }
         }
-        if (h > largestMegaNav) {
-          largestMegaNav = h;
-        }
       });
     })
 
