@@ -4075,7 +4075,6 @@ lazySizesConfig.expFactor = 4;
       var largestMegaNav = 0;
       siteHeader.querySelectorAll(selectors.megamenu).forEach(nav => {
         var h = nav.offsetHeight;
-        console.log(nav);
         if(typeof nav.getBoundingClientRect() !== "undefined"){
           const navRectPositions =nav.getBoundingClientRect();
           //deduct left position screen value to position menu to absolute left
@@ -9078,6 +9077,24 @@ lazySizesConfig.expFactor = 4;
            new theme.AddCart(productBlock);
       }
     });
+
+    document.addEventListener('resize',function(evt){
+        const siteHeader = document.querySelector(''#SiteHeader'');
+        siteHeader.querySelectorAll(selectors.megamenu).forEach(nav => {
+        var h = nav.offsetHeight;
+        if(typeof nav.getBoundingClientRect() !== "undefined"){
+          const navRectPositions =nav.getBoundingClientRect();
+          //deduct left position screen value to position menu to absolute left
+          if(navRectPositions !== null && typeof navRectPositions.left !== "undefined"){
+            nav.style.left =  "-"+Math.round(navRectPositions.left)+"px";
+            nav.style.width = Math.round(window.innerWidth)+"px";
+          }
+        }
+        if (h > largestMegaNav) {
+          largestMegaNav = h;
+        }
+      });
+    })
 
     theme.pageTransitions();
 
