@@ -9089,7 +9089,7 @@ lazySizesConfig.expFactor = 4;
           if(navRectPositions !== null && typeof navRectPositions.left !== "undefined"){
             let oldLeftPost = Math.abs(parseInt(nav.style.left));
             let newPositionLeft = navRectPositions.left +oldLeftPost;
-            nav.style.left +=  "-"+Math.round(navRectPositions.left)+"px";
+            nav.style.left +=  "-"+Math.round( newPositionLeft )+"px";
             nav.style.width = Math.round(window.innerWidth)+"px";
           }
         }
