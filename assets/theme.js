@@ -4260,12 +4260,12 @@ lazySizesConfig.expFactor = 4;
           parent.classList.add(classes.dropdownActive);
           hasActiveDropdown = false;
         }
-
-            const navRectPositions =el.getBoundingClientRect();
-          //deduct left position screen value to position menu to absolute left
-          if(navRectPositions !== null ){
-            el.style.width = Math.round(screen.width)+"px";
-          }
+           console.log(parent)
+          //   const navRectPositions =el.getBoundingClientRect();
+          // //deduct left position screen value to position menu to absolute left
+          // if(navRectPositions !== null ){
+          //   el.style.width = Math.round(screen.width)+"px";
+          // }
     
         // if (!theme.config.isTouch) {
         //   if (!closeOnClickActive) {
