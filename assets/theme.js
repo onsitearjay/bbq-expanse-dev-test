@@ -4192,7 +4192,7 @@ lazySizesConfig.expFactor = 4;
         el.on('focusin' + config.namespace, accessibleMouseEvent);
         //el.on('mouseover' + config.namespace, accessibleMouseEvent);
         el.on('click' + config.namespace, accessibleMouseEvent);
-       // el.on('mouseleave' + config.namespace, closeDropdowns);
+        el.on('mouseleave' + config.namespace, closeDropdowns);
       });
   
       document.querySelectorAll(selectors.navDropdownLinks).forEach(el => {
