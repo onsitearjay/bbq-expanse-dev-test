@@ -28,16 +28,10 @@
           "settings": {
           }
         },
-        "c793016f-1962-4802-9dae-409aad41593a": {
-          "type": "shopify:\/\/apps\/bread-pay-messaging\/blocks\/app-block-product\/17f8811a-68d5-4aab-a4c3-0c2b49a4e68b",
-          "settings": {
-            "shopId": "shopId"
-          }
-        },
         "a9b9159f-7fe2-4149-bf31-0833258247c1": {
           "type": "custom",
           "settings": {
-            "code": "<div class=\"exclusive-savings\">\n\t<p>\n\t\t\n\t\t<a href=\"tel:888-667-4986\" style=\"color:#090;\">\n\t\t\tPhone Discounts\n\t\t<\/a> | \n\t\t<a href=\"\/collections\/package-deals\" target=\"_blank\">\n\t\t\tPackage Deals\n\t\t<\/a> | \n\t\t\n\t\t<a href=\"\/collections\/open-box-1\" style=\"color:#090;\">\n\t\t\tOpen Box\n\t\t<\/span> |\n\n\t\t<a href=\"\/collections\/close-out-deals\" target=\"_blank\">\n\t\t\tClose Out\n\t\t<\/a>| \n    \n    <a href=\"\/collections\/scratch-and-dents\" style=\"color:#090;\" target=\"_blank\">\n\t\t\tScratch + Dent\n\t\t<\/a> | \n    \n    <span id=\"low-monthly-payments\">Low Monthly Payments <\/span> |\n    \n\t<a href=\"\/pages\/free-accessories\" style=\"color:#090;\" target=\"_blank\">\n\t\t\tFree Accessory Bundles\n\t\t<\/a>\n\t\t\n\t<\/p>\n\n<\/div>"
+            "code": "<div class=\"exclusive-savings\">\n\t<p>\n\t\t\n\t\t<a href=\"tel:888-667-4986\" style=\"color:#090;\">\n\t\t\tPhone Discounts\n\t\t<\/a> | \n\t\t<a href=\"\/collections\/package-deals\" target=\"_blank\">\n\t\t\tPackage Deals\n\t\t<\/a> | \n\t\t\n\t\t<a href=\"\/collections\/open-box-1\" style=\"color:#090;\">\n\t\t\tOpen Box\n\t\t<\/span> |\n\n\t\t<a href=\"\/collections\/close-out-deals\" target=\"_blank\">\n\t\t\tClose Out\n\t\t<\/a>| \n    \n    <a href=\"\/collections\/scratch-and-dents\" style=\"color:#090;\" target=\"_blank\">\n\t\t\tScratch + Dent\n\t\t<\/a> | \n    \n    <span id=\"low-monthly-payments\">Low Monthly Payments \n{% if product.available %}\n<div id=\"bread-checkout-btn-product\" style=\"width:250px; height:50px; margin:20px 0px;\"><\/div>\n{% endif %}\n<\/span> |\n    \n\t<a href=\"\/pages\/free-accessories\" style=\"color:#090;\" target=\"_blank\">\n\t\t\tFree Accessory Bundles\n\t\t<\/a>\n\t\t\n\t<\/p>\n\n<\/div>"
           }
         },
         "6d4a00c6-99ed-42dd-bfd5-1b91c8900dc8": {
@@ -143,7 +137,6 @@
       },
       "block_order": [
         "price",
-        "c793016f-1962-4802-9dae-409aad41593a",
         "a9b9159f-7fe2-4149-bf31-0833258247c1",
         "6d4a00c6-99ed-42dd-bfd5-1b91c8900dc8",
         "44880ef3-f19a-40d1-acc6-025a4af3db44",
