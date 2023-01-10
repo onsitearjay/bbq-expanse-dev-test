@@ -4075,12 +4075,13 @@ lazySizesConfig.expFactor = 4;
       var largestMegaNav = 0;
       siteHeader.querySelectorAll(selectors.megamenu).forEach(nav => {
         var h = nav.offsetHeight;
+        console.log(nav);
         if(typeof nav.getBoundingClientRect() !== "undefined"){
-   
-        const navRectPositions =nav.getBoundingClientRect();
-        //deduct left position screen value to position menu to absolute left
-        if(navRectPositions !== null && typeof navRectPositions.left !== "undefined"){
-          nav.style.left =  "-"+round(navRectPositions.left)+"px";
+          const navRectPositions =nav.getBoundingClientRect();
+          //deduct left position screen value to position menu to absolute left
+          if(navRectPositions !== null && typeof navRectPositions.left !== "undefined"){
+            nav.style.left =  "-"+round(navRectPositions.left)+"px";
+          }
         }
         if (h > largestMegaNav) {
           largestMegaNav = h;
