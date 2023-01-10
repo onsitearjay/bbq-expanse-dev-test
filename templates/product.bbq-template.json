@@ -201,6 +201,12 @@
           "settings": {
             "is_tab": true
           }
+        },
+        "123b3a6f-667a-47ce-b80d-7f398939fb18": {
+          "type": "custom",
+          "settings": {
+            "code": "{% if product.metafields.frequently.fbi_heading != blank %}\n<div class=\"frequently-bought-item\">\n  <h3 class=\"h3\">{{ product.metafields.frequently.fbi_heading }}<\/h3>\n  <div class=\"fbi-content-wrap\">\n    {% for frequently in product.metafields.frequently.fbi_related_product %}\n    <div class=\"fbi-inner-content\">\n      {% assign referenced_product = all_products[product.metafields.frequently.fbi_related_product[forloop.index0]] %}\n      {% assign productPrice = referenced_product.price %}\n      {%comment%}{% assign priceDiff = referenced_product.price | minus: product.price %}{%endcomment%}\n      <div>\n        <a href=\"{{ referenced_product }}\">\n          <img src=\"{{ referenced_product | img_url: '300x300'}}\">\n        <\/a>\n      <\/div>\n      <div class=\"grid-product__title\">{{ referenced_product }}<\/div>\n      <div>\n        <p>{{ productPrice | money_with_currency }}<\/p>\n        {%comment%}<p>{{ priceDiff | abs | money_with_currency }}<\/p> {%endcomment%}\n      <\/div>\n    <\/div>\n  {% endfor %}\n  <\/div>\n<\/div>\n{% endif %}"
+          }
         }
       },
       "block_order": [
@@ -208,7 +214,8 @@
         "e473ac02-fdd6-45c8-8fb6-b7488095642d",
         "69d4d595-5925-455a-9869-5d792470f921",
         "b427215c-ccca-4ec5-b966-c5366f403200",
-        "description"
+        "description",
+        "123b3a6f-667a-47ce-b80d-7f398939fb18"
       ],
       "settings": {
         "max_width": false
@@ -216,6 +223,7 @@
     },
     "cdf2246f-9cce-4bfc-8ae9-6b5eb30e9acd": {
       "type": "advanced-content",
+      "disabled": true,
       "blocks": {
         "template--14912652017743__cdf2246f-9cce-4bfc-8ae9-6b5eb30e9acd-1672368930c68ec30c-1": {
           "type": "liquid",
@@ -261,6 +269,36 @@
       "settings": {
         "color_scheme": "2"
       }
+    },
+    "662d4d67-4aa6-4e41-b2ea-2491d9b38a62": {
+      "type": "newsletter",
+      "blocks": {
+        "template--16536872386817__662d4d67-4aa6-4e41-b2ea-2491d9b38a62-16733355036436e84d-0": {
+          "type": "title",
+          "settings": {
+            "title": "Sign up and save"
+          }
+        },
+        "template--16536872386817__662d4d67-4aa6-4e41-b2ea-2491d9b38a62-16733355036436e84d-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.<\/p>"
+          }
+        },
+        "template--16536872386817__662d4d67-4aa6-4e41-b2ea-2491d9b38a62-16733355036436e84d-2": {
+          "type": "form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "template--16536872386817__662d4d67-4aa6-4e41-b2ea-2491d9b38a62-16733355036436e84d-0",
+        "template--16536872386817__662d4d67-4aa6-4e41-b2ea-2491d9b38a62-16733355036436e84d-1",
+        "template--16536872386817__662d4d67-4aa6-4e41-b2ea-2491d9b38a62-16733355036436e84d-2"
+      ],
+      "settings": {
+        "color_scheme": "1"
+      }
     }
   },
   "order": [
@@ -272,6 +310,7 @@
     "more-products-vendor",
     "more-products-collection",
     "recently-viewed",
-    "collection-return"
+    "collection-return",
+    "662d4d67-4aa6-4e41-b2ea-2491d9b38a62"
   ]
 }
