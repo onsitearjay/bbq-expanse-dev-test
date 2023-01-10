@@ -9080,16 +9080,17 @@ lazySizesConfig.expFactor = 4;
     
     window.onresize = function(e) {
         const siteHeader = document.querySelector('#SiteHeader');
-      setTimeout(function(){
-         siteHeader.querySelectorAll('.megamenu').forEach(nav => {
+        siteHeader.querySelectorAll('.megamenu').forEach(nav => {
         var h = nav.offsetHeight;
         if(typeof nav.getBoundingClientRect() !== "undefined"){
-                  const navRectPositions =nav.getBoundingClientRect();
-          console.log(navRectPositions)
+           console.log(window.getComputedStyle(nav).zoom)
+          //deduct left position screen value to position menu to absolute left
+          if(navRectPositions !== null && typeof navRectPositions.left !== "undefined"){
+            nav.style.left +=  "-"+Math.round(navRectPositions.left)+"px";
+            nav.style.width = Math.round(window.innerWidth)+"px";
+          }
         }
       });
-      },500)
-       
     }
  
 
