@@ -9077,12 +9077,9 @@ lazySizesConfig.expFactor = 4;
            new theme.AddCart(productBlock);
       }
     });
-    window.onzoom = function(e) {
-    	// zoom event
-    }
-
-    document.addEventListener('resize',function(evt){
-        const siteHeader = document.querySelector('#SiteHeader');
+    
+    window.onresize = function(e) {
+          const siteHeader = document.querySelector('#SiteHeader');
         siteHeader.querySelectorAll(selectors.megamenu).forEach(nav => {
         var h = nav.offsetHeight;
           console.log('test');
@@ -9095,7 +9092,8 @@ lazySizesConfig.expFactor = 4;
           }
         }
       });
-    })
+    }
+ 
 
     theme.pageTransitions();
 
