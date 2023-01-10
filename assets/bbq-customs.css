@@ -12,7 +12,7 @@
   background-color: #f8f8f8;
 }
 .fbi-inner-content img{
-  aspect-ratio:1;
+  aspect-ratio:1/1;
 }
 .openbox{
  color: var(--bbq-green);
