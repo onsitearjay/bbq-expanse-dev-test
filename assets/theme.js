@@ -4075,6 +4075,7 @@ lazySizesConfig.expFactor = 4;
       var largestMegaNav = 0;
       siteHeader.querySelectorAll(selectors.megamenu).forEach(nav => {
         var h = nav.offsetHeight;
+        console.log(nav.getBoundingClientRect())
         if (h > largestMegaNav) {
           largestMegaNav = h;
         }
