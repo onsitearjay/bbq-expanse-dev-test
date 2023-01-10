@@ -4075,7 +4075,11 @@ lazySizesConfig.expFactor = 4;
       var largestMegaNav = 0;
       siteHeader.querySelectorAll(selectors.megamenu).forEach(nav => {
         var h = nav.offsetHeight;
-        console.log(nav.getBoundingClientRect())
+        if(typeof nav.getBoundingClientRect() !== "undefined"){
+          navRectPositions =nav.getBoundingClientRect();
+          //deduct left position screen value to position menu to absolute left
+          nav.left -=  navRectPositions.left;
+        }
         if (h > largestMegaNav) {
           largestMegaNav = h;
         }
