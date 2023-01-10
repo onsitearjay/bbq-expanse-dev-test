@@ -9082,8 +9082,8 @@ lazySizesConfig.expFactor = 4;
         const siteHeader = document.querySelector('#SiteHeader');
         siteHeader.querySelectorAll('.megamenu').forEach(nav => {
         var h = nav.offsetHeight;
+         const navRectPositions =  nav.getBoundingClientRect()
         if(typeof nav.getBoundingClientRect() !== "undefined"){
-           console.log(window.getComputedStyle(nav).zoom)
           //deduct left position screen value to position menu to absolute left
           if(navRectPositions !== null && typeof navRectPositions.left !== "undefined"){
             nav.style.left +=  "-"+Math.round(navRectPositions.left)+"px";
