@@ -5377,7 +5377,7 @@ lazySizesConfig.expFactor = 4;
             }));
             this.AddCartHolder = document.querySelector(
                     selectors.quickAddHolder);
-            
+            console.log(product.items[0].product_id);
             this.AddCartHolder.innerHTML = `
 
             <div class="modal-add-cart-body">
