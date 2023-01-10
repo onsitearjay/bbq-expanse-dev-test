@@ -9088,6 +9088,7 @@ lazySizesConfig.expFactor = 4;
           //deduct left position screen value to position menu to absolute left
           if(navRectPositions !== null && typeof navRectPositions.left !== "undefined"){
             let oldLeftPost = Math.abs(parseInt(nav.style.left));
+            console.log(oldLeftPost)
             let newPositionLeft = navRectPositions.left +oldLeftPost;
             nav.style.left +=  "-"+Math.round( newPositionLeft )+"px";
             nav.style.width = Math.round(window.innerWidth)+"px";
