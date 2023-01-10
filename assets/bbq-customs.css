@@ -253,7 +253,7 @@ a[aria-current="activePage"] {
 }
 //mega menu custom css
 .megamenu{
-  position:fixed;
+  position:fixed !important;
 }
 
 
