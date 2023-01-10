@@ -28,6 +28,12 @@
           "settings": {
           }
         },
+        "c793016f-1962-4802-9dae-409aad41593a": {
+          "type": "shopify:\/\/apps\/bread-pay-messaging\/blocks\/app-block-product\/17f8811a-68d5-4aab-a4c3-0c2b49a4e68b",
+          "settings": {
+            "shopId": "shopId"
+          }
+        },
         "a9b9159f-7fe2-4149-bf31-0833258247c1": {
           "type": "custom",
           "settings": {
@@ -137,6 +143,7 @@
       },
       "block_order": [
         "price",
+        "c793016f-1962-4802-9dae-409aad41593a",
         "a9b9159f-7fe2-4149-bf31-0833258247c1",
         "6d4a00c6-99ed-42dd-bfd5-1b91c8900dc8",
         "44880ef3-f19a-40d1-acc6-025a4af3db44",
