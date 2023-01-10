@@ -9080,13 +9080,16 @@ lazySizesConfig.expFactor = 4;
     
     window.onresize = function(e) {
         const siteHeader = document.querySelector('#SiteHeader');
-        siteHeader.querySelectorAll('.megamenu').forEach(nav => {
+      setTimeout(function(){
+         siteHeader.querySelectorAll('.megamenu').forEach(nav => {
         var h = nav.offsetHeight;
         if(typeof nav.getBoundingClientRect() !== "undefined"){
                   const navRectPositions =nav.getBoundingClientRect();
           console.log(navRectPositions)
         }
       });
+      },500)
+       
     }
  
 
