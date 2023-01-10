@@ -5382,7 +5382,7 @@ lazySizesConfig.expFactor = 4;
 
             <div class="modal-add-cart-body">
              <div class="modal-add-cart-product-info-holder" data-id="${product.items[0].product_id}">
-                <label class="modal-add-cart-product-name">${product.items[0].title}</label>
+                <label class="modal-add-cart-product-name">${product.items[0].product_title}</label>
              </div>
             <div class="modal-add-cart-product-info-section">
               <div class="modal-add-cart-image-holder">
