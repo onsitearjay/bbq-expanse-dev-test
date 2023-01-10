@@ -4051,7 +4051,7 @@ lazySizesConfig.expFactor = 4;
     function stickyHeaderCheck() {
       // Disable sticky header if any mega menu is taller than window
       theme.config.stickyHeader = doesMegaMenuFit();
-  
+        theme.config.stickyHeader = false;
       if (theme.config.stickyHeader) {
         config.forceStopSticky = false;
         stickyHeader();
