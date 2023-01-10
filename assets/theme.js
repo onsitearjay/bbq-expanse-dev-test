@@ -4081,7 +4081,7 @@ lazySizesConfig.expFactor = 4;
           //deduct left position screen value to position menu to absolute left
           if(navRectPositions !== null && typeof navRectPositions.left !== "undefined"){
             nav.style.left =  "-"+Math.round(navRectPositions.left)+"px";
-            nav.style.width = Math.round(screen.width)+"px";
+            nav.style.width = Math.round(window.innerWidth)+"px";
           }
         }
         if (h > largestMegaNav) {
@@ -4192,7 +4192,7 @@ lazySizesConfig.expFactor = 4;
         el.on('focusin' + config.namespace, accessibleMouseEvent);
         //el.on('mouseover' + config.namespace, accessibleMouseEvent);
         el.on('click' + config.namespace, accessibleMouseEvent);
-        //el.on('mouseleave' + config.namespace, closeDropdowns);
+        el.on('mouseleave' + config.namespace, closeDropdowns);
       });
   
       document.querySelectorAll(selectors.navDropdownLinks).forEach(el => {
@@ -4260,12 +4260,8 @@ lazySizesConfig.expFactor = 4;
           parent.classList.add(classes.dropdownActive);
           hasActiveDropdown = false;
         }
-           parent.querySelector('.megamenu')
-          //   const navRectPositions =el.getBoundingClientRect();
-          // //deduct left position screen value to position menu to absolute left
-          // if(navRectPositions !== null ){
-          //   el.style.width = Math.round(screen.width)+"px";
-          // }
+        //parent.querySelector('.megamenu')
+      
     
         // if (!theme.config.isTouch) {
         //   if (!closeOnClickActive) {
