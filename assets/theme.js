@@ -9077,6 +9077,9 @@ lazySizesConfig.expFactor = 4;
            new theme.AddCart(productBlock);
       }
     });
+    window.onzoom = function(e) {
+    	// zoom event
+    }
 
     document.addEventListener('resize',function(evt){
         const siteHeader = document.querySelector('#SiteHeader');
