@@ -9079,7 +9079,7 @@ lazySizesConfig.expFactor = 4;
     });
 
     document.addEventListener('resize',function(evt){
-        const siteHeader = document.querySelector(''#SiteHeader'');
+        const siteHeader = document.querySelector('#SiteHeader');
         siteHeader.querySelectorAll(selectors.megamenu).forEach(nav => {
         var h = nav.offsetHeight;
         if(typeof nav.getBoundingClientRect() !== "undefined"){
