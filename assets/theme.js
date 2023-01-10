@@ -4080,7 +4080,7 @@ lazySizesConfig.expFactor = 4;
           const navRectPositions =nav.getBoundingClientRect();
            console.log(navRectPositions);
           //deduct left position screen value to position menu to absolute left
-         // nav.style.left =  ""+navRectPositions.left;
+          nav.style.left =  "-200px";
         }
         if (h > largestMegaNav) {
           largestMegaNav = h;
