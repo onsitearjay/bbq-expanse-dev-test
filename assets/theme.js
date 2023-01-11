@@ -9081,8 +9081,10 @@ lazySizesConfig.expFactor = 4;
     });
   
     document.addEventListener("bread-loaded", function(evt) {
+      
           var opts = {
           buttonId: 'bread-checkout-btn-new',
+          asLowAs: true,
           items: [],
           /* STEP 3: Add a done callback */
           done: function(err, tx_token) {
