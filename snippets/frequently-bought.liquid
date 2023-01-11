@@ -8,6 +8,16 @@
       {% assign productPrice = referenced_product.price %}
       {% assign regularPrice = referenced_product.compare_at_price %}
       {% assign savedPrice = regularPrice | minus: productPrice  %}
+      <div class="grid-product__actions"><button class="btn btn--circle btn--icon quick-product__btn js-modal-open-quick-modal-6892417613903 small--hide" title="Quick shop" tabindex="-1" data-handle="bull-single-vented-vertical-door-89980" aria-expanded="false">
+              <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-search" viewBox="0 0 64 64"><defs><style>.cls-1{fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px}</style></defs><path class="cls-1" d="M47.16 28.58A18.58 18.58 0 1 1 28.58 10a18.58 18.58 0 0 1 18.58 18.58zM54 54L41.94 42"></path></svg>
+              <span class="icon__fallback-text">Quick shop</span>
+            </button>
+<button type="button" class="text-link quick-add-btn js-add-cart-btn" title="Add to cart" tabindex="-1" data-id="40387402629199">
+                <span class="btn btn--circle btn--icon">
+                  <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-plus" viewBox="0 0 64 64"><path class="cls-1" d="M32 9v46m23-23H9"></path></svg>
+                  <span class="icon__fallback-text">Add to cart</span>
+                </span>
+              </button></div>
       <div class="fbi_image">
         <a href="{{ referenced_product.url }}">
           <img src="{{ referenced_product | img_url: '300x300'}}">
