@@ -4,6 +4,9 @@
   endunless
 
   assign collection_link = collection.url
+  if product
+    assign collection_link = product.url
+  endif
   if block.settings.title != blank
     assign title_output = block.settings.title
   else
