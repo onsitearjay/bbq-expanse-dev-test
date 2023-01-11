@@ -272,6 +272,9 @@ a[aria-current="activePage"] {
     justify-content: center;
     font-weight: 800 !important;
 }
+.exclusive-savings-col a{
+    color:#090;
+}
 .product-price-column p{
   font-size:18px;
   font-weigth:800;
