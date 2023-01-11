@@ -9079,9 +9079,7 @@ lazySizesConfig.expFactor = 4;
 
     
     });
-    document.addEventListener("message", function(evt) {
-      console.log(evt)
-    })
+  
     document.addEventListener("DOMContentLoaded", function(evt) {
           var opts = {
           buttonId: 'bread-checkout-btn-new',
@@ -9105,7 +9103,11 @@ lazySizesConfig.expFactor = 4;
       //consoel.log('test')
     });
 
-
+    var observer = new MutationObserver(function (mutationRecords) {
+    console.log("change detected");
+    });
+    observer.observe(document.getElementById('bread-checkout-btn-product'), {childList: true});
+    
     theme.pageTransitions();
     
 
