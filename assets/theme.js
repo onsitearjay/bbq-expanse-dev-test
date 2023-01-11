@@ -9094,8 +9094,9 @@ lazySizesConfig.expFactor = 4;
           customCSS: '#bread-button,body,html{height:100%;margin:0;width:100%}body{display:table}#bread-button{background:#50c742;color:#FFFFFF;border:0px solid #ffffff;border-radius:4px;display:table-cell;font-family:Lato, HelveticaNeue, Helvetica Neue, sans-serif;font-size:16px;font-weight:400;text-align:center;vertical-align:middle;transition:all .3s ease}.bread-btn{cursor:pointer}#bread-button.bread-btn:hover{background:#50c742}.bread-embed-inner,.bread-label .bread-embed-icon{display:inline-block}.bread-label .bread-embed-icon:after{background:rgba(255,255,255,.5);border-radius:50px;color:#333;content:"i";cursor:pointer;display:inline-block;line-height:1;margin-left:8px;padding:4px 9px}.bread-pot:before{content:"Pay over time"}.bread-btn .bread-as-low-as:before,.bread-label .bread-as-low-as:before{content:"As low as "}.bread-for:before{content:"For "}' 
           /* END STEP 4 */
         };
-
-       bread.checkout(opts);
+      setTimeout(function(){
+         bread.checkout(opts);
+      },2000)
     });
     
 
