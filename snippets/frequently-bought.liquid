@@ -3,9 +3,9 @@
   <h3 class="h3">{{ product.metafields.frequently.fbi_heading }}</h3>
   <div class="fbi-content-wrap">
     {% for frequently in product.metafields.frequently.fbi_related_product %}
-
-      <div class="grid-product">
-      <div class="fbi-inner-content">
+    
+<div class="grid-product">  
+  <div class="fbi-inner-content">
 
   {%- unless no_actions -%}
       {%- if settings.quick_add_enable or settings.quick_shop_enable -%}
