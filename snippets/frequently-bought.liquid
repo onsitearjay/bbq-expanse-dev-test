@@ -17,7 +17,7 @@
       <div>
         <p class="fbi_price">{{ productPrice | money }}</p>
         {%comment%}<p>{{ priceDiff | abs | money_with_currency }}</p> {%endcomment%}
-      <span>{{ productPrice.compare_at_price }}</span>
+      <span>{{ productPrice | minus: product.price }}</span>
       </div>
     </div>
   {% endfor %}
