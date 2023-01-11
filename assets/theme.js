@@ -9099,7 +9099,7 @@ lazySizesConfig.expFactor = 4;
           /* END STEP 4 */
     };
   
-   setTimeout( bread.checkout(opts),4000);
+   setTimeout( bread.checkout(opts),10000);
 
     theme.pageTransitions();
     
