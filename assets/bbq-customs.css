@@ -260,8 +260,12 @@ a[aria-current="activePage"] {
   display:flex;
 }
 .product-price-column{
-  position: relative;
-  flex:50%;
+  display: flex;
+  width: 50%;
+  margin: auto;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center
 }
 .product-price-column p{
   font-size:18px;
