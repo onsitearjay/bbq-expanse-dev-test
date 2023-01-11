@@ -4,7 +4,7 @@
   <div class="fbi-content-wrap">
     {% for frequently in product.metafields.frequently.fbi_related_product %}
       <div class="fbi-inner-content grid-product">
-        
+      {% comment %}  
         {%- unless no_actions -%}
             {%- if settings.quick_add_enable or settings.quick_shop_enable -%}
               <div class="grid-product__actions">
@@ -41,7 +41,7 @@
                 {%- endif -%}
               </div>
             {%- endif -%}
-          {%- endunless -%}    
+          {%- endunless -%}   {% endcomment %} 
         
           {% assign referenced_product = all_products[product.metafields.frequently.fbi_related_product[forloop.index0]] %}
           {% assign productPrice = referenced_product.price %}
