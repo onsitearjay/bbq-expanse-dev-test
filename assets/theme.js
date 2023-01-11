@@ -9079,7 +9079,9 @@ lazySizesConfig.expFactor = 4;
 
     
     });
-    
+    document.addEventListener("message", function(evt) {
+      console.log(evt)
+    })
     document.addEventListener("DOMContentLoaded", function(evt) {
           var opts = {
           buttonId: 'bread-checkout-btn-new',
