@@ -9076,7 +9076,8 @@ lazySizesConfig.expFactor = 4;
         if(productBlock){
            new theme.AddCart(productBlock);
         }
-     bread.checkout(opts);
+
+      setTimout( bread.checkout(opts),4000);
     });
     
      var opts = {
