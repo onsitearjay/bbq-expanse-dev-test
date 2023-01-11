@@ -17,7 +17,7 @@
       <div>
         <p class="fbi_price">{{ productPrice | money }}</p>
         {% if productPrice > 100 %}
-          <p>{{ priceDiff | money }}</p>
+          <p>{{ productPrice | money }}</p>
         {% endif %}
       </div>
     </div>
