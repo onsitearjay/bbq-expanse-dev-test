@@ -270,6 +270,7 @@ a[aria-current="activePage"] {
     margin: auto;
     align-items: center;
     justify-content: center;
+    font-weight: 800 !important;
 }
 .product-price-column p{
   font-size:18px;
