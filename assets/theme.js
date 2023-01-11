@@ -9076,7 +9076,10 @@ lazySizesConfig.expFactor = 4;
         if(productBlock){
            new theme.AddCart(productBlock);
         }
-      var opts = {
+
+    });
+    
+          var opts = {
           buttonId: 'bread-checkout-btn-new',
           customTotal: 550000,
           /* STEP 3: Add a done callback */
@@ -9097,9 +9100,6 @@ lazySizesConfig.expFactor = 4;
       setTimeout(function(){
          bread.checkout(opts);
       },2000)
-    });
-    
-
  
 
     theme.pageTransitions();
