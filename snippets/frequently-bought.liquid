@@ -19,7 +19,7 @@
         <p class="fbi_price">{{ productPrice | money }}
           <span class="grid-product__price--original">{{ regularPrice | money }}</span>
         </p>
-        <p class="grid-product__price--savings">Save {{ savedPrice | money }}</p>
+        <p class="grid-product__price--savings">Save {{ savedPrice | abs | money }}</p>
       </div>
     </div>
   {% endfor %}
