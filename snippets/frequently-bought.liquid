@@ -16,6 +16,7 @@
       <div class="grid-product__vendor">{{ product.vendor }}</div>
       <div>
         <p class="fbi_price">{{ productPrice | money }} </p>
+        <psna>{{ compare_at_price | money }}</psna>
         {%comment%}<p>{{ priceDiff | abs | money_with_currency }}</p> {%endcomment%}
       </div>
     </div>
