@@ -9077,7 +9077,7 @@ lazySizesConfig.expFactor = 4;
            new theme.AddCart(productBlock);
         }
 
-      setTimout( bread.checkout(opts),4000);
+    
     });
     
      var opts = {
@@ -9099,7 +9099,7 @@ lazySizesConfig.expFactor = 4;
           /* END STEP 4 */
     };
   
- 
+   setTimout( bread.checkout(opts),4000);
 
     theme.pageTransitions();
     
