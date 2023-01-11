@@ -263,14 +263,7 @@ a[aria-current="activePage"] {
   position: relative;
   flex:50%;
 }
-.exclusive-savings{
-    display: flex;
-    width: 50%;
-    flex:unset
-    margin: auto;
-    align-items: center;
-    justify-content: center;
-}
+
 .product-price-column p{
   font-size:18px;
   font-weigth:800;
