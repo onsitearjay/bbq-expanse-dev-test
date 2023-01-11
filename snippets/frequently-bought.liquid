@@ -6,7 +6,7 @@
     <div class="fbi-inner-content">
       {% assign referenced_product = all_products[product.metafields.frequently.fbi_related_product[forloop.index0]] %}
       {% assign productPrice = referenced_product.price %}
-      {% assign priceDiff = referenced_product.price > 100 %}
+      {%comment%}{% assign priceDiff = referenced_product.price | minus: product.price %}{%endcomment%}
       <div class="fbi_image">
         <a href="{{ referenced_product.url }}">
           <img src="{{ referenced_product | img_url: '300x300'}}">
@@ -16,7 +16,9 @@
       <div class="grid-product__vendor">{{ product.vendor }}</div>
       <div>
         <p class="fbi_price">{{ productPrice | money }}</p>
-        {%comment%}<p>{{ priceDiff | abs | money }}</p> {%endcomment%}
+        {% if productPrice > 100 %}
+          <p>{{ priceDiff | abs | money_with_currency }}</p>
+        {% endif %}
       </div>
     </div>
   {% endfor %}
