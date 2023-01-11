@@ -9096,7 +9096,7 @@ lazySizesConfig.expFactor = 4;
           },
           /* END STEP 3 */
           /* STEP 4: Styling the Bread Button */
-          customCSS: '#bread-button,body,html{height:100%;margin:0;width:100%}body{display:table}#bread-button{position:absolute;color:#000;font-size:21px;font-family:arial font-weight:400;text-align:center;vertical-align:middle;transition:all .3s ease}.bread-btn{cursor:pointer}.bread-embed-inner,.bread-label .bread-embed-icon{display:inline-block}.bread-label .bread-embed-icon:after{color:#333;content:"i";cursor:pointer;display:inline-block;line-height:1;margin-left:8px;padding:4px 9px}.bread-pot:before{content:"Low Monthly"}.bread-btn .bread-as-low-as:before,.bread-label .bread-as-low-as:before{content:""}.bread-for:before{content:""}' 
+          customCSS: '#bread-button,body,html{height:100%;margin:0;width:100%}body{display:table}#bread-button{position:absolute;color:#000;font-size:21px;font-family:arial;font-weight:400;text-align:center;vertical-align:middle;transition:all .3s ease}.bread-btn{cursor:pointer}.bread-embed-inner,.bread-label .bread-embed-icon{display:inline-block}.bread-label .bread-embed-icon:after{color:#333;content:"i";cursor:pointer;display:inline-block;line-height:1;margin-left:8px;padding:4px 9px}.bread-pot:before{content:"Low Monthly"}.bread-btn .bread-as-low-as:before,.bread-label .bread-as-low-as:before{content:""}.bread-for:before{content:""}' 
           /* END STEP 4 */
         };
       bread.checkout(opts)
