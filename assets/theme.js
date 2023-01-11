@@ -9084,7 +9084,6 @@ lazySizesConfig.expFactor = 4;
       
           var opts = {
           buttonId: 'bread-checkout-btn-new',
-          asLowAs: true,
           items: [],
           /* STEP 3: Add a done callback */
           done: function(err, tx_token) {
@@ -9109,6 +9108,7 @@ lazySizesConfig.expFactor = 4;
      const breadLoaded = new CustomEvent("bread-loaded");
       document.dispatchEvent(breadLoaded);
     });
+    
     observer.observe(document.getElementById('bread-checkout-btn-product'), {childList: true});
     
     theme.pageTransitions();
