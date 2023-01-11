@@ -244,6 +244,9 @@
                                 {%- render 'price' with current_variant.unit_price -%}
                               </span>/{{ unit_price_base_unit }}
                             </div>
+                          {% if product.available %}
+                              <div id="bread-checkout-btn-product" style="width:250px; height:50px; margin:20px 0px;"></div>
+                          {% endif %}
                           </div>
                          <div class="product-price-column">
                                <p>
