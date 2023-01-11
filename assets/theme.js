@@ -9100,6 +9100,7 @@ lazySizesConfig.expFactor = 4;
           /* END STEP 4 */
         };
        bread.checkout(opts)
+      consoel.log('test')
     });
 
 
