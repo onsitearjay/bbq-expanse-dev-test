@@ -4,9 +4,8 @@
   <div class="fbi-content-wrap">
     {% for frequently in product.metafields.frequently.fbi_related_product %}
     
-<div class="grid-product">  
-  <div class="fbi-inner-content">
-
+    
+<div class="fbi-inner-content">
   {%- unless no_actions -%}
       {%- if settings.quick_add_enable or settings.quick_shop_enable -%}
         <div class="grid-product__actions">
@@ -65,6 +64,5 @@
     </div>
   {% endfor %}
   </div>
-</div>
 </div>
 {% endif %}
