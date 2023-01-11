@@ -8,8 +8,8 @@
 .fbi-inner-content{
   width: 25%;
   padding: 25px;
-  margin-right:15px;
-  background-color: #f8f8f8;
+  /*margin-right:15px;
+  background-color: #f8f8f8;*/
 }
 .fbi-inner-content:last-child{
   margin-right:0;
