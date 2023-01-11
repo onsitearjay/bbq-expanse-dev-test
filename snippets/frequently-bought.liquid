@@ -16,7 +16,7 @@
       <div class="grid-product__vendor">{{ product.vendor }}</div>
       <div>
         <p class="fbi_price">{{ productPrice | money }} </p>
-        <span>{{ compare_at_price | money }}</span>
+        <span>{{ money_price }}</span>
         {%comment%}<p>{{ priceDiff | abs | money_with_currency }}</p> {%endcomment%}
       </div>
     </div>
