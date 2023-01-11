@@ -9104,7 +9104,7 @@ lazySizesConfig.expFactor = 4;
     });
 
     var observer = new MutationObserver(function (mutationRecords) {
-    console.log("change detected");
+    console.log(bread);
     });
     observer.observe(document.getElementById('bread-checkout-btn-product'), {childList: true});
     
