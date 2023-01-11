@@ -16,9 +16,7 @@
       <div class="grid-product__vendor">{{ product.vendor }}</div>
       <div>
         <p class="fbi_price">{{ productPrice | money }}</p>
-        {% if productPrice > 100 %}
-          <p>{{ productPrice | money }}</p>
-        {% endif %}
+        <p>{{ 'products.general.regular_price' | t }}</p>
       </div>
     </div>
   {% endfor %}
