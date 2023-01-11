@@ -1,67 +1,70 @@
 {% if product.metafields.frequently.fbi_heading != blank %}
-<div class="frequently-bought-item">
-  <h3 class="h3">{{ product.metafields.frequently.fbi_heading }}</h3>
-  <div class="fbi-content-wrap">
-    {% for frequently in product.metafields.frequently.fbi_related_product %}
-    <div class="fbi-inner-content grid-product">
-
-  {%- unless no_actions -%}
-      {%- if settings.quick_add_enable or settings.quick_shop_enable -%}
-        <div class="grid-product__actions">
-          {%- if settings.quick_shop_enable -%}
-            <button class="btn btn--circle btn--icon quick-product__btn quick-product__btn--not-ready js-modal-open-quick-modal-{{ product.id }} small--hide" title="{{ 'products.general.quick_shop' | t }}" tabindex="-1" data-handle="{{ product.handle }}">
-              <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-search" viewBox="0 0 64 64"><defs><style>.cls-1{fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px}</style></defs><path class="cls-1" d="M47.16 28.58A18.58 18.58 0 1 1 28.58 10a18.58 18.58 0 0 1 18.58 18.58zM54 54L41.94 42"/></svg>
-              <span class="icon__fallback-text">{{ 'products.general.quick_shop' | t }}</span>
-            </button>
-          {%- endif -%}
-          {%- if settings.quick_add_enable and product.available -%}
-            {% comment %}
-              Quick add feature:
-                - when a single variant option, product is immediately added
-                - when multiple variants, popup with product form appears
-            {% endcomment %}
-            {%- if product.variants.size > 1 -%}
-              <button type="button" class="text-link quick-add-btn js-quick-add-form js-modal-open-quick-add" title="{{ 'products.product.add_to_cart' | t }}" tabindex="-1">
-                <span class="btn btn--circle btn--icon">
-                  <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-plus" viewBox="0 0 64 64"><path class="cls-1" d="M32 9v46m23-23H9"/></svg>
-                  <span class="icon__fallback-text">{{ 'products.product.add_to_cart' | t }}</span>
-                </span>
-              </button>
-            {%- else -%}
-              <button type="button" class="text-link quick-add-btn js-add-cart-btn"
-                      title="{{ 'products.product.add_to_cart' | t }}"
-                      tabindex="-1"
-                      data-id="{{ product.selected_or_first_available_variant.id }}">
-                <span class="btn btn--circle btn--icon">
-                  <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-plus" viewBox="0 0 64 64"><path class="cls-1" d="M32 9v46m23-23H9"/></svg>
-                  <span class="icon__fallback-text">{{ 'products.product.add_to_cart' | t }}</span>
-                </span>
+  <div class="frequently-bought-item">
+    <h3 class="h3">{{ product.metafields.frequently.fbi_heading }}</h3>
+  
+  <div class="grid-item grid-product ">
+    <div class="fbi-content-wrap">
+      {% for frequently in product.metafields.frequently.fbi_related_product %}
+      <div class="fbi-inner-content">
+  
+    {%- unless no_actions -%}
+        {%- if settings.quick_add_enable or settings.quick_shop_enable -%}
+          <div class="grid-product__actions">
+            {%- if settings.quick_shop_enable -%}
+              <button class="btn btn--circle btn--icon quick-product__btn quick-product__btn--not-ready js-modal-open-quick-modal-{{ product.id }} small--hide" title="{{ 'products.general.quick_shop' | t }}" tabindex="-1" data-handle="{{ product.handle }}">
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-search" viewBox="0 0 64 64"><defs><style>.cls-1{fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px}</style></defs><path class="cls-1" d="M47.16 28.58A18.58 18.58 0 1 1 28.58 10a18.58 18.58 0 0 1 18.58 18.58zM54 54L41.94 42"/></svg>
+                <span class="icon__fallback-text">{{ 'products.general.quick_shop' | t }}</span>
               </button>
             {%- endif -%}
-          {%- endif -%}
+            {%- if settings.quick_add_enable and product.available -%}
+              {% comment %}
+                Quick add feature:
+                  - when a single variant option, product is immediately added
+                  - when multiple variants, popup with product form appears
+              {% endcomment %}
+              {%- if product.variants.size > 1 -%}
+                <button type="button" class="text-link quick-add-btn js-quick-add-form js-modal-open-quick-add" title="{{ 'products.product.add_to_cart' | t }}" tabindex="-1">
+                  <span class="btn btn--circle btn--icon">
+                    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-plus" viewBox="0 0 64 64"><path class="cls-1" d="M32 9v46m23-23H9"/></svg>
+                    <span class="icon__fallback-text">{{ 'products.product.add_to_cart' | t }}</span>
+                  </span>
+                </button>
+              {%- else -%}
+                <button type="button" class="text-link quick-add-btn js-add-cart-btn"
+                        title="{{ 'products.product.add_to_cart' | t }}"
+                        tabindex="-1"
+                        data-id="{{ product.selected_or_first_available_variant.id }}">
+                  <span class="btn btn--circle btn--icon">
+                    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-plus" viewBox="0 0 64 64"><path class="cls-1" d="M32 9v46m23-23H9"/></svg>
+                    <span class="icon__fallback-text">{{ 'products.product.add_to_cart' | t }}</span>
+                  </span>
+                </button>
+              {%- endif -%}
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      {%- endunless -%}    
+        
+        {% assign referenced_product = all_products[product.metafields.frequently.fbi_related_product[forloop.index0]] %}
+        {% assign productPrice = referenced_product.price %}
+        {% assign regularPrice = referenced_product.compare_at_price %}
+        {% assign savedPrice = regularPrice | minus: productPrice  %}
+        <div class="fbi_image">
+          <a href="{{ referenced_product.url }}">
+            <img src="{{ referenced_product | img_url: '300x300'}}">
+          </a>
         </div>
-      {%- endif -%}
-    {%- endunless -%}    
-      
-      {% assign referenced_product = all_products[product.metafields.frequently.fbi_related_product[forloop.index0]] %}
-      {% assign productPrice = referenced_product.price %}
-      {% assign regularPrice = referenced_product.compare_at_price %}
-      {% assign savedPrice = regularPrice | minus: productPrice  %}
-      <div class="fbi_image">
-        <a href="{{ referenced_product.url }}">
-          <img src="{{ referenced_product | img_url: '300x300'}}">
-        </a>
+        <div class="grid-product__title">{{ referenced_product.title }}</div>
+        <div class="grid-product__vendor">{{ product.vendor }}</div>
+        <div>
+          <p class="fbi_price">{{ productPrice | money }}
+            <span class="grid-product__price--original">{{ regularPrice | money }}</span>
+          </p>
+          <p class="grid-product__price--savings">Save {{ savedPrice | abs | money }}</p>
+        </div>
       </div>
-      <div class="grid-product__title">{{ referenced_product.title }}</div>
-      <div class="grid-product__vendor">{{ product.vendor }}</div>
-      <div>
-        <p class="fbi_price">{{ productPrice | money }}
-          <span class="grid-product__price--original">{{ regularPrice | money }}</span>
-        </p>
-        <p class="grid-product__price--savings">Save {{ savedPrice | abs | money }}</p>
-      </div>
+    {% endfor %}
     </div>
-  {% endfor %}
   </div>
-</div>
-{% endif %}
+  </div>
+  {% endif %}
