@@ -122,7 +122,7 @@
 .grid-product__price--current{
   font-size:16px;
 }
-#VendorProducts-template--14912652017743__more-products-vendor,
+[data-view=scrollable] .grid-item,
 #Recommendations-template--16537158713601__recommendations .new-grid .grid-item,
 #VendorProducts-template--16537158713601__more-products-vendor .grid-item,
 #RecentlyViewed-template--16537158713601__recently-viewed .new-grid .grid-item{
