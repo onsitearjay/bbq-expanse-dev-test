@@ -1,8 +1,8 @@
-{% assign referenced_product = all_products[product.metafields.frequently.fbi_related_product[forloop.index0]] %}
-{% assign productPrice = referenced_product.price %}
-{% assign regularPrice = referenced_product.compare_at_price %}
-
 {% if product.metafields.frequently.fbi_heading != blank %}
+  {% assign referenced_product = all_products[product.metafields.frequently.fbi_related_product[forloop.index0]] %}
+  {% assign productPrice = referenced_product.price %}
+  {% assign regularPrice = referenced_product.compare_at_price %}
+  
 <div class="frequently-bought-item">
   <h3 class="h3">{{ product.metafields.frequently.fbi_heading }}</h3>
   <div class="fbi-content-wrap">
