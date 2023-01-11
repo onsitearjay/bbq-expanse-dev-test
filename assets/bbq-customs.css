@@ -263,7 +263,7 @@ a[aria-current="activePage"] {
   position: relative;
   flex:50%;
 }
-.exclusive-savings{
+.exclusive-savings-col{
     display: flex;
     width: 50%;
     flex:unset
