@@ -9080,7 +9080,7 @@ lazySizesConfig.expFactor = 4;
     
     });
     
-    document.addEventListener('bread-flag-ready', function(evt) {
+    document.addEventListener("DOMContentLoaded", function(evt) {
           var opts = {
           buttonId: 'bread-checkout-btn-new',
           customTotal: 550000,
