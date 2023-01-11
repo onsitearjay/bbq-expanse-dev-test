@@ -22,7 +22,15 @@
 .fbi_price{
   font-weight:900;
 }
-.openbox{
+.clipped-text{
+  width: 400px;
+  overflow: hidden;
+  text-overflow: clip;
+  white-space: nowrap;
+}
+.openbox-title,
+.openbox-price,
+.specs-value{
  color: var(--bbq-green);
  font-weight: 900;
 }
