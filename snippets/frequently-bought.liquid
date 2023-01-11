@@ -7,6 +7,7 @@
       {% assign referenced_product = all_products[product.metafields.frequently.fbi_related_product[forloop.index0]] %}
       {% assign productPrice = referenced_product.price %}
       {% assign regularPrice = referenced_product.compare_at_price %}
+      {% assign savedPrice = regularPrice | minus: product.price  %}
       <div class="fbi_image">
         <a href="{{ referenced_product.url }}">
           <img src="{{ referenced_product | img_url: '300x300'}}">
@@ -18,6 +19,7 @@
         <p class="fbi_price">{{ productPrice | money }}
         <span class="grid-product__price--original">{{ regularPrice | money }}</span>
         </p>
+        <p class="grid-product__price--savings">{{ savedPrice | money }}</p>
       </div>
     </div>
   {% endfor %}
