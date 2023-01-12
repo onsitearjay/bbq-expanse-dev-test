@@ -284,5 +284,9 @@ a[aria-current="activePage"] {
   left: 0;
 }
 
-
+@media only screen and (max-width: 768px){
+  .clipped-text{
+    width: 375px;
+  }
+}
 
