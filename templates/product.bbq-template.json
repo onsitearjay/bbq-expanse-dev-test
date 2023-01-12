@@ -97,6 +97,12 @@
             "code": "<p class=\"variantTitle\"> Size <\/p>\n\n<select id=\"s1\" name=\"section\" onChange=\"SelectRedirect();\">\n    {% for option in product.metafields.bbq.size_title %}\n        <option value=\"{{ product.metafields.bbq.size_title[forloop.index0] }}\">\n                    {{ product.metafields.bbq.size_title[forloop.index0] }}\n        <\/option>\n    {% endfor %} \n<\/select>"
           }
         },
+        "b4c9450c-8412-40a8-96ba-590d64beb1f0": {
+          "type": "shopify:\/\/apps\/infinite-options\/blocks\/app-block\/7e73b6f9-82b0-45f5-9b9b-04f446ba1a9b",
+          "disabled": true,
+          "settings": {
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -148,6 +154,7 @@
         "e53656a4-6f00-4df8-b8e0-99e17b1f705f",
         "9b8e058c-44b0-4ed0-a873-eba443923274",
         "948419f6-5159-4d16-8ea7-16760e4199ee",
+        "b4c9450c-8412-40a8-96ba-590d64beb1f0",
         "variant_picker",
         "sales_point2",
         "sales_point3",
