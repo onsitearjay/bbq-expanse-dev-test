@@ -46,7 +46,7 @@
           <!--image hover-->
           {%- if settings.product_hover_image and product.media.size > 1 -%}
           {%- for media in product.media offset: 1 limit: 1 -%}
-            {%- assign second_image = media.preview_image -%}
+            {%- assign second_image = referenced_product.preview_image -%}
           {%- endfor -%}
           <div class="grid-product__secondary-image small--hide">
             {%- assign img_url = second_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
