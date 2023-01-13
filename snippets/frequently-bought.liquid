@@ -1,76 +1,84 @@
-{%- liquid
-  assign recommend_products = true
+{% if product.metafields.frequently.fbi_heading != blank %}
+<div class="frequently-bought-item">
+  <h3 class="h3">{{ product.metafields.frequently.fbi_heading }}</h3>
+  <div class="fbi-content-wrap">
+    {% for frequently in product.metafields.frequently.fbi_related_product %}
+      <div class="fbi-inner-content grid-product">
+ 
+        {%- unless no_actions -%}
+            {%- if settings.quick_add_enable or settings.quick_shop_enable -%}
+              <div class="grid-product__actions">
+                {%- if settings.quick_shop_enable -%}
+                  <button class="btn btn--circle btn--icon quick-product__btn quick-product__btn--not-ready js-modal-open-quick-modal-{{ product.id }} small--hide" title="{{ 'products.general.quick_shop' | t }}" tabindex="-1" data-handle="{{ product.handle }}">
+                    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-search" viewBox="0 0 64 64"><defs><style>.cls-1{fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px}</style></defs><path class="cls-1" d="M47.16 28.58A18.58 18.58 0 1 1 28.58 10a18.58 18.58 0 0 1 18.58 18.58zM54 54L41.94 42"/></svg>
+                    <span class="icon__fallback-text">{{ 'products.general.quick_shop' | t }}</span>
+                  </button>
+                {%- endif -%}
+                {%- if settings.quick_add_enable and product.available -%}
+                  {% comment %}
+                    Quick add feature:
+                      - when a single variant option, product is immediately added
+                      - when multiple variants, popup with product form appears
+                  {% endcomment %}
+                  {%- if product.variants.size > 1 -%}
+                    <button type="button" class="text-link quick-add-btn js-quick-add-form js-modal-open-quick-add" title="{{ 'products.product.add_to_cart' | t }}" tabindex="-1">
+                      <span class="btn btn--circle btn--icon">
+                        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-plus" viewBox="0 0 64 64"><path class="cls-1" d="M32 9v46m23-23H9"/></svg>
+                        <span class="icon__fallback-text">{{ 'products.product.add_to_cart' | t }}</span>
+                      </span>
+                    </button>
+                  {%- else -%}
+                    <button type="button" class="text-link quick-add-btn js-add-cart-btn"
+                            title="{{ 'products.product.add_to_cart' | t }}"
+                            tabindex="-1"
+                            data-id="{{ product.selected_or_first_available_variant.id }}">
+                      <span class="btn btn--circle btn--icon">
+                        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-plus" viewBox="0 0 64 64"><path class="cls-1" d="M32 9v46m23-23H9"/></svg>
+                        <span class="icon__fallback-text">{{ 'products.product.add_to_cart' | t }}</span>
+                      </span>
+                    </button>
+                  {%- endif -%}
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+          {%- endunless -%} 
 
-  if recommendations.products and recommendations.products_count > 0
-    assign related_collection = recommendations
-  endif
-
-  for tag in product.tags
-    if tag contains '_related'
-      assign include_collection_handle = tag | split: '_' | last
-      assign include_collection = collections[include_collection_handle]
-      if include_collection != empty and include_collection.products_count > 0
-        assign related_collection = include_collection
-        assign recommend_products = false
-        break
-      endif
-    endif
-  endfor
-
-  assign number_of_products = 6
--%}
-
-<div
-  id="Recommendations-product-recommendations"
-  data-section-id="product-recommendations"
-  data-section-type="product-recommendations"
-  data-enable="true"
-  data-product-id="{{ product.id }}"
-  data-url="{{ routes.product_recommendations_url }}?section_id=product-recommendations&product_id=&limit={{number_of_products}}"
-  data-limit="{{number_of_products}}">
-
-  <div
-    data-section-id="{{ product.id }}"
-    data-subsection
-    data-section-type="collection-template"
-    class="index-section index-section--sub-product">
-    <div class="page-width">
-      <header class="section-header">
-        <div class="h3 section-header__title">
-         You may also like
-        </div>
-      </header>
-    </div>
-
-    <div class="page-width page-width--flush-small">
-      {%- if recommend_products -%}
-        <div class="product-recommendations-placeholder">
-          {% comment %}
-            This content is visually hidden and replaced when recommended
-            products show up
-          {% endcomment %}
-          <div class="new-grid product-grid scrollable-grid--small visually-invisible" aria-hidden="true" data-view="scrollable">
-            {%- render 'product-grid-item', product: product, no_actions: true -%}
+          <!--image hover-->
+          {%- if settings.product_hover_image and product.media.size > 1 -%}
+          {%- for media in product.media offset: 1 limit: 1 -%}
+            {%- assign second_image = media.preview_image -%}
+          {%- endfor -%}
+          <div class="grid-product__secondary-image small--hide">
+            {%- assign img_url = second_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+            <img class="lazyload"
+                data-src="{{ img_url }}"
+                data-widths="[360, 540, 720, 1000]"
+                data-aspectratio="{{ second_image.aspect_ratio }}"
+                data-sizes="auto"
+                alt="{{ second_image.alt }}">
           </div>
-        </div>
-      {%- endif -%}
-      {%- if related_collection.products_count > 1 -%}
-        <div class="product-recommendations">
-          <div class="new-grid product-grid scrollable-grid--small" data-view="scrollable">
-            {%- for product in related_collection.products -%}
-              {%- render 'product-grid-item', product: product -%}
-            {%- endfor -%}
+          {%- endif -%}
+          
+          <!--display product-->
+          {% assign referenced_product = all_products[product.metafields.frequently.fbi_related_product[forloop.index0]] %}
+          {% assign productPrice = referenced_product.price %}
+          {% assign regularPrice = referenced_product.compare_at_price %}
+          {% assign savedPrice = regularPrice | minus: productPrice  %}
+          <div class="fbi_image">
+            <a href="{{ referenced_product.url }}">
+              <img src="{{ referenced_product | img_url: '300x300'}}">
+            </a>
           </div>
-
-          {%- liquid
-            if settings.quick_shop_enable
-              for product in related_collection.products
-                render 'quick-shop-modal', product: product
-              endfor
-            endif
-          -%}
-        </div>
-      {%- endif -%}
-    </div>
+          <div class="grid-product__title">{{ referenced_product.title }}</div>
+          <div class="grid-product__vendor">{{ product.vendor }}</div>
+          <div>
+            <p class="fbi_price">{{ productPrice | money }}
+              <span class="grid-product__price--original">{{ regularPrice | money }}</span>
+            </p>
+            <p class="grid-product__price--savings">Save {{ savedPrice | money_without_trailing_zeros }}</p>
+          </div>
+      </div>
+    {% endfor %}
   </div>
 </div>
+{% endif %}
