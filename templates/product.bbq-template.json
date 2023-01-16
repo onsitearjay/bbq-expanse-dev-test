@@ -6,7 +6,7 @@
         "template--16536872386817__8f6decbc-21f6-46a0-83d9-9c58f593aba7-166958914497521f2f-1": {
           "type": "liquid",
           "settings": {
-            "code": "<div class=\"index-section color-scheme-1 text-center\">\n<h2>\nCall For Best Pricing <a href=\"tel:8886674986\">888-667-4986<\/a>\n<\/h2>\n\n<p>\nExperts are standing by to provide you with best pricing and exlcusive package deal disounts. Save today with just 1 call.\n<\/p>\n<\/div>",
+            "code": "<div class=\"index-section color-scheme-1 text-center\">\n<h4 style=\"margin-bottom:0;\">\nCall For Best Pricing <a href=\"tel:8886674986\">888-667-4986<\/a>\n<\/h4>\n\n<p>\nExperts are standing by to provide you with best pricing and exlcusive package deal disounts. Save today with just 1 call.\n<\/p>\n<\/div>",
             "width": "100%",
             "alignment": "center"
           }
