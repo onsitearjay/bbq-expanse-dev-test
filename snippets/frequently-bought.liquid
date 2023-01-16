@@ -11,8 +11,11 @@
           {% assign regularPrice = referenced_product.compare_at_price %}
           {% assign savedPrice = regularPrice | minus: productPrice  %}
           <div class="fbi_image">
-            <a href="{{ referenced_product.url }}">
-              <img src="{{ referenced_product | img_url: '300x300'}}">
+            <a href="{{ referenced_product.url }}" clas="{% if referenced_product.size > 1 %} has-secondary{% endif %}"">
+              <img class="grid-view-item__image" src="{{ referenced_product | img_url: '300x300'}}">
+              {% if referenced_product.size > 1 %}
+              <img class="secondary" src="{{ referenced_product.last | img_url: grid_image_width }}" alt="{{ referenced_product.last.alt | escape }}">
+              {% endif %}
             </a>
           </div>
           <div class="grid-product__title">{{ referenced_product.title }}</div>
