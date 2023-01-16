@@ -13,10 +13,10 @@
           {% assign productImage = referenced_product | img_url: '300x300' %}
       
           <div class="fbi_image grid-view-item">
-            <a href="{{ referenced_product.url }}" class="grid-view-item__link {% if productImage > 1 %} has-secondary{% endif %}">
+            <a href="{{ referenced_product.url }}" class="grid-view-item__link {% if productImage.size > 1 %} has-secondary{% endif %}">
               
               <img class="grid-view-item__image" src="{{ referenced_product | img_url: '300x300'}}">
-              {% if productImage > 1 %}
+              {% if productImage.size > 1 %}
               <img class="secondary" src="{{ productImage.last }}" alt="{{ productImage.last.alt | escape }}">
               {% endif %}
       
