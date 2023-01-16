@@ -290,3 +290,38 @@ a[aria-current="activePage"] {
   }
 }
 
+/*product image hover*/
+.has-secondary.grid-view-item__link img.secondary{
+ display:none;
+}
+
+.has-secondary.grid-view-item__link:hover img.secondary{
+ display:block;
+}
+
+.has-secondary.grid-view-item__link:hover img.grid-view-item__image{
+ display:none;
+}
+
+@media screen and (min-width:767px){
+.has-secondary.grid-view-item__link img.secondary{
+ display:none;
+}
+
+.has-secondary.grid-view-item__link:hover img.secondary{
+ display:block;
+}
+
+.has-secondary.grid-view-item__link:hover img.grid-view-item__image{
+ display:none;
+}
+}
+
+@media screen and (max-width:767px){
+.has-secondary.grid-view-item__link img.secondary{
+ display:none;
+}
+}
+.grid-view-item__title {
+margin-top: 10px;
+}
