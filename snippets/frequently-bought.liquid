@@ -8,9 +8,6 @@
      <img class="secondary" src="{{ product.images.last | img_url: grid_image_width }}" alt="{{ product.images.last.alt | escape }}">
     {% endif %}
     <div class="h4 grid-view-item__title">{{ product.title }}</div>
-    
-    <div class="grid-view-item__meta">
-      {% include 'product-price', variant: product %}
-    </div>
+
   </a>
 </div>
