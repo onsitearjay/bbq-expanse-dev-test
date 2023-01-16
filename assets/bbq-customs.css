@@ -29,6 +29,9 @@
   text-overflow: clip;
   white-space: nowrap;
 }
+.openbox-title{
+  font-size: 20px;
+}
 .openbox-title,
 .openbox-price,
 .specs-value{
