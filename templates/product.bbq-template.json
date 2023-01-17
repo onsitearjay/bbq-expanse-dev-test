@@ -217,7 +217,6 @@
         },
         "123b3a6f-667a-47ce-b80d-7f398939fb18": {
           "type": "custom",
-          "disabled": true,
           "settings": {
             "code": "{% render 'frequently-bought'  %}"
           }
