@@ -196,14 +196,9 @@
             "code": "{%- if product.metafields.bbq.shipping_weight !=blank -%}\n  <div class=\"collapsibles-wrapper\" style=\"margin-bottom: -30px;\">\n      <button type=\"button\"\n        class=\"label collapsible-trigger collapsible-trigger-btn collapsible-trigger-btn--borders collapsible--auto-height{% if force_open %} is-open{% endif %}\" aria-controls=\"Product-content-shipping-info\"\n        {% if force_open %}aria-expanded=\"true\"{% endif %}>\n        Shipping Information\n        {%- render 'collapsible-icons' -%}\n      <\/button>\n      <div id=\"Product-content-shipping-info\"\n        class=\"bbq-description collapsible-content collapsible-content--all{% if force_open %} is-open{% endif %}\"\n        {% if force_open %}style=\"height: auto;\"{% endif %}>\n        <div class=\"collapsible-content__inner rte\">\n          <div>\n            {%- if product.metafields.bbq.shipping_weight !=blank -%}\n              <div><strong>Shipping Weight:<\/strong><\/div> <p> {{ product.metafields.bbq.shipping_weight }}lb<\/p>\n            {% endif %}\n            \n            {%- if product.metafields.bbq.shipping_dimensions !=blank -%}\n              <div><strong>Shipping Dimensions (WxDxH):<\/strong><\/div> <p> {{ product.metafields.bbq.shipping_dimensions }}in<\/p>\n            {% endif %}\n          <\/div>\n        <\/div>\n      <\/div>\n  <\/div>\n{% endif %}"
           }
         },
-        "123b3a6f-667a-47ce-b80d-7f398939fb18": {
-          "type": "custom",
-          "settings": {
-            "code": "{% render 'frequently-bought'  %}"
-          }
-        },
         "f91317d7-f642-4811-a1b6-4e8dcdfe52ed": {
           "type": "custom",
+          "disabled": true,
           "settings": {
             "code": "{% render 'questions-answers' %}"
           }
@@ -220,6 +215,12 @@
             "code": "{% if product.metafields.bbq.file_name != blank %}\n<div class=\"collapsibles-wrapper\">\n    <button type=\"button\"\n      class=\"label collapsible-trigger collapsible-trigger-btn collapsible-trigger-btn--borders collapsible--auto-height{% if force_open %} is-open{% endif %}\" aria-controls=\"Product-content-manufacturer-download\"\n      {% if force_open %}aria-expanded=\"true\"{% endif %}>\n      Manufacturer's Manual\n      {%- render 'collapsible-icons' -%}\n    <\/button>\n    <div id=\"Product-content-manufacturer-download\"\n      class=\"bbq-description collapsible-content collapsible-content--all{% if force_open %} is-open{% endif %}\"\n      {% if force_open %}style=\"height: auto;\"{% endif %}>\n      <div class=\"collapsible-content__inner rte\">\n        {% for filename in product.metafields.bbq.file_name %} \n        <div>\n        <a href=\"{{ product.metafields.bbq.upload_file[forloop.index0] }}\" target=\"_blank\"> {{ product.metafields.bbq.file_name[forloop.index0] }}<\/a> \n        <\/div>\n        {% endfor %}\n      <\/div>\n    <\/div>\n  <\/div>\n  {% endif %}"
           }
         },
+        "123b3a6f-667a-47ce-b80d-7f398939fb18": {
+          "type": "custom",
+          "settings": {
+            "code": "{% render 'frequently-bought'  %}"
+          }
+        },
         "description": {
           "type": "description",
           "disabled": true,
@@ -232,10 +233,10 @@
         "d5636319-b1ba-4b4f-8008-bce914237531",
         "e473ac02-fdd6-45c8-8fb6-b7488095642d",
         "69d4d595-5925-455a-9869-5d792470f921",
-        "123b3a6f-667a-47ce-b80d-7f398939fb18",
         "f91317d7-f642-4811-a1b6-4e8dcdfe52ed",
         "50c1c46e-32a0-4fc2-9645-4eaf24d3fbe7",
         "b427215c-ccca-4ec5-b966-c5366f403200",
+        "123b3a6f-667a-47ce-b80d-7f398939fb18",
         "description"
       ],
       "settings": {
