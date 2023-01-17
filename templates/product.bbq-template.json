@@ -80,7 +80,7 @@
         "e53656a4-6f00-4df8-b8e0-99e17b1f705f": {
           "type": "custom",
           "settings": {
-            "code": "{% if product.metafields.bbq.brand_new_heading_title != blank %}\n    <p class=\"variantTitle\">{{ product.metafields.bbq.brand_new_heading_title }}<\/p>\n    <a class=\"custom-variant-btn\" href=\"\/collections\/{{ product.metafields.bbq.brand_new_related_collection }}\">\n        {{ product.metafields.bbq.brand_new_heading_title }}\n    <\/a>\n{% endif %}"
+            "code": "{% if product.metafields.bbq.brand_new_heading_title != blank %}\n    <div class=\"openbox\">\n        <p class=\"variantTitle\">{{ product.metafields.bbq.brand_new_heading_title }}<\/p>\n        \n        {% for shopNew in product.metafields.bbq.brand_new_related_product %}\n            {% assign referenced_product = all_products[product.metafields.bbq.brand_new_related_product[forloop.index0]] %}\n            {% assign productPrice = referenced_product.price %}\n\n            <a class=\"custom-variant-btn clipped-text\" href=\"{{ product.metafields.bbq.brand_new_related_product[forloop.index0] }}\">\n                {{ referenced_product.title }}\n                <p class=\"openbox-price\">\n                {{ productPrice | money }}\n                <\/p>\n            <\/a>\n        {% endfor %}\n    \n    <\/div>\n    {% endif %}"
           }
         },
         "9b8e058c-44b0-4ed0-a873-eba443923274": {
