@@ -246,7 +246,6 @@
     },
     "recommendations": {
       "type": "product-recommendations",
-      "disabled": true,
       "settings": {
         "product_recommendations_heading": "You may also like",
         "related_count": 5
@@ -254,19 +253,16 @@
     },
     "more-products-vendor": {
       "type": "more-products-vendor",
-      "disabled": true,
       "settings": {
       }
     },
     "more-products-collection": {
       "type": "more-products-collection",
-      "disabled": true,
       "settings": {
       }
     },
     "recently-viewed": {
       "type": "recently-viewed",
-      "disabled": true,
       "settings": {
       }
     },
