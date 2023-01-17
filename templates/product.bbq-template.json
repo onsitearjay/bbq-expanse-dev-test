@@ -243,29 +243,9 @@
         "max_width": false
       }
     },
-    "cdf2246f-9cce-4bfc-8ae9-6b5eb30e9acd": {
-      "type": "advanced-content",
-      "disabled": true,
-      "blocks": {
-        "template--14912652017743__cdf2246f-9cce-4bfc-8ae9-6b5eb30e9acd-1672368930c68ec30c-1": {
-          "type": "liquid",
-          "settings": {
-            "code": "<div class=\"frequently-bought-item\">\n{% if product.metafields.frequently.fbi_heading != blank %}\n  <h3 class=\"h3\">{{ product.metafields.frequently.fbi_heading }}<\/h3>\n  <div class=\"fbi-content-wrap\">\n    {% for frequently in product.metafields.frequently.fbi_related_product %}\n    <div class=\"fbi-inner-content\">\n      {% assign referenced_product = all_products[product.metafields.frequently.fbi_related_product[forloop.index0]] %}\n      {% assign productPrice = referenced_product.price %}\n      {%comment%}{% assign priceDiff = referenced_product.price | minus: product.price %}{%endcomment%}\n      <div>\n        <a href=\"{{ referenced_product }}\">\n          <img src=\"{{ referenced_product | img_url: '300x300'}}\">\n        <\/a>\n      <\/div>\n      <div class=\"grid-product__title\">{{ referenced_product }}<\/div>\n      <div>\n        <p>{{ productPrice | money_with_currency }}<\/p>\n        {%comment%}<p>{{ priceDiff | abs | money_with_currency }}<\/p> {%endcomment%}\n      <\/div>\n    <\/div>\n  {% endfor %}\n  <\/div>\n{% endif %}\n<\/div>",
-            "width": "100%",
-            "alignment": "center"
-          }
-        }
-      },
-      "block_order": [
-        "template--14912652017743__cdf2246f-9cce-4bfc-8ae9-6b5eb30e9acd-1672368930c68ec30c-1"
-      ],
-      "settings": {
-        "full_width": false,
-        "space_around": false
-      }
-    },
     "recommendations": {
       "type": "product-recommendations",
+      "disabled": true,
       "settings": {
         "product_recommendations_heading": "You may also like",
         "related_count": 5
@@ -273,16 +253,19 @@
     },
     "more-products-vendor": {
       "type": "more-products-vendor",
+      "disabled": true,
       "settings": {
       }
     },
     "more-products-collection": {
       "type": "more-products-collection",
+      "disabled": true,
       "settings": {
       }
     },
     "recently-viewed": {
       "type": "recently-viewed",
+      "disabled": true,
       "settings": {
       }
     },
@@ -328,7 +311,6 @@
     "8f6decbc-21f6-46a0-83d9-9c58f593aba7",
     "main",
     "sub",
-    "cdf2246f-9cce-4bfc-8ae9-6b5eb30e9acd",
     "recommendations",
     "more-products-vendor",
     "more-products-collection",
