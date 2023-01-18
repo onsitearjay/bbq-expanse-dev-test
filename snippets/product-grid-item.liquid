@@ -245,10 +245,12 @@
               {%- endif -%}
             {%- endfor -%}
           {%- endif -%}
-
+          
+          {% comment %}WD1-T544{% endcomment %}
           <a href="{{ product.url  }}" class="grid-item__link">
           <div class="grid-product__title">{{ product.title }}</div>
           </a>
+          {% comment %}WD1-T545{% endcomment %}
           {%- if settings.vendor_enable -%}
             <span class="product-single__vendor">
             {%- assign vendor_handle = product.vendor | handleize -%}
@@ -261,6 +263,7 @@
             {%- endif -%}
           </span>
           {%- endif -%}
+          
         </div>
         
         <div class="grid-item__meta-secondary">
