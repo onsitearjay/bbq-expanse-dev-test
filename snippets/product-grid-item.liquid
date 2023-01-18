@@ -250,11 +250,19 @@
           <div class="grid-product__title">{{ product.title }}</div>
           </a>
           {%- if settings.vendor_enable -%}
+            <span class="product-single__vendor">
+            {%- assign vendor_handle = product.vendor | handleize -%}
+            {%- if collections[vendor_handle] != empty -%}
             <a href="{{ routes.collections_url }}/{{ collections[vendor_handle].handle }}">
             <div class="grid-product__vendor">{{ product.vendor }}</div>
             </a>
+              {%- else -%}
+              {{ product.vendor | link_to_vendor }}
+            {%- endif -%}
+          </span>
           {%- endif -%}
         </div>
+        
         <div class="grid-item__meta-secondary">
           <div class="grid-product__price">
             {%- if product.price_varies -%}
