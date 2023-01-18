@@ -203,12 +203,6 @@
             "code": "{% render 'questions-answers' %}"
           }
         },
-        "50c1c46e-32a0-4fc2-9645-4eaf24d3fbe7": {
-          "type": "custom",
-          "settings": {
-            "code": "{%- if product.metafields.bbq.shipping_weight !=blank -%}\n  <div class=\"collapsibles-wrapper\" style=\"margin-bottom: -30px;\">\n      <button type=\"button\"\n        class=\"label collapsible-trigger collapsible-trigger-btn collapsible-trigger-btn--borders collapsible--auto-height{% if force_open %} is-open{% endif %}\" aria-controls=\"question-and-answer\"\n        {% if force_open %}aria-expanded=\"true\"{% endif %}>\n        Question &amp; Answer\n        {%- render 'collapsible-icons' -%}\n      <\/button>\n      <div id=\"question-and-answer\"\n        class=\"bbq-description collapsible-content collapsible-content--all{% if force_open %} is-open{% endif %}\"\n        {% if force_open %}style=\"height: auto;\"{% endif %}>\n        <div class=\"collapsible-content__inner rte\">\n          <div>\n           \nAsk a Question \n           \n          <\/div>\n        <\/div>\n      <\/div>\n  <\/div>\n{% endif %}"
-          }
-        },
         "b427215c-ccca-4ec5-b966-c5366f403200": {
           "type": "custom",
           "settings": {
@@ -234,7 +228,6 @@
         "e473ac02-fdd6-45c8-8fb6-b7488095642d",
         "69d4d595-5925-455a-9869-5d792470f921",
         "f91317d7-f642-4811-a1b6-4e8dcdfe52ed",
-        "50c1c46e-32a0-4fc2-9645-4eaf24d3fbe7",
         "b427215c-ccca-4ec5-b966-c5366f403200",
         "123b3a6f-667a-47ce-b80d-7f398939fb18",
         "description"
