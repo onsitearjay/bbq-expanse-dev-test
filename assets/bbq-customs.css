@@ -31,8 +31,9 @@
 }
 .openbox-title{
   font-size: 22px;
+  font-weight: 600;
+  font-style:italic;
 }
-.openbox-title,
 .openbox-price,
 .specs-value{
  color: var(--accent);
