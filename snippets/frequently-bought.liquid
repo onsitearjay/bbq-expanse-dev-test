@@ -16,7 +16,7 @@
             <a href="{{ referenced_product.url }}" class="grid-view-item__link {% if productImage.size > 1 %} has-secondary{% endif %}">
               <img class="grid-view-item__image" src="{{ referenced_product | img_url: '300x300'}}">
               {% if productImage.size > 1 %}
-              <img class="secondary" src="{{ product.images[1] | img_url: grid_image_width }}">
+              <img class="secondary" src="{{ productImage.images[1] | img_url: grid_image_width }}">
               {% endif %}
             </a>
           </div>
