@@ -477,6 +477,7 @@ a[aria-current="activePage"] {
   padding: 10px 40px 10px 40px;
   background:#D3D3D3
 }
+
 /* frequently bought product image hover */
 .has-secondary.grid-view-item__link img.secondary{
  display:none;
