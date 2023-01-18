@@ -1,5 +1,8 @@
 :root {
-  --bbq-green:#090;
+  --accent:#090;
+}
+.accent-color{
+  color: var(--accent);
 }
 .frequently-bought-item .fbi-content-wrap{
   display:flex;
@@ -7,8 +10,8 @@
 }
 .fbi-inner-content{
   width: 25%;
-  /*padding: 25px;
-  margin-right:15px;
+  padding: 25px;
+  /*margin-right:15px;
   background-color: #f8f8f8;*/
 }
 .fbi-inner-content:last-child{
@@ -16,8 +19,10 @@
 }
 .fbi-inner-content .fbi_image{
   aspect-ratio:1/1;
-  mix-blend-mode: multiply;
+}
+.fbi-inner-content img{
   object-fit:contain;
+  height:100%;
 }
 .fbi_price{
   font-weight:900;
@@ -31,12 +36,25 @@
 }
 .openbox-title{
   font-size: 22px;
+  font-weight: 600;
+  font-style:italic;
 }
-.openbox-title,
 .openbox-price,
 .specs-value{
- color: var(--bbq-green);
+ color: var(--accent);
  font-weight: 900;
+}
+.variant-input-wrap input[type=radio]:checked+label{
+  box-shadow: 0 0 0 0 #fff;
+  margin-top:-10px;
+}
+#bread-container{
+  justify-content:flex-start !important;
+  margin-top:-20px;
+}
+#bread-checkout-btn-product{
+  width:350px !important;
+  height:30px !important;
 }
 .bbq-prod-details-title{
   font-family:Harmonia Sans;
@@ -72,11 +90,20 @@
   margin:8px 0;
 }/*end description show more*/
 
+.section-header--flush{
+  display:none;
+  /*text-align:center;
+  margin-bottom:50px;*/
+}
+/*.product-block:nth-child(9),
+.product-block:nth-child(9) > .product-block:first-child{
+  margin-bottom:0;
+}*/
 .collection-hero{
   height:200px;
 }
 .bbq-text-green{
-  color: var(--bbq-green);
+  color: var(--accent);
   font-weight: 900;
   display: contents;
 }
@@ -125,7 +152,6 @@
 .grid-product__price--current{
   font-size:16px;
 }
-[data-view=scrollable] .grid-item,
 #Recommendations-template--16537158713601__recommendations .new-grid .grid-item,
 #VendorProducts-template--16537158713601__more-products-vendor .grid-item,
 #RecentlyViewed-template--16537158713601__recently-viewed .new-grid .grid-item{
@@ -150,6 +176,9 @@
 .product-single__title{
   line-height: 1.25em;
 }
+.sales-point:last-child {
+  margin-bottom:30px;
+}
 .sales-point .icon-phone{
   font-weight:600;
   font-size:18px;
@@ -167,7 +196,7 @@ label[for=ProductPrice-template--16537158713601__main]{
 }
 .product-single__vendor-sku,
 #custom-variant-meta{
-  margin-bottom: -20px;
+  /*margin-bottom: -20px;*/
 }
 .custom-field-block {
   margin-bottom:10px;
@@ -201,7 +230,7 @@ a[aria-current="activePage"] {
   display: inline-block;
 }
 
-/*Rondel CSS*/
+/* Rondel CSS */
 
 .variantTitle {
     font-weight: 700;
@@ -209,12 +238,14 @@ a[aria-current="activePage"] {
 
 .variantSize {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 33% 33% 33%;
 }
 
 .variantSize .custom-variant-btn {
     min-height: 90px;
     text-align: center;
+    padding: 5px;
+    font-size: 15px;
 }
 
 .bbq-size-short-desc {
@@ -224,7 +255,192 @@ a[aria-current="activePage"] {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     margin-top: 10px;
-    margin-bottom: 10px;
+}
+
+/* Quantity Selector Beside Add To Cart Button */
+
+.product-single__meta .product-single__form {
+    position: relative;
+}
+
+.product-single__meta .add-to-cart {
+    position: absolute;
+    top: -70px;
+    width: calc(100% - 85px);
+    left: 85px;
+}
+
+.js-qty__num {
+    height: 55px;
+}
+
+.shopify-payment-button {
+    margin-top: 15px;
+}
+
+/* Add To Cart Popup */
+
+.uh-selectbox {
+    display: none;
+}
+
+.uh-product__title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    height: 65px;
+}
+
+.uh-popup__header {
+    display: none;
+}
+
+.uh-scroll.uh-gallery-layout:before {
+    content: 'Frequently Bought Together';
+    padding: 10px 20px;
+    display: block;
+}
+
+.uh-added {
+    height: 150px;
+}
+
+.uh-added__bottom {
+    height: 80px !important;
+}
+
+.uh-added__img img {
+    max-width: 100px !important;
+}
+
+.product__quantity {
+    margin-bottom: 15px;
+    margin-top: -15px;
+}
+
+.uh-added__cart {
+    position: absolute !important;
+    top: 90px;
+    left: 144px;
+}
+
+.sch-product.sch-upsell--added.uh-message.uh-message--success {
+    margin: 0 0 10px 0 !important;
+}
+
+.uh-added .uh-added__bottom .uh-added__cart:after {
+    display: none !important;
+}
+
+.uh-added__img {
+    margin-top: 40px;
+    margin-right: 10px;
+}
+
+.uh-added__title {
+    max-width: 350px;
+}
+
+.uh-added__checkout {
+    display: none;
+}
+
+.uh-quantity {
+    display: none !important;
+}
+
+.uh-popup__footer {
+    position: absolute;
+    top: 32px;
+    z-index: 10;
+    right: 20px;
+    border: none !important;
+}
+
+.uh-scroll-outer-parent {
+    margin-top: -20px;
+}
+
+.product-single__meta .product-block {
+    margin-bottom: 15px !important;
+}
+
+#low-monthly-payments {
+    cursor: pointer;
+}
+
+#bread-checkout-btn-new {
+    height: 22px;
+    width: 185px;
+}
+
+.product-details-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-details-links a {
+    padding: 0 5px;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}      
+
+.product-details-links a:hover {
+    opacity: .5;
+    transition: .5s;
+}
+
+.lastinrow {
+    display: none;
+}
+
+.bbq-product-links {
+    display: grid;  
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.bbq-product-links a {
+    font-size: 15px;
+    font-style: italic;
+    font-family: sans-serif;
+}
+
+.price_container {
+    display: flex;
+    column-gap: 10px;
+    margin-top: 10px;
+}
+
+.product__quantity label {
+    margin-top: -15px !important;
+}
+
+@media only screen and (max-width: 768px){
+
+  .header-layout {
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+  }
+  
+  .mobile-nav-trigger.left-trigger {
+    display: block !important;
+    padding-left: 0 !important;
+  }
+
+  .site-nav__icons .mobile-nav-trigger {
+    display: none;
+  }
+
+  .header-item--logo {
+    max-width: unset !important;
+    word-break: unset;
+    justify-content: center;
+  }
+  
 }
 
 .modal-add-cart-body{
@@ -249,8 +465,8 @@ a[aria-current="activePage"] {
   padding-top: 10%;
 }
 .modal-add-cart-image-element{
-  height:150px,
-  width: 150px,
+  height:250px;
+  width: 250px;
 }
 
 .modal-action-section .btn{
@@ -261,70 +477,9 @@ a[aria-current="activePage"] {
   padding: 10px 40px 10px 40px;
   background:#D3D3D3
 }
-.product-price-container{
-  display:flex;
-}
-.product-price-column{
-  position: relative;
-  flex:50%;
-}
-.exclusive-savings-col{
-    display: flex;
-    width: 50%;
-    flex:unset
-    margin: auto;
-    align-items: center;
-    justify-content: center;
-    font-weight: 800 !important;
-}
-.exclusive-savings-col a{
-    color:#090;
-}
-.product-price-column p{
-  font-size:18px;
-  font-weigth:800;
-  bottom: 0;
-  left: 0;
-}
 
 @media only screen and (max-width: 768px){
   .clipped-text{
     width: 375px;
   }
-}
-
-/*product image hover*/
-.has-secondary.grid-view-item__link img.secondary{
- display:none;
-}
-
-.has-secondary.grid-view-item__link:hover img.secondary{
- display:block;
-}
-
-.has-secondary.grid-view-item__link:hover img.grid-view-item__image{
- display:none;
-}
-
-@media screen and (min-width:767px){
-.has-secondary.grid-view-item__link img.secondary{
- display:none;
-}
-
-.has-secondary.grid-view-item__link:hover img.secondary{
- display:block;
-}
-
-.has-secondary.grid-view-item__link:hover img.grid-view-item__image{
- display:none;
-}
-}
-
-@media screen and (max-width:767px){
-.has-secondary.grid-view-item__link img.secondary{
- display:none;
-}
-}
-.grid-view-item__title {
-margin-top: 10px;
 }
