@@ -1,6 +1,9 @@
 :root {
   --accent:#090;
 }
+.accent-color{
+  color: var(--accent);
+}
 .frequently-bought-item .fbi-content-wrap{
   display:flex;
   justify-content: flex-start;
