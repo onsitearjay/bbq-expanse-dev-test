@@ -4,20 +4,14 @@
   <div class="fbi-content-wrap">
     {% for frequently in product.metafields.frequently.fbi_related_product %}
       <div class="fbi-inner-content grid-product">
-          
-          <!--display product-->
+        
           {% assign referenced_product = all_products[product.metafields.frequently.fbi_related_product[forloop.index0]] %}
           {% assign productPrice = referenced_product.price %}
           {% assign regularPrice = referenced_product.compare_at_price %}
           {% assign savedPrice = regularPrice | minus: productPrice  %}
-          {% assign productImage = referenced_product.last | img_url: '300x300' %}
-      
-          <div class="fbi_image grid-view-item">
-            <a href="{{ referenced_product.url }}" class="grid-view-item__link {% if productImage.size > 1 %} has-secondary{% endif %}">
-              <img class="grid-view-item__image" src="{{ referenced_product | img_url: '300x300'}}">
-              {% if productImage.size > 1 %}
-              <img class="secondary" src="{{ productImage }}">
-              {% endif %}
+          <div class="fbi_image">
+            <a href="{{ referenced_product.url }}">
+              <img src="{{ referenced_product | img_url: '300x300'}}">
             </a>
           </div>
           <div class="grid-product__title">{{ referenced_product.title }}</div>
@@ -26,38 +20,10 @@
             <p class="fbi_price">{{ productPrice | money }}
               <span class="grid-product__price--original">{{ regularPrice | money }}</span>
             </p>
-            <p class="grid-product__price--savings">Save {{ savedPrice | money_without_trailing_zeros }}</p>
+            <p class="grid-product__price--savings">Save {{ savedPrice | abs | money }}</p>
           </div>
       </div>
     {% endfor %}
-=======
-  <div class="frequently-bought-item">
-    <h3 class="h3">{{ product.metafields.frequently.fbi_heading }}</h3>
-    <div class="fbi-content-wrap">
-      {% for frequently in product.metafields.frequently.fbi_related_product %}
-        <div class="fbi-inner-content grid-product">
-            
-            <!--display product-->
-            {% assign referenced_product = all_products[product.metafields.frequently.fbi_related_product[forloop.index0]] %}
-            {% assign productPrice = referenced_product.price %}
-            {% assign regularPrice = referenced_product.compare_at_price %}
-            {% assign savedPrice = regularPrice | minus: productPrice  %}
-            {% assign prductImage = referenced_product | img_url: '300x300' %}
-            <div class="fbi_image">
-              <a href="{{ referenced_product.url }}">
-                <img src="{{ referenced_product | img_url: '300x300'}}">
-              </a>
-            </div>
-            <div class="grid-product__title">{{ referenced_product.title }}</div>
-            <div class="grid-product__vendor">{{ product.vendor }}</div>
-            <div>
-              <p class="fbi_price">{{ productPrice | money }}
-                <span class="grid-product__price--original">{{ regularPrice | money }}</span>
-              </p>
-              <p class="grid-product__price--savings">Save {{ savedPrice | money_without_trailing_zeros }}</p>
-            </div>
-        </div>
-      {% endfor %}
-    </div>
   </div>
-  {% endif %}
+</div>
+{% endif %}
