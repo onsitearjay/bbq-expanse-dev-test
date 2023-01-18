@@ -1,5 +1,5 @@
 :root {
-  --bbq-green:#090;
+  --accent:#090;
 }
 .frequently-bought-item .fbi-content-wrap{
   display:flex;
@@ -35,7 +35,7 @@
 .openbox-title,
 .openbox-price,
 .specs-value{
- color: var(--bbq-green);
+ color: var(--accent);
  font-weight: 900;
 }
 .bbq-prod-details-title{
@@ -76,7 +76,7 @@
   height:200px;
 }
 .bbq-text-green{
-  color: var(--bbq-green);
+  color: var(--accent);
   font-weight: 900;
   display: contents;
 }
