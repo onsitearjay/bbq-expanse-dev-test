@@ -251,11 +251,12 @@
           <div class="grid-product__title">{{ product.title }}</div>
           </a>
           
+          {% comment %}WD1-T545
           {%- if settings.vendor_enable -%}
             <div class="grid-product__vendor">{{ product.vendor }}</div>
           {%- endif -%}
+          {% endcomment %}
           
-          {% comment %}WD1-T545
           {%- if settings.vendor_enable -%}
             <span class="product-single__vendor">
             {%- assign vendor_handle = product.vendor | handleize -%}
@@ -267,7 +268,7 @@
               {{ product.vendor | link_to_vendor }}
             {%- endif -%}
           </span>
-          {%- endif -%}{% endcomment %}
+          {%- endif -%}
           
         </div>
         
