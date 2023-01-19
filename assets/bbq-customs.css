@@ -285,10 +285,18 @@ a[aria-current="activePage"] {
     color:#090;
 }
 .product-price-column p{
-  font-size:18px;
-  font-weigth:800;
-  bottom: 0;
-  left: 0;
+    font-size:18px;
+    font-weigth:800;
+    bottom: 0;
+    left: 0;
+}
+
+.product-price-column.exclusive-savings-col {
+    text-align: center;
+}
+
+.product-price-column.exclusive-savings-col p {
+    margin: 0 !important;
 }
 
 @media only screen and (max-width: 768px){
