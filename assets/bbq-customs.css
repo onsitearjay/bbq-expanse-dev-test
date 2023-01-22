@@ -7,6 +7,9 @@
 [data-transitions=true].unloading .transition-body{
   animation:fade-in .3s ease forwards;
 }
+.frequently-bought-item{
+  clear:both;
+}
 .frequently-bought-item .fbi-content-wrap{
   display:flex;
   justify-content: flex-start;
