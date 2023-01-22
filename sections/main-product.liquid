@@ -9,7 +9,7 @@
     assign isAjax = true
   endif
 -%}
-
+{% render 'questions-answers' %}
 {%- render 'product-template',
   product: product,
   section_id: section.id,
