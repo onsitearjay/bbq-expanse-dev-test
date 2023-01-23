@@ -49,12 +49,12 @@
 {%- endif -%}
 </div>
 
-{%- if product.metafields.bbq.shipping_weight !=blank -%}
+{%- if product.metafields.bbq.shipping_info_heading_title !=blank -%}
   <div class="shipping-information collapsibles-wrapper">
       <button type="button"
         class="label collapsible-trigger collapsible-trigger-btn collapsible-trigger-btn--borders collapsible--auto-height{% if force_open %} is-open{% endif %}" aria-controls="Product-content-shipping-info"
         {% if force_open %}aria-expanded="true"{% endif %}>
-        Shipping Information
+        {{ product.metafields.bbq.shipping_info_heading_title }}
         {%- render 'collapsible-icons' -%}
       </button>
       <div id="Product-content-shipping-info"
