@@ -131,7 +131,7 @@
           <div class="">
                   <input type="hidden" name="simpAskAction" value="askQuestion">
                   <input type="hidden" id="simpAskProductId" name="simpAskProductId" value="{{ product.id }}">
-                  <textarea required="" style="resize:none; min-height:86px;" name="question" placeholder="{% if shop.metafields.simptranslation.qa_question_ph %}{{ shop.metafields.simptranslation.qa_question_ph }}{% else %}Type your question here{% endif %}" title="Please Enter Your Question."></textarea>
+                  <textarea required="" style="resize:none; min-height:86px;" name="question" placeholder="{% if shop.metafields.simptranslation.qa_question_ph %}{{ shop.metafields.simptranslation.qa_question_ph }}{% else %}Type your question here{% endif %} and email" title="Please Enter Your Question."></textarea>
             	  <input required="" type="text" name="name" value="" placeholder="{% if shop.metafields.simptranslation.qa_name_ph %}{{ shop.metafields.simptranslation.qa_name_ph }}{% else %}Your Name{% endif %}" title="Please Enter Your Name here." class="simpAsk-fifty-percent fleft">
                   <input required="" type="email" name="email" value="" placeholder="{% if shop.metafields.simptranslation.qa_email_ph %}{{ shop.metafields.simptranslation.qa_email_ph }}{% else %}Your Email{% endif %}" title="Please Enter Your Email." class="simpAsk-fifty-percent fright">
                   <input type="text" name="questionMark" value="" class="questionMarkFormat"> 
