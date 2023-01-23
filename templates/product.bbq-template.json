@@ -28,12 +28,6 @@
           "settings": {
           }
         },
-        "a9b9159f-7fe2-4149-bf31-0833258247c1": {
-          "type": "custom",
-          "settings": {
-            "code": "<div class=\"exclusive-savings\">\n\t<p>\n\t\t\n\t\t<a href=\"tel:888-667-4986\" style=\"color:#090;\">\n\t\t\tPhone Discounts\n\t\t<\/a> | \n\t\t<a href=\"\/collections\/package-deals\" target=\"_blank\">\n\t\t\tPackage Deals\n\t\t<\/a> | \n\t\t\n\t\t<a href=\"\/collections\/open-box-1\" style=\"color:#090;\">\n\t\t\tOpen Box\n\t\t<\/span> |\n\n\t\t<a href=\"\/collections\/close-out-deals\" target=\"_blank\">\n\t\t\tClose Out\n\t\t<\/a>| \n    \n    <a href=\"\/collections\/scratch-and-dents\" style=\"color:#090;\" target=\"_blank\">\n\t\t\tScratch + Dent\n\t\t<\/a> | \n    \n    <span id=\"low-monthly-payments\">\n  <div id=\"bread-checkout-btn-new\" style=\"height:21px; \nwidth:148px;\ndisplay:inline-flex;\n\"><\/div>\n<\/span> |\n\t<a href=\"\/pages\/free-accessories\" style=\"color:#090;\" target=\"_blank\">\n\t\t\tFree Accessory Bundles\n\t\t<\/a>\n\t\t\n\n<\/div>"
-          }
-        },
         "44880ef3-f19a-40d1-acc6-025a4af3db44": {
           "type": "custom",
           "settings": {
@@ -132,6 +126,12 @@
             "text": "Free Shipping!"
           }
         },
+        "a9b9159f-7fe2-4149-bf31-0833258247c1": {
+          "type": "custom",
+          "settings": {
+            "code": "<div class=\"exclusive-savings\">\n\t<p>\n\t\t\n\t\t<a href=\"tel:888-667-4986\" style=\"color:#090;\">\n\t\t\tPhone Discounts\n\t\t<\/a> | \n\t\t<a href=\"\/collections\/package-deals\" target=\"_blank\">\n\t\t\tPackage Deals\n\t\t<\/a> | \n\t\t\n\t\t<a href=\"\/collections\/open-box-1\" style=\"color:#090;\">\n\t\t\tOpen Box\n\t\t<\/span> |\n\n\t\t<a href=\"\/collections\/close-out-deals\" target=\"_blank\">\n\t\t\tClose Out\n\t\t<\/a>| \n    \n    <a href=\"\/collections\/scratch-and-dents\" style=\"color:#090;\" target=\"_blank\">\n\t\t\tScratch + Dent\n\t\t<\/a> | \n    \n    <span id=\"low-monthly-payments\">\n  <div id=\"bread-checkout-btn-new\" style=\"height:21px; \nwidth:148px;\ndisplay:inline-flex;\n\"><\/div>\n<\/span> |\n\t<a href=\"\/pages\/free-accessories\" style=\"color:#090;\" target=\"_blank\">\n\t\t\tFree Accessory Bundles\n\t\t<\/a>\n\t\t\n\n<\/div>"
+          }
+        },
         "inventory_status": {
           "type": "inventory_status",
           "settings": {
@@ -149,7 +149,6 @@
       },
       "block_order": [
         "price",
-        "a9b9159f-7fe2-4149-bf31-0833258247c1",
         "44880ef3-f19a-40d1-acc6-025a4af3db44",
         "6d4a00c6-99ed-42dd-bfd5-1b91c8900dc8",
         "36c63643-2306-453c-a69a-302aac2fee56",
@@ -164,6 +163,7 @@
         "b4c9450c-8412-40a8-96ba-590d64beb1f0",
         "sales_point2",
         "sales_point3",
+        "a9b9159f-7fe2-4149-bf31-0833258247c1",
         "inventory_status",
         "buy_buttons"
       ],
