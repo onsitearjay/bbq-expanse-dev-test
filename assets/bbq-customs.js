@@ -59,7 +59,7 @@ var gasInfoBtn = document.getElementById("gastype_info_btn");
 var spanClose = document.getElementsByClassName("gasinfo-close")[0];
 
 gasInfoBtn.onclick = function() {
-  gasModal.style.display = "inline-block";
+  gasModal.style.display = "block";
 }
 spanClose.onclick = function() {
   gasModal.style.display = "none";
