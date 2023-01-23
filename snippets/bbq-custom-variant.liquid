@@ -1,4 +1,5 @@
 {% if product.metafields.bbq.option_title != blank %}
+<div class="bbq-meta-block">
 <p class="variantTitle">{{ product.metafields.bbq.option_title }} <span id="learn-gastype" class="info-gastype">learn more...</span> </p>
   {% for option in product.metafields.bbq.option_type %}
     <a class="custom-variant-btn" href="{{ product.metafields.bbq.option_related_product[forloop.index0] }}">
@@ -6,17 +7,16 @@
     </a> 
   {% endfor %}
 {% endif %}
-
 <div id="gastype_modal" class="gastype_info_modal">
-
   <div class="gastype-modal-content">
     <span class="gasinfo-close">&times;</span>
     <p>gas info text here...</p>
   </div>
-
+</div>
 </div>
 
 {% if product.metafields.bbq.configuration_type != blank %}
+<div class="bbq-meta-block">
     <p class="variantTitle"> Configuration </p>
     <div class="custom-field-block variantSize">
         {% for option in product.metafields.bbq.configuration_type %}
@@ -37,12 +37,14 @@
         </a>
         {% endfor %}
     </div>
+</div>
 {% endif %}
 
 {% if product.metafields.bbq.size_title != blank %}
+<div class="bbq-meta-block">
 <p class="variantTitle"> Size </p>
    <div class="custom-field-block variantSize"> 
-    {% for option in product.metafields.bbq.size_title %}
+      {% for option in product.metafields.bbq.size_title %}
         <a href="{{ product.metafields.bbq.related_product[forloop.index0] }}" class="custom-variant-btn">
         <span class="bbq-size-short-desc">
             {{ product.metafields.bbq.size_title[forloop.index0] }}
@@ -56,33 +58,37 @@
             {% endif %}
         </span>
         </a>
-    {% endfor %}
+      {% endfor %}
+  </div>
 </div>
 {% endif %}
 
 {% if product.metafields.bbq.orientation_heading_title != blank %}
+<div class="bbq-meta-block">
     <p class="variantTitle">{{ product.metafields.bbq.orientation_heading_title }}</p>
       {% for option in product.metafields.bbq.selection_name %}
         <a class="custom-variant-btn" href="{{ product.metafields.bbq.selection_related_product[forloop.index0] }}">
           {{ product.metafields.bbq.selection_name[forloop.index0] }}
         </a>
       {% endfor %}
+</div>
 {% endif %}
 
 {% if product.metafields.bbq.hinge_heading_title != blank %}
+<div class="bbq-meta-block">
     <p class="variantTitle">{{ product.metafields.bbq.hinge_heading_title }}</p>
       {% for option in product.metafields.bbq.hinge_selection %}
         <a class="custom-variant-btn" href="{{ product.metafields.bbq.hinge_related_product[forloop.index0] }}">
           {{ product.metafields.bbq.hinge_selection[forloop.index0] }}
         </a>
       {% endfor %}
+</div>
 {% endif %}
 
 {% if product.metafields.bbq.open_box_heading_title != blank %}
+<div class="bbq-meta-block">
 <div class="openbox">
-
     <p class="openbox-title"><span class="accent-color">{{ product.metafields.bbq.open_box_heading_title }}</span> Shop Open Box</p>    
-    
     {% for openbox in product.metafields.bbq.openbox_related_product %}
         {% assign referenced_product = all_products[product.metafields.bbq.openbox_related_product[forloop.index0]] %}
         {% assign productTitle = product.metafields.bbq.openbox_product_text[forloop.index0] %}
@@ -106,9 +112,11 @@
         </a>
     {% endfor %}
 </div>
+</div>
 {% endif %}
 
 {% if product.metafields.bbq.shopnew_heading_title != blank %}
+<div class="bbq-meta-block">
     <div class="openbox">
         <p class="openbox-title">{{ product.metafields.bbq.shopnew_heading_title }}</p>
         
@@ -139,7 +147,8 @@
         {% endfor %}
     
     </div>
-    {% endif %}
+</div>
+{% endif %}
 
 <script>
 var gasModal = document.getElementById("gastype_modal");
