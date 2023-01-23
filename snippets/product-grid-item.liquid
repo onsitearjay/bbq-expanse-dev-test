@@ -43,7 +43,7 @@
                 - when multiple variants, popup with product form appears
             {% endcomment %}
             {%- if product.variants.size > 1 -%}
-              <button type="button" class="text-link quick-add-btn js-quick-add-form js-modal-open-quick-add" title="{{ 'products.product.add_to_cart' | t }}" tabindex="-1">
+              <button type="button" class="text-link quick-add-btn js-add-cart-btn" title="{{ 'products.product.add_to_cart' | t }}" tabindex="-1">
                 <span class="btn btn--circle btn--icon">
                   <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-plus" viewBox="0 0 64 64"><path class="cls-1" d="M32 9v46m23-23H9"/></svg>
                   <span class="icon__fallback-text">{{ 'products.product.add_to_cart' | t }}</span>
@@ -75,7 +75,7 @@
       assign img_url = preview_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.'
     -%}
 
-    <a href="{{ product.url  }}" class="grid-item__link">
+    <a href="{{  product.url | split: "?" | first }}" class="grid-item__link">
       <div class="grid-product__image-wrap">
         <div class="grid-product__tags">
           {%- if has_custom_label -%}
@@ -245,14 +245,12 @@
               {%- endif -%}
             {%- endfor -%}
           {%- endif -%}
-          
-          {% comment %}WD1-T544{% endcomment %}
-          <a href="{{ product.url  }}" class="grid-item__link">
-          <div class="grid-product__title">{{ product.title }}</div>
-          </a>
 
-          {% comment %}WD1-T545{% endcomment %}
-           {%- if settings.vendor_enable -%}
+          <a href="{{ product.url  }}" class="grid-item__link">
+          <div class="grid-product__title" title='{{ product.title }}'>{{ product.title }}</div>
+          </a>
+  
+          {%- if settings.vendor_enable -%}
             <span class="product-single__vendor">
             {%- assign vendor_handle = product.vendor | handleize -%}
             {%- if collections[vendor_handle] != empty -%}
@@ -270,11 +268,9 @@
             <div class="grid-product__vendor">{{ product.vendor }}</div>
           {%- endif -%}
           {% endcomment %}
-          
-         
+      
           
         </div>
-        
         <div class="grid-item__meta-secondary">
           <div class="grid-product__price">
             {%- if product.price_varies -%}

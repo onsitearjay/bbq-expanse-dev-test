@@ -71,7 +71,12 @@
       <div class="site-header__element site-header__element--top">
         <div class="page-width">
           <div class="header-layout" data-layout="{{ section.settings.main_menu_alignment }}" data-nav="{{ nav_position }}" data-logo-align="{{ logo_alignment }}">
-
+            <button type="button"
+              aria-controls="MobileNav"
+              class="site-nav__link site-nav__link--icon medium-up--hide mobile-nav-trigger left-trigger" style="display: none;">
+              <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-hamburger" viewBox="0 0 64 64"><path class="cls-1" d="M7 15h51">.</path><path class="cls-1" d="M7 32h43">.</path><path class="cls-1" d="M7 49h51">.</path></svg>
+              <span class="icon__fallback-text">{{ 'general.drawers.navigation' | t }}</span>
+            </button>
             {%- if nav_position == 'below' and logo_alignment == 'left' -%}
               <div class="header-item header-item--compress-nav small--hide">
                 <button type="button" class="site-nav__link site-nav__link--icon site-nav__compress-menu">

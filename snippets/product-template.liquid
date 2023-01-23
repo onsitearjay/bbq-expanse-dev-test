@@ -132,7 +132,7 @@
             {% comment %}Start automatically added Judge.me widget{% endcomment %}
               {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', concierge_install: true, product: product %}
             {% comment %}End automatically added Judge.me widget{% endcomment %}
-            </div>  
+            </div>    
           </div>
         {%- endif -%}
 
@@ -174,92 +174,92 @@
                       {%- assign id = block.id | append: product.id -%}
                       {%- render 'product-description', id: id, product: product, is_tab: block.settings.is_tab -%}
                     </div>
-
                   {%- when 'price' -%}
                     <div class="product-block product-block--price" {{ block.shopify_attributes }}>
-                      <div class="product-price-container">
-                          <div class="product-price-column">
-                            <label class="variant__label" for="ProductPrice-{{ section_id }}">
-                              {{ 'cart.label.price' | t }}
-                            </label>
-      
-                            {%- assign hide_sale_price = true -%}
-                            {%- if product.compare_at_price_max > product.price -%}
-                              {%- if current_variant.compare_at_price > current_variant.price -%}
-                                {%- assign hide_sale_price = false -%}
-                              {%- endif -%}
-                              <span
-                                data-a11y-price
-                                class="visually-hidden"
-                                aria-hidden="{{ hide_sale_price }}">
-                                  {{ 'products.general.regular_price' | t }}
-                              </span>
-                              <span data-product-price-wrap class="{% if hide_sale_price %} hide{% endif %}">
-                                <span data-compare-price class="product__price product__price--compare">
-                                  {%- if current_variant.compare_at_price > current_variant.price -%}
-                                    {%- render 'price' with current_variant.compare_at_price -%}
-                                  {%- endif -%}
-                                </span>
-                              </span>
-                              <span data-compare-price-a11y class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
-                            {%- else -%}
-                              <span id="PriceA11y-{{ section_id }}" class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
+                      <label class="variant__label" for="ProductPrice-{{ section_id }}">
+                        {{ 'cart.label.price' | t }}
+                      </label>
+                      
+                    <div class="price_container">
+                      <div class="price_main_container">
+                      {%- assign hide_sale_price = true -%}
+                      {%- if product.compare_at_price_max > product.price -%}
+                        {%- if current_variant.compare_at_price > current_variant.price -%}
+                          {%- assign hide_sale_price = false -%}
+                        {%- endif -%}
+                        <span
+                          data-a11y-price
+                          class="visually-hidden"
+                          aria-hidden="{{ hide_sale_price }}">
+                            {{ 'products.general.regular_price' | t }}
+                        </span>
+                        <span data-product-price-wrap class="{% if hide_sale_price %} hide{% endif %}">
+                          <span data-compare-price class="product__price product__price--compare">
+                            {%- if current_variant.compare_at_price > current_variant.price -%}
+                              {%- render 'price' with current_variant.compare_at_price -%}
                             {%- endif -%}
-      
-                            <span data-product-price
-                              class="product__price{% if current_variant.compare_at_price > current_variant.price %} on-sale{% endif %}">
-                              {%- unless product.empty? -%}
-                                {%- render 'price' with current_variant.price -%}
-                              {%- else -%}
-                                {%- render 'price' with 1999 -%}
-                              {%- endunless -%}
-                            </span>
-      
-                            {%- if settings.product_save_amount -%}
-                              {%- if settings.product_save_type == 'dollar' -%}
-                                {%- capture saved_amount -%}{{ current_variant.compare_at_price | minus: current_variant.price | money_without_trailing_zeros }}{%- endcapture -%}
-                              {%- else -%}
-                                {%- capture saved_amount -%}{{ current_variant.compare_at_price | minus: current_variant.price | times: 100.0 | divided_by: current_variant.compare_at_price | round }}%{%- endcapture -%}
+                          </span>
+                        </span>
+                        <span data-compare-price-a11y class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
+                      {%- else -%}
+                        <span id="PriceA11y-{{ section_id }}" class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
+                      {%- endif -%}
+
+                      <span data-product-price
+                        class="product__price{% if current_variant.compare_at_price > current_variant.price %} on-sale{% endif %}">
+                        {%- unless product.empty? -%}
+                          {%- render 'price' with current_variant.price -%}
+                        {%- else -%}
+                          {%- render 'price' with 1999 -%}
+                        {%- endunless -%}
+                      </span>
+
+                      {%- if settings.product_save_amount -%}
+                        {%- if settings.product_save_type == 'dollar' -%}
+                          {%- capture saved_amount -%}{{ current_variant.compare_at_price | minus: current_variant.price | money_without_trailing_zeros }}{%- endcapture -%}
+                        {%- else -%}
+                          {%- capture saved_amount -%}{{ current_variant.compare_at_price | minus: current_variant.price | times: 100.0 | divided_by: current_variant.compare_at_price | round }}%{%- endcapture -%}
+                        {%- endif -%}
+                        <span data-save-price class="product__price-savings{% if hide_sale_price %} hide{% endif %}">
+                          {%- unless hide_sale_price -%}
+                            {{ 'products.general.save_html' | t: saved_amount: saved_amount }}
+                          {%- endunless -%}
+                        </span>
+                        <span class="price_free-shipping_text">{% if current_variant.price >= 99900 %} + Free Shipping{% endif %}</span>
+                      {%- endif -%}
+
+                      <div data-unit-price-wrapper class="product__unit-price{% unless current_variant.unit_price_measurement %} hide{% endunless %}">
+                        {%- capture unit_price_base_unit -%}
+                          <span data-unit-base>
+                            {%- if current_variant.unit_price_measurement -%}
+                              {%- if current_variant.unit_price_measurement.reference_value != 1 -%}
+                                {{ current_variant.unit_price_measurement.reference_value }}
                               {%- endif -%}
-                              <span data-save-price class="product__price-savings{% if hide_sale_price %} hide{% endif %}">
-                                {%- unless hide_sale_price -%}
-                                  {{ 'products.general.save_html' | t: saved_amount: saved_amount }}
-                                {%- endunless -%}
-                              </span>
+                              {{ current_variant.unit_price_measurement.reference_unit }}
                             {%- endif -%}
-      
-                            <div data-unit-price-wrapper class="product__unit-price{% unless current_variant.unit_price_measurement %} hide{% endunless %}">
-                              {%- capture unit_price_base_unit -%}
-                                <span data-unit-base>
-                                  {%- if current_variant.unit_price_measurement -%}
-                                    {%- if current_variant.unit_price_measurement.reference_value != 1 -%}
-                                      {{ current_variant.unit_price_measurement.reference_value }}
-                                    {%- endif -%}
-                                    {{ current_variant.unit_price_measurement.reference_unit }}
-                                  {%- endif -%}
-                                </span>
-                              {%- endcapture -%}
-      
-                              <span data-unit-price>
-                                {%- render 'price' with current_variant.unit_price -%}
-                              </span>/{{ unit_price_base_unit }}
-                            </div>
-                          {% if product.available %}
-                              <div id="bread-checkout-btn-product" style="width:250px; height:50px; margin:20px 0px;"></div>
-                          {% endif %}
-                          </div>
-                         <div class="product-price-column  exclusive-savings-col">
-                              <p>
-                        		Exclusive Savings Just One Call Away!
-                              </p>
-                              <p>
-                                Experts Standing By 
-                        		<a href="tel:888-667-4986">
-                    			<strong style="font-size:20px;">888-667-4986</strong>
-                        		</a>
-                              </p>
-                         </div>
+                          </span>
+                        {%- endcapture -%}
+
+                        <span data-unit-price>
+                          {%- render 'price' with current_variant.unit_price -%}
+                        </span>/{{ unit_price_base_unit }}
+
+                      </div> <!-- insert here-->
+                    </div> <!-- price_main_container end-->
+                      
+                      <div class="product-price-column  exclusive-savings-col">
+                        <p>
+                          Exclusive Savings Just One Call Away!
+                        </p>
+                        <p>
+                          Experts Standing By 
+                          <a href="tel:888-667-4986">
+                          <strong style="font-size:20px;">888-667-4986</strong>
+                          </a>
+                        </p>
                       </div>
+                  </div> <!-- price_container end-->
+                  
                     </div>
                   {%- when 'quantity_selector' -%}
                     <div class="product-block" {{ block.shopify_attributes }}>
@@ -443,8 +443,6 @@
                       {{ block.settings.code }}
                     </div>
                 {%- endcase -%}
-
-                                  
               {%- else -%}
                 <div data-blocks-holder
                      data-url="{{ product.url | within: collection }}"

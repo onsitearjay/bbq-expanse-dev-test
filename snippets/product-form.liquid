@@ -36,9 +36,9 @@
 
     <button
       {% if product.empty? %}type="button"{% else %}type="button"{% endif %}
-      name="add-cart"
-      data-id=""
-      onclick="addCartProdPage(this)"
+      name="add"
+      data-id="{{product.selected_or_first_available_variant.id}}"
+      data-add-to-cart
       class="btn btn--full js-add-cart-btn{% if enable_dynamic_buttons and product.selling_plan_groups == empty %} btn--secondary{% endif %}"
       {% unless current_variant.available %} disabled="disabled"{% endunless %}>
       <span data-add-to-cart-text data-default-text="{{ default_text }}">

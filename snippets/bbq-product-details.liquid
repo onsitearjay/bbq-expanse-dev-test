@@ -96,3 +96,31 @@
     </div>
   </div>
 {% endif %}
+
+{% comment %}
+<script>
+  var content = document.getElementById("desc-content");
+  var button = document.getElementById("desc-show-more");
+    button.onclick = function () {
+    	if(content.className == "open"){
+    		content.className = "";
+    		button.innerHTML = "Read more >>";
+    	} else {
+    		content.className = "open";
+    		button.innerHTML = "Read less <<";
+    	}
+    };
+
+  var specsContent = document.getElementById("specs-content");
+  var specsButton = document.getElementById("specs-view-more");
+    specsButton.onclick = function () {
+    	if(specsContent.className == "view"){
+    		specsContent.className = "see";
+    		specsButton.innerHTML = "Read more >>";
+    	} else {
+    		specsContent.className = "view";
+    		specsButton.innerHTML = "Read less <<";
+    	}
+    };
+</script>
+{% endcomment %}

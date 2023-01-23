@@ -40,7 +40,6 @@ This file can be re-written at any time.
   {%- render 'font-face' -%}
   {{ 'theme.css' | asset_url | stylesheet_tag: preload: true }}
   {%- render 'css-variables' -%}
-  
   {{ 'bbq-customs.css' | asset_url | stylesheet_tag }}
   
   {%- liquid
@@ -102,6 +101,7 @@ This file can be re-written at any time.
       themeVersion: "4.0.1"
     };
   </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   {{ content_for_header }}
 
@@ -117,24 +117,25 @@ This file can be re-written at any time.
   {% endif %}
 
   {% render 'shogun-head' %}
-  {% render 'minmaxify-head' %}
-  {% render 'judgeme_core' %}
+  
+  {{ '//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css' | stylesheet_tag }}
 
-<script language="javascript">
-  function SelectRedirect(){
-  switch(document.getElementById('s1').value)
-    { 
-    {% for option in product.metafields.bbq.size_title %}
-    case "{{ product.metafields.bbq.size_title[forloop.index0] }}":
-    window.location="{{ product.metafields.bbq.related_product[forloop.index0] }}";
-    break;
-    {% endfor %}
-    default:
-    window.location="../";
-    break;
-    }
-    }
-</script>
+  {{ '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' | stylesheet_tag }}
+
+  {{ 'quickview.css' | asset_url | stylesheet_tag }} 
+
+  {{ '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js' | script_tag }}
+
+  {{ 'quickview.js' | asset_url | script_tag }}
+
+  <script>
+  
+    {% capture content %}{% include 'quickview' %}{% endcapture %}
+  
+    var content = {{ content | json }};
+  
+  </script>
+  {% render 'judgeme_core' %}
 
 </head>
 
