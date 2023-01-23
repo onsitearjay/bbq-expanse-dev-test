@@ -50,7 +50,7 @@
 {% if product.metafields.bbq.size_heading_title != blank %}
 <div class="bbq-meta-block">
   {% assign sizeHeading = product.metafields.bbq.size_heading_title %}
-  {% if sizeHeading == sizeHeading %}
+  {% if sizeHeading != sizeHeading %}
     <p class="variantTitle"> {{ product.metafields.bbq.size_heading_title }} </p>
   {% else %}
     <p class="variantTitle"> Size </p>
