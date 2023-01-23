@@ -101,6 +101,9 @@
 /*.specification{
   margin-bottom:-30px;
 }*/
+.custom-meta-description{
+  margin-bottom:20px;
+}
 #desc-content{
 	max-height: 4.5em;
 	overflow: hidden;
