@@ -49,13 +49,7 @@
 
 {% if product.metafields.bbq.size_heading_title != blank %}
 <div class="bbq-meta-block">
-  {% assign sizeHeading = product.metafields.bbq.size_heading_title %}
-  {% if sizeHeading != blank %}
-    <p class="variantTitle"> {{ product.metafields.bbq.size_heading_title }} </p>
-  {% else %}
-    <p class="variantTitle"> Size </p>
-  {% endif %}
-  
+    <p class="variantTitle"> {{ product.metafields.bbq.size_heading_title }} </p> 
    <div class="custom-field-block variantSize"> 
       {% for option in product.metafields.bbq.size_title %}
         <a href="{{ product.metafields.bbq.related_product[forloop.index0] }}" class="custom-variant-btn">
