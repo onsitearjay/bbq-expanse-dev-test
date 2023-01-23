@@ -1,12 +1,17 @@
 {% if product.metafields.bbq.option_title != blank %}
 <div class="bbq-meta-block">
-<p class="variantTitle">{{ product.metafields.bbq.option_title }} <span id="learn-gastype" class="info-gastype">learn more...</span> </p>
+<p class="variantTitle">{{ product.metafields.bbq.option_title }} 
+  {% comment %}
+  <span id="learn-gastype" class="info-gastype">learn more...</span> 
+  {% endcomment %}
+</p>
   {% for option in product.metafields.bbq.option_type %}
     <a class="custom-variant-btn" href="{{ product.metafields.bbq.option_related_product[forloop.index0] }}">
       {{ product.metafields.bbq.option_type[forloop.index0] }} 
     </a> 
   {% endfor %}
 {% endif %}
+{% comment %}
 <div id="gastype_modal" class="gastype_info_modal">
   <div class="gastype-modal-content">
     <span class="gasinfo-close">&times;</span>
@@ -14,6 +19,7 @@
   </div>
 </div>
 </div>
+{% endcomment %}
 
 {% if product.metafields.bbq.configuration_type != blank %}
 <div class="bbq-meta-block">
@@ -150,6 +156,7 @@
 </div>
 {% endif %}
 
+{% comment %}
 <script>
 var gasModal = document.getElementById("gastype_modal");
 var gasInfoBtn = document.getElementById("learn-gastype");
@@ -167,3 +174,4 @@ window.onclick = function(event) {
   }
 }
 </script>
+{% endcomment %}
