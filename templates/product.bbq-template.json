@@ -218,7 +218,7 @@
         "13c8794f-442a-4464-b4d5-581030603fc3": {
           "type": "custom",
           "settings": {
-            "code": "<script src=\"https:\/\/storedesigndev.services.answerbase.com\/javascript\/widget\/cta-widget.min.js\" \n            data-insert-after=\"\">\n    <\/script>"
+            "code": "<script type=\"text\/javascript\" src=\"https:\/\/storedesigndev.services.answerbase.com\/javascript\/widget\/full-featured-widget.min.js\"\n        data-platform=\"shopify\"\n        data-shop=\"storedesigndev.myshopify.com\" defer>\n<\/script>"
           }
         },
         "123b3a6f-667a-47ce-b80d-7f398939fb18": {
