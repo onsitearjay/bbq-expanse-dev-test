@@ -54,3 +54,18 @@ if(button !== null  && button.onclick !== null && typeof button.onclick !== "und
 }
 
 
+var gasModal = document.getElementById("gastype_modal");
+var gasInfoBtn = document.getElementById("gastype_info_btn");
+var spanClose = document.getElementsByClassName("gasinfo-close")[0];
+
+gasInfoBtn.onclick = function() {
+  gasModal.style.display = "inline-block";
+}
+spanClose.onclick = function() {
+  gasModal.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == gasModal) {
+    gasModal.style.display = "none";
+  }
+}
