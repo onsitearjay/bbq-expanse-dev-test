@@ -7,6 +7,9 @@
 [data-transitions=true].unloading .transition-body{
   animation:fade-in .3s ease forwards;
 }
+.info-gastype{
+  font: italic normal 12px Harmonia Sans;
+}
 .frequently-bought-item{
   clear:both;
 }
