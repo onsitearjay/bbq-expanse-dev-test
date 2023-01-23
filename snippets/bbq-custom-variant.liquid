@@ -1,24 +1,24 @@
 {% if product.metafields.bbq.option_title != blank %}
 <div class="bbq-meta-block">
-<p class="variantTitle">{{ product.metafields.bbq.option_title }} 
+  <p class="variantTitle">{{ product.metafields.bbq.option_title }} 
+    {% comment %}
+    <span id="learn-gastype" class="info-gastype">learn more...</span> 
+    {% endcomment %}
+  </p>
+    {% for option in product.metafields.bbq.option_type %}
+      <a class="custom-variant-btn" href="{{ product.metafields.bbq.option_related_product[forloop.index0] }}">
+        {{ product.metafields.bbq.option_type[forloop.index0] }} 
+      </a> 
+    {% endfor %}
+  {% endif %}
   {% comment %}
-  <span id="learn-gastype" class="info-gastype">learn more...</span> 
-  {% endcomment %}
-</p>
-  {% for option in product.metafields.bbq.option_type %}
-    <a class="custom-variant-btn" href="{{ product.metafields.bbq.option_related_product[forloop.index0] }}">
-      {{ product.metafields.bbq.option_type[forloop.index0] }} 
-    </a> 
-  {% endfor %}
-{% endif %}
-{% comment %}
-<div id="gastype_modal" class="gastype_info_modal">
-  <div class="gastype-modal-content">
-    <span class="gasinfo-close">&times;</span>
-    <p>gas info text here...</p>
+  <div id="gastype_modal" class="gastype_info_modal">
+    <div class="gastype-modal-content">
+      <span class="gasinfo-close">&times;</span>
+      <p>gas info text here...</p>
+    </div>
   </div>
-</div>
-{% endcomment %}
+  {% endcomment %}
 </div>
 
 
@@ -47,28 +47,126 @@
 </div>
 {% endif %}
 
-{% if product.metafields.bbq.size_heading_title != blank %}
 <div class="bbq-meta-block">
-    <p class="variantTitle"> {{ product.metafields.bbq.size_heading_title }} </p> 
-   <div class="custom-field-block variantSize"> 
-      {% for option in product.metafields.bbq.size_title %}
-        <a href="{{ product.metafields.bbq.related_product[forloop.index0] }}" class="custom-variant-btn">
-        <span class="bbq-size-short-desc">
-            {{ product.metafields.bbq.size_title[forloop.index0] }}
-        </span>
-        <span class="bbq-text-green">
-            {% assign diff1 = product.metafields.bbq.related_product.value.price | minus: product.price %}
-            {% if diff1 < 0 %}
-            Save {{ diff1 | abs | money_with_currency}}
-            {% elsif diff1 > 0 %}
-            Add {{ diff1 | abs | money_with_currency}}
-            {% endif %}
-        </span>
-        </a>
-      {% endfor %}
+<!--Old Custom Metafield-->
+<div id="custom-variant-meta">
+{% if product.metafields.custom.size_option_title != blank %}
+  <p class="variantTitle"> Size </p>
+  <div class="custom-field-block variantSize">
+      <a href="{{ product.metafields.custom.size_related_product.value.url }}" class="custom-variant-btn">
+      <span class="bbq-size-short-desc">
+          {{ product.metafields.custom.size_option_title }}
+      </span>
+      <span class="bbq-text-green">
+          {% assign diff1 = product.metafields.custom.size_related_product.value.price | minus: product.price %}
+          {% if diff1 < 0 %}
+          Save {{ diff1 | abs | money_with_currency}}
+          {% elsif diff1 > 0 %}
+          Add {{ diff1 | abs | money_with_currency}}
+          {% endif %}
+      </span>
+      <img src="{{ product.metafields.custom.size_related_product.value | img_url: '1800x1800' }}" hidden>
+      </a>
+      {% endif %}
+
+      {% if product.metafields.custom.size_two_product_title != blank %}
+      <a href="{{ product.metafields.custom.size_two_product.value.url }}" class="custom-variant-btn">
+      <span class="bbq-size-short-desc">
+          {{ product.metafields.custom.size_two_product_title }}
+      </span>
+      <span class="bbq-text-green">
+          {% assign diff2 = product.metafields.custom.size_two_product.value.price | minus: product.price %}
+          {% if diff2 < 0 %}
+              Save {{ diff2 | abs | money_with_currency}}
+          {% elsif diff2 > 0 %}
+              Add {{ diff2 | abs | money_with_currency}}
+          {% endif %}
+      </span>
+      <img src="{{ product.metafields.custom.size_two_product.value | img_url: '1800x1800' }}" hidden>
+      </a>
+      {% endif %}
+
+      {% if product.metafields.custom.size_three_title != blank %}
+      <a href="{{ product.metafields.custom.size_three_product.value.url }}" class="custom-variant-btn">
+      <span class="bbq-size-short-desc">
+          {{ product.metafields.custom.size_three_title }} 
+      </span>
+      <span class="bbq-text-green">
+          {% assign diff3 = product.metafields.custom.size_three_product.value.price | minus: product.price %}
+          {% if diff3 < 0 %}
+              Save {{ diff3 | abs | money_with_currency}}
+          {% elsif diff3 > 0 %}
+              Add {{ diff3 | abs | money_with_currency}}
+          {% endif %}
+      </span>
+      <img src="{{ product.metafields.custom.size_three_product.value | img_url: '1800x1800' }}" hidden>
+      </a>
+      {% endif %}
+
+      {% if product.metafields.custom.size_four_title != blank %}
+      <a href="{{ product.metafields.custom.size_four_product.value.url }}" class="custom-variant-btn">
+      <span class="bbq-size-short-desc">
+          {{ product.metafields.custom.size_four_title }}
+      </span>
+      <span class="bbq-text-green"> 
+          {% assign diff4 = product.metafields.custom.size_four_product.value.price | minus: product.price %}
+          {% if diff4 < 0 %}
+              Save {{ diff4 | abs | money_with_currency}}
+          {% elsif diff4 > 0 %}
+              Add {{ diff4 | abs | money_with_currency}}
+          {% endif %}
+      </span>
+      <img src="{{ product.metafields.custom.size_four_product.value | img_url: '1800x1800' }}" hidden>
+      </a>
+      {% endif %}
+
+      {% if product.metafields.custom.size_five_title != blank %}
+      <a href="{{ product.metafields.custom.size_five_product.value.url }}" class="custom-variant-btn">
+      <span class="bbq-size-short-desc">
+          {{ product.metafields.custom.size_five_title }} 
+      </span>
+      <span class="bbq-text-green">
+          {% assign diff5 = product.metafields.custom.size_five_product.value.price | minus: product.price %}
+          {% if diff5 < 0 %}
+              Save {{ diff5 | abs | money_with_currency}}
+          {% elsif diff5 > 0 %}
+              Add {{ diff5 | abs | money_with_currency}}
+          {% endif %}
+      </span>
+      <img src="{{ product.metafields.custom.size_five_product.value | img_url: '1800x1800' }}" hidden>
+      </a>
+      {% endif %}
   </div>
 </div>
+
+{% comment %}
+//Accentuate metafield
+{% if product.metafields.bbq.size_heading_title != blank %}
+  <div class="bbq-meta-block">
+      <p class="variantTitle"> {{ product.metafields.bbq.size_heading_title }} </p> 
+     <div class="custom-field-block variantSize"> 
+        {% for option in product.metafields.bbq.size_title %}
+          <a href="{{ product.metafields.bbq.related_product[forloop.index0] }}" class="custom-variant-btn">
+          <span class="bbq-size-short-desc">
+              {{ product.metafields.bbq.size_title[forloop.index0] }}
+          </span>
+          <span class="bbq-text-green">
+              {% assign diff1 = product.metafields.bbq.related_product.value.price | minus: product.price %}
+              {% if diff1 < 0 %}
+              Save {{ diff1 | abs | money_with_currency}}
+              {% elsif diff1 > 0 %}
+              Add {{ diff1 | abs | money_with_currency}}
+              {% endif %}
+          </span>
+          </a>
+        {% endfor %}
+    </div>
+  </div>
 {% endif %}
+{% endcomment %}
+  
+</div>
+
 
 {% if product.metafields.bbq.orientation_heading_title != blank %}
 <div class="bbq-meta-block">
@@ -94,31 +192,31 @@
 
 {% if product.metafields.bbq.open_box_heading_title != blank %}
 <div class="bbq-meta-block">
-<div class="openbox">
-    <p class="openbox-title"><span class="accent-color">{{ product.metafields.bbq.open_box_heading_title }}</span> Shop Open Box</p>    
-    {% for openbox in product.metafields.bbq.openbox_related_product %}
-        {% assign referenced_product = all_products[product.metafields.bbq.openbox_related_product[forloop.index0]] %}
-        {% assign productTitle = product.metafields.bbq.openbox_product_text[forloop.index0] %}
-        {% assign referencedTitle = referenced_product.title %}
-        {% assign open_box_price = referenced_product.price %}
-        {% assign regularPrice = product.price %}
-        {% assign savedPrice = regularPrice | minus: open_box_price  %}
+    <div class="openbox">
+        <p class="openbox-title"><span class="accent-color">{{ product.metafields.bbq.open_box_heading_title }}</span> Shop Open Box</p>    
+        {% for openbox in product.metafields.bbq.openbox_related_product %}
+            {% assign referenced_product = all_products[product.metafields.bbq.openbox_related_product[forloop.index0]] %}
+            {% assign productTitle = product.metafields.bbq.openbox_product_text[forloop.index0] %}
+            {% assign referencedTitle = referenced_product.title %}
+            {% assign open_box_price = referenced_product.price %}
+            {% assign regularPrice = product.price %}
+            {% assign savedPrice = regularPrice | minus: open_box_price  %}
 
-        <a class="custom-variant-btn clipped-text" href="{{ product.metafields.bbq.openbox_related_product[forloop.index0] }}">
-            
-            {% if productTitle == blank %}
-                {{ referenced_product.title }}
-            {% elsif productTitle != blank %}
-                 {{ productTitle }}
-            {% endif %}
+            <a class="custom-variant-btn clipped-text" href="{{ product.metafields.bbq.openbox_related_product[forloop.index0] }}">
+                
+                {% if productTitle == blank %}
+                    {{ referenced_product.title }}
+                {% elsif productTitle != blank %}
+                    {{ productTitle }}
+                {% endif %}
 
-            <p class="openbox-price">
-                Save {{ savedPrice | money_without_trailing_zeros }}
-              {% comment %} {{ open_box_price | money }} {% endcomment %}
-            </p>
-        </a>
-    {% endfor %}
-</div>
+                <p class="openbox-price">
+                    Save {{ savedPrice | money_without_trailing_zeros }}
+                {% comment %} {{ open_box_price | money }} {% endcomment %}
+                </p>
+            </a>
+        {% endfor %}
+    </div>
 </div>
 {% endif %}
 
