@@ -212,7 +212,13 @@
         "ef06d0ca-5862-4d1e-be13-d79dc566f337": {
           "type": "custom",
           "settings": {
-            "code": "<div class=\"collapsibles-wrapper\" style=\"margin-top:-30px;\">\n    \n  <button type=\"button\"\n      class=\"label collapsible-trigger collapsible-trigger-btn collapsible-trigger-btn--borders collapsible--auto-height{% if force_open %} is-open{% endif %}\" aria-controls=\"question-answer\"\n      {% if force_open %}aria-expanded=\"true\"{% endif %}>\n      Question &amp; Answer\n      {%- render 'collapsible-icons' -%}\n  <\/button>\n  \n  <div id=\"question-answer\"\n      class=\"bbq-description collapsible-content collapsible-content--all{% if force_open %} is-open{% endif %}\"\n      {% if force_open %}style=\"height: auto;\"{% endif %}>\n      <div class=\"collapsible-content__inner rte\">\n        \n        <div>\n{% render 'questions-answers' %}\n\n        <\/div>\n        \n      <\/div>\n    <\/div>\n  <\/div>"
+            "code": "<div class=\"collapsibles-wrapper\" style=\"margin-top:-30px;\">\n    \n  <button type=\"button\"\n      class=\"label collapsible-trigger collapsible-trigger-btn collapsible-trigger-btn--borders collapsible--auto-height{% if force_open %} is-open{% endif %}\" aria-controls=\"question-answer\"\n      {% if force_open %}aria-expanded=\"true\"{% endif %}>\n      Question &amp; Answer\n      {%- render 'collapsible-icons' -%}\n  <\/button>\n  \n  <div id=\"question-answer\"\n      class=\"bbq-description collapsible-content collapsible-content--all{% if force_open %} is-open{% endif %}\"\n      {% if force_open %}style=\"height: auto;\"{% endif %}>\n      <div class=\"collapsible-content__inner rte\">\n        \n        <div>\n{% render 'questions-answers' %}\n        <\/div>\n        \n      <\/div>\n    <\/div>\n  <\/div>"
+          }
+        },
+        "13c8794f-442a-4464-b4d5-581030603fc3": {
+          "type": "custom",
+          "settings": {
+            "code": "<script type=\"text\/javascript\" src=\"https:\/\/storedesigndev.services.answerbase.com\/javascript\/widget\/full-featured-widget.min.js\"\n    data-platform=\"shopify\"\n    data-shop=\"[SHOP]\" defer>\n<\/script>"
           }
         },
         "123b3a6f-667a-47ce-b80d-7f398939fb18": {
@@ -236,6 +242,7 @@
         "f91317d7-f642-4811-a1b6-4e8dcdfe52ed",
         "b427215c-ccca-4ec5-b966-c5366f403200",
         "ef06d0ca-5862-4d1e-be13-d79dc566f337",
+        "13c8794f-442a-4464-b4d5-581030603fc3",
         "123b3a6f-667a-47ce-b80d-7f398939fb18",
         "description"
       ],
