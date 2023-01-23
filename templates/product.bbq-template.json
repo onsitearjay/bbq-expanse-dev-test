@@ -44,7 +44,7 @@
         "44880ef3-f19a-40d1-acc6-025a4af3db44": {
           "type": "custom",
           "settings": {
-            "code": "{% if product.metafields.bbq.option_title != blank %}\n<p class=\"variantTitle\">{{ product.metafields.bbq.option_title }}<\/p>\n  {% for option in product.metafields.bbq.option_type %}\n    <a class=\"custom-variant-btn\" href=\"{{ product.metafields.bbq.option_related_product[forloop.index0] }}\">\n      {{ product.metafields.bbq.option_type[forloop.index0] }}\n    <\/a>\n  {% endfor %}\n{% endif %}"
+            "code": "{% if product.metafields.bbq.option_title != blank %}\n<p class=\"variantTitle\">{{ product.metafields.bbq.option_title }}<\/p>\n  {% for option in product.metafields.bbq.option_type %}\n    <a class=\"custom-variant-btn\" href=\"{{ product.metafields.bbq.option_related_product[forloop.index0] }}\">\n      {{ product.metafields.bbq.option_type[forloop.index0] }} \n    <\/a> \n  {% endfor %}\n{% endif %}\n<span style=\"font: italic normal 10px;\">learn more...<\/span>"
           }
         },
         "36c63643-2306-453c-a69a-302aac2fee56": {
