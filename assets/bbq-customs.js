@@ -53,7 +53,6 @@ if(button !== null  && button.onclick !== null && typeof button.onclick !== "und
 }
 }
 
-
 var gasModal = document.getElementById("gastype_modal");
 var gasInfoBtn = document.getElementById("learn-gastype");
 var spanClose = document.getElementsByClassName("gasinfo-close")[0];
