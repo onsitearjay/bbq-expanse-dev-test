@@ -246,8 +246,15 @@
             "code": "{% render 'bbq-product-details' %}"
           }
         },
+        "ed90fc26-9996-4534-aefc-b13019c297d6": {
+          "type": "custom",
+          "settings": {
+            "code": "<div class=\"collapsibles-wrapper\">\n    \n  <button type=\"button\"\n      class=\"label collapsible-trigger collapsible-trigger-btn collapsible-trigger-btn--borders collapsible--auto-height{% if force_open %} is-open{% endif %}\" aria-controls=\"question-answer\"\n      {% if force_open %}aria-expanded=\"true\"{% endif %}>\n      Question &amp; Answer\n      {%- render 'collapsible-icons' -%}\n  <\/button>\n  \n  <div id=\"question-answer\"\n      class=\"collapsible-content collapsible-content--all{% if force_open %} is-open{% endif %}\"\n      {% if force_open %}style=\"height: auto;\"{% endif %}>\n      <div class=\"collapsible-content__inner rte\">\n        \n        <div>\n       {% render 'questions-answers'%}\n        <\/div>\n        \n      <\/div>\n    <\/div>\n  <\/div>"
+          }
+        },
         "12dbe39b-ebc7-4f7a-9aab-e8394a54e832": {
           "type": "shopify:\/\/apps\/product-questions-and-answers\/blocks\/SQA\/84c5ea51-4ec6-4681-8c2f-c95d8846ed7e",
+          "disabled": true,
           "settings": {
           }
         },
@@ -304,6 +311,7 @@
       },
       "block_order": [
         "537fe456-4e5c-41bd-b566-ebed312f5bbb",
+        "ed90fc26-9996-4534-aefc-b13019c297d6",
         "12dbe39b-ebc7-4f7a-9aab-e8394a54e832",
         "657031d1-9b76-4891-a517-3f9ad4204e87",
         "7496d8b3-154f-4f4a-809c-85ae285a9f13",
