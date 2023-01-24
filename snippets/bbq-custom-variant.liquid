@@ -250,22 +250,10 @@
 </div>
 {% endif %}
 
-{% comment %}
 <script>
-var gasModal = document.getElementById("gastype_modal");
-var gasInfoBtn = document.getElementById("learn-gastype");
-var spanClose = document.getElementsByClassName("gasinfo-close")[0];
-
-gasInfoBtn.onclick = function() {
-  gasModal.style.display = "block";
-}
-spanClose.onclick = function() {
-  gasModal.style.display = "none";
-}
-window.onclick = function(event) {
-  if (event.target == gasModal) {
-    gasModal.style.display = "none";
+function learnGasType() {
+  var gasPopup = document.getElementById("gasTypeInfo");
+  GasPopup.classList.toggle("gastype-show");
   }
-}
 </script>
-{% endcomment %}
+</script>
