@@ -7,6 +7,42 @@
 [data-transitions=true].unloading .transition-body{
   animation:fade-in .3s ease forwards;
 }
+.tbg__panel-wrapper {
+  width: 60%;
+  margin: auto;
+  position: relative;
+}
+.tbg__btn {
+  color: #000;
+  text-decoration: none;
+}
+.read_more, .read_less {
+  position: absolute;
+  bottom: -1.5em;
+  left: 0;
+  z-index: 100;
+  text-align: center;
+}
+.read_less {
+  display: none;
+}
+.read_more:target {
+  display: none;
+}
+.read_more:target ~ .read_less {
+  display: block;
+}
+.read_more:target ~ .tbg__panel {
+  max-height: 2000px;
+}
+.tbg__panel {
+  position: relative;
+  margin: 2em auto;
+  width: 100%;
+  max-height: 55px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
 .info-gastype{
   font: italic normal 12px Harmonia Sans;
 }
