@@ -16,7 +16,6 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    margin: 20%;
 }
 .gastype-popup .gastype-popup-text {
     visibility: hidden;
