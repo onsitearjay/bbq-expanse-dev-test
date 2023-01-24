@@ -168,7 +168,7 @@
   opacity: 1;
   margin-top: 15px;
 }
-.custom-meta-description, .specs-description{
+.bbq-description, .specs-description{
   margin-bottom:-15px;
 }
 .product-block:first-child > div > .specs-description{
