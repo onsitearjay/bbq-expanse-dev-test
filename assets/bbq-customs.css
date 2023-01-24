@@ -169,14 +169,14 @@
   visibility: visible;
   overflow: hidden;
   opacity: 1;
-  padding-top: 15px;
+  margin-top: 15px;
 }
 .product-block:first-child > div > .specs-description{
   height: 115px;
   visibility: visible;
   overflow: hidden;
   opacity: 1;
-  padding-top: 15px;
+  margin-top: 15px;
 }
 .exclusive-savings{
   text-align:center;
