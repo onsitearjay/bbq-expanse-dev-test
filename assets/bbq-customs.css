@@ -137,20 +137,7 @@
 	overflow: hidden;
 	transition: max-height 0.2s;
 }*/
-#desc-content.open,
-#specs-content.view{
-	max-height: 100%;
-	transition: max-height 0.5s;
-}
-#desc-show-more,
-#specs-view-more{ 
-  font-weight:900;
-  color: #888;
-  font-style: italic;
-  cursor: pointer;
-  display:inline-block;
-  margin:8px 0;
-}/*end description show more*/
+/*end description show more*/
 
 .section-header--flush{
   display:none;
