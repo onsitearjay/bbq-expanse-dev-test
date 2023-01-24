@@ -1,1 +1,452 @@
-{"sections":{"shogun-helper":{"type":"shogun-helper","disabled":true,"settings":{}},"shogun-above":{"type":"shogun-above","disabled":true,"settings":{}},"bd104bd1-4110-4aa8-af67-d31a8fa87139":{"type":"rich-text","disabled":true,"blocks":{"template--16537158713601__bd104bd1-4110-4aa8-af67-d31a8fa87139-1665008160a1847d21-0":{"type":"heading","settings":{"title":"Call For Best Pricing 888-667-4986"}},"template--16537158713601__bd104bd1-4110-4aa8-af67-d31a8fa87139-1665008160a1847d21-1":{"type":"text","settings":{"enlarge_text":false,"text":"<p>Experts are standing by to provide you with best pricing and exlcusive package deal disounts. Save today with just 1 call.<\/p>"}}},"block_order":["template--16537158713601__bd104bd1-4110-4aa8-af67-d31a8fa87139-1665008160a1847d21-0","template--16537158713601__bd104bd1-4110-4aa8-af67-d31a8fa87139-1665008160a1847d21-1"],"settings":{"align_text":"center","narrow_column":false,"color_scheme":"1","divider":false}},"7b89ad01-2cba-44e8-b3b9-43e819c66cf3":{"type":"advanced-content","blocks":{"template--16537158713601__7b89ad01-2cba-44e8-b3b9-43e819c66cf3-166958789312d92201-0":{"type":"image","disabled":true,"settings":{"link":"","width":"100%","alignment":"center"}},"template--16537158713601__7b89ad01-2cba-44e8-b3b9-43e819c66cf3-166958789312d92201-1":{"type":"liquid","settings":{"code":"<div class=\"index-section color-scheme-1 text-center\">\n<h4 style=\"margin-bottom:0;\">\nCall For Best Pricing <a href=\"tel:888-667-4986\">888-667-4986<\/a>\n<\/h4>\n\n<p>\nExperts are standing by to provide you with best pricing and exlcusive package deal disounts. Save today with just 1 call.\n<\/p>\n<\/div>","width":"100%","alignment":"center"}}},"block_order":["template--16537158713601__7b89ad01-2cba-44e8-b3b9-43e819c66cf3-166958789312d92201-0","template--16537158713601__7b89ad01-2cba-44e8-b3b9-43e819c66cf3-166958789312d92201-1"],"settings":{"full_width":true,"space_around":false}},"main":{"type":"main-product","blocks":{"price":{"type":"price","settings":{}},"8fed217b-27c3-4215-8974-39abe8ec5d4d":{"type":"shopify:\/\/apps\/bread-pay-messaging\/blocks\/app-block-product\/17f8811a-68d5-4aab-a4c3-0c2b49a4e68b","settings":{"shopId":"25ca4596-6321-4870-b8e0-5878ae62bf7e"}},"a6388045-336d-48af-a6a1-2727d36e88e7":{"type":"custom","settings":{"code":"{% render 'bbq-custom-variant' %}"}},"21b2a4f6-74da-4cae-a9fc-982a824e1450":{"type":"custom","disabled":true,"settings":{"code":"<div id=\"custom-variant-meta\">    \n    <div class=\"custom-field-block gasType\">\n        {% if product.metafields.custom.option_one_title != blank %}\n            <p class=\"variantTitle\">{{ product.metafields.custom.option_field_title }}<\/p>\n\n            {% if product.metafields.custom.option_one_title != blank %}\n            <a href=\"{{ product.metafields.custom.option_one_product.value.url }}\" class=\"custom-variant-btn\">\n            {{ product.metafields.custom.option_one_title }}<\/a>\n            {% endif %}\n\n            {% if product.metafields.custom.option_two_title != blank %}\n            <a href=\"{{ product.metafields.custom.option_two_product.value.url }}\" class=\"custom-variant-btn\">\n            {{ product.metafields.custom.option_two_title }} <\/a>\n            {% endif %}\n\n            {% if product.metafields.custom.option_three_title != blank %}\n            <a href=\"{{ product.metafields.custom.option_three_product.value.url }}\" class=\"custom-variant-btn\">\n            {{ product.metafields.custom.option_three_title }} <\/a>\n            {% endif %}\n        {% endif %}\n    <\/div>\n<\/div>"}},"8dd87ec1-859d-4d44-b3af-2d0a03a43cc5":{"type":"custom","disabled":true,"settings":{"code":"{% if product.metafields.bbq.configuration_heading_title != blank %}\n    <p class=\"variantTitle\"> {{ product.metafields.bbq.configuration_heading_title }} <\/p>\n    <div class=\"custom-field-block variantSize\">\n        {% for option in product.metafields.bbq.configuration_type %}\n        <a class=\"custom-variant-btn\" href=\"{{ product.metafields.bbq.configuration_product[forloop.index0] }}\">\n            <span class=\"bbq-size-short-desc\">\n              {{ product.metafields.bbq.configuration_type[forloop.index0] }}\n            <\/span>\n            <span class=\"bbq-text-green\">\n                {% assign referenced_product = all_products[product.metafields.bbq.configuration_product[forloop.index0]] %}\n                {% assign priceDiff = referenced_product.price | minus: product.price %}\n                {% if priceDiff < 0 %}\n                  Save {{ priceDiff | abs | money_with_currency}}\n                {% elsif priceDiff > 0 %}\n                  Add {{ priceDiff | abs | money_with_currency}}\n                {% endif %}\n            <\/span>\n            <img src=\"{{ referenced_product | img_url: '1800x1800' }}\" hidden>\n        <\/a>\n        {% endfor %}\n    <\/div>\n{% endif %}"}},"832f3067-63be-4799-a5f9-5142bff5a039":{"type":"custom","disabled":true,"settings":{"code":"<!-- Custom Metafield-->\n<div id=\"custom-variant-meta\">\n{% if product.metafields.custom.size_option_title != blank %}\n  <p class=\"variantTitle\"> Size <\/p>\n  <div class=\"custom-field-block variantSize\">\n      <a href=\"{{ product.metafields.custom.size_related_product.value.url }}\" class=\"custom-variant-btn\">\n      <span class=\"bbq-size-short-desc\">\n          {{ product.metafields.custom.size_option_title }}\n      <\/span>\n      <span class=\"bbq-text-green\">\n          {% assign diff1 = product.metafields.custom.size_related_product.value.price | minus: product.price %}\n          {% if diff1 < 0 %}\n          Save {{ diff1 | abs | money_with_currency}}\n          {% elsif diff1 > 0 %}\n          Add {{ diff1 | abs | money_with_currency}}\n          {% endif %}\n      <\/span>\n      <img src=\"{{ product.metafields.custom.size_related_product.value | img_url: '1800x1800' }}\" hidden>\n      <\/a>\n      {% endif %}\n\n      {% if product.metafields.custom.size_two_product_title != blank %}\n      <a href=\"{{ product.metafields.custom.size_two_product.value.url }}\" class=\"custom-variant-btn\">\n      <span class=\"bbq-size-short-desc\">\n          {{ product.metafields.custom.size_two_product_title }}\n      <\/span>\n      <span class=\"bbq-text-green\">\n          {% assign diff2 = product.metafields.custom.size_two_product.value.price | minus: product.price %}\n          {% if diff2 < 0 %}\n              Save {{ diff2 | abs | money_with_currency}}\n          {% elsif diff2 > 0 %}\n              Add {{ diff2 | abs | money_with_currency}}\n          {% endif %}\n      <\/span>\n      <img src=\"{{ product.metafields.custom.size_two_product.value | img_url: '1800x1800' }}\" hidden>\n      <\/a>\n      {% endif %}\n\n      {% if product.metafields.custom.size_three_title != blank %}\n      <a href=\"{{ product.metafields.custom.size_three_product.value.url }}\" class=\"custom-variant-btn\">\n      <span class=\"bbq-size-short-desc\">\n          {{ product.metafields.custom.size_three_title }} \n      <\/span>\n      <span class=\"bbq-text-green\">\n          {% assign diff3 = product.metafields.custom.size_three_product.value.price | minus: product.price %}\n          {% if diff3 < 0 %}\n              Save {{ diff3 | abs | money_with_currency}}\n          {% elsif diff3 > 0 %}\n              Add {{ diff3 | abs | money_with_currency}}\n          {% endif %}\n      <\/span>\n      <img src=\"{{ product.metafields.custom.size_three_product.value | img_url: '1800x1800' }}\" hidden>\n      <\/a>\n      {% endif %}\n\n      {% if product.metafields.custom.size_four_title != blank %}\n      <a href=\"{{ product.metafields.custom.size_four_product.value.url }}\" class=\"custom-variant-btn\">\n      <span class=\"bbq-size-short-desc\">\n          {{ product.metafields.custom.size_four_title }}\n      <\/span>\n      <span class=\"bbq-text-green\"> \n          {% assign diff4 = product.metafields.custom.size_four_product.value.price | minus: product.price %}\n          {% if diff4 < 0 %}\n              Save {{ diff4 | abs | money_with_currency}}\n          {% elsif diff4 > 0 %}\n              Add {{ diff4 | abs | money_with_currency}}\n          {% endif %}\n      <\/span>\n      <img src=\"{{ product.metafields.custom.size_four_product.value | img_url: '1800x1800' }}\" hidden>\n      <\/a>\n      {% endif %}\n\n      {% if product.metafields.custom.size_five_title != blank %}\n      <a href=\"{{ product.metafields.custom.size_five_product.value.url }}\" class=\"custom-variant-btn\">\n      <span class=\"bbq-size-short-desc\">\n          {{ product.metafields.custom.size_five_title }} \n      <\/span>\n      <span class=\"bbq-text-green\">\n          {% assign diff5 = product.metafields.custom.size_five_product.value.price | minus: product.price %}\n          {% if diff5 < 0 %}\n              Save {{ diff5 | abs | money_with_currency}}\n          {% elsif diff5 > 0 %}\n              Add {{ diff5 | abs | money_with_currency}}\n          {% endif %}\n      <\/span>\n      <img src=\"{{ product.metafields.custom.size_five_product.value | img_url: '1800x1800' }}\" hidden>\n      <\/a>\n      {% endif %}\n  <\/div>\n\n  <div class=\"custom-field-block shopOpenBox\">\n      {% if product.metafields.custom.open_box != blank %}\n      <p class=\"variantTitle\"> Shop Open Box <\/p>\n      <a href=\"{{ product.metafields.custom.open_box.value.url }}\" class=\"openBox\">\n          {{ product.metafields.custom.open_box.value.title }}<\/a>\n      {% endif %}\n  <\/div>\n<\/div>"}},"18280402-7c04-48d3-84fa-e1259f763e74":{"type":"custom","disabled":true,"settings":{"code":"{% if product.metafields.bbq.orientation_heading_title != blank %}\n    <p class=\"variantTitle\">{{ product.metafields.bbq.orientation_heading_title }}<\/p>\n      {% for option in product.metafields.bbq.selection_name %}\n        <a class=\"custom-variant-btn\" href=\"{{ product.metafields.bbq.selection_related_product[forloop.index0] }}\">\n          {{ product.metafields.bbq.selection_name[forloop.index0] }}\n        <\/a>\n      {% endfor %}\n{% endif %}"}},"7a374f6a-2d3b-48e2-8e0c-acc5db365007":{"type":"custom","disabled":true,"settings":{"code":"{% if product.metafields.bbq.hinge_heading_title != blank %}\n    <p class=\"variantTitle\">{{ product.metafields.bbq.hinge_heading_title }}<\/p>\n      {% for option in product.metafields.bbq.hinge_selection %}\n        <a class=\"custom-variant-btn\" href=\"{{ product.metafields.bbq.hinge_related_product[forloop.index0] }}\">\n          {{ product.metafields.bbq.hinge_selection[forloop.index0] }}\n        <\/a>\n      {% endfor %}\n{% endif %}"}},"c9c256b7-3353-4b61-a32c-d655606ad610":{"type":"custom","disabled":true,"settings":{"code":"{% if product.metafields.bbq.open_box_heading_title != blank %}\n    <div class=\"openbox\">\n    \n        <p class=\"openbox-title\"><span class=\"accent-color\">{{ product.metafields.bbq.open_box_heading_title }}<\/span> Shop Open Box<\/p>    \n        \n        {% for openbox in product.metafields.bbq.openbox_related_product %}\n            {% assign referenced_product = all_products[product.metafields.bbq.openbox_related_product[forloop.index0]] %}\n            {% assign productTitle = product.metafields.bbq.openbox_product_text[forloop.index0] %}\n            {% assign referencedTitle = referenced_product.title %}\n            {% assign productPrice = referenced_product.price %}\n            \n            <a class=\"custom-variant-btn clipped-text\" href=\"{{ product.metafields.bbq.openbox_related_product[forloop.index0] }}\">\n                \n                {% if productTitle == blank %}\n                    {{ referenced_product.title }}\n                {% else %}\n                     {{ productTitle }}\n                {% endif %}\n    \n                <p class=\"openbox-price\">\n                {{ productPrice | money }}\n                <\/p>\n            <\/a>\n        {% endfor %}\n    <\/div>\n    {% endif %}"}},"d00761c5-323d-414c-8128-e1056dd982bc":{"type":"custom","disabled":true,"settings":{"code":"{% if product.metafields.bbq.shopnew_heading_title != blank %}\n    <div class=\"openbox\">\n        <p class=\"openbox-title\">{{ product.metafields.bbq.shopnew_heading_title }}<\/p>\n        \n        {% for shopnew in product.metafields.bbq.shopnew_related_product %}\n\n            {% assign referenced_product = all_products[product.metafields.bbq.shopnew_related_product[forloop.index0]] %}\n            {% assign productTitle = product.metafields.bbq.shopnew_product_text[forloop.index0] %}\n            {% assign referencedTitle = referenced_product.title %}\n            {% assign shop_new_price = referenced_product.price %}\n            {% assign regularPrice = product.price %}\n            {% assign addPrice = regularPrice | minus: shop_new_price  %}\n            \n            <a class=\"custom-variant-btn clipped-text\" href=\"{{ product.metafields.bbq.shopnew_related_product[forloop.index0] }}\">\n                \n                {% if productTitle == blank %}\n                    {{ referenced_product.title }}\n                {% else %}\n                     {{ productTitle }}\n                {% endif %}\n                \n                <p class=\"openbox-price\">\n                    {{ shop_new_price | money }}\n                <\/p>\n\n            <\/a>\n            \n        {% endfor %}\n    \n    <\/div>\n    {% endif %}"}},"e97d56c3-caac-49e4-aad5-c930c56fc3a9":{"type":"shopify:\/\/apps\/infinite-options\/blocks\/app-block\/7e73b6f9-82b0-45f5-9b9b-04f446ba1a9b","settings":{}},"variant_picker":{"type":"variant_picker","disabled":true,"settings":{"variant_labels":true,"picker_type":"button","product_dynamic_variants_enable":false,"color_swatches":false}},"9baa522e-3224-4b7b-a821-a13f86d11b95":{"type":"sales_point","settings":{"icon":"package","text":"Call for Open Box Availability  <a href=\"tel:888-667-4986\">888-667-4986<\/a>"}},"sales_point2":{"type":"sales_point","settings":{"icon":"truck","text":"Free Shipping"}},"32ef1b25-067d-4a91-84ad-b38d0c2dda2c":{"type":"custom","settings":{"code":"<div class=\"exclusive-savings\">\n\t<div class=\"product-details-links\">\n\t\t\n\t\t<a href=\"tel:888-667-4986\" style=\"color:#090; margin: 0 10px;\">\n\t\t\tPhone Discounts\n\t\t<\/a><span class=\"divider\"> | <\/span>\n\t\t<a href=\"\/collections\/package-deals\" style=\"margin: 0 10px;\" target=\"_blank\">\n\t\t\tPackage Deals\n\t\t<\/a><span class=\"divider\"> | <\/span>\n\t\t<a href=\"\/collections\/open-box-1\" style=\"color:#090; margin: 0 10px;\">\n\t\t\tOpen Box\n\t\t<\/a><span class=\"divider\"> | <\/span>\n\t\t<a href=\"\/collections\/close-out-deals\" style=\"margin: 0 10px;\" target=\"_blank\">\n\t\t\tClose Out\n\t\t<\/a><span class=\"divider\"> | <\/span>\n    \t<a href=\"\/collections\/scratch-and-dents\" style=\"color:#090; margin: 0 10px;\" target=\"_blank\">\n\t\t\tScratch + Dent\n\t\t<\/a><span class=\"divider\"> | <\/span>\n    \t<a id=\"bread-checkout-btn-new\">Low Monthly Payments <\/a><span class=\"divider\"> | <\/span>\n\t\t<a href=\"\/pages\/free-accessories\" style=\"color:#090; margin: 0 10px;\" target=\"_blank\">\n\t\t\tFree Accessory Bundles\n\t\t<\/a>\n\t\t\n\t<\/div>\n\n\t<p style=\"margin-top: 20px; display: none;\">\n\t\tExclusive Savings Just One Call Away! Experts Standing By \n\t\t<a href=\"tel:888-667-4986\">\n\t\t\t<strong style=\"font-size:20px;\">888-667-4986<\/strong>\n\t\t<\/a>\n\t<\/p>\n<\/div>"}},"b56e1b84-834a-44d6-b8c6-0c0d38d85f3c":{"type":"quantity_selector","settings":{}},"buy_buttons":{"type":"buy_buttons","settings":{"show_dynamic_checkout":false,"surface_pickup_enable":false}},"69701aab-3281-4e87-b0b5-1b337c97ed70":{"type":"custom","settings":{"code":"<div class=\"tabarnapp_upsell\" data-id=\"uzDhukdFCzYg6ngzh\"><\/div>"}},"003b73b9-a144-4659-a547-17e0a4df9fe4":{"type":"custom","settings":{"code":"<center>\n<a href=\"tel:888-667-4986\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0660\/1900\/0577\/files\/Contact_a_specialist_3.png\">\n<\/a>\n<\/center>"}},"sales_point":{"type":"sales_point","disabled":true,"settings":{"icon":"tag","text":"Exclusive Phone Discounts | Package Deals | Open Box | Close Out | Scratch + Dent | Low Monthly Payments | Free Accessories |  Huge Savings Just One Call Away! Experts Standing By 888-667-4986"}}},"block_order":["price","8fed217b-27c3-4215-8974-39abe8ec5d4d","a6388045-336d-48af-a6a1-2727d36e88e7","21b2a4f6-74da-4cae-a9fc-982a824e1450","8dd87ec1-859d-4d44-b3af-2d0a03a43cc5","832f3067-63be-4799-a5f9-5142bff5a039","18280402-7c04-48d3-84fa-e1259f763e74","7a374f6a-2d3b-48e2-8e0c-acc5db365007","c9c256b7-3353-4b61-a32c-d655606ad610","d00761c5-323d-414c-8128-e1056dd982bc","e97d56c3-caac-49e4-aad5-c930c56fc3a9","variant_picker","9baa522e-3224-4b7b-a821-a13f86d11b95","sales_point2","32ef1b25-067d-4a91-84ad-b38d0c2dda2c","b56e1b84-834a-44d6-b8c6-0c0d38d85f3c","buy_buttons","69701aab-3281-4e87-b0b5-1b337c97ed70","003b73b9-a144-4659-a547-17e0a4df9fe4","sales_point"],"settings":{"sku_enable":true,"image_position":"left","image_container_size":"medium","product_image_size":"landscape","product_zoom_enable":true,"thumbnail_position":"below","thumbnail_height":"flexible","thumbnail_arrows":true,"mobile_layout":"partial","enable_video_looping":true,"product_video_style":"muted"}},"sub":{"type":"product-full-width","blocks":{"537fe456-4e5c-41bd-b566-ebed312f5bbb":{"type":"custom","settings":{"code":"{% render 'bbq-product-details' %}"}},"657031d1-9b76-4891-a517-3f9ad4204e87":{"type":"custom","settings":{"code":"{% render 'frequently-bought'  %}"}},"7496d8b3-154f-4f4a-809c-85ae285a9f13":{"type":"custom","disabled":true,"settings":{"code":"{%- if product.description !=blank -%}\n<div>\n<h4 class=\"bbq-prod-details-title\">Description<\/h4>\n\n<div id=\"desc-content\">\n  {{ product.description }}\n<\/div>\n<span id=\"desc-show-more\">Read more >><\/span>\n<hr>\n<\/div>\n{%- endif -%}"}},"2ee0bec7-82ce-4c5f-a2b4-81b58aa55114":{"type":"custom","disabled":true,"settings":{"code":"<div class=\"specification\">\n {%- if product.metafields.bbq.specification_heading_title !=blank -%}\n    <h4 class=\"bbq-prod-details-title\">{{ product.metafields.bbq.specification_heading_title }}<\/h4>\n    <div id=\"specs-content\">\n        {%- if product.metafields.bbq.overall_dimensions !=blank -%}\n        <div><strong>Overall Dimensions (WxDxH):<\/strong><\/div> <p class=\"specs-value\">{{ product.metafields.bbq.overall_dimensions }} <\/p>\n        {% endif %}\n        {%- if product.metafields.bbq.cutout_dimensions !=blank -%}\n        <div><strong>Cutout Dimensions (WxDxH):<\/strong><\/div> <p class=\"specs-value\"> {{ product.metafields.bbq.cutout_dimensions }}<\/p>\n        {% endif %}\n        {%- if product.metafields.bbq.product_weight !=blank -%}\n        <div><strong>Product Weight:<\/strong><\/div> <p class=\"specs-value\">{{ product.metafields.bbq.product_weight }}lb<\/p>\n        {% endif %}\n        {%- if product.metafields.bbq.number_of_main_burners !=blank -%}\n        <div><strong>Number Of Main Burners:<\/strong><\/div> <p class=\"specs-value\">{{ product.metafields.bbq.number_of_main_burners }}<\/p>\n        {% endif %}\n        {%- if product.metafields.bbq.total_surface_btu !=blank -%}\n        <div><strong>Total Surface BTUs:<\/strong><\/div> <p class=\"specs-value\">{{ product.metafields.bbq.total_surface_btu }}<\/p>\n        {% endif %}\n        {%- if product.metafields.bbq.single_burner_btus !=blank -%}\n        <div><strong>Single Burner BTUs:<\/strong><\/div> <p class=\"specs-value\">{{ product.metafields.bbq.single_burner_btus }}<\/p>\n        {% endif %}\n        {%- if product.metafields.bbq.grill_lights !=blank -%}\n        <div><strong>Grill Lights:<\/strong><\/div> <p class=\"specs-value\">{{ product.metafields.bbq.grill_lights }}<\/p>\n        {% endif %}\n        {%- if product.metafields.bbq.rear_infrared_burner !=blank -%}\n        <div><strong>Rear Infrared Burner:<\/strong><\/div> <p class=\"specs-value\">{{ product.metafields.bbq.rear_infrared_burner }}<\/p>\n        {% endif %}\n        {%- if product.metafields.bbq.rotisserie_kit !=blank -%}\n        <div><strong>Rotisserie Kit:<\/strong><\/div> <p class=\"specs-value\">{{ product.metafields.bbq.rotisserie_kit }}<\/p>\n        {% endif %}\n        {%- if product.metafields.bbq.thermometer !=blank -%}\n        <div><strong>Thermometer:<\/strong><\/div> <p class=\"specs-value\">{{ product.metafields.bbq.thermometer }}<\/p>\n        {% endif %}\n    <\/div>\n    <span id=\"specs-view-more\">Read more >> <\/span>\n    <hr>\n{%- endif -%}\n<\/div>"}},"ab3328b5-1169-4436-99f3-cd9088d8ce89":{"type":"custom","disabled":true,"settings":{"code":"{%- if product.metafields.bbq.shipping_weight !=blank -%}\n  <div class=\"collapsibles-wrapper\" style=\"margin-top: -30px;\">\n      <button type=\"button\"\n        class=\"label collapsible-trigger collapsible-trigger-btn collapsible-trigger-btn--borders collapsible--auto-height{% if force_open %} is-open{% endif %}\" aria-controls=\"Product-content-shipping-info\"\n        {% if force_open %}aria-expanded=\"true\"{% endif %}>\n        Shipping Information\n        {%- render 'collapsible-icons' -%}\n      <\/button>\n      <div id=\"Product-content-shipping-info\"\n        class=\"bbq-description collapsible-content collapsible-content--all{% if force_open %} is-open{% endif %}\"\n        {% if force_open %}style=\"height: auto;\"{% endif %}>\n        <div class=\"collapsible-content__inner rte\">\n          <div>\n            {%- if product.metafields.bbq.shipping_weight !=blank -%}\n              <div><strong>Shipping Weight:<\/strong><\/div> <p> {{ product.metafields.bbq.shipping_weight }}lb<\/p>\n            {% endif %}\n            \n            {%- if product.metafields.bbq.shipping_dimensions !=blank -%}\n              <div><strong>Shipping Dimensions (WxDxH):<\/strong><\/div> <p> {{ product.metafields.bbq.shipping_dimensions }}in<\/p>\n            {% endif %}\n          <\/div>\n        <\/div>\n      <\/div>\n  <\/div>\n{% endif %}"}},"c20671f6-f1e6-4181-9153-ec09f78919ce":{"type":"custom","disabled":true,"settings":{"code":"{% if product.metafields.bbq.manufacturer_download_heading_title != blank %}\n<div class=\"collapsibles-wrapper\" style=\"margin-top:-30px;\">\n    <button type=\"button\"\n      class=\"label collapsible-trigger collapsible-trigger-btn collapsible-trigger-btn--borders collapsible--auto-height{% if force_open %} is-open{% endif %}\" aria-controls=\"Product-content-manufacturer-download\"\n      {% if force_open %}aria-expanded=\"true\"{% endif %}>\n      {{ product.metafields.bbq.manufacturer_download_heading_title }}\n      {%- render 'collapsible-icons' -%}\n    <\/button>\n    <div id=\"Product-content-manufacturer-download\"\n      class=\"bbq-description collapsible-content collapsible-content--all{% if force_open %} is-open{% endif %}\"\n      {% if force_open %}style=\"height: auto;\"{% endif %}>\n      <div class=\"collapsible-content__inner rte\">\n        {% for filename in product.metafields.bbq.file_name %} \n        <div>\n        <a href=\"{{ product.metafields.bbq.upload_file[forloop.index0] }}\" target=\"_blank\"> {{ product.metafields.bbq.file_name[forloop.index0] }}<\/a> \n        <\/div>\n        {% endfor %}\n      <\/div>\n    <\/div>\n  <\/div>\n  {% endif %}"}},"description":{"type":"description","disabled":true,"settings":{"is_tab":true}},"tab":{"type":"tab","disabled":true,"settings":{"title":"Shipping information","content":"<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.<\/p><p>Ex: Shipping and return policies, size guides, and other common questions.<\/p>","page":""}}},"block_order":["537fe456-4e5c-41bd-b566-ebed312f5bbb","657031d1-9b76-4891-a517-3f9ad4204e87","7496d8b3-154f-4f4a-809c-85ae285a9f13","2ee0bec7-82ce-4c5f-a2b4-81b58aa55114","ab3328b5-1169-4436-99f3-cd9088d8ce89","c20671f6-f1e6-4181-9153-ec09f78919ce","description","tab"],"settings":{"max_width":false}},"d5c00d86-1a72-4c6a-9a28-59d957df3906":{"type":"advanced-content","disabled":true,"blocks":{"template--16537158713601__d5c00d86-1a72-4c6a-9a28-59d957df3906-16723696897f050543-1":{"type":"liquid","settings":{"code":"{% render 'frequently-bought'  %}","width":"100%","alignment":"center"}}},"block_order":["template--16537158713601__d5c00d86-1a72-4c6a-9a28-59d957df3906-16723696897f050543-1"],"settings":{"full_width":false,"space_around":false}},"recommendations":{"type":"product-recommendations","settings":{"product_recommendations_heading":"You may also like","related_count":4}},"more-products-vendor":{"type":"more-products-vendor","settings":{}},"recently-viewed":{"type":"recently-viewed","settings":{}},"1670545089f50dc112":{"type":"apps","blocks":{"99211ee7-10f8-4bad-b044-3995dfd0f644":{"type":"shopify:\/\/apps\/judge-me-product-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8","settings":{}}},"block_order":["99211ee7-10f8-4bad-b044-3995dfd0f644"],"settings":{"full_width":false,"space_around":false}},"collection-return":{"type":"collection-return","settings":{"color_scheme":"none"}},"shogun-below":{"type":"shogun-below","settings":{}},"more-products-collection":{"type":"more-products-collection","disabled":true,"settings":{}},"1fa9ba0d-2fa3-4629-86c6-e10c1a20ec22":{"type":"promo-grid","disabled":true,"blocks":{"template--16537158713601__1fa9ba0d-2fa3-4629-86c6-e10c1a20ec22-1665008908c07d6e15-0":{"type":"advanced","settings":{"subheading":"","heading":"Announce your promotion","textarea":"Include the smaller details of your promotion in text below the title.","cta_text1":"Shop This","cta_link1":"","cta_text2":"Shop All","cta_link2":"","video_url":"","width":"50","height":100,"text_align":"vertical-center horizontal-center","focal_point":"center","color_accent":"#ffffff"}},"template--16537158713601__1fa9ba0d-2fa3-4629-86c6-e10c1a20ec22-1665008908c07d6e15-1":{"type":"advanced","settings":{"subheading":"","heading":"Announce your promotion","textarea":"Include the smaller details of your promotion in text below the title.","cta_text1":"Shop This","cta_link1":"","cta_text2":"Shop All","cta_link2":"","video_url":"","width":"50","height":500,"text_align":"vertical-center horizontal-center","focal_point":"center","color_accent":"#ffffff"}}},"block_order":["template--16537158713601__1fa9ba0d-2fa3-4629-86c6-e10c1a20ec22-1665008908c07d6e15-0","template--16537158713601__1fa9ba0d-2fa3-4629-86c6-e10c1a20ec22-1665008908c07d6e15-1"],"settings":{"full_width":false,"gutter_size":20,"space_above":true,"space_below":true}}},"order":["shogun-helper","shogun-above","bd104bd1-4110-4aa8-af67-d31a8fa87139","7b89ad01-2cba-44e8-b3b9-43e819c66cf3","main","sub","d5c00d86-1a72-4c6a-9a28-59d957df3906","recommendations","more-products-vendor","recently-viewed","1670545089f50dc112","collection-return","shogun-below","more-products-collection","1fa9ba0d-2fa3-4629-86c6-e10c1a20ec22"]}
+{
+  "sections": {
+    "shogun-helper": {
+      "type": "shogun-helper",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "shogun-above": {
+      "type": "shogun-above",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "bd104bd1-4110-4aa8-af67-d31a8fa87139": {
+      "type": "rich-text",
+      "disabled": true,
+      "blocks": {
+        "template--16537158713601__bd104bd1-4110-4aa8-af67-d31a8fa87139-1665008160a1847d21-0": {
+          "type": "heading",
+          "settings": {
+            "title": "Call For Best Pricing 888-667-4986"
+          }
+        },
+        "template--16537158713601__bd104bd1-4110-4aa8-af67-d31a8fa87139-1665008160a1847d21-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Experts are standing by to provide you with best pricing and exlcusive package deal disounts. Save today with just 1 call.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16537158713601__bd104bd1-4110-4aa8-af67-d31a8fa87139-1665008160a1847d21-0",
+        "template--16537158713601__bd104bd1-4110-4aa8-af67-d31a8fa87139-1665008160a1847d21-1"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": false,
+        "color_scheme": "1",
+        "divider": false
+      }
+    },
+    "7b89ad01-2cba-44e8-b3b9-43e819c66cf3": {
+      "type": "advanced-content",
+      "blocks": {
+        "template--16537158713601__7b89ad01-2cba-44e8-b3b9-43e819c66cf3-166958789312d92201-0": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "link": "",
+            "width": "100%",
+            "alignment": "center"
+          }
+        },
+        "template--16537158713601__7b89ad01-2cba-44e8-b3b9-43e819c66cf3-166958789312d92201-1": {
+          "type": "liquid",
+          "settings": {
+            "code": "<div class=\"index-section color-scheme-1 text-center\">\n<h4 style=\"margin-bottom:0;\">\nCall For Best Pricing <a href=\"tel:888-667-4986\">888-667-4986<\/a>\n<\/h4>\n\n<p>\nExperts are standing by to provide you with best pricing and exlcusive package deal disounts. Save today with just 1 call.\n<\/p>\n<\/div>",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--16537158713601__7b89ad01-2cba-44e8-b3b9-43e819c66cf3-166958789312d92201-0",
+        "template--16537158713601__7b89ad01-2cba-44e8-b3b9-43e819c66cf3-166958789312d92201-1"
+      ],
+      "settings": {
+        "full_width": true,
+        "space_around": false
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "a6388045-336d-48af-a6a1-2727d36e88e7": {
+          "type": "custom",
+          "settings": {
+            "code": "{% render 'bbq-custom-variant' %}"
+          }
+        },
+        "21b2a4f6-74da-4cae-a9fc-982a824e1450": {
+          "type": "custom",
+          "disabled": true,
+          "settings": {
+            "code": "<div id=\"custom-variant-meta\">    \n    <div class=\"custom-field-block gasType\">\n        {% if product.metafields.custom.option_one_title != blank %}\n            <p class=\"variantTitle\">{{ product.metafields.custom.option_field_title }}<\/p>\n\n            {% if product.metafields.custom.option_one_title != blank %}\n            <a href=\"{{ product.metafields.custom.option_one_product.value.url }}\" class=\"custom-variant-btn\">\n            {{ product.metafields.custom.option_one_title }}<\/a>\n            {% endif %}\n\n            {% if product.metafields.custom.option_two_title != blank %}\n            <a href=\"{{ product.metafields.custom.option_two_product.value.url }}\" class=\"custom-variant-btn\">\n            {{ product.metafields.custom.option_two_title }} <\/a>\n            {% endif %}\n\n            {% if product.metafields.custom.option_three_title != blank %}\n            <a href=\"{{ product.metafields.custom.option_three_product.value.url }}\" class=\"custom-variant-btn\">\n            {{ product.metafields.custom.option_three_title }} <\/a>\n            {% endif %}\n        {% endif %}\n    <\/div>\n<\/div>"
+          }
+        },
+        "8dd87ec1-859d-4d44-b3af-2d0a03a43cc5": {
+          "type": "custom",
+          "disabled": true,
+          "settings": {
+            "code": "{% if product.metafields.bbq.configuration_heading_title != blank %}\n    <p class=\"variantTitle\"> {{ product.metafields.bbq.configuration_heading_title }} <\/p>\n    <div class=\"custom-field-block variantSize\">\n        {% for option in product.metafields.bbq.configuration_type %}\n        <a class=\"custom-variant-btn\" href=\"{{ product.metafields.bbq.configuration_product[forloop.index0] }}\">\n            <span class=\"bbq-size-short-desc\">\n              {{ product.metafields.bbq.configuration_type[forloop.index0] }}\n            <\/span>\n            <span class=\"bbq-text-green\">\n                {% assign referenced_product = all_products[product.metafields.bbq.configuration_product[forloop.index0]] %}\n                {% assign priceDiff = referenced_product.price | minus: product.price %}\n                {% if priceDiff < 0 %}\n                  Save {{ priceDiff | abs | money_with_currency}}\n                {% elsif priceDiff > 0 %}\n                  Add {{ priceDiff | abs | money_with_currency}}\n                {% endif %}\n            <\/span>\n            <img src=\"{{ referenced_product | img_url: '1800x1800' }}\" hidden>\n        <\/a>\n        {% endfor %}\n    <\/div>\n{% endif %}"
+          }
+        },
+        "832f3067-63be-4799-a5f9-5142bff5a039": {
+          "type": "custom",
+          "disabled": true,
+          "settings": {
+            "code": "<!-- Custom Metafield-->\n<div id=\"custom-variant-meta\">\n{% if product.metafields.custom.size_option_title != blank %}\n  <p class=\"variantTitle\"> Size <\/p>\n  <div class=\"custom-field-block variantSize\">\n      <a href=\"{{ product.metafields.custom.size_related_product.value.url }}\" class=\"custom-variant-btn\">\n      <span class=\"bbq-size-short-desc\">\n          {{ product.metafields.custom.size_option_title }}\n      <\/span>\n      <span class=\"bbq-text-green\">\n          {% assign diff1 = product.metafields.custom.size_related_product.value.price | minus: product.price %}\n          {% if diff1 < 0 %}\n          Save {{ diff1 | abs | money_with_currency}}\n          {% elsif diff1 > 0 %}\n          Add {{ diff1 | abs | money_with_currency}}\n          {% endif %}\n      <\/span>\n      <img src=\"{{ product.metafields.custom.size_related_product.value | img_url: '1800x1800' }}\" hidden>\n      <\/a>\n      {% endif %}\n\n      {% if product.metafields.custom.size_two_product_title != blank %}\n      <a href=\"{{ product.metafields.custom.size_two_product.value.url }}\" class=\"custom-variant-btn\">\n      <span class=\"bbq-size-short-desc\">\n          {{ product.metafields.custom.size_two_product_title }}\n      <\/span>\n      <span class=\"bbq-text-green\">\n          {% assign diff2 = product.metafields.custom.size_two_product.value.price | minus: product.price %}\n          {% if diff2 < 0 %}\n              Save {{ diff2 | abs | money_with_currency}}\n          {% elsif diff2 > 0 %}\n              Add {{ diff2 | abs | money_with_currency}}\n          {% endif %}\n      <\/span>\n      <img src=\"{{ product.metafields.custom.size_two_product.value | img_url: '1800x1800' }}\" hidden>\n      <\/a>\n      {% endif %}\n\n      {% if product.metafields.custom.size_three_title != blank %}\n      <a href=\"{{ product.metafields.custom.size_three_product.value.url }}\" class=\"custom-variant-btn\">\n      <span class=\"bbq-size-short-desc\">\n          {{ product.metafields.custom.size_three_title }} \n      <\/span>\n      <span class=\"bbq-text-green\">\n          {% assign diff3 = product.metafields.custom.size_three_product.value.price | minus: product.price %}\n          {% if diff3 < 0 %}\n              Save {{ diff3 | abs | money_with_currency}}\n          {% elsif diff3 > 0 %}\n              Add {{ diff3 | abs | money_with_currency}}\n          {% endif %}\n      <\/span>\n      <img src=\"{{ product.metafields.custom.size_three_product.value | img_url: '1800x1800' }}\" hidden>\n      <\/a>\n      {% endif %}\n\n      {% if product.metafields.custom.size_four_title != blank %}\n      <a href=\"{{ product.metafields.custom.size_four_product.value.url }}\" class=\"custom-variant-btn\">\n      <span class=\"bbq-size-short-desc\">\n          {{ product.metafields.custom.size_four_title }}\n      <\/span>\n      <span class=\"bbq-text-green\"> \n          {% assign diff4 = product.metafields.custom.size_four_product.value.price | minus: product.price %}\n          {% if diff4 < 0 %}\n              Save {{ diff4 | abs | money_with_currency}}\n          {% elsif diff4 > 0 %}\n              Add {{ diff4 | abs | money_with_currency}}\n          {% endif %}\n      <\/span>\n      <img src=\"{{ product.metafields.custom.size_four_product.value | img_url: '1800x1800' }}\" hidden>\n      <\/a>\n      {% endif %}\n\n      {% if product.metafields.custom.size_five_title != blank %}\n      <a href=\"{{ product.metafields.custom.size_five_product.value.url }}\" class=\"custom-variant-btn\">\n      <span class=\"bbq-size-short-desc\">\n          {{ product.metafields.custom.size_five_title }} \n      <\/span>\n      <span class=\"bbq-text-green\">\n          {% assign diff5 = product.metafields.custom.size_five_product.value.price | minus: product.price %}\n          {% if diff5 < 0 %}\n              Save {{ diff5 | abs | money_with_currency}}\n          {% elsif diff5 > 0 %}\n              Add {{ diff5 | abs | money_with_currency}}\n          {% endif %}\n      <\/span>\n      <img src=\"{{ product.metafields.custom.size_five_product.value | img_url: '1800x1800' }}\" hidden>\n      <\/a>\n      {% endif %}\n  <\/div>\n\n  <div class=\"custom-field-block shopOpenBox\">\n      {% if product.metafields.custom.open_box != blank %}\n      <p class=\"variantTitle\"> Shop Open Box <\/p>\n      <a href=\"{{ product.metafields.custom.open_box.value.url }}\" class=\"openBox\">\n          {{ product.metafields.custom.open_box.value.title }}<\/a>\n      {% endif %}\n  <\/div>\n<\/div>"
+          }
+        },
+        "18280402-7c04-48d3-84fa-e1259f763e74": {
+          "type": "custom",
+          "disabled": true,
+          "settings": {
+            "code": "{% if product.metafields.bbq.orientation_heading_title != blank %}\n    <p class=\"variantTitle\">{{ product.metafields.bbq.orientation_heading_title }}<\/p>\n      {% for option in product.metafields.bbq.selection_name %}\n        <a class=\"custom-variant-btn\" href=\"{{ product.metafields.bbq.selection_related_product[forloop.index0] }}\">\n          {{ product.metafields.bbq.selection_name[forloop.index0] }}\n        <\/a>\n      {% endfor %}\n{% endif %}"
+          }
+        },
+        "7a374f6a-2d3b-48e2-8e0c-acc5db365007": {
+          "type": "custom",
+          "disabled": true,
+          "settings": {
+            "code": "{% if product.metafields.bbq.hinge_heading_title != blank %}\n    <p class=\"variantTitle\">{{ product.metafields.bbq.hinge_heading_title }}<\/p>\n      {% for option in product.metafields.bbq.hinge_selection %}\n        <a class=\"custom-variant-btn\" href=\"{{ product.metafields.bbq.hinge_related_product[forloop.index0] }}\">\n          {{ product.metafields.bbq.hinge_selection[forloop.index0] }}\n        <\/a>\n      {% endfor %}\n{% endif %}"
+          }
+        },
+        "c9c256b7-3353-4b61-a32c-d655606ad610": {
+          "type": "custom",
+          "disabled": true,
+          "settings": {
+            "code": "{% if product.metafields.bbq.open_box_heading_title != blank %}\n    <div class=\"openbox\">\n    \n        <p class=\"openbox-title\"><span class=\"accent-color\">{{ product.metafields.bbq.open_box_heading_title }}<\/span> Shop Open Box<\/p>    \n        \n        {% for openbox in product.metafields.bbq.openbox_related_product %}\n            {% assign referenced_product = all_products[product.metafields.bbq.openbox_related_product[forloop.index0]] %}\n            {% assign productTitle = product.metafields.bbq.openbox_product_text[forloop.index0] %}\n            {% assign referencedTitle = referenced_product.title %}\n            {% assign productPrice = referenced_product.price %}\n            \n            <a class=\"custom-variant-btn clipped-text\" href=\"{{ product.metafields.bbq.openbox_related_product[forloop.index0] }}\">\n                \n                {% if productTitle == blank %}\n                    {{ referenced_product.title }}\n                {% else %}\n                     {{ productTitle }}\n                {% endif %}\n    \n                <p class=\"openbox-price\">\n                {{ productPrice | money }}\n                <\/p>\n            <\/a>\n        {% endfor %}\n    <\/div>\n    {% endif %}"
+          }
+        },
+        "d00761c5-323d-414c-8128-e1056dd982bc": {
+          "type": "custom",
+          "disabled": true,
+          "settings": {
+            "code": "{% if product.metafields.bbq.shopnew_heading_title != blank %}\n    <div class=\"openbox\">\n        <p class=\"openbox-title\">{{ product.metafields.bbq.shopnew_heading_title }}<\/p>\n        \n        {% for shopnew in product.metafields.bbq.shopnew_related_product %}\n\n            {% assign referenced_product = all_products[product.metafields.bbq.shopnew_related_product[forloop.index0]] %}\n            {% assign productTitle = product.metafields.bbq.shopnew_product_text[forloop.index0] %}\n            {% assign referencedTitle = referenced_product.title %}\n            {% assign shop_new_price = referenced_product.price %}\n            {% assign regularPrice = product.price %}\n            {% assign addPrice = regularPrice | minus: shop_new_price  %}\n            \n            <a class=\"custom-variant-btn clipped-text\" href=\"{{ product.metafields.bbq.shopnew_related_product[forloop.index0] }}\">\n                \n                {% if productTitle == blank %}\n                    {{ referenced_product.title }}\n                {% else %}\n                     {{ productTitle }}\n                {% endif %}\n                \n                <p class=\"openbox-price\">\n                    {{ shop_new_price | money }}\n                <\/p>\n\n            <\/a>\n            \n        {% endfor %}\n    \n    <\/div>\n    {% endif %}"
+          }
+        },
+        "e97d56c3-caac-49e4-aad5-c930c56fc3a9": {
+          "type": "shopify:\/\/apps\/infinite-options\/blocks\/app-block\/7e73b6f9-82b0-45f5-9b9b-04f446ba1a9b",
+          "settings": {
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "disabled": true,
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": false,
+            "color_swatches": false
+          }
+        },
+        "9baa522e-3224-4b7b-a821-a13f86d11b95": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "package",
+            "text": "Call for Open Box Availability  <a href=\"tel:888-667-4986\">888-667-4986<\/a>"
+          }
+        },
+        "sales_point2": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "truck",
+            "text": "Free Shipping"
+          }
+        },
+        "32ef1b25-067d-4a91-84ad-b38d0c2dda2c": {
+          "type": "custom",
+          "settings": {
+            "code": "<div class=\"exclusive-savings\">\n\t<div class=\"product-details-links\">\n\t\t\n\t\t<a href=\"tel:888-667-4986\" style=\"color:#090; margin: 0 10px;\">\n\t\t\tPhone Discounts\n\t\t<\/a><span class=\"divider\"> | <\/span>\n\t\t<a href=\"\/collections\/package-deals\" style=\"margin: 0 10px;\" target=\"_blank\">\n\t\t\tPackage Deals\n\t\t<\/a><span class=\"divider\"> | <\/span>\n\t\t<a href=\"\/collections\/open-box-1\" style=\"color:#090; margin: 0 10px;\">\n\t\t\tOpen Box\n\t\t<\/a><span class=\"divider\"> | <\/span>\n\t\t<a href=\"\/collections\/close-out-deals\" style=\"margin: 0 10px;\" target=\"_blank\">\n\t\t\tClose Out\n\t\t<\/a><span class=\"divider\"> | <\/span>\n    \t<a href=\"\/collections\/scratch-and-dents\" style=\"color:#090; margin: 0 10px;\" target=\"_blank\">\n\t\t\tScratch + Dent\n\t\t<\/a><span class=\"divider\"> | <\/span>\n    \t<a id=\"bread-checkout-btn-new\">Low Monthly Payments <\/a><span class=\"divider\"> | <\/span>\n\t\t<a href=\"\/pages\/free-accessories\" style=\"color:#090; margin: 0 10px;\" target=\"_blank\">\n\t\t\tFree Accessory Bundles\n\t\t<\/a>\n\t\t\n\t<\/div>\n\n\t<p style=\"margin-top: 20px; display: none;\">\n\t\tExclusive Savings Just One Call Away! Experts Standing By \n\t\t<a href=\"tel:888-667-4986\">\n\t\t\t<strong style=\"font-size:20px;\">888-667-4986<\/strong>\n\t\t<\/a>\n\t<\/p>\n<\/div>"
+          }
+        },
+        "b56e1b84-834a-44d6-b8c6-0c0d38d85f3c": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "surface_pickup_enable": false
+          }
+        },
+        "69701aab-3281-4e87-b0b5-1b337c97ed70": {
+          "type": "custom",
+          "settings": {
+            "code": "<div class=\"tabarnapp_upsell\" data-id=\"uzDhukdFCzYg6ngzh\"><\/div>"
+          }
+        },
+        "003b73b9-a144-4659-a547-17e0a4df9fe4": {
+          "type": "custom",
+          "settings": {
+            "code": "<center>\n<a href=\"tel:888-667-4986\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0660\/1900\/0577\/files\/Contact_a_specialist_3.png\">\n<\/a>\n<\/center>"
+          }
+        },
+        "sales_point": {
+          "type": "sales_point",
+          "disabled": true,
+          "settings": {
+            "icon": "tag",
+            "text": "Exclusive Phone Discounts | Package Deals | Open Box | Close Out | Scratch + Dent | Low Monthly Payments | Free Accessories |  Huge Savings Just One Call Away! Experts Standing By 888-667-4986"
+          }
+        }
+      },
+      "block_order": [
+        "price",
+        "a6388045-336d-48af-a6a1-2727d36e88e7",
+        "21b2a4f6-74da-4cae-a9fc-982a824e1450",
+        "8dd87ec1-859d-4d44-b3af-2d0a03a43cc5",
+        "832f3067-63be-4799-a5f9-5142bff5a039",
+        "18280402-7c04-48d3-84fa-e1259f763e74",
+        "7a374f6a-2d3b-48e2-8e0c-acc5db365007",
+        "c9c256b7-3353-4b61-a32c-d655606ad610",
+        "d00761c5-323d-414c-8128-e1056dd982bc",
+        "e97d56c3-caac-49e4-aad5-c930c56fc3a9",
+        "variant_picker",
+        "9baa522e-3224-4b7b-a821-a13f86d11b95",
+        "sales_point2",
+        "32ef1b25-067d-4a91-84ad-b38d0c2dda2c",
+        "b56e1b84-834a-44d6-b8c6-0c0d38d85f3c",
+        "buy_buttons",
+        "69701aab-3281-4e87-b0b5-1b337c97ed70",
+        "003b73b9-a144-4659-a547-17e0a4df9fe4",
+        "sales_point"
+      ],
+      "settings": {
+        "sku_enable": true,
+        "image_position": "left",
+        "image_container_size": "medium",
+        "product_image_size": "landscape",
+        "product_zoom_enable": true,
+        "thumbnail_position": "below",
+        "thumbnail_height": "flexible",
+        "thumbnail_arrows": true,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "blocks": {
+        "537fe456-4e5c-41bd-b566-ebed312f5bbb": {
+          "type": "custom",
+          "settings": {
+            "code": "{% render 'bbq-product-details' %}"
+          }
+        },
+        "12dbe39b-ebc7-4f7a-9aab-e8394a54e832": {
+          "type": "shopify:\/\/apps\/product-questions-and-answers\/blocks\/SQA\/84c5ea51-4ec6-4681-8c2f-c95d8846ed7e",
+          "settings": {
+          }
+        },
+        "657031d1-9b76-4891-a517-3f9ad4204e87": {
+          "type": "custom",
+          "settings": {
+            "code": "{% render 'frequently-bought'  %}"
+          }
+        },
+        "7496d8b3-154f-4f4a-809c-85ae285a9f13": {
+          "type": "custom",
+          "disabled": true,
+          "settings": {
+            "code": "{%- if product.description !=blank -%}\n<div>\n<h4 class=\"bbq-prod-details-title\">Description<\/h4>\n\n<div id=\"desc-content\">\n  {{ product.description }}\n<\/div>\n<span id=\"desc-show-more\">Read more >><\/span>\n<hr>\n<\/div>\n{%- endif -%}"
+          }
+        },
+        "2ee0bec7-82ce-4c5f-a2b4-81b58aa55114": {
+          "type": "custom",
+          "disabled": true,
+          "settings": {
+            "code": "<div class=\"specification\">\n {%- if product.metafields.bbq.specification_heading_title !=blank -%}\n    <h4 class=\"bbq-prod-details-title\">{{ product.metafields.bbq.specification_heading_title }}<\/h4>\n    <div id=\"specs-content\">\n        {%- if product.metafields.bbq.overall_dimensions !=blank -%}\n        <div><strong>Overall Dimensions (WxDxH):<\/strong><\/div> <p class=\"specs-value\">{{ product.metafields.bbq.overall_dimensions }} <\/p>\n        {% endif %}\n        {%- if product.metafields.bbq.cutout_dimensions !=blank -%}\n        <div><strong>Cutout Dimensions (WxDxH):<\/strong><\/div> <p class=\"specs-value\"> {{ product.metafields.bbq.cutout_dimensions }}<\/p>\n        {% endif %}\n        {%- if product.metafields.bbq.product_weight !=blank -%}\n        <div><strong>Product Weight:<\/strong><\/div> <p class=\"specs-value\">{{ product.metafields.bbq.product_weight }}lb<\/p>\n        {% endif %}\n        {%- if product.metafields.bbq.number_of_main_burners !=blank -%}\n        <div><strong>Number Of Main Burners:<\/strong><\/div> <p class=\"specs-value\">{{ product.metafields.bbq.number_of_main_burners }}<\/p>\n        {% endif %}\n        {%- if product.metafields.bbq.total_surface_btu !=blank -%}\n        <div><strong>Total Surface BTUs:<\/strong><\/div> <p class=\"specs-value\">{{ product.metafields.bbq.total_surface_btu }}<\/p>\n        {% endif %}\n        {%- if product.metafields.bbq.single_burner_btus !=blank -%}\n        <div><strong>Single Burner BTUs:<\/strong><\/div> <p class=\"specs-value\">{{ product.metafields.bbq.single_burner_btus }}<\/p>\n        {% endif %}\n        {%- if product.metafields.bbq.grill_lights !=blank -%}\n        <div><strong>Grill Lights:<\/strong><\/div> <p class=\"specs-value\">{{ product.metafields.bbq.grill_lights }}<\/p>\n        {% endif %}\n        {%- if product.metafields.bbq.rear_infrared_burner !=blank -%}\n        <div><strong>Rear Infrared Burner:<\/strong><\/div> <p class=\"specs-value\">{{ product.metafields.bbq.rear_infrared_burner }}<\/p>\n        {% endif %}\n        {%- if product.metafields.bbq.rotisserie_kit !=blank -%}\n        <div><strong>Rotisserie Kit:<\/strong><\/div> <p class=\"specs-value\">{{ product.metafields.bbq.rotisserie_kit }}<\/p>\n        {% endif %}\n        {%- if product.metafields.bbq.thermometer !=blank -%}\n        <div><strong>Thermometer:<\/strong><\/div> <p class=\"specs-value\">{{ product.metafields.bbq.thermometer }}<\/p>\n        {% endif %}\n    <\/div>\n    <span id=\"specs-view-more\">Read more >> <\/span>\n    <hr>\n{%- endif -%}\n<\/div>"
+          }
+        },
+        "ab3328b5-1169-4436-99f3-cd9088d8ce89": {
+          "type": "custom",
+          "disabled": true,
+          "settings": {
+            "code": "{%- if product.metafields.bbq.shipping_weight !=blank -%}\n  <div class=\"collapsibles-wrapper\" style=\"margin-top: -30px;\">\n      <button type=\"button\"\n        class=\"label collapsible-trigger collapsible-trigger-btn collapsible-trigger-btn--borders collapsible--auto-height{% if force_open %} is-open{% endif %}\" aria-controls=\"Product-content-shipping-info\"\n        {% if force_open %}aria-expanded=\"true\"{% endif %}>\n        Shipping Information\n        {%- render 'collapsible-icons' -%}\n      <\/button>\n      <div id=\"Product-content-shipping-info\"\n        class=\"bbq-description collapsible-content collapsible-content--all{% if force_open %} is-open{% endif %}\"\n        {% if force_open %}style=\"height: auto;\"{% endif %}>\n        <div class=\"collapsible-content__inner rte\">\n          <div>\n            {%- if product.metafields.bbq.shipping_weight !=blank -%}\n              <div><strong>Shipping Weight:<\/strong><\/div> <p> {{ product.metafields.bbq.shipping_weight }}lb<\/p>\n            {% endif %}\n            \n            {%- if product.metafields.bbq.shipping_dimensions !=blank -%}\n              <div><strong>Shipping Dimensions (WxDxH):<\/strong><\/div> <p> {{ product.metafields.bbq.shipping_dimensions }}in<\/p>\n            {% endif %}\n          <\/div>\n        <\/div>\n      <\/div>\n  <\/div>\n{% endif %}"
+          }
+        },
+        "c20671f6-f1e6-4181-9153-ec09f78919ce": {
+          "type": "custom",
+          "disabled": true,
+          "settings": {
+            "code": "{% if product.metafields.bbq.manufacturer_download_heading_title != blank %}\n<div class=\"collapsibles-wrapper\" style=\"margin-top:-30px;\">\n    <button type=\"button\"\n      class=\"label collapsible-trigger collapsible-trigger-btn collapsible-trigger-btn--borders collapsible--auto-height{% if force_open %} is-open{% endif %}\" aria-controls=\"Product-content-manufacturer-download\"\n      {% if force_open %}aria-expanded=\"true\"{% endif %}>\n      {{ product.metafields.bbq.manufacturer_download_heading_title }}\n      {%- render 'collapsible-icons' -%}\n    <\/button>\n    <div id=\"Product-content-manufacturer-download\"\n      class=\"bbq-description collapsible-content collapsible-content--all{% if force_open %} is-open{% endif %}\"\n      {% if force_open %}style=\"height: auto;\"{% endif %}>\n      <div class=\"collapsible-content__inner rte\">\n        {% for filename in product.metafields.bbq.file_name %} \n        <div>\n        <a href=\"{{ product.metafields.bbq.upload_file[forloop.index0] }}\" target=\"_blank\"> {{ product.metafields.bbq.file_name[forloop.index0] }}<\/a> \n        <\/div>\n        {% endfor %}\n      <\/div>\n    <\/div>\n  <\/div>\n  {% endif %}"
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "is_tab": true
+          }
+        },
+        "tab": {
+          "type": "tab",
+          "disabled": true,
+          "settings": {
+            "title": "Shipping information",
+            "content": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.<\/p><p>Ex: Shipping and return policies, size guides, and other common questions.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "537fe456-4e5c-41bd-b566-ebed312f5bbb",
+        "12dbe39b-ebc7-4f7a-9aab-e8394a54e832",
+        "657031d1-9b76-4891-a517-3f9ad4204e87",
+        "7496d8b3-154f-4f4a-809c-85ae285a9f13",
+        "2ee0bec7-82ce-4c5f-a2b4-81b58aa55114",
+        "ab3328b5-1169-4436-99f3-cd9088d8ce89",
+        "c20671f6-f1e6-4181-9153-ec09f78919ce",
+        "description",
+        "tab"
+      ],
+      "settings": {
+        "max_width": false
+      }
+    },
+    "d5c00d86-1a72-4c6a-9a28-59d957df3906": {
+      "type": "advanced-content",
+      "disabled": true,
+      "blocks": {
+        "template--16537158713601__d5c00d86-1a72-4c6a-9a28-59d957df3906-16723696897f050543-1": {
+          "type": "liquid",
+          "settings": {
+            "code": "{% render 'frequently-bought'  %}",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--16537158713601__d5c00d86-1a72-4c6a-9a28-59d957df3906-16723696897f050543-1"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": false
+      }
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "product_recommendations_heading": "You may also like",
+        "related_count": 4
+      }
+    },
+    "more-products-vendor": {
+      "type": "more-products-vendor",
+      "settings": {
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "settings": {
+      }
+    },
+    "1670545089f50dc112": {
+      "type": "apps",
+      "settings": {
+        "full_width": false,
+        "space_around": false
+      }
+    },
+    "collection-return": {
+      "type": "collection-return",
+      "settings": {
+        "color_scheme": "none"
+      }
+    },
+    "shogun-below": {
+      "type": "shogun-below",
+      "settings": {
+      }
+    },
+    "more-products-collection": {
+      "type": "more-products-collection",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "1fa9ba0d-2fa3-4629-86c6-e10c1a20ec22": {
+      "type": "promo-grid",
+      "disabled": true,
+      "blocks": {
+        "template--16537158713601__1fa9ba0d-2fa3-4629-86c6-e10c1a20ec22-1665008908c07d6e15-0": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "Announce your promotion",
+            "textarea": "Include the smaller details of your promotion in text below the title.",
+            "cta_text1": "Shop This",
+            "cta_link1": "",
+            "cta_text2": "Shop All",
+            "cta_link2": "",
+            "video_url": "",
+            "width": "50",
+            "height": 100,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        },
+        "template--16537158713601__1fa9ba0d-2fa3-4629-86c6-e10c1a20ec22-1665008908c07d6e15-1": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "Announce your promotion",
+            "textarea": "Include the smaller details of your promotion in text below the title.",
+            "cta_text1": "Shop This",
+            "cta_link1": "",
+            "cta_text2": "Shop All",
+            "cta_link2": "",
+            "video_url": "",
+            "width": "50",
+            "height": 500,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "template--16537158713601__1fa9ba0d-2fa3-4629-86c6-e10c1a20ec22-1665008908c07d6e15-0",
+        "template--16537158713601__1fa9ba0d-2fa3-4629-86c6-e10c1a20ec22-1665008908c07d6e15-1"
+      ],
+      "settings": {
+        "full_width": false,
+        "gutter_size": 20,
+        "space_above": true,
+        "space_below": true
+      }
+    }
+  },
+  "order": [
+    "shogun-helper",
+    "shogun-above",
+    "bd104bd1-4110-4aa8-af67-d31a8fa87139",
+    "7b89ad01-2cba-44e8-b3b9-43e819c66cf3",
+    "main",
+    "sub",
+    "d5c00d86-1a72-4c6a-9a28-59d957df3906",
+    "recommendations",
+    "more-products-vendor",
+    "recently-viewed",
+    "1670545089f50dc112",
+    "collection-return",
+    "shogun-below",
+    "more-products-collection",
+    "1fa9ba0d-2fa3-4629-86c6-e10c1a20ec22"
+  ]
+}
