@@ -51,8 +51,10 @@
   position: relative;
 }
 .specs__btn {
-  color: #000;
   text-decoration: none;
+  font-weight: 900;
+  color: #888;
+  font-style: italic;
 }
 .specs_more, .specs_less {
   position: absolute;
