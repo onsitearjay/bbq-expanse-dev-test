@@ -1,9 +1,12 @@
 {% if product.metafields.bbq.option_title != blank %}
 <div class="bbq-meta-block">
   <p class="variantTitle">{{ product.metafields.bbq.option_title }} 
-    {% comment %}
-    <span id="learn-gastype" class="info-gastype">learn more...</span> 
-    {% endcomment %}
+    <div class="gastype-popup" onclick="learnGasType()">Learn more...
+      <span class="gastype-popup-text" id="gasTypeInfo">
+        Constructed of 304 stainless steel, the Outlaw built-in propane gas BBQ grill features four porcelain-coated bar burners that push 15,000 BTUs each for a total of 60,000 BTUs.
+        Grill your favorite steaks on the large 600 square inch cooking area or keep items warm on the 210 square inch warming rack for a total of 810 square inches of cooking space.
+      </span>
+    </div>
   </p>
     {% for option in product.metafields.bbq.option_type %}
       <a class="custom-variant-btn" href="{{ product.metafields.bbq.option_related_product[forloop.index0] }}">
@@ -11,14 +14,6 @@
       </a> 
     {% endfor %}
   {% endif %}
-  {% comment %}
-  <div id="gastype_modal" class="gastype_info_modal">
-    <div class="gastype-modal-content">
-      <span class="gasinfo-close">&times;</span>
-      <p>gas info text here...</p>
-    </div>
-  </div>
-  {% endcomment %}
 </div>
 
 
@@ -254,3 +249,23 @@
     </div>
 </div>
 {% endif %}
+
+{% comment %}
+<script>
+var gasModal = document.getElementById("gastype_modal");
+var gasInfoBtn = document.getElementById("learn-gastype");
+var spanClose = document.getElementsByClassName("gasinfo-close")[0];
+
+gasInfoBtn.onclick = function() {
+  gasModal.style.display = "block";
+}
+spanClose.onclick = function() {
+  gasModal.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == gasModal) {
+    gasModal.style.display = "none";
+  }
+}
+</script>
+{% endcomment %}
