@@ -166,17 +166,12 @@
   visibility: visible;
   overflow: hidden;
   opacity: 1;
-  margin-top: 15px;
-}
-.bbq-description, .specs-description{
-  margin-bottom:0;
 }
 .specs-description{
   height: 115px;
   visibility: visible;
   overflow: hidden;
   opacity: 1;
-  margin-top: 15px;
 }
 .exclusive-savings{
   text-align:center;
