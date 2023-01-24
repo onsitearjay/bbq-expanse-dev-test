@@ -8,7 +8,7 @@
   animation:fade-in .3s ease forwards;
 }
 .tbg__panel-wrapper {
-  width: 60%;
+  width: 100%;
   margin: auto;
   position: relative;
 }
