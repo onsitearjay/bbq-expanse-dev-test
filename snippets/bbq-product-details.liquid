@@ -1,7 +1,7 @@
 {%- if product.description !=blank -%}
 <div class="custom-meta-description collapsibles-wrapper">
     <button type="button"
-        class="label collapsible-trigger collapsible-trigger-btn collapsible-trigger-btn--borders collapsible--auto-height{% if force_open %} is-open{% endif %}" aria-controls="bbq-description-meta"
+        class="label collapsible-trigger collapsible-trigger-btn collapsible--auto-height{% if force_open %} is-open{% endif %}" aria-controls="bbq-description-meta"
         {% if force_open %}aria-expanded="true"{% endif %}>   
              Description
         {%- render 'collapsible-icons' -%}
@@ -12,7 +12,7 @@
      
         {% if force_open %}style="height: auto;"{% endif %}>
         <div class="collapsible-content__inner rte">     
-            <div id="desc-content">
+            <div id="desc-content collapsible-trigger-btn--borders">
                 {{ product.description }}
             </div>
         </div>
