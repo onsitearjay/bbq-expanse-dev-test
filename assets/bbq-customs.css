@@ -124,9 +124,6 @@
 .bbq-question-answer{
   margin-top:-30px;
 }
-/*.custom-meta-description{
-  margin-bottom:20px;
-}*/
 /*#desc-content{
 	max-height: 4.5em;
 	overflow: hidden;
@@ -170,6 +167,9 @@
   overflow: hidden;
   opacity: 1;
   margin-top: 15px;
+}
+.custom-meta-description, .specs-description{
+  margin:0;
 }
 .product-block:first-child > div > .specs-description{
   height: 115px;
