@@ -19,6 +19,7 @@
     font: italic normal 12px Harmonia Sans;
 }
 .gastype-popup .gastype-popup-text {
+    font: normal 12px Harmonia Sans;
     visibility: hidden;
     width: 400px;
     background-color: #fff;
