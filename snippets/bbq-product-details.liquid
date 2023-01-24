@@ -1,11 +1,22 @@
 {%- if product.description !=blank -%}
-<div class="custom-meta-description">  
-  <h4 class="bbq-prod-details-title">Description</h4>
-    <div id="desc-content">
-      {{ product.description }}
+<div class="custom-meta-description collapsibles-wrapper">
+    <button type="button"
+        class="label collapsible-trigger collapsible-trigger-btn collapsible-trigger-btn--borders collapsible--auto-height{% if force_open %} is-open{% endif %}" aria-controls="bbq-description-meta"
+        {% if force_open %}aria-expanded="true"{% endif %}>   
+             Description
+        {%- render 'collapsible-icons' -%}
+    </button>
+    
+    <div id="bbq-description-meta"
+        class="bbq-description collapsible-content collapsible-content--all{% if force_open %} is-open{% endif %}"
+     
+        {% if force_open %}style="height: auto;"{% endif %}>
+        <div class="collapsible-content__inner rte">     
+            <div id="desc-content">
+                {{ product.description }}
+            </div>
+        </div>
     </div>
-  <span id="desc-show-more">Read more >> </span>
-  <hr>
 </div>
 {%- endif -%}
 
@@ -96,31 +107,3 @@
     </div>
   </div>
 {% endif %}
-
-{% comment %}
-<script>
-  var content = document.getElementById("desc-content");
-  var button = document.getElementById("desc-show-more");
-    button.onclick = function () {
-    	if(content.className == "open"){
-    		content.className = "";
-    		button.innerHTML = "Read more >>";
-    	} else {
-    		content.className = "open";
-    		button.innerHTML = "Read less <<";
-    	}
-    };
-
-  var specsContent = document.getElementById("specs-content");
-  var specsButton = document.getElementById("specs-view-more");
-    specsButton.onclick = function () {
-    	if(specsContent.className == "view"){
-    		specsContent.className = "see";
-    		specsButton.innerHTML = "Read more >>";
-    	} else {
-    		specsContent.className = "view";
-    		specsButton.innerHTML = "Read less <<";
-    	}
-    };
-</script>
-{% endcomment %}
