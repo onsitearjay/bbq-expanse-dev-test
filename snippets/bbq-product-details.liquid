@@ -1,22 +1,17 @@
 {%- if product.description !=blank -%}
-<div class="custom-meta-description collapsibles-wrapper">
-    <button type="button"
-        class="label collapsible-trigger collapsible-trigger-btn collapsible-trigger-btn--borders collapsible--auto-height{% if force_open %} is-open{% endif %}" aria-controls="bbq-description-meta"
-        {% if force_open %}aria-expanded="true"{% endif %}>   
-             Description
-        {%- render 'collapsible-icons' -%}
-    </button>
+<div class="custom-meta-description">  
+  <h4 class="bbq-prod-details-title">Description</h4>
+  
+  <div class="tbg__panel-wrapper">
+    <a href="#read_more" class="read_more tbg__btn" id="read_more">Read more >></a> 
+    <a href="#read_less" class="read_less tbg__btn" id="read_less">Read less << </a> 
     
-    <div id="bbq-description-meta"
-        class="bbq-description collapsible-content collapsible-content--all{% if force_open %} is-open{% endif %}"
-     
-        {% if force_open %}style="height: auto;"{% endif %}>
-        <div class="collapsible-content__inner rte">     
-            <div id="desc-content">
-                {{ product.description }}
-            </div>
-        </div>
+    <div class="tbg__panel">
+      {{ product.description }}
     </div>
+  </div>
+  
+  <hr>
 </div>
 {%- endif -%}
 
