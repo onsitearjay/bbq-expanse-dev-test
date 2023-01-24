@@ -16,6 +16,7 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    font: italic normal 12px Harmonia Sans;
 }
 .gastype-popup .gastype-popup-text {
     visibility: hidden;
