@@ -62,7 +62,9 @@
     to {opacity:1 ;}
 }
 /*end Gas type learn more */
-
+.frequently-bought-item{
+  clear:both;
+}
 .frequently-bought-item .fbi-content-wrap{
   display:flex;
   justify-content: flex-start;
