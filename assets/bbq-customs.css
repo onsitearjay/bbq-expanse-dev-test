@@ -41,7 +41,7 @@
   position: relative;
   margin: 0 0 2em auto;
   width: 100%;
-  max-height: 75px;
+  max-height: 115px;
   overflow: hidden;
   transition: max-height 0.3s ease;
 }
