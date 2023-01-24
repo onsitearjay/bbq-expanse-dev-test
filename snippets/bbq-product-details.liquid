@@ -1,7 +1,7 @@
 {%- if product.description !=blank -%}
-<div class="custom-meta-description collapsibles-wrapper">
+<div class="custom-meta-description collapsibles-wrapper collapsible-trigger-btn--borders">
     <button type="button"
-        class="label collapsible-trigger collapsible-trigger-btn collapsible-trigger-btn--borders collapsible--auto-height{% if force_open %} is-open{% endif %}" aria-controls="bbq-description-meta"
+        class="label collapsible-trigger collapsible-trigger-btn collapsible--auto-height{% if force_open %} is-open{% endif %}" aria-controls="bbq-description-meta"
         {% if force_open %}aria-expanded="true"{% endif %}>   
              Description
         {%- render 'collapsible-icons' -%}
@@ -23,9 +23,9 @@
 
 {%- if product.metafields.bbq.specification_heading_title !=blank -%}
 
-    <div class="custom-meta-specification collapsibles-wrapper">
+    <div class="custom-meta-specification collapsibles-wrapper collapsible-trigger-btn--borders">
         <button type="button"
-            class="label collapsible-trigger collapsible-trigger-btn collapsible-trigger-btn--borders collapsible--auto-height{% if force_open %} is-open{% endif %}" aria-controls="specification-meta"
+            class="label collapsible-trigger collapsible-trigger-btn collapsible--auto-height{% if force_open %} is-open{% endif %}" aria-controls="specification-meta"
             {% if force_open %}aria-expanded="true"{% endif %}>   
                 {{ product.metafields.bbq.specification_heading_title }}
             {%- render 'collapsible-icons' -%}
