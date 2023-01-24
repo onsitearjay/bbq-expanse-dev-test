@@ -168,9 +168,9 @@
   font-weight:700;
 }
 /*description & specs show more*/
-/*.specification{
-  margin-bottom:-30px;
-}*/
+.specification{
+  margin-top:20px;
+}
 .bbq-question-answer{
   margin-top:-30px;
 }
