@@ -163,6 +163,7 @@
 .jdgm-preview-badge{
   margin-bottom:10px;
 }
+/* description preview*/
 .product-block:first-child > div > .bbq-description{
   height: 75px;
   visibility: visible;
