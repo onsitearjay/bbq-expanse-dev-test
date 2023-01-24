@@ -169,7 +169,7 @@
   margin-top: 15px;
 }
 .custom-meta-description, .specs-description{
-  margin:0;
+  margin-bottom:-15px;
 }
 .product-block:first-child > div > .specs-description{
   height: 115px;
