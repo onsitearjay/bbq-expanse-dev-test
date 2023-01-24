@@ -74,7 +74,7 @@
 /*.custom-meta-description{
   margin-bottom:20px;
 }*/
-#desc-content{
+/*#desc-content{
 	max-height: 4.5em;
 	overflow: hidden;
 	transition: max-height 0.2s;
@@ -83,7 +83,7 @@
 	max-height: 7em;
 	overflow: hidden;
 	transition: max-height 0.2s;
-}
+}*/
 #desc-content.open,
 #specs-content.view{
 	max-height: 100%;
