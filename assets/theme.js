@@ -4008,7 +4008,7 @@ lazySizesConfig.expFactor = 4;
       var navigation = siteHeader.querySelector(selectors.navigation);
       if (navigation.querySelectorAll('.grid-product')) {
         new theme.QuickAdd(navigation);
-        new theme.AddCart(navigation);
+        
         new theme.QuickShop(navigation);
       }
   
@@ -5046,7 +5046,7 @@ lazySizesConfig.expFactor = 4;
             init: function() {
                 this.cartForm = new theme.CartForm(this.form);
                 this.quickAdd = new theme.QuickAdd(this.wrapper);
-                this.addCart =   new theme.AddCart(this.wrapper);
+                
                 this.quickShop = new theme.QuickShop(this.wrapper);
                 this.cartForm.buildCart();
 
@@ -6741,7 +6741,7 @@ lazySizesConfig.expFactor = 4;
                 }
 
                 this.quickAdd = new theme.QuickAdd(this.container);
-                this.addCart =   new theme.AddCart(this.container);
+              
                 this.quickShop = new theme.QuickShop(this.container);
 
                 this.colorImages = this.container.querySelectorAll(selectors.colorSwatchImage);
@@ -8630,7 +8630,7 @@ lazySizesConfig.expFactor = 4;
                         this.outputContainer.append(results);
 
                         new theme.QuickAdd(this.outputContainer);
-                        new theme.AddCart(this.outputContainer);
+                        
                         new theme.QuickShop(this.outputContainer);
                     } else {
                         this.container.classList.add('hide');
@@ -8722,7 +8722,7 @@ lazySizesConfig.expFactor = 4;
                         }
 
                         new theme.QuickAdd(this.outputContainer);
-                        new theme.AddCart(this.outputContainer);
+                        
                     }
                 });
             }
@@ -8926,7 +8926,7 @@ lazySizesConfig.expFactor = 4;
                 var recommendations = document.querySelector('.cart-recommendations[data-location="page"]');
                 if (recommendations) {
                     new theme.QuickAdd(recommendations);
-                    new theme.AddCart(recommendations);
+                   
                     new theme.QuickShop(recommendations);
                 }
 
@@ -8951,7 +8951,7 @@ lazySizesConfig.expFactor = 4;
                 var searchProducts = searchGrid.querySelectorAll('.grid-product');
                 if (searchProducts.length) {
                     new theme.QuickAdd(searchGrid);
-                    new theme.AddCart(searchGrid);
+                    
                     new theme.QuickShop(searchGrid);
                 }
             }
@@ -8960,17 +8960,12 @@ lazySizesConfig.expFactor = 4;
         document.addEventListener('recommendations:loaded', function(evt) {
             if (evt && evt.detail && evt.detail.section) {
                 new theme.QuickAdd(evt.detail.section);
-                new theme.AddCart(evt.detail.section);
+               
                 new theme.QuickShop(evt.detail.section);
             }
         });
 
-        document.addEventListener('page:loaded', function(evt) {
-            const  productBlock = document.querySelector('.product-single__form')
-            if(productBlock){
-               new theme.AddCart(productBlock);
-            }
-        });
+
 
         //Bread Financing Custome Button
         document.addEventListener("bread-loaded", function(evt) {
