@@ -123,12 +123,22 @@
   font-size: 19px;
   font-weight:700;
 }
-/*description & specs*/
-
+/* bbq product details */
 .bbq-question-answer{
   margin-top:-30px;
 }
-
+.bbq-description{
+  height: 75px;
+  visibility: visible;
+  overflow: hidden;
+  opacity: 1;
+}
+.specs-description{
+  height: 115px;
+  visibility: visible;
+  overflow: hidden;
+  opacity: 1;
+}
 /*end description & specs */
 
 .section-header--flush{
@@ -149,19 +159,6 @@
 }
 .jdgm-preview-badge{
   margin-bottom:10px;
-}
-/* description preview*/
-.bbq-description{
-  height: 75px;
-  visibility: visible;
-  overflow: hidden;
-  opacity: 1;
-}
-.specs-description{
-  height: 115px;
-  visibility: visible;
-  overflow: hidden;
-  opacity: 1;
 }
 .exclusive-savings{
   text-align:center;
