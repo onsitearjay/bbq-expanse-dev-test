@@ -175,6 +175,8 @@
 }
 .exclusive-savings{
   text-align:center;
+  background-color: #f2f2f2;
+  padding: 10px 0;
 }
 .exclusive-savings p:first-child{
   color:#000;
