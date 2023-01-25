@@ -1,10 +1,10 @@
-{%- if product.description !=blank -%}
+{% if product.description !=blank %}
 <div class="custom-meta-description collapsibles-wrapper collapsible-trigger-btn--borders">
     <button type="button"
         class="label collapsible-trigger collapsible-trigger-btn collapsible--auto-height{% if force_open %} is-open{% endif %}" aria-controls="bbq-description-meta"
         {% if force_open %}aria-expanded="true"{% endif %}>   
              Description
-        {%- render 'collapsible-icons' -%}
+        {% render 'collapsible-icons' %}
     </button>
     
     <div id="bbq-description-meta"
@@ -19,16 +19,16 @@
     </div>
 
 </div>
-{%- endif -%}
+{% endif %}
 
-{%- if product.metafields.bbq.specification_heading_title !=blank -%}
+{% if product.metafields.bbq.specification_heading_title !=blank %}
 
     <div class="custom-meta-specification collapsibles-wrapper collapsible-trigger-btn--borders">
         <button type="button"
             class="label collapsible-trigger collapsible-trigger-btn collapsible--auto-height{% if force_open %} is-open{% endif %}" aria-controls="specification-meta"
             {% if force_open %}aria-expanded="true"{% endif %}>   
                 {{ product.metafields.bbq.specification_heading_title }}
-            {%- render 'collapsible-icons' -%}
+            {% render 'collapsible-icons' %}
         </button>
         
         <div id="specification-meta"
@@ -37,34 +37,34 @@
             {% if force_open %}style="height: auto;"{% endif %}>
             <div class="collapsible-content__inner rte">     
                 <div id="specs-content">
-                    {%- if product.metafields.bbq.overall_dimensions !=blank -%}
+                    {% if product.metafields.bbq.overall_dimensions !=blank %}
                     <div><strong>Overall Dimensions (WxDxH):</strong></div> <p class="specs-value">{{ product.metafields.bbq.overall_dimensions }} </p>
                     {% endif %}
-                    {%- if product.metafields.bbq.cutout_dimensions !=blank -%}
+                    {% if product.metafields.bbq.cutout_dimensions !=blank %}
                     <div><strong>Cutout Dimensions (WxDxH):</strong></div> <p class="specs-value"> {{ product.metafields.bbq.cutout_dimensions }}</p>
                     {% endif %}
-                    {%- if product.metafields.bbq.product_weight !=blank -%}
+                    {% if product.metafields.bbq.product_weight !=blank %}
                     <div><strong>Product Weight:</strong></div> <p class="specs-value">{{ product.metafields.bbq.product_weight }}lb</p>
                     {% endif %}
-                    {%- if product.metafields.bbq.number_of_main_burners !=blank -%}
+                    {% if product.metafields.bbq.number_of_main_burners !=blank %}
                     <div><strong>Number Of Main Burners:</strong></div> <p class="specs-value">{{ product.metafields.bbq.number_of_main_burners }}</p>
                     {% endif %}
-                    {%- if product.metafields.bbq.total_surface_btu !=blank -%}
+                    {% if product.metafields.bbq.total_surface_btu !=blank %}
                     <div><strong>Total Surface BTUs:</strong></div> <p class="specs-value">{{ product.metafields.bbq.total_surface_btu }}</p>
                     {% endif %}
-                    {%- if product.metafields.bbq.single_burner_btus !=blank -%}
+                    {% if product.metafields.bbq.single_burner_btus !=blank %}
                     <div><strong>Single Burner BTUs:</strong></div> <p class="specs-value">{{ product.metafields.bbq.single_burner_btus }}</p>
                     {% endif %}
-                    {%- if product.metafields.bbq.grill_lights !=blank -%}
+                    {% if product.metafields.bbq.grill_lights !=blank %}
                     <div><strong>Grill Lights:</strong></div> <p class="specs-value">{{ product.metafields.bbq.grill_lights }}</p>
                     {% endif %}
-                    {%- if product.metafields.bbq.rear_infrared_burner !=blank -%}
+                    {% if product.metafields.bbq.rear_infrared_burner !=blank %}
                     <div><strong>Rear Infrared Burner:</strong></div> <p class="specs-value">{{ product.metafields.bbq.rear_infrared_burner }}</p>
                     {% endif %}
-                    {%- if product.metafields.bbq.rotisserie_kit !=blank -%}
+                    {% if product.metafields.bbq.rotisserie_kit !=blank %}
                     <div><strong>Rotisserie Kit:</strong></div> <p class="specs-value">{{ product.metafields.bbq.rotisserie_kit }}</p>
                     {% endif %}
-                    {%- if product.metafields.bbq.thermometer !=blank -%}
+                    {% if product.metafields.bbq.thermometer !=blank %}
                     <div><strong>Thermometer:</strong></div> <p class="specs-value">{{ product.metafields.bbq.thermometer }}</p>
                     {% endif %}
                 </div>
@@ -73,26 +73,26 @@
         </div>
     </div>
     
-{%- endif -%}
+{% endif %}
       
-{%- if product.metafields.bbq.shipping_info_heading_title !=blank -%}
+{% if product.metafields.bbq.shipping_info_heading_title !=blank %}
   <div class="shipping-information collapsibles-wrapper">
       <button type="button"
         class="label collapsible-trigger collapsible-trigger-btn collapsible-trigger-btn--borders collapsible--auto-height{% if force_open %} is-open{% endif %}" aria-controls="Product-content-shipping-info"
         {% if force_open %}aria-expanded="true"{% endif %}>
         {{ product.metafields.bbq.shipping_info_heading_title }}
-        {%- render 'collapsible-icons' -%}
+        {% render 'collapsible-icons' %}
       </button>
       <div id="Product-content-shipping-info"
         class="collapsible-content collapsible-content--all{% if force_open %} is-open{% endif %}"
         {% if force_open %}style="height: auto;"{% endif %}>
         <div class="collapsible-content__inner rte">
           <div>
-            {%- if product.metafields.bbq.shipping_weight !=blank -%}
+            {% if product.metafields.bbq.shipping_weight !=blank %}
               <div><strong>Shipping Weight:</strong></div> <p> {{ product.metafields.bbq.shipping_weight }}lb</p>
             {% endif %}
             
-            {%- if product.metafields.bbq.shipping_dimensions !=blank -%}
+            {% if product.metafields.bbq.shipping_dimensions !=blank %}
               <div><strong>Shipping Dimensions (WxDxH):</strong></div> <p> {{ product.metafields.bbq.shipping_dimensions }}in</p>
             {% endif %}
           </div>
@@ -107,7 +107,7 @@
       class="label collapsible-trigger collapsible-trigger-btn collapsible-trigger-btn--borders collapsible--auto-height{% if force_open %} is-open{% endif %}" aria-controls="Product-content-manufacturer-download"
       {% if force_open %}aria-expanded="true"{% endif %}>
       Manufacturer's Manual
-      {%- render 'collapsible-icons' -%}
+      {% render 'collapsible-icons' %}
     </button>
     <div id="Product-content-manufacturer-download"
       class="collapsible-content collapsible-content--all{% if force_open %} is-open{% endif %}"
