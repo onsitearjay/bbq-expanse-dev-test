@@ -75,7 +75,7 @@
       assign img_url = preview_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.'
     -%}
 
-    <a href="{{  product.url | split: "?" | first }}" class="grid-item__link">
+    <a href="{{ product.url | split: "?" | first }}" class="grid-item__link">
       <div class="grid-product__image-wrap">
         <div class="grid-product__tags">
           {%- if has_custom_label -%}
@@ -246,7 +246,7 @@
             {%- endfor -%}
           {%- endif -%}
 
-          <a href="{{ product.url  }}" class="grid-item__link">
+          <a href="{{ product.url }}" class="grid-item__link">
           <div class="grid-product__title" title='{{ product.title }}'>{{ product.title }}</div>
           </a>
   
