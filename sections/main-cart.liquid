@@ -43,14 +43,7 @@
               <textarea name="note" class="input-full cart__note hide" id="CartNote">{{ cart.note }}</textarea>
             </div>
           {% endif %}
-        {% for p in item.properties %}
-  {% if p.first contains '_io_' %}
-    {% continue %}
-  {% endif %}
-  {% unless p.last == blank %}
-    <br />{{p.first}}: {{ p.last }}
-  {% endunless %}
-{% endfor %}
+        
           <div class="cart__item-sub cart__item-row cart__item--subtotal">
             <div>{{ 'cart.general.subtotal' | t }}</div>
             <div data-subtotal>
