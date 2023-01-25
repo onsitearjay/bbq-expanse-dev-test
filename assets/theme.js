@@ -4008,7 +4008,7 @@ lazySizesConfig.expFactor = 4;
       var navigation = siteHeader.querySelector(selectors.navigation);
       if (navigation.querySelectorAll('.grid-product')) {
         new theme.QuickAdd(navigation);
-        
+        new theme.AddCart(navigation);
         new theme.QuickShop(navigation);
       }
   
@@ -5046,7 +5046,7 @@ lazySizesConfig.expFactor = 4;
             init: function() {
                 this.cartForm = new theme.CartForm(this.form);
                 this.quickAdd = new theme.QuickAdd(this.wrapper);
-                
+                this.addCart =   new theme.AddCart(this.wrapper);
                 this.quickShop = new theme.QuickShop(this.wrapper);
                 this.cartForm.buildCart();
 
@@ -5306,7 +5306,111 @@ lazySizesConfig.expFactor = 4;
         return QuickAdd;
     })();
 
-  
+    /*============================================================================
+    Add Cart
+    - Add To Cart Modal
+  ==============================================================================*/
+    theme.AddCart = (function() {
+        var selectors = {
+            quickAddBtn: '.js-add-cart-btn',
+            quickAddForm: '.js-add-cart-form',
+            quickAddHolder: '#AddCartModalHolder'
+        };
+
+        var modalInitailized = false;
+        var modal;
+
+        function AddCart(container) {
+            if (!container) {
+                return;
+            }
+            this.container = container;
+            this.init();
+        }
+
+        AddCart.prototype = Object.assign({}, AddCart.prototype, {
+            init: function() {
+                // When a single variant, auto add it to cart
+                var quickAddBtns = this.container.querySelectorAll(selectors.quickAddBtn);
+
+                if (quickAddBtns) {
+                    quickAddBtns.forEach(btn => {
+
+                        btn.addEventListener('click', this.addToCart.bind(this));
+                    });
+                }
+
+                // Button loads form when 1+ variants
+                var quickAddForms = this.container.querySelectorAll(selectors.quickAddForm);
+
+            },
+
+            addToCart: function(evt) {
+
+                var btn = evt.currentTarget;
+                var visibleBtn = btn.querySelector('.btn');
+                if(visibleBtn) visibleBtn.classList.add('btn--loading');
+
+                var id = btn.dataset.id;
+
+                var data = {
+                    'items': [{
+                        'id': id,
+                        'quantity': 1
+                    }]
+                };
+
+                fetch(theme.routes.cartAdd, {
+                    method: 'POST',
+                    body: JSON.stringify(data),
+                    credentials: 'same-origin',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                    .then(response => response.json())
+                    .then(function(data) {
+                        if (data.status === 422 || data.status === 'bad_request') {
+                        } else {
+                            var product = data;
+
+                            document.dispatchEvent(new CustomEvent('ajaxProduct:added', {
+                                detail: {
+                                    product: product,
+                                    addToCartBtn: btn
+                                }
+                            }));
+                            this.AddCartHolder = document.querySelector(
+                                selectors.quickAddHolder);
+                            console.log(product.items[0]);
+                            this.AddCartHolder.innerHTML = `
+
+            <div class="modal-add-cart-body">
+             <div class="modal-add-cart-product-info-holder" data-id="${product.items[0].product_id}">
+                <label class="modal-add-cart-product-name">${product.items[0].product_title}</label>
+             </div>
+            <div class="modal-add-cart-product-info-section">
+              <div class="modal-add-cart-image-holder">
+                <img class="modal-add-cart-image-element" src="${product.items[0].image}"/>
+              </div>
+            </div>
+            <div class="modal-action-section">
+              <a href="/cart" class="btn btn--secondary">Continue to Cart</a>
+              <button href="javascript:void(0)" class="btn  js-modal-close">Continue to Shopping</button>
+            </div>
+            <div>`;
+
+                            modal = new theme.Modals('AddCartModal', 'quick-add');
+                            modal.open();
+
+                        }
+                        if(visibleBtn) visibleBtn.classList.remove('btn--loading');
+                    }.bind(this));
+            },
+        });
+
+        return AddCart;
+    })();
 
     /*============================================================================
     QuickShop
@@ -6741,7 +6845,7 @@ lazySizesConfig.expFactor = 4;
                 }
 
                 this.quickAdd = new theme.QuickAdd(this.container);
-              
+                this.addCart =   new theme.AddCart(this.container);
                 this.quickShop = new theme.QuickShop(this.container);
 
                 this.colorImages = this.container.querySelectorAll(selectors.colorSwatchImage);
@@ -8630,7 +8734,7 @@ lazySizesConfig.expFactor = 4;
                         this.outputContainer.append(results);
 
                         new theme.QuickAdd(this.outputContainer);
-                        
+                        new theme.AddCart(this.outputContainer);
                         new theme.QuickShop(this.outputContainer);
                     } else {
                         this.container.classList.add('hide');
@@ -8722,7 +8826,7 @@ lazySizesConfig.expFactor = 4;
                         }
 
                         new theme.QuickAdd(this.outputContainer);
-                        
+                        new theme.AddCart(this.outputContainer);
                     }
                 });
             }
@@ -8926,7 +9030,7 @@ lazySizesConfig.expFactor = 4;
                 var recommendations = document.querySelector('.cart-recommendations[data-location="page"]');
                 if (recommendations) {
                     new theme.QuickAdd(recommendations);
-                   
+                    new theme.AddCart(recommendations);
                     new theme.QuickShop(recommendations);
                 }
 
@@ -8951,7 +9055,7 @@ lazySizesConfig.expFactor = 4;
                 var searchProducts = searchGrid.querySelectorAll('.grid-product');
                 if (searchProducts.length) {
                     new theme.QuickAdd(searchGrid);
-                    
+                    new theme.AddCart(searchGrid);
                     new theme.QuickShop(searchGrid);
                 }
             }
@@ -8960,12 +9064,17 @@ lazySizesConfig.expFactor = 4;
         document.addEventListener('recommendations:loaded', function(evt) {
             if (evt && evt.detail && evt.detail.section) {
                 new theme.QuickAdd(evt.detail.section);
-               
+                new theme.AddCart(evt.detail.section);
                 new theme.QuickShop(evt.detail.section);
             }
         });
 
-
+        document.addEventListener('page:loaded', function(evt) {
+            const  productBlock = document.querySelector('.product-single__form')
+            if(productBlock){
+               new theme.AddCart(productBlock);
+            }
+        });
 
         //Bread Financing Custome Button
         document.addEventListener("bread-loaded", function(evt) {
