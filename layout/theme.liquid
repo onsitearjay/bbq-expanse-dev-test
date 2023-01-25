@@ -1,23 +1,10 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}" dir="{{ settings.text_direction }}">
 <head>
- 
-  <!-- Google Tag Manager -->
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  </script>
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-PTL24VQ');</script>
-  <!-- End Google Tag Manager -->
-  
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="{{ settings.color_button }}">
-  <meta name="google-site-verification" content="ScEZ4BYo_K4u4T0d3f7nK3FoPpdMCUswAyd3YYip4cg" />
   <link rel="canonical" href="{{ canonical_url }}">
   <link rel="preload" as="script" href="{{ 'theme.js' | asset_url }}">
   <link rel="preconnect" href="https://cdn.shopify.com">
@@ -114,16 +101,26 @@
   <script src="{{ 'vendor-scripts-v2.js' | asset_url | split: '?' | first }}" defer="defer"></script>
   <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
 
+  {%- if request.page_type contains 'customers/' -%}
+    <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer="defer"></script>
+  {%- endif -%}
+
+  {% if request.design_mode %}
+    <script src="https://api.archetypethemes.co/design-mode.js" defer="defer"></script>
+  {% endif %}
+
+  {% render 'shogun-head' %}
+  
   {{ '//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css' | stylesheet_tag }}
 
   {{ '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' | stylesheet_tag }}
-  
+
   {{ 'quickview.css' | asset_url | stylesheet_tag }} 
-  
+
   {{ '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js' | script_tag }}
-  
+
   {{ 'quickview.js' | asset_url | script_tag }}
-  
+
   <script>
   
     {% capture content %}{% include 'quickview' %}{% endcapture %}
@@ -131,16 +128,11 @@
     var content = {{ content | json }};
   
   </script>
-  
+  {% render 'judgeme_core' %}
 </head>
 
 <body class="template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}{% if request.path == '/challenge' %} template-challange{% endif %}" data-transitions="{{ settings.animate_page_transitions }}" data-button_style="{{ settings.button_style }}" data-edges="{{ settings.roundness }}" data-type_header_capitalize="{{ settings.type_header_capitalize }}" data-swatch_style="{{ settings.swatch_style }}" data-grid-style="{{ settings.product_grid_style }}">
 
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PTL24VQ"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-  
   {% if settings.animate_page_transitions %}
     <script type="text/javascript">window.setTimeout(function() { document.body.className += " loaded"; }, 25);</script>
   {% endif %}
@@ -152,7 +144,7 @@
       {%- section 'toolbar' -%}
       {%- section 'header' -%}
       {%- section 'newsletter-popup' -%}
-      
+
       <main class="main-content" id="MainContent">
         {{ content_for_layout }}
       </main>
@@ -169,28 +161,9 @@
       render 'quick-add-modal'
     endif
     render 'tool-tip'
-    render 'addcart-modal'
   -%}
   <div id="ProductModals"></div>
-  <div id="AddCartModal" class="modal modal--square add-cart-modal">
-   
-    <div class="modal__inner">
-      <div class="modal__centered">
-         <div class="modal__header">
-           <label>Added to Cart</label>
-         </div>
-        <div class="modal__centered-content">
-          <div id="AddCartModalHolder"></div>
-           {% render 'frequently-bought'  %}
-        </div>
-  
-        <button type="button" class="btn btn--circle btn--icon modal__close js-modal-close">
-          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 64 64"><defs><style>.cls-1{fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px}</style></defs><path class="cls-1" d="M19 17.61l27.12 27.13m0-27.13L19 44.74"/></svg>
-          <span class="icon__fallback-text">{{ 'general.accessibility.close_modal' | t | json }}</span>
-        </button>
-      </div>
-    </div>
-  </div>
+
   {{ 'bbq-customs.js' | asset_url | script_tag }}
 </body>
 </html>
