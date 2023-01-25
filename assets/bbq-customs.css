@@ -114,6 +114,13 @@
   justify-content:flex-start !important;
   margin-top:-20px;
 }
+#bread-container:after{
+  content:"";
+  background: url("https://cdn.shopify.com/s/files/1/0660/1900/0577/files/bread-financing-logo-110.png") no-repeat;
+  background-size: contain;
+  width:90px;
+  height:20px;
+}
 #bread-checkout-btn-product{
   width:400px !important;
   height:30px !important;
