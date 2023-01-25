@@ -108,9 +108,9 @@
       <span class="bbq-text-green"> 
           {% assign diff4 = product.metafields.custom.size_four_product.value.price | minus: product.price %}
           {% if diff4 < 0 %}
-              Save {{ diff4 | abs | money_with_currency}}
+              Save {{ diff4 | abs | money_with_currency }}
           {% elsif diff4 > 0 %}
-              Add {{ diff4 | abs | money_with_currency}}
+              Add {{ diff4 | abs | money_with_currency }}
           {% endif %}
       </span>
       <img src="{{ product.metafields.custom.size_four_product.value | img_url: '1800x1800' }}" hidden>
@@ -125,9 +125,9 @@
       <span class="bbq-text-green">
           {% assign diff5 = product.metafields.custom.size_five_product.value.price | minus: product.price %}
           {% if diff5 < 0 %}
-              Save {{ diff5 | abs | money_with_currency}}
+              Save {{ diff5 | abs | money_with_currency }}
           {% elsif diff5 > 0 %}
-              Add {{ diff5 | abs | money_with_currency}}
+              Add {{ diff5 | abs | money_with_currency }}
           {% endif %}
       </span>
       <img src="{{ product.metafields.custom.size_five_product.value | img_url: '1800x1800' }}" hidden>
@@ -197,7 +197,7 @@
             {% assign referencedTitle = referenced_product.title %}
             {% assign open_box_price = referenced_product.price %}
             {% assign regularPrice = product.price %}
-            {% assign savedPrice = regularPrice | minus: open_box_price  %}
+            {% assign savedPrice = regularPrice | minus: open_box_price %}
 
             <a class="custom-variant-btn clipped-text" href="{{ product.metafields.bbq.openbox_related_product[forloop.index0] }}">
                 
@@ -229,7 +229,7 @@
             {% assign referencedTitle = referenced_product.title %}
             {% assign shop_new_price = referenced_product.price %}
             {% assign regularPrice = product.price %}
-            {% assign addPrice = regularPrice | minus: shop_new_price  %}
+            {% assign addPrice = regularPrice | minus: shop_new_price %}
             
             <a class="custom-variant-btn clipped-text" href="{{ product.metafields.bbq.shopnew_related_product[forloop.index0] }}">
                 
