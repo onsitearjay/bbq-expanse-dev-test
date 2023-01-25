@@ -2,6 +2,9 @@
   --accent:#090;
 }
 .accent-color{
+  color: var(--accent);
+}
+.accent-color-2{
   color: var(--colorTextSavings);
 }
 [data-transitions=true].unloading .transition-body{

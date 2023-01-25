@@ -190,7 +190,7 @@
 {% if product.metafields.bbq.open_box_heading_title != blank %}
 <div class="bbq-meta-block">
     <div class="openbox">
-        <p class="openbox-title"><span class="accent-color">{{ product.metafields.bbq.open_box_heading_title }}</span> Shop Open Box</p>    
+        <p class="openbox-title"><span class="accent-color-2">{{ product.metafields.bbq.open_box_heading_title }}</span> Shop Open Box</p>    
         {% for openbox in product.metafields.bbq.openbox_related_product %}
             {% assign referenced_product = all_products[product.metafields.bbq.openbox_related_product[forloop.index0]] %}
             {% assign productTitle = product.metafields.bbq.openbox_product_text[forloop.index0] %}
