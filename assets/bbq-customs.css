@@ -96,6 +96,9 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.openbox{
+  margin:center;
+}
 .openbox-title{
   font-size: 22px;
   font-weight: 600;
