@@ -25,32 +25,28 @@
           {%- endfor -%}
         </div>
       {%- endunless -%}
-      
       {%- if product.selling_plan_allocation != empty -%}
         <div class="cart__item--variants">
           {{ product.selling_plan_allocation.selling_plan.name }}
         </div>
       {%- endif -%}
-      
-{% comment %} Protection plan {% endcomment %}
-  {%- assign property_size = product.properties | size -%}
-  {% if property_size > 0 %}
-    {% for p in product.properties %}
-      {%- assign first_character_in_key = p.first | truncate: 1, '' -%}
-      {% unless p.last == blank or first_character_in_key == '_' %}
-        <div>
-          {{ p.first }}:
-          {% if p.last contains '/uploads/' %}
-            <a href="{{ p.last }}">{{ p.last | split: '/' | last }}</a>
-          {% else %}
-            {{ p.last }}
-          {% endif %}
-        </div>
-      {% endunless %}
-    {% endfor %}
-  {% endif %}
+      {%- assign property_size = product.properties | size -%}
+      {% if property_size > 0 %}
+        {% for p in product.properties %}
+          {%- assign first_character_in_key = p.first | truncate: 1, '' -%}
+          {% unless p.last == blank or first_character_in_key == '_' %}
+            <div>
+              {{ p.first }}:
+              {% if p.last contains '/uploads/' %}
+                <a href="{{ p.last }}">{{ p.last | split: '/' | last }}</a>
+              {% else %}
+                {{ p.last }}
+              {% endif %}
+            </div>
+          {% endunless %}
+        {% endfor %}
+      {% endif %}
 
-      
     </div>
     <div class="cart__item-sub">
       <div>
