@@ -2,7 +2,7 @@
   --accent:#090;
 }
 .accent-color{
-  color: var(--accent);
+  color: var(--colorTextSavings);
 }
 [data-transitions=true].unloading .transition-body{
   animation:fade-in .3s ease forwards;
