@@ -4,10 +4,13 @@
 .accent-color{
   color: var(--accent);
 }
+.accent-color-2{
+  color: var(--colorTextSavings);
+}
 [data-transitions=true].unloading .transition-body{
   animation:fade-in .3s ease forwards;
 }
-/*Gas type learn more */
+/*Gas type learn more*/
 .gastype-popup {
     position: relative;
     display: inline-block;
@@ -96,10 +99,16 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.openbox{
+  text-align:center;
+}
 .openbox-title{
   font-size: 22px;
   font-weight: 600;
   font-style:italic;
+}
+.openbox-title .accent-color {
+  font-size: 24px;
 }
 .openbox-price,
 .specs-value{
@@ -113,6 +122,13 @@
 #bread-container{
   justify-content:flex-start !important;
   margin-top:-20px;
+}
+#bread-container:after{
+  content:"";
+  background: url("https://cdn.shopify.com/s/files/1/0660/1900/0577/files/bread-financing-logo-110.png") no-repeat;
+  background-size: contain;
+  width:90px;
+  height:20px;
 }
 #bread-checkout-btn-product{
   width:400px !important;
@@ -162,6 +178,8 @@
 }
 .exclusive-savings{
   text-align:center;
+  background-color: #f2f2f2;
+  padding: 10px 0;
 }
 .exclusive-savings p:first-child{
   color:#000;
@@ -235,10 +253,6 @@
 }
 label[for=ProductPrice-template--16537158713601__main]{
   margin-bottom:-15px !important;
-}
-.product-single__vendor-sku,
-#custom-variant-meta{
-  /*margin-bottom: -20px;*/
 }
 .custom-field-block {
   margin-bottom:10px;
