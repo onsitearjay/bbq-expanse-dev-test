@@ -7,7 +7,7 @@
 [data-transitions=true].unloading .transition-body{
   animation:fade-in .3s ease forwards;
 }
-/*Gas type learn more*/
+/*Gas type learn more test*/
 .gastype-popup {
     position: relative;
     display: inline-block;
@@ -235,10 +235,6 @@
 }
 label[for=ProductPrice-template--16537158713601__main]{
   margin-bottom:-15px !important;
-}
-.product-single__vendor-sku,
-#custom-variant-meta{
-  /*margin-bottom: -20px;*/
 }
 .custom-field-block {
   margin-bottom:10px;
