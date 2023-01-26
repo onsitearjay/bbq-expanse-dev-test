@@ -145,6 +145,90 @@
   font-weight:700;
 }
 /* bbq product details */
+.custom-meta-description{
+  padding-bottom:30px;
+}
+.specification{
+  padding-bottom:10px;
+}
+.descmeta__panel-wrapper {
+  width: 100%;
+  margin: auto;
+  position: relative;
+}
+.descmeta__btn {
+  color: #000;
+  text-decoration: none;
+}
+.descmeta__read_more, .descmeta__read_less {
+  position: absolute;
+  bottom: -1.5em;
+  left: 0;
+  z-index: 100;
+  text-align: center;
+  font-style: italic;
+  font-weight: 600;
+  color: #808080;
+}
+.descmeta__read_less {
+  display: none;
+}
+.descmeta__read_more:target {
+  display: none;
+}
+.descmeta__read_more:target ~ .descmeta__read_less {
+  display: block;
+}
+.descmeta__read_more:target ~ .descmeta__panel {
+  max-height: 2000px;
+}
+.descmeta__panel {
+  position: relative;
+  margin: 1em auto;
+  width: 100%;
+  max-height: 75px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.specs__panel-wrapper {
+  width: 100%;
+  margin: auto;
+  position: relative;
+}
+.specs__btn {
+  color: #000;
+  text-decoration: none;
+}
+.specs_more, .specs_less {
+  position: absolute;
+  bottom: -1.5em;
+  left: 0;
+  z-index: 100;
+  text-align: center;
+  font-style: italic;
+  font-weight: 600;
+  color: #808080;
+}
+.specs_less {
+  display: none;
+}
+.specs_more:target {
+  display: none;
+}
+.specs_more:target ~ .specs_less {
+  display: block;
+}
+.specs_more:target ~ .specs__panel {
+  max-height: 2000px;
+}
+.specs__panel {
+  position: relative;
+  margin: 1em auto;
+  width: 100%;
+  max-height: 115px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
 .bbq-question-answer{
   margin-top:-30px;
 }
