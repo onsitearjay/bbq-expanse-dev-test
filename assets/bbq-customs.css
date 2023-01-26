@@ -19,7 +19,9 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    font: italic normal 12px Harmonia Sans;
+    font: normal 12px Harmonia Sans;
+    color: #399cfd;
+    text-decoration: underline;
 }
 .gastype-popup .gastype-popup-text {
     font: normal 12px Harmonia Sans;
