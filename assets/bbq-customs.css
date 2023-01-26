@@ -122,6 +122,7 @@
 #bread-container{
   justify-content:flex-start !important;
   margin-top:-20px;
+  display:flex;
 }
 #bread-container:after{
   content:"";
@@ -129,6 +130,8 @@
   background-size: contain;
   width:90px;
   height:20px;
+  position: relative;
+  top: 25px;
 }
 #bread-checkout-btn-product{
   width:400px !important;
