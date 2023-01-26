@@ -325,27 +325,6 @@
         "max_width": false
       }
     },
-    "d5c00d86-1a72-4c6a-9a28-59d957df3906": {
-      "type": "advanced-content",
-      "disabled": true,
-      "blocks": {
-        "template--16537158713601__d5c00d86-1a72-4c6a-9a28-59d957df3906-16723696897f050543-1": {
-          "type": "liquid",
-          "settings": {
-            "code": "{% render 'frequently-bought'  %}",
-            "width": "100%",
-            "alignment": "center"
-          }
-        }
-      },
-      "block_order": [
-        "template--16537158713601__d5c00d86-1a72-4c6a-9a28-59d957df3906-16723696897f050543-1"
-      ],
-      "settings": {
-        "full_width": false,
-        "space_around": false
-      }
-    },
     "recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -447,7 +426,6 @@
     "7b89ad01-2cba-44e8-b3b9-43e819c66cf3",
     "main",
     "sub",
-    "d5c00d86-1a72-4c6a-9a28-59d957df3906",
     "recommendations",
     "more-products-vendor",
     "recently-viewed",
