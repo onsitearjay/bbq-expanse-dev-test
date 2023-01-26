@@ -147,7 +147,7 @@
     <div class="accordionSimpQA">
     <ul>
       {%  assign j = 1 %}
-      {% for field in product.metafields.simpquestions reversed %}
+      {% for field in product.metafields.simpquestions %}
       {% assign questionData = field | last | split: '***SIMP***' %}
       <li>
          <p class="simpQuestionHolder">{{questionData[0]}}</p>
