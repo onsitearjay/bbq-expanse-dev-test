@@ -19,9 +19,7 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    font: normal 14px Harmonia Sans;
-    color: #399cfd;
-    text-decoration: underline;
+    font: italic normal 12px Harmonia Sans;
 }
 .gastype-popup .gastype-popup-text {
     font: normal 12px Harmonia Sans;
@@ -130,7 +128,7 @@
   content:"";
   background: url("https://cdn.shopify.com/s/files/1/0660/1900/0577/files/bread-financing-logo-110.png") no-repeat;
   background-size: contain;
-  width:80px;
+  width:90px;
   height:20px;
   position: relative;
   top: 25px;
@@ -535,13 +533,7 @@ a[aria-current="activePage"] {
   .clipped-text{
     width: 375px;
   }
-  #bread-checkout-btn-product {
-    width: 280px!important;
-    height: 60px!important;
-  }
-  #bread-container:before{
-    top: 40px;
-  }
+  
 }
 
 .modal-add-cart-body{
