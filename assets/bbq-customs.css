@@ -151,6 +151,9 @@
   margin: -10px auto 0 !important;
   max-width: none !important;
 }
+#simpAskQuestion .simpAsk-title-container{
+  margin-top: 40px;
+}
 .specification{
   padding:30px 0 10px 0;
 }
@@ -246,6 +249,13 @@
   visibility: visible;
   overflow: hidden;
   opacity: 1;
+}
+.question-clip {
+  height: 200px;
+  visibility: visible;
+  overflow: hidden;
+  opacity: 1;
+  /*margin-top:30px*/
 }
 /*end bbq product details */
 
@@ -372,6 +382,12 @@ a[aria-current="activePage"] {
   border-radius: 1px;
   color:#fff;
   transition: all .3s ease-in-out;
+}
+.config-btn {
+  min-height: 65px !important;
+}
+.config-btn span{
+  margin-top: 5px;
 }
 .openBox{
   box-shadow: 0 0 0 2px #000;

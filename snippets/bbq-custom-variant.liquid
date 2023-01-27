@@ -23,7 +23,7 @@
     <p class="variantTitle"> Configuration </p>
     <div class="custom-field-block variantSize">
         {% for option in product.metafields.bbq.configuration_type %}
-        <a class="custom-variant-btn" href="{{ product.metafields.bbq.configuration_product[forloop.index0] }}">
+        <a class="custom-variant-btn config-btn" href="{{ product.metafields.bbq.configuration_product[forloop.index0] }}">
             <span class="bbq-size-short-desc">
               {{ product.metafields.bbq.configuration_type[forloop.index0] }}
             </span>
