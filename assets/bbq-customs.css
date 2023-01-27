@@ -202,7 +202,7 @@
   color: #000;
   text-decoration: none;
 }
-.specs_more, .specs_less {
+.read-specification, .specs_less {
   position: absolute;
   bottom: -1.5em;
   left: 0;
@@ -215,13 +215,13 @@
 .specs_less {
   display: none;
 }
-.specs_more:target {
+.read-specification:target {
   display: none;
 }
-.specs_more:target ~ .specs_less {
+.read-specification:target ~ .specs_less {
   display: block;
 }
-.specs_more:target ~ .specs__panel {
+.read-specification:target ~ .specs__panel {
   max-height: 2000px;
 }
 .specs__panel {
