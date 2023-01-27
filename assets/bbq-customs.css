@@ -202,7 +202,7 @@
   color: #000;
   text-decoration: none;
 }
-.read-specification, .specs_less {
+.read-specification, .preview-specification {
   position: absolute;
   bottom: -1.5em;
   left: 0;
@@ -212,13 +212,13 @@
   font-weight: 600;
   color: #808080;
 }
-.specs_less {
+.preview-specification {
   display: none;
 }
 .read-specification:target {
   display: none;
 }
-.read-specification:target ~ .specs_less {
+.read-specification:target ~ .preview-specification {
   display: block;
 }
 .read-specification:target ~ .specs__panel {
