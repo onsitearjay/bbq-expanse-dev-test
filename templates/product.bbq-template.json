@@ -249,7 +249,7 @@
         "ed90fc26-9996-4534-aefc-b13019c297d6": {
           "type": "custom",
           "settings": {
-            "code": "{% render 'questions-answers'%}"
+            "code": "{% render 'bbq-questions-answers'%}"
           }
         },
         "12dbe39b-ebc7-4f7a-9aab-e8394a54e832": {
