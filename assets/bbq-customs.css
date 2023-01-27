@@ -139,17 +139,20 @@
   width:400px !important;
   height:30px !important;
 }
+
+/* bbq product details */
+#simpAskQuestion.simpAsk-container h2,
 .bbq-prod-details-title{
   font-family:Harmonia Sans;
   font-size: 19px;
   font-weight:700;
 }
-/* bbq product details */
-.custom-meta-description{
-  padding-bottom:30px;
+.simpAsk-container{
+  margin: auto !important;
+  max-width: none !important;
 }
 .specification{
-  padding-bottom:10px;
+  padding:30px 0 10px 0;
 }
 .descmeta__panel-wrapper {
   width: 100%;
@@ -160,7 +163,7 @@
   color: #000;
   text-decoration: none;
 }
-.descmeta__read_more, .descmeta__read_less {
+.read-description, .preview-description {
   position: absolute;
   bottom: -1.5em;
   left: 0;
@@ -170,16 +173,16 @@
   font-weight: 600;
   color: #808080;
 }
-.descmeta__read_less {
+.preview-description {
   display: none;
 }
-.descmeta__read_more:target {
+.read-description:target {
   display: none;
 }
-.descmeta__read_more:target ~ .descmeta__read_less {
+.read-description:target ~ .preview-description {
   display: block;
 }
-.descmeta__read_more:target ~ .descmeta__panel {
+.read-description:target ~ .descmeta__panel {
   max-height: 2000px;
 }
 .descmeta__panel {
