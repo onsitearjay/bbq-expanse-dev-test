@@ -252,6 +252,13 @@
             "page_width": false
           }
         },
+        "2a3291f3-27ca-447b-abdf-b56ba509ead7": {
+          "type": "shopify:\/\/apps\/product-questions-answers\/blocks\/acreview-block\/874ee9ec-48a5-4644-99b1-52a39b5a02b9",
+          "disabled": true,
+          "settings": {
+            "page_width": true
+          }
+        },
         "657031d1-9b76-4891-a517-3f9ad4204e87": {
           "type": "custom",
           "settings": {
@@ -313,6 +320,7 @@
       "block_order": [
         "537fe456-4e5c-41bd-b566-ebed312f5bbb",
         "585bfcd6-41e6-4033-8591-f86afd61f87f",
+        "2a3291f3-27ca-447b-abdf-b56ba509ead7",
         "657031d1-9b76-4891-a517-3f9ad4204e87",
         "ed90fc26-9996-4534-aefc-b13019c297d6",
         "7496d8b3-154f-4f4a-809c-85ae285a9f13",
