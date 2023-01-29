@@ -1,0 +1,35 @@
+{% assign AppStatus = true %}
+{% if AppStatus %}
+
+{% if template == 'customers/login' %}
+
+<script type='text/javascript' src='https://storedesigndev.myshopify.com/apps/questionanswer/js/appify_login_redirect.min.js'></script>
+
+{% endif %}
+
+{% if template == 'product' or template == 'collection' %}
+
+<input type='hidden' id='str_id' value='8905883727' />
+<input type='hidden' id='prd_id' value='{{product.id}}' />
+<input type='hidden' id='prd_handle' value='{{product.handle}}' />
+<input type='hidden' id='page_data' value='{{template}}' />
+<input type='hidden' id='cust_enable' value='{{shop.customer_accounts_enabled}}' />
+<input type='hidden' id='cust_id' value='{{customer.id}}' />
+<input type='hidden' id='cust_name' value='{{customer.first_name}}' />
+<input type='hidden' id='cust_email' value='{{customer.email}}' />
+<input type='hidden' id='shop_url' value='{{shop.url}}' />
+<div id='cssloader' class='lds-css ng-scope loader'><div style='width:100%;height:100%' class='lds-eclipse'><div></div></div></div>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css' rel='stylesheet'>
+
+<link rel='stylesheet' type='text/css' href='/apps/questionanswer/assets/Css/prqa_2.min.css?v=181233'></link>
+<script src='/apps/questionanswer/assets/js/OriginalJs/prqa_2.js?v=181233'type='text/javascript'></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
+
+
+{% endif %}
+
+
+
+{% endif %}
+
