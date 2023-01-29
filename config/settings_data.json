@@ -296,7 +296,15 @@
     },
     "content_for_index": [
 
-    ]
+    ],
+    "blocks": {
+      "13557039114941162046": {
+        "type": "shopify:\/\/apps\/product-questions-answers\/blocks\/prqa-widget\/874ee9ec-48a5-4644-99b1-52a39b5a02b9",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    }
   },
   "presets": {
     "Modern": {
