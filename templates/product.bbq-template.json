@@ -249,7 +249,7 @@
         "585bfcd6-41e6-4033-8591-f86afd61f87f": {
           "type": "shopify:\/\/apps\/product-questions-answers\/blocks\/acqa-block\/874ee9ec-48a5-4644-99b1-52a39b5a02b9",
           "settings": {
-            "page_width": true
+            "page_width": false
           }
         },
         "657031d1-9b76-4891-a517-3f9ad4204e87": {
