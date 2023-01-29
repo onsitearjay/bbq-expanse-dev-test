@@ -246,23 +246,16 @@
             "code": "{% render 'bbq-product-details' %}"
           }
         },
-        "657031d1-9b76-4891-a517-3f9ad4204e87": {
-          "type": "custom",
-          "settings": {
-            "code": "{% render 'frequently-bought'  %}"
-          }
-        },
         "585bfcd6-41e6-4033-8591-f86afd61f87f": {
           "type": "shopify:\/\/apps\/product-questions-answers\/blocks\/acqa-block\/874ee9ec-48a5-4644-99b1-52a39b5a02b9",
           "settings": {
             "page_width": true
           }
         },
-        "90c80374-682a-45c6-95eb-80b421a4eb8a": {
-          "type": "shopify:\/\/apps\/product-questions-answers\/blocks\/acreview-block\/874ee9ec-48a5-4644-99b1-52a39b5a02b9",
-          "disabled": true,
+        "657031d1-9b76-4891-a517-3f9ad4204e87": {
+          "type": "custom",
           "settings": {
-            "page_width": true
+            "code": "{% render 'frequently-bought'  %}"
           }
         },
         "ed90fc26-9996-4534-aefc-b13019c297d6": {
@@ -319,9 +312,8 @@
       },
       "block_order": [
         "537fe456-4e5c-41bd-b566-ebed312f5bbb",
-        "657031d1-9b76-4891-a517-3f9ad4204e87",
         "585bfcd6-41e6-4033-8591-f86afd61f87f",
-        "90c80374-682a-45c6-95eb-80b421a4eb8a",
+        "657031d1-9b76-4891-a517-3f9ad4204e87",
         "ed90fc26-9996-4534-aefc-b13019c297d6",
         "7496d8b3-154f-4f4a-809c-85ae285a9f13",
         "2ee0bec7-82ce-4c5f-a2b4-81b58aa55114",
