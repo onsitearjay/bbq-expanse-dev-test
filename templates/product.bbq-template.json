@@ -260,6 +260,7 @@
         },
         "90c80374-682a-45c6-95eb-80b421a4eb8a": {
           "type": "shopify:\/\/apps\/product-questions-answers\/blocks\/acreview-block\/874ee9ec-48a5-4644-99b1-52a39b5a02b9",
+          "disabled": true,
           "settings": {
             "page_width": true
           }
