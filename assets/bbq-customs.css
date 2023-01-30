@@ -71,6 +71,9 @@
 .frequently-bought-item{
   clear:both;
 }
+.frequently-bought-item h3{
+  color: red;
+}
 .frequently-bought-item .fbi-content-wrap{
   display:flex;
   justify-content: flex-start;
