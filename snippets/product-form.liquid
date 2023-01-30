@@ -39,7 +39,7 @@
       name="add"
       data-id="{{product.selected_or_first_available_variant.id}}"
       data-add-to-cart
-      class="btn btn--full js-add-cart-btn{% if enable_dynamic_buttons and product.selling_plan_groups == empty %} btn--secondary{% endif %}"
+      class="add-to-cart btn btn--full js-add-cart-btn{% if enable_dynamic_buttons and product.selling_plan_groups == empty %} btn--secondary{% endif %}"
       {% unless current_variant.available %} disabled="disabled"{% endunless %}>
       <span data-add-to-cart-text data-default-text="{{ default_text }}">
         {{ button_text }}
