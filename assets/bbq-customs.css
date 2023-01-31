@@ -94,7 +94,8 @@
 .fbi_price{
   font-weight:900;
   margin-bottom:0;
-}
+}/*end frequently bought*/
+
 .clipped-text{
   width: 400px;
   overflow: hidden;
