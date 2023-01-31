@@ -10,7 +10,7 @@
 [data-transitions=true].unloading .transition-body{
   animation:fade-in .3s ease forwards;
 }
-/*Gas type learn more */
+/*Gas type learn more test*/
 .gastype-popup {
     position: relative;
     display: inline-block;
