@@ -1,6 +1,8 @@
 {% if product.metafields.frequently.fbi_heading != blank %}
 <div class="frequently-bought-item">
-  <h3 class="h3">{{ product.metafields.frequently.fbi_heading }}</h3>
+  
+ {% comment%} <h3 class="h3">{{ product.metafields.frequently.fbi_heading }}</h3>{% endcomment %}
+  
   <div class="fbi-content-wrap">
     {% for frequently in product.metafields.frequently.fbi_related_product %}
       <div class="fbi-inner-content grid-product">
